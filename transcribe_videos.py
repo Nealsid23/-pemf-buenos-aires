@@ -165,6 +165,104 @@ def extract_frames(file_path, interval_seconds=5):
     except Exception as e:
         raise RuntimeError(f"Failed to extract frames from {file_path}: {e}")
 
+def detect_text_in_frames(frames, logger):
+    """
+    Detect text in video frames using OCR.
+
+    Args:
+        frames: List of (timestamp, frame) tuples from extract_frames()
+        logger: logging instance
+
+    Returns:
+        dict: {timestamp: detected_text_lines}
+    """
+    if pytesseract is None:
+        raise RuntimeError("pytesseract is not installed. Install with: pip install pytesseract")
+
+    try:
+        text_by_time = {}
+
+        for timestamp, frame in frames:
+            try:
+                # Convert BGR to grayscale for better OCR
+                gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+                # Detect text using pytesseract
+                text = pytesseract.image_to_string(gray, lang='spa')
+
+                if text.strip():
+                    text_by_time[timestamp] = text.strip()
+                    logger.debug(f"OCR detected text at {timestamp}s: {text[:50]}...")
+
+            except Exception as e:
+                logger.debug(f"OCR failed for frame at {timestamp}s: {e}")
+                continue
+
+        return text_by_time
+
+    except Exception as e:
+        logger.warning(f"OCR processing failed: {e}")
+        return {}
+
+def match_speaker_names(ocr_text_dict, diarization_segments, logger):
+    """
+    Match detected speaker names from OCR to diarization speaker IDs.
+
+    Args:
+        ocr_text_dict: Dict from detect_text_in_frames()
+        diarization_segments: List of speaker segments with timestamps
+        logger: logging instance
+
+    Returns:
+        dict: {speaker_id: speaker_name} mapping
+    """
+    speaker_names = {}
+    speaker_name_count = 0
+
+    try:
+        # Extract unique speaker IDs from diarization
+        unique_speakers = set()
+        for seg in diarization_segments:
+            if 'speaker' in seg:
+                unique_speakers.add(seg['speaker'])
+
+        # Try to match OCR text to speakers
+        for timestamp, text in sorted(ocr_text_dict.items()):
+            # Look for text patterns that might be names (capitalized words)
+            lines = text.split('\n')
+            for line in lines:
+                words = line.strip().split()
+                if len(words) > 0 and words[0][0].isupper():
+                    # This might be a speaker name
+                    potential_name = words[0]
+
+                    # Find closest speaker by timestamp
+                    closest_speaker = None
+                    closest_distance = float('inf')
+
+                    for seg in diarization_segments:
+                        if abs(seg.get('start', 0) - timestamp) < closest_distance:
+                            closest_distance = abs(seg.get('start', 0) - timestamp)
+                            closest_speaker = seg.get('speaker')
+
+                    if closest_speaker and closest_speaker not in speaker_names:
+                        speaker_names[closest_speaker] = potential_name
+                        speaker_name_count += 1
+
+        logger.info(f"Matched {speaker_name_count} speaker names via OCR")
+
+        # Assign default names to speakers without detected names
+        for speaker_id in unique_speakers:
+            if speaker_id not in speaker_names:
+                speaker_names[speaker_id] = f"Speaker {len([s for s in speaker_names.keys() if s.startswith('speaker_')])+1}"
+
+        return speaker_names
+
+    except Exception as e:
+        logger.warning(f"Speaker name matching failed: {e}")
+        # Return default speaker names
+        return {f"speaker_{i}": f"Speaker {i+1}" for i in range(len(unique_speakers))}
+
 if __name__ == '__main__':
     print(f"Whisper Transcription Automator v{SCRIPT_VERSION}")
     print("Dependencies check: OK (can be validated during execution)")
