@@ -233,10 +233,7 @@ def perform_diarization(file_path, logger):
         logger.info("Loading Pyannote diarization model...")
 
         # Load pre-trained diarization pipeline
-        pipeline = Pipeline.from_pretrained(
-            "pyannote/speaker-diarization-3.1",
-            use_auth_token=False  # Using public model
-        )
+        pipeline = Pipeline.from_pretrained("pyannote/speaker-diarization-3.1")
 
         logger.info(f"Running diarization on {Path(file_path).name}...")
 
