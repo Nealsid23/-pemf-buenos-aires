@@ -204,6 +204,54 @@ def detect_text_in_frames(frames, logger):
         logger.warning(f"OCR processing failed: {e}")
         return {}
 
+def perform_diarization(file_path, logger):
+    """
+    Perform speaker diarization on audio file using Pyannote.
+
+    Args:
+        file_path: Path to audio/video file
+        logger: logging instance
+
+    Returns:
+        list: List of speaker segments with timestamps and speaker IDs
+    """
+    try:
+        if Pipeline is None:
+            raise RuntimeError("Pyannote is not installed. Install with: pip install pyannote.audio")
+
+        logger.info("Loading Pyannote diarization model...")
+
+        # Load pre-trained diarization pipeline
+        pipeline = Pipeline.from_pretrained(
+            "pyannote/speaker-diarization-3.1",
+            use_auth_token=False  # Using public model
+        )
+
+        logger.info(f"Running diarization on {Path(file_path).name}...")
+
+        # Perform diarization
+        diarization = pipeline(str(file_path))
+
+        # Convert to segment list
+        segments = []
+        for turn, _, speaker in diarization.itertracks(yield_label=True):
+            segment = {
+                'start': turn.start,
+                'end': turn.end,
+                'speaker': speaker,
+                'duration': turn.end - turn.start
+            }
+            segments.append(segment)
+
+        unique_speakers = len(set(s['speaker'] for s in segments))
+        logger.info(f"Diarization detected {unique_speakers} unique speakers")
+
+        return segments
+
+    except Exception as e:
+        logger.error(f"Diarization failed for {Path(file_path).name}: {e}")
+        raise
+
 def match_speaker_names(ocr_text_dict, diarization_segments, logger):
     """
     Match detected speaker names from OCR to diarization speaker IDs.
