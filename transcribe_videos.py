@@ -94,6 +94,77 @@ def find_video_files(folder_path):
     # Sort by filename for consistent processing order
     return sorted(video_files)
 
+def get_audio_duration(file_path):
+    """
+    Get duration of audio file in seconds using ffprobe.
+
+    Args:
+        file_path: Path to audio file
+
+    Returns:
+        tuple: (duration_seconds, duration_formatted)
+    """
+    try:
+        cmd = [
+            'ffprobe', '-v', 'error',
+            '-show_entries', 'format=duration',
+            '-of', 'default=noprint_wrappers=1:nokey=1:noprint_sections=1',
+            str(file_path)
+        ]
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
+
+        duration_seconds = float(result.stdout.strip())
+
+        # Format as HH:MM:SS
+        hours = int(duration_seconds // 3600)
+        minutes = int((duration_seconds % 3600) // 60)
+        seconds = int(duration_seconds % 60)
+        duration_formatted = f"{hours}:{minutes:02d}:{seconds:02d}"
+
+        return duration_seconds, duration_formatted
+
+    except Exception as e:
+        raise RuntimeError(f"Failed to get duration for {file_path}: {e}")
+
+def extract_frames(file_path, interval_seconds=5):
+    """
+    Extract frames from video at regular intervals for OCR processing.
+
+    Args:
+        file_path: Path to video file
+        interval_seconds: Seconds between frame extractions (default: 5)
+
+    Returns:
+        list: List of tuples (timestamp, frame_image)
+    """
+    if cv2 is None:
+        raise RuntimeError("OpenCV (cv2) is not installed. Install with: pip install opencv-python")
+
+    try:
+        cap = cv2.VideoCapture(str(file_path))
+        fps = cap.get(cv2.CAP_PROP_FPS)
+        frame_interval = int(fps * interval_seconds)
+
+        frames = []
+        frame_count = 0
+
+        while True:
+            ret, frame = cap.read()
+            if not ret:
+                break
+
+            if frame_count % frame_interval == 0:
+                timestamp = frame_count / fps
+                frames.append((timestamp, frame))
+
+            frame_count += 1
+
+        cap.release()
+        return frames
+
+    except Exception as e:
+        raise RuntimeError(f"Failed to extract frames from {file_path}: {e}")
+
 if __name__ == '__main__':
     print(f"Whisper Transcription Automator v{SCRIPT_VERSION}")
     print("Dependencies check: OK (can be validated during execution)")
