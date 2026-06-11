@@ -355,10 +355,11 @@ def merge_transcription_with_diarization(whisper_result, diarization_segments, s
     """
     Merge Whisper transcription with diarization speaker info.
     Creates theater-style dialogue output.
+    Handles case where diarization is unavailable.
 
     Args:
         whisper_result: Dict from Whisper with segments
-        diarization_segments: List from perform_diarization()
+        diarization_segments: List from perform_diarization() (can be empty)
         speaker_names: Dict from match_speaker_names()
 
     Returns:
@@ -371,21 +372,22 @@ def merge_transcription_with_diarization(whisper_result, diarization_segments, s
         seg_end = whisper_seg['end']
         seg_text = whisper_seg['text'].strip()
 
-        # Find which diarization speaker segment overlaps
         best_speaker = None
-        best_overlap = 0
+        speaker_name = "Narrator"
 
-        for diar_seg in diarization_segments:
-            overlap_start = max(seg_start, diar_seg['start'])
-            overlap_end = min(seg_end, diar_seg['end'])
-            overlap = max(0, overlap_end - overlap_start)
+        # If diarization is available, use it
+        if diarization_segments:
+            best_overlap = 0
+            for diar_seg in diarization_segments:
+                overlap_start = max(seg_start, diar_seg['start'])
+                overlap_end = min(seg_end, diar_seg['end'])
+                overlap = max(0, overlap_end - overlap_start)
 
-            if overlap > best_overlap:
-                best_overlap = overlap
-                best_speaker = diar_seg['speaker']
+                if overlap > best_overlap:
+                    best_overlap = overlap
+                    best_speaker = diar_seg['speaker']
 
-        # Get speaker name or use default
-        speaker_name = speaker_names.get(best_speaker, "Unknown Speaker")
+            speaker_name = speaker_names.get(best_speaker, "Unknown Speaker")
 
         dialogue_entry = {
             'id': idx,
@@ -558,9 +560,13 @@ def process_single_file(file_path, output_folder, logger):
         logger.info("Running OCR to detect speaker names...")
         ocr_text_dict = detect_text_in_frames(frames, logger)
 
-        # Step 4: Perform diarization
+        # Step 4: Perform diarization (with fallback if it fails)
         logger.info("Running speaker diarization...")
-        diarization_segments = perform_diarization(file_path, logger)
+        try:
+            diarization_segments = perform_diarization(file_path, logger)
+        except Exception as e:
+            logger.warning(f"Diarization unavailable ({e}), continuing with Whisper-only transcription")
+            diarization_segments = []
 
         # Step 5: Match speaker names
         speaker_names = match_speaker_names(ocr_text_dict, diarization_segments, logger)
@@ -595,13 +601,13 @@ def process_single_file(file_path, output_folder, logger):
             'duracion_formateada': duration_formatted,
             'modelo_whisper': WHISPER_MODEL,
             'idioma': WHISPER_LANGUAGE,
-            'diarization_habilitada': True,
-            'speakers_detectados': speakers_list,
+            'diarization_habilitada': len(diarization_segments) > 0,
+            'speakers_detectados': speakers_list if diarization_segments else [],
             'diálogo': dialogue,
             'transcripcion_completa': theater_text,
             'timestamp_procesamiento': datetime.now().isoformat(),
             'estado': 'success',
-            'notas': ''
+            'notas': 'Diarization unavailable - using Whisper transcription only' if not diarization_segments else ''
         }
 
         # Step 11: Generate and save JSON
