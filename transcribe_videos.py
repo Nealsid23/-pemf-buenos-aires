@@ -48,6 +48,28 @@ def setup_logging(log_path):
     )
     return logging.getLogger(__name__)
 
+def parse_filename(filename):
+    """
+    Extract date and description from filename.
+    Expected format: YYYY-MM-DD-description.ext
+
+    Returns:
+        tuple: (date_str, description_str)
+    """
+    # Remove file extension
+    name_without_ext = os.path.splitext(filename)[0]
+
+    # Pattern: YYYY-MM-DD followed by dash and rest of name
+    pattern = r'^(\d{4}-\d{2}-\d{2})-(.+)$'
+    match = re.match(pattern, name_without_ext)
+
+    if match:
+        date_str = match.group(1)
+        description = match.group(2)
+        return date_str, description
+    else:
+        raise ValueError(f"Filename does not match expected pattern (YYYY-MM-DD-description): {filename}")
+
 if __name__ == '__main__':
     print(f"Whisper Transcription Automator v{SCRIPT_VERSION}")
     print("Dependencies check: OK (can be validated during execution)")
