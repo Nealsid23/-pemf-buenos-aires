@@ -311,6 +311,38 @@ def match_speaker_names(ocr_text_dict, diarization_segments, logger):
         # Return default speaker names
         return {f"speaker_{i}": f"Speaker {i+1}" for i in range(len(unique_speakers))}
 
+def transcribe_with_whisper(file_path, logger):
+    """
+    Transcribe audio file using OpenAI Whisper.
+
+    Args:
+        file_path: Path to audio file
+        logger: logging instance
+
+    Returns:
+        dict: Whisper result with text and segments
+    """
+    try:
+        import whisper
+
+        logger.info(f"Loading Whisper model '{WHISPER_MODEL}'...")
+        model = whisper.load_model(WHISPER_MODEL)
+
+        logger.info(f"Transcribing: {Path(file_path).name}")
+
+        result = model.transcribe(
+            str(file_path),
+            language=WHISPER_LANGUAGE,
+            verbose=False
+        )
+
+        logger.info(f"Transcription completed for {Path(file_path).name}")
+        return result
+
+    except Exception as e:
+        logger.error(f"Transcription failed for {file_path}: {e}")
+        raise
+
 if __name__ == '__main__':
     print(f"Whisper Transcription Automator v{SCRIPT_VERSION}")
     print("Dependencies check: OK (can be validated during execution)")
