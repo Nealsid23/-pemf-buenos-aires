@@ -464,6 +464,68 @@ def save_transcript(output_folder, date_str, original_filename, json_content):
 
     return output_path
 
+def validate_video_file(file_path):
+    """
+    Validate that a file is a readable video file.
+
+    Args:
+        file_path: Path to file to validate
+
+    Returns:
+        bool: True if file is valid
+
+    Raises:
+        ValueError: If file fails any validation check
+    """
+    file_path = Path(file_path)
+
+    if not file_path.exists():
+        raise ValueError(f"File not found: {file_path}")
+
+    if not file_path.is_file():
+        raise ValueError(f"Path is not a file: {file_path}")
+
+    if file_path.suffix.lower() not in SUPPORTED_FORMATS:
+        raise ValueError(f"Unsupported format: {file_path.suffix}")
+
+    if file_path.stat().st_size == 0:
+        raise ValueError(f"File is empty: {file_path}")
+
+    return True
+
+def create_error_json(file_path, date_str, error_message):
+    """
+    Create JSON output for failed transcription.
+
+    Args:
+        file_path: Path to the video file
+        date_str: Date string from filename
+        error_message: Error message to include in output
+
+    Returns:
+        dict: Error JSON structure with estado='error'
+    """
+    try:
+        duration_seconds, duration_formatted = get_audio_duration(file_path)
+    except:
+        duration_seconds, duration_formatted = 0, "0:00:00"
+
+    return {
+        'fecha': date_str,
+        'archivo_original': Path(file_path).name,
+        'duracion_segundos': duration_seconds,
+        'duracion_formateada': duration_formatted,
+        'modelo_whisper': WHISPER_MODEL,
+        'idioma': WHISPER_LANGUAGE,
+        'diarization_habilitada': True,
+        'speakers_detectados': [],
+        'diálogo': [],
+        'transcripcion_completa': '',
+        'timestamp_procesamiento': datetime.now().isoformat(),
+        'estado': 'error',
+        'notas': error_message
+    }
+
 if __name__ == '__main__':
     print(f"Whisper Transcription Automator v{SCRIPT_VERSION}")
     print("Dependencies check: OK (can be validated during execution)")
