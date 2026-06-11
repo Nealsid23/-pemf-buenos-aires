@@ -343,6 +343,74 @@ def transcribe_with_whisper(file_path, logger):
         logger.error(f"Transcription failed for {file_path}: {e}")
         raise
 
+def merge_transcription_with_diarization(whisper_result, diarization_segments, speaker_names):
+    """
+    Merge Whisper transcription with diarization speaker info.
+    Creates theater-style dialogue output.
+
+    Args:
+        whisper_result: Dict from Whisper with segments
+        diarization_segments: List from perform_diarization()
+        speaker_names: Dict from match_speaker_names()
+
+    Returns:
+        list: Merged dialogue segments with speaker info
+    """
+    dialogue = []
+
+    for idx, whisper_seg in enumerate(whisper_result.get('segments', [])):
+        seg_start = whisper_seg['start']
+        seg_end = whisper_seg['end']
+        seg_text = whisper_seg['text'].strip()
+
+        # Find which diarization speaker segment overlaps
+        best_speaker = None
+        best_overlap = 0
+
+        for diar_seg in diarization_segments:
+            overlap_start = max(seg_start, diar_seg['start'])
+            overlap_end = min(seg_end, diar_seg['end'])
+            overlap = max(0, overlap_end - overlap_start)
+
+            if overlap > best_overlap:
+                best_overlap = overlap
+                best_speaker = diar_seg['speaker']
+
+        # Get speaker name or use default
+        speaker_name = speaker_names.get(best_speaker, "Unknown Speaker")
+
+        dialogue_entry = {
+            'id': idx,
+            'inicio': seg_start,
+            'fin': seg_end,
+            'speaker_id': best_speaker,
+            'speaker_nombre': speaker_name,
+            'texto': seg_text
+        }
+
+        dialogue.append(dialogue_entry)
+
+    return dialogue
+
+def create_theater_format_text(dialogue):
+    """
+    Create theater-style transcript text.
+
+    Args:
+        dialogue: List of dialogue entries from merge_transcription_with_diarization()
+
+    Returns:
+        str: Formatted text (Speaker: text)
+    """
+    lines = []
+
+    for entry in dialogue:
+        speaker = entry['speaker_nombre']
+        text = entry['texto']
+        lines.append(f"{speaker}: {text}")
+
+    return "\n".join(lines)
+
 if __name__ == '__main__':
     print(f"Whisper Transcription Automator v{SCRIPT_VERSION}")
     print("Dependencies check: OK (can be validated during execution)")
