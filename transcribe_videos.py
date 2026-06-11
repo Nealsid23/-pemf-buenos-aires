@@ -14,6 +14,22 @@ from datetime import datetime
 import re
 import subprocess
 
+# Diarization and OCR dependencies
+try:
+    from pyannote.audio import Pipeline
+except ImportError:
+    Pipeline = None
+
+try:
+    import pytesseract
+except ImportError:
+    pytesseract = None
+
+try:
+    import cv2
+except ImportError:
+    cv2 = None
+
 # Version and constants
 SCRIPT_VERSION = "1.0.0"
 SUPPORTED_FORMATS = {'.m4a', '.mp4'}
