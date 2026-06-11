@@ -114,12 +114,17 @@ def get_audio_duration(file_path):
         cmd = [
             'ffprobe', '-v', 'error',
             '-show_entries', 'format=duration',
-            '-of', 'default=noprint_wrappers=1:nokey=1:noprint_sections=1',
+            '-of', 'default=noprint_wrappers=1',
             str(file_path)
         ]
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
 
-        duration_seconds = float(result.stdout.strip())
+        # Parse output like: duration=123.45\n
+        output = result.stdout.strip()
+        if 'duration=' in output:
+            duration_seconds = float(output.split('=')[1])
+        else:
+            raise ValueError(f"Could not parse duration from ffprobe output: {output}")
 
         # Format as HH:MM:SS
         hours = int(duration_seconds // 3600)
@@ -606,11 +611,11 @@ def process_single_file(file_path, output_folder, logger):
         json_content = create_transcript_json(transcript_data)
         output_path = save_transcript(output_folder, date_str, file_path.name, json_content)
 
-        logger.info(f"✓ Transcript saved: {output_path}")
+        logger.info(f"[OK] Transcript saved: {output_path}")
         return True
 
     except Exception as e:
-        logger.error(f"✗ Failed to process {file_path.name}: {e}")
+        logger.error(f"[ERROR] Failed to process {file_path.name}: {e}")
 
         try:
             date_str, _ = parse_filename(file_path.name)
