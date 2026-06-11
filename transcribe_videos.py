@@ -14,6 +14,12 @@ from datetime import datetime
 import re
 import subprocess
 
+# Core dependencies
+try:
+    import whisper
+except ImportError:
+    whisper = None
+
 # Diarization and OCR dependencies
 try:
     from pyannote.audio import Pipeline
@@ -526,6 +532,154 @@ def create_error_json(file_path, date_str, error_message):
         'notas': error_message
     }
 
+def process_single_file(file_path, output_folder, logger):
+    """
+    Process a single video file: diarize, transcribe, merge, save JSON.
+
+    Returns:
+        bool: True if successful, False if failed
+    """
+    try:
+        validate_video_file(file_path)
+        date_str, description = parse_filename(file_path.name)
+
+        logger.info(f"Processing: {file_path.name}")
+
+        # Step 1: Get duration
+        duration_seconds, duration_formatted = get_audio_duration(file_path)
+
+        # Step 2: Extract frames for OCR
+        logger.info("Extracting video frames for OCR...")
+        frames = extract_frames(file_path)
+
+        # Step 3: Perform OCR on frames
+        logger.info("Running OCR to detect speaker names...")
+        ocr_text_dict = detect_text_in_frames(frames, logger)
+
+        # Step 4: Perform diarization
+        logger.info("Running speaker diarization...")
+        diarization_segments = perform_diarization(file_path, logger)
+
+        # Step 5: Match speaker names
+        speaker_names = match_speaker_names(ocr_text_dict, diarization_segments, logger)
+
+        # Step 6: Transcribe with Whisper
+        logger.info("Running Whisper transcription...")
+        whisper_result = transcribe_with_whisper(file_path, logger)
+
+        # Step 7: Merge transcription with diarization
+        dialogue = merge_transcription_with_diarization(
+            whisper_result, diarization_segments, speaker_names
+        )
+
+        # Step 8: Create theater-format text
+        theater_text = create_theater_format_text(dialogue)
+
+        # Step 9: Build speakers list for JSON
+        speakers_list = [
+            {
+                'speaker_id': sid,
+                'nombre': sname,
+                'fuente': 'ocr' if any(ocr_text for ocr_text in ocr_text_dict.values() if sname in ocr_text) else 'diarization'
+            }
+            for sid, sname in speaker_names.items()
+        ]
+
+        # Step 10: Create transcript data
+        transcript_data = {
+            'fecha': date_str,
+            'archivo_original': file_path.name,
+            'duracion_segundos': duration_seconds,
+            'duracion_formateada': duration_formatted,
+            'modelo_whisper': WHISPER_MODEL,
+            'idioma': WHISPER_LANGUAGE,
+            'diarization_habilitada': True,
+            'speakers_detectados': speakers_list,
+            'diálogo': dialogue,
+            'transcripcion_completa': theater_text,
+            'timestamp_procesamiento': datetime.now().isoformat(),
+            'estado': 'success',
+            'notas': ''
+        }
+
+        # Step 11: Generate and save JSON
+        json_content = create_transcript_json(transcript_data)
+        output_path = save_transcript(output_folder, date_str, file_path.name, json_content)
+
+        logger.info(f"✓ Transcript saved: {output_path}")
+        return True
+
+    except Exception as e:
+        logger.error(f"✗ Failed to process {file_path.name}: {e}")
+
+        try:
+            date_str, _ = parse_filename(file_path.name)
+        except:
+            date_str = datetime.now().strftime('%Y-%m-%d')
+
+        error_data = create_error_json(file_path, date_str, str(e))
+        error_json = create_transcript_json(error_data)
+
+        try:
+            save_transcript(output_folder, date_str, file_path.name, error_json)
+        except:
+            pass
+
+        return False
+
+def process_all_videos(input_folder, output_folder):
+    """Process all video files in input folder."""
+    input_folder = Path(input_folder)
+    output_folder = Path(output_folder)
+
+    log_path = input_folder / 'transcription.log'
+    logger = setup_logging(log_path)
+
+    logger.info("=" * 80)
+    logger.info(f"Whisper Transcription Automator with Speaker Diarization v{SCRIPT_VERSION}")
+    logger.info(f"Start time: {datetime.now().isoformat()}")
+    logger.info(f"Input folder: {input_folder}")
+    logger.info(f"Output folder: {output_folder}")
+    logger.info(f"Model: {WHISPER_MODEL} | Language: {WHISPER_LANGUAGE}")
+    logger.info(f"Features: Speaker Diarization + OCR Name Detection")
+    logger.info("=" * 80)
+
+    try:
+        video_files = find_video_files(input_folder)
+
+        if not video_files:
+            logger.warning(f"No video files found in {input_folder}")
+            return
+
+        logger.info(f"Found {len(video_files)} video file(s) to process")
+
+        successful = 0
+        failed = 0
+
+        for idx, video_file in enumerate(video_files, 1):
+            logger.info(f"\n[{idx}/{len(video_files)}] Processing...")
+
+            success = process_single_file(video_file, output_folder, logger)
+
+            if success:
+                successful += 1
+            else:
+                failed += 1
+
+        logger.info("\n" + "=" * 80)
+        logger.info(f"Processing Complete")
+        logger.info(f"Successful: {successful}/{len(video_files)}")
+        logger.info(f"Failed: {failed}/{len(video_files)}")
+        logger.info(f"Output folder: {output_folder}")
+        logger.info(f"Log file: {log_path}")
+        logger.info("=" * 80)
+
+    except Exception as e:
+        logger.error(f"Fatal error: {e}", exc_info=True)
+        sys.exit(1)
+
 if __name__ == '__main__':
-    print(f"Whisper Transcription Automator v{SCRIPT_VERSION}")
-    print("Dependencies check: OK (can be validated during execution)")
+    INPUT_FOLDER = r'C:\Users\neals\Downloads\inmuno'
+    OUTPUT_FOLDER = r'C:\Users\neals\Downloads\inmuno\transcripts'
+
+    process_all_videos(INPUT_FOLDER, OUTPUT_FOLDER)
