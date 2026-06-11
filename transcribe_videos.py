@@ -411,6 +411,59 @@ def create_theater_format_text(dialogue):
 
     return "\n".join(lines)
 
+def create_transcript_json(transcript_data):
+    """
+    Create formatted JSON string from transcript data with speaker info.
+
+    Args:
+        transcript_data: dict with transcript information
+
+    Returns:
+        str: JSON formatted string
+    """
+    output = {
+        'fecha': transcript_data['fecha'],
+        'archivo_original': transcript_data['archivo_original'],
+        'duracion_segundos': transcript_data['duracion_segundos'],
+        'duracion_formateada': transcript_data['duracion_formateada'],
+        'modelo_whisper': transcript_data['modelo_whisper'],
+        'idioma': transcript_data['idioma'],
+        'diarization_habilitada': transcript_data.get('diarization_habilitada', True),
+        'speakers_detectados': transcript_data.get('speakers_detectados', []),
+        'diálogo': transcript_data.get('diálogo', []),
+        'transcripcion_completa': transcript_data.get('transcripcion_completa', ''),
+        'timestamp_procesamiento': transcript_data['timestamp_procesamiento'],
+        'estado': transcript_data['estado'],
+        'notas': transcript_data['notas']
+    }
+
+    return json.dumps(output, ensure_ascii=False, indent=2)
+
+def save_transcript(output_folder, date_str, original_filename, json_content):
+    """
+    Save transcript JSON to file.
+
+    Args:
+        output_folder: Path where to save transcripts
+        date_str: Date string from filename
+        original_filename: Original video filename
+        json_content: JSON string content
+
+    Returns:
+        Path: Path to saved file
+    """
+    output_folder = Path(output_folder)
+    output_folder.mkdir(parents=True, exist_ok=True)
+
+    base_name = os.path.splitext(original_filename)[0]
+    output_filename = f"{base_name}.json"
+    output_path = output_folder / output_filename
+
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write(json_content)
+
+    return output_path
+
 if __name__ == '__main__':
     print(f"Whisper Transcription Automator v{SCRIPT_VERSION}")
     print("Dependencies check: OK (can be validated during execution)")
