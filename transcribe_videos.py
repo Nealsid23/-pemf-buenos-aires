@@ -70,6 +70,30 @@ def parse_filename(filename):
     else:
         raise ValueError(f"Filename does not match expected pattern (YYYY-MM-DD-description): {filename}")
 
+def find_video_files(folder_path):
+    """
+    Find all supported video files in a folder.
+
+    Args:
+        folder_path: Path object or string path to search
+
+    Returns:
+        list: List of Path objects for found video files
+    """
+    folder_path = Path(folder_path)
+
+    if not folder_path.exists():
+        raise FileNotFoundError(f"Folder not found: {folder_path}")
+
+    video_files = []
+
+    # Find all files with supported extensions
+    for ext in SUPPORTED_FORMATS:
+        video_files.extend(folder_path.glob(f'*{ext}'))
+
+    # Sort by filename for consistent processing order
+    return sorted(video_files)
+
 if __name__ == '__main__':
     print(f"Whisper Transcription Automator v{SCRIPT_VERSION}")
     print("Dependencies check: OK (can be validated during execution)")
