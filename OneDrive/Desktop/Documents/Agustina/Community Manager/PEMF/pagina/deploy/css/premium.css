@@ -489,51 +489,92 @@
 .step-num { position: relative; z-index: 1; }
 
 /* ════════════════════════════════════════════
-   NOSOTROS — marquee de reels de Instagram
+   NOSOTROS — franja social estilo Neuro Gum
    ════════════════════════════════════════════ */
-.nosotros-photo {
-  aspect-ratio: auto;
-  height: 620px;
-  background: linear-gradient(165deg, #eaf6fc, #d8edf8);
-  position: relative;
-}
-.ig-marquee {
-  position: absolute;
-  inset: 0;
+.nosotros-grid { grid-template-columns: 1fr; }
+.ig-band { margin-top: 72px; }
+.ig-band-head {
   display: flex;
-  gap: 14px;
-  padding: 0 16px;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
 }
-/* fades arriba/abajo */
-.nosotros-photo::before, .nosotros-photo::after {
-  content: '';
-  position: absolute;
-  left: 0; right: 0;
-  height: 70px;
-  z-index: 2;
-  pointer-events: none;
+.ig-band-title {
+  font-family: 'Figtree', sans-serif;
+  font-size: clamp(28px, 3.4vw, 42px);
+  font-weight: 900;
+  letter-spacing: -.03em;
+  color: var(--slate);
+  margin-top: 12px;
 }
-.nosotros-photo::before { top: 0; background: linear-gradient(to bottom, #e7f4fb, transparent); }
-.nosotros-photo::after  { bottom: 0; background: linear-gradient(to top, #dceef7, transparent); }
-.ig-col {
+.ig-band-title em {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.ig-band-sub { font-size: 15px; color: var(--muted); margin-top: 6px; }
+
+/* marquee de hashtags — relleno y contorno alternados */
+.ig-hashtags {
+  overflow: hidden;
+  margin: 0 -32px 26px;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+.ig-hash-track {
   display: flex;
-  flex-direction: column;
-  gap: 14px;
-  flex: 1;
-  animation: igUp 30s linear infinite;
+  align-items: center;
+  gap: 26px;
+  width: max-content;
+  animation: hashSide 26s linear infinite;
   will-change: transform;
 }
-.ig-col.col-b { animation: igDown 36s linear infinite; }
-@keyframes igUp   { to   { transform: translateY(-50%); } }
-@keyframes igDown { from { transform: translateY(-50%); } to { transform: translateY(0); } }
-.ig-marquee:hover .ig-col { animation-play-state: paused; }
+@keyframes hashSide { to { transform: translateX(-50%); } }
+.ig-hash-track span {
+  font-family: 'Figtree', sans-serif;
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 900;
+  letter-spacing: -.02em;
+  color: var(--slate);
+  white-space: nowrap;
+}
+.ig-hash-track span.hollow {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(26,79,182,.45);
+}
+.ig-hash-track i { color: var(--sky); font-style: normal; font-size: 22px; }
+
+/* tira horizontal de reels */
+.ig-strip {
+  overflow: hidden;
+  margin: 0 -32px;
+  padding: 10px 0 18px;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+.ig-strip-track {
+  display: flex;
+  gap: 18px;
+  width: max-content;
+  animation: stripSide 38s linear infinite;
+  will-change: transform;
+}
+@keyframes stripSide { to { transform: translateX(-50%); } }
+.ig-strip:hover .ig-strip-track { animation-play-state: paused; }
 .ig-card {
   position: relative;
-  border-radius: 18px;
+  width: 236px;
+  border-radius: 20px;
   overflow: hidden;
   display: block;
   flex-shrink: 0;
-  box-shadow: 0 12px 30px rgba(16,29,61,.16);
+  box-shadow: 0 14px 34px rgba(16,29,61,.16);
   transition: transform .35s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
 }
 .ig-card img {
@@ -543,10 +584,43 @@
   object-fit: cover;
   display: block;
 }
+.ig-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,24,56,.55) 0%, transparent 32%);
+  pointer-events: none;
+}
 .ig-card:hover {
-  transform: scale(1.04) rotate(.5deg);
-  box-shadow: 0 18px 44px rgba(16,29,61,.28);
+  transform: translateY(-8px) scale(1.03) rotate(.6deg);
+  box-shadow: 0 24px 54px rgba(16,29,61,.3);
   z-index: 3;
+}
+.ig-handle {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  background: rgba(255,255,255,.88);
+  backdrop-filter: blur(6px);
+  border-radius: 100px;
+  padding: 5px 12px;
+  font-family: 'Figtree', sans-serif;
+  font-size: 10.5px;
+  font-weight: 800;
+  color: var(--night);
+}
+.ig-caption {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  right: 14px;
+  z-index: 2;
+  font-family: 'Figtree', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(10,24,56,.5);
 }
 .ig-play {
   position: absolute;
@@ -608,7 +682,9 @@
   .quizcta-card { padding: 48px 24px; }
   .bg-orb { filter: blur(60px); }
   .orb-sky { width: 300px; height: 300px; }
-  .nosotros-photo { height: 440px; }
+  .ig-card { width: 168px; border-radius: 16px; }
+  .ig-strip, .ig-hashtags { margin: 0 -20px; }
+  .ig-band { margin-top: 48px; }
   .mech-rings { inset: -4% -6%; }
 }
 
@@ -619,6 +695,6 @@
   .anim-ready [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; clip-path: none !important; }
   .anim-ready .w-rev > span { animation: none !important; transform: none !important; }
   .const-item, .ev-paper, .quizcta-card, [data-tilt] { transform: none !important; transition: none !important; }
-  .ig-col, .mech-rings i, .mech-shine::before, .anim-ready .step { animation: none !important; }
+  .ig-strip-track, .ig-hash-track, .mech-rings i, .mech-shine::before, .anim-ready .step { animation: none !important; }
   * { animation-duration: .001s !important; }
 }

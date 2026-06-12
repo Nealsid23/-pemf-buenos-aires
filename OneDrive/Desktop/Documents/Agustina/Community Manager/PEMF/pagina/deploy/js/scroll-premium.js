@@ -241,12 +241,6 @@
       el.setAttribute('data-reveal', '');
       el.style.setProperty('--rd', (Math.min(i, 5) * 0.07).toFixed(2) + 's');
     });
-    // Nosotros: foto con máscara, texto desde la derecha
-    var photo = document.querySelector('.nosotros-photo');
-    if (photo) {
-      photo.classList.remove('reveal');
-      photo.setAttribute('data-reveal', 'mask');
-    }
     // Footer: zoom sutil
     var footer = document.querySelector('.footer-inner');
     if (footer) footer.setAttribute('data-reveal', 'zoom');
@@ -336,7 +330,7 @@
         if (el) grids.push(el);
       });
     }
-    var tickers = [].slice.call(document.querySelectorAll('.ticker-row, .ig-col'));
+    var tickers = [].slice.call(document.querySelectorAll('.ticker-row, .ig-strip-track, .ig-hash-track'));
     function frame() {
       var y = window.scrollY;
       v += ((y - lastY) - v) * 0.12;                // velocidad con inercia
