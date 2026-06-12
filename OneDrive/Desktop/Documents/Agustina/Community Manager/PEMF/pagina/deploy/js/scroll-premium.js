@@ -28,6 +28,9 @@
         if (!en.isIntersecting) return;
         en.target.classList.add('revealed');
         io.unobserve(en.target);
+        // terminada la entrada, se quita la transición para que
+        // el tilt y los hovers respondan al instante
+        setTimeout(function () { en.target.classList.add('reveal-done'); }, 1400);
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
 
@@ -221,13 +224,150 @@
     els.forEach(function (el) { io.observe(el); });
   }
 
+  /* ────────────────────────────────────────────
+     6 · AUTO-TAG — entradas premium para secciones existentes
+     ──────────────────────────────────────────── */
+  function initAutoTag() {
+    // stagger en grillas que ya usan .reveal (page-index les pone .in)
+    ['.problem-grid', '.prod-grid', '.como-grid'].forEach(function (sel) {
+      var grid = document.querySelector(sel);
+      if (!grid) return;
+      [].forEach.call(grid.querySelectorAll('.reveal'), function (el, i) {
+        el.style.setProperty('--rd', ((i % 4) * 0.09).toFixed(2) + 's');
+      });
+    });
+    // FAQ: entrada escalonada
+    [].forEach.call(document.querySelectorAll('.faq-item'), function (el, i) {
+      el.setAttribute('data-reveal', '');
+      el.style.setProperty('--rd', (Math.min(i, 5) * 0.07).toFixed(2) + 's');
+    });
+    // Nosotros: foto con máscara, texto desde la derecha
+    var photo = document.querySelector('.nosotros-photo');
+    if (photo) {
+      photo.classList.remove('reveal');
+      photo.setAttribute('data-reveal', 'mask');
+    }
+    // Footer: zoom sutil
+    var footer = document.querySelector('.footer-inner');
+    if (footer) footer.setAttribute('data-reveal', 'zoom');
+    // Orbes de ambiente en secciones claras
+    ['.quiz-section', '.wa-form-section'].forEach(function (sel) {
+      var s = document.querySelector(sel);
+      if (!s) return;
+      s.insertAdjacentHTML('afterbegin',
+        '<div class="bg-orb orb-sky" style="opacity:.5"></div><div class="bg-orb orb-gold" style="opacity:.6"></div>');
+    });
+  }
+
+  /* ────────────────────────────────────────────
+     7 · TÍTULOS — palabra por palabra al entrar
+     ──────────────────────────────────────────── */
+  function initTitleReveals() {
+    var titles = [].filter.call(
+      document.querySelectorAll('.section-title, .quiz-title'),
+      function (el) { return !el.id && el.children.length === 0 && el.textContent.trim(); }
+    );
+    if (!titles.length) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        en.target.classList.add('t-on');
+        io.unobserve(en.target);
+      });
+    }, { threshold: 0.4 });
+    titles.forEach(function (el) {
+      var words = el.textContent.trim().split(/\s+/);
+      el.textContent = '';
+      words.forEach(function (w, i) {
+        var line = document.createElement('span');
+        line.className = 't-line';
+        var inner = document.createElement('span');
+        inner.textContent = w;
+        inner.style.setProperty('--td', (i * 0.07).toFixed(2) + 's');
+        line.appendChild(inner);
+        el.appendChild(line);
+        if (i < words.length - 1) el.appendChild(document.createTextNode(' '));
+      });
+      io.observe(el);
+    });
+  }
+
+  /* ────────────────────────────────────────────
+     8 · PARALLAX — capas a distinta velocidad
+     ──────────────────────────────────────────── */
+  function initParallax() {
+    var conf = [
+      { sel: '.how-bg-wrap',        f: 0.12 },
+      { sel: '.nosotros-photo img', f: 0.09 },
+      { sel: '.ev-fan',             f: 0.05 },
+      { sel: '.hero-v2 .orb-sky',   f: -0.22 },
+      { sel: '.hero-v2 .orb-blue',  f: 0.14 }
+    ];
+    var mobile = window.matchMedia('(max-width: 768px)').matches;
+    var targets = [];
+    conf.forEach(function (c) {
+      var el = document.querySelector(c.sel);
+      if (el) targets.push({ el: el, f: mobile ? c.f * 0.4 : c.f, y: 0 });
+    });
+    if (!targets.length) return;
+    function frame() {
+      var vc = window.innerHeight / 2;
+      targets.forEach(function (t) {
+        var r = t.el.getBoundingClientRect();
+        var goal = ((r.top + r.height / 2) - vc) * t.f;
+        goal = Math.max(-110, Math.min(110, goal)); // capado: secciones altas
+        t.y += (goal - t.y) * 0.08;                 // inercia fluida
+        t.el.style.transform = 'translate3d(0,' + (-t.y).toFixed(2) + 'px,0)';
+      });
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  /* ────────────────────────────────────────────
+     9 · VELOCIDAD DE SCROLL — ticker y skew de grillas
+     ──────────────────────────────────────────── */
+  function initVelocity() {
+    var lastY = window.scrollY, v = 0;
+    var grids = [];
+    if (canHover) {
+      ['.prod-grid', '.problem-grid'].forEach(function (sel) {
+        var el = document.querySelector(sel);
+        if (el) grids.push(el);
+      });
+    }
+    var tickers = [].slice.call(document.querySelectorAll('.ticker-row'));
+    function frame() {
+      var y = window.scrollY;
+      v += ((y - lastY) - v) * 0.12;                // velocidad con inercia
+      lastY = y;
+      // las grillas se inclinan apenas con el envión del scroll
+      var skew = Math.max(-1.4, Math.min(1.4, v * 0.05));
+      grids.forEach(function (g) {
+        g.style.transform = 'skewY(' + skew.toFixed(3) + 'deg)';
+      });
+      // los testimonios aceleran cuando scrolleás rápido
+      var rate = 1 + Math.min(2.5, Math.abs(v) * 0.06);
+      tickers.forEach(function (t) {
+        var anims = t.getAnimations ? t.getAnimations() : [];
+        anims.forEach(function (a) { a.playbackRate = rate; });
+      });
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
   /* ──────────────────────────────────────────── */
   function init() {
+    initAutoTag();        // debe correr antes que initReveals
     initReveals();
     initConstellation();
     initTilt();
     initEvidenceFan();
     initCounters();
+    initTitleReveals();
+    initParallax();
+    initVelocity();
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
