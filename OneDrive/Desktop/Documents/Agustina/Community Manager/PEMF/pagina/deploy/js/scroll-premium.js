@@ -336,7 +336,7 @@
         if (el) grids.push(el);
       });
     }
-    var tickers = [].slice.call(document.querySelectorAll('.ticker-row'));
+    var tickers = [].slice.call(document.querySelectorAll('.ticker-row, .ig-col'));
     function frame() {
       var y = window.scrollY;
       v += ((y - lastY) - v) * 0.12;                // velocidad con inercia
@@ -357,6 +357,50 @@
     requestAnimationFrame(frame);
   }
 
+  /* ────────────────────────────────────────────
+     10 · CÓMO FUNCIONA — panel de vidrio 3D interactivo
+     El tilt va sobre .mech-carousel (no sobre .mech-card,
+     cuyas animaciones card-in/out usan fill:forwards).
+     ──────────────────────────────────────────── */
+  function initMech3D() {
+    var panel = document.querySelector('.mech-carousel');
+    if (!panel) return;
+    var section = document.getElementById('tecnologia') || panel;
+    var host = panel.parentElement;
+    host.classList.add('mech-stage-host');
+    // anillos de energía detrás del panel + barrido de luz adentro
+    host.insertAdjacentHTML('afterbegin', '<div class="mech-rings"><i></i><i></i><i></i></div>');
+    panel.insertAdjacentHTML('beforeend', '<div class="mech-shine"></div>');
+
+    var tx = 0, ty = 0, mx = 0, my = 0, sr = 0;
+    if (canHover) {
+      panel.addEventListener('mousemove', function (e) {
+        var r = panel.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width;
+        var py = (e.clientY - r.top) / r.height;
+        tx = (px - 0.5) * 2;
+        ty = (py - 0.5) * 2;
+        panel.style.setProperty('--glow-x', (px * 100).toFixed(1) + '%');
+        panel.style.setProperty('--glow-y', (py * 100).toFixed(1) + '%');
+      });
+      panel.addEventListener('mouseleave', function () { tx = 0; ty = 0; });
+    }
+    function frame() {
+      // rotación base ligada al scroll: el panel "mira" al centro del viewport
+      var r = section.getBoundingClientRect();
+      var p = ((r.top + r.height / 2) - window.innerHeight / 2) / window.innerHeight;
+      var goal = Math.max(-9, Math.min(9, p * 16));
+      sr += (goal - sr) * 0.07;
+      // tilt de mouse con inercia
+      mx += ((tx * 6) - mx) * 0.08;
+      my += ((ty * -6) - my) * 0.08;
+      panel.style.transform =
+        'perspective(1200px) rotateX(' + (sr + my).toFixed(2) + 'deg) rotateY(' + mx.toFixed(2) + 'deg)';
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
   /* ──────────────────────────────────────────── */
   function init() {
     initAutoTag();        // debe correr antes que initReveals
@@ -368,6 +412,7 @@
     initTitleReveals();
     initParallax();
     initVelocity();
+    initMech3D();
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
