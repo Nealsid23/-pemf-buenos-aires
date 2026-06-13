@@ -380,6 +380,186 @@
       "pdf": "estudios/extra/wang-2019-geomagnetic-brain-alpha.pdf",
       "doi": "10.1523/ENEURO.0483-18.2019",
       "note": "OPTIMIZE (C. Clinton), referencias cap. 6. Evidencia directa de magnetorrecepción en humanos; respalda la base biofísica de la sensibilidad a campos magnéticos. Acceso abierto (eNeuro/Caltech). · Verificado contra el PDF original"
+    },
+    {
+      "id": "extra-chevalier-2012-earthing-revision",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/chevalier-2012-earthing-revision.jpg",
+      "title": "Earthing: Health Implications of Reconnecting the Human Body to the Earth's Surface Electrons",
+      "cite": "Chevalier, Sinatra, Oschman et al. · Journal of Environmental and Public Health · 2012",
+      "n": "Revisión (sintetiza ~12 estudios piloto previos)",
+      "loc": "University of California Irvine, EE.UU. / Military Clinical Hospital, Bydgoszcz, Polonia",
+      "dur": "—",
+      "method": "Artículo de revisión que recopila la investigación sobre earthing/grounding: contacto eléctricamente conductivo del cuerpo con la superficie de la Tierra (descalzo o mediante sistemas conductivos conectados a tierra) y su efecto sobre la fisiología.",
+      "results": [
+        "La superficie de la Tierra mantiene un potencial negativo con un suministro continuo de electrones libres que pueden transferirse al cuerpo por contacto conductivo.",
+        "La reconexión con los electrones de la Tierra se asocia a mejor sueño, menor dolor, normalización del ritmo circadiano de cortisol y cambios fisiológicos medibles.",
+        "Propone que los electrones libres absorbidos actúan como antioxidantes neutralizando especies reactivas de oxígeno (ROS) implicadas en inflamación."
+      ],
+      "pdf": "estudios/extra/chevalier-2012-earthing-revision.pdf",
+      "doi": "10.1155/2012/291541",
+      "note": "Resuena con bioelectricidad y el rol de electrones/antioxidantes en la fisiología, base conceptual de terapias de campo. Verificado contra el PDF original."
+    },
+    {
+      "id": "extra-li-pollack-2020-flujo-inducido-superficie-ir-ez",
+      "brand": "analemma",
+      "type": "vitro",
+      "portada": "img/papers/li-pollack-2020-flujo-inducido-superficie-ir-ez.jpg",
+      "title": "Surface-induced flow: A natural microscopic engine using infrared energy as fuel",
+      "cite": "Li & Pollack · Science Advances · 2020",
+      "n": "Experimentos in vitro en hidrogeles vegetales y animales (agarosa, agar, almidón, colágeno, gelatina)",
+      "loc": "Department of Bioengineering, University of Washington, Seattle, EE.UU.",
+      "dur": "—",
+      "method": "Estudio biofísico de laboratorio: túneles en hidrogeles inmersos en agua; se observa el flujo espontáneo con microesferas de poliestireno y se mide el efecto de la energía infrarroja incidente y del diámetro del túnel sobre la velocidad de flujo.",
+      "results": [
+        "Se produce flujo espontáneo dentro de túneles de hidrogel sin ningún gradiente de presión, confirmado en hidrogeles vegetales y animales.",
+        "El flujo se vincula a la zona de exclusión (EZ) cargada negativamente que se forma junto a superficies hidrofílicas; sin EZ (Teflón) no hay flujo.",
+        "La energía infrarroja incidente aumenta sustancialmente la velocidad del flujo y los túneles más estrechos generan flujo más rápido: el agua estructurada convierte energía radiante en energía cinética."
+      ],
+      "pdf": "estudios/extra/li-pollack-2020-flujo-inducido-superficie-ir-ez.pdf",
+      "doi": "10.1126/sciadv.aba0941",
+      "note": "Respalda el concepto de agua estructurada/EZ (Analemma) y la luz infrarroja como fuente de energía biológica. Verificado contra el PDF original."
+    },
+    {
+      "id": "extra-powner-2024-luz-roja-mitocondria-glucosa",
+      "brand": "all",
+      "type": "rct",
+      "portada": "img/papers/powner-2024-luz-roja-mitocondria-glucosa.jpg",
+      "title": "Light stimulation of mitochondria reduces blood glucose levels",
+      "cite": "Powner & Jeffery · Journal of Biophotonics · 2024",
+      "n": "30 participantes sanos (15 luz 670 nm, 15 placebo)",
+      "loc": "City, University of London / UCL Institute of Ophthalmology, Reino Unido",
+      "dur": "Dos test de tolerancia a la glucosa en un periodo de 7 días",
+      "method": "Ensayo aleatorizado con placebo: prueba oral de tolerancia a la glucosa (75 g). El grupo de fotobiomodulación recibió 15 min de luz roja 670 nm 45 min antes de la glucosa; el placebo se posicionó igual con la luz apagada. Glucemia capilar medida cada 15 min durante 2 h.",
+      "results": [
+        "La exposición de 15 min a luz 670 nm redujo la elevación de glucosa tras la ingesta en un 27,7% integrado sobre 2 h.",
+        "El pico máximo de glucosa se redujo un 7,5% respecto al placebo.",
+        "La luz roja absorbida por la citocromo c oxidasa aumenta el potencial de membrana mitocondrial y la producción de ATP, incrementando la demanda y consumo de glucosa."
+      ],
+      "pdf": "estudios/extra/powner-2024-luz-roja-mitocondria-glucosa.pdf",
+      "doi": "10.1002/jbio.202300521",
+      "note": "Respalda fotobiomodulación / fototerapia (luz roja 670 nm, mitocondrias), núcleo conceptual de productos de luz. Verificado contra el PDF original."
+    },
+    {
+      "id": "extra-cheng-2023-hidrogeno-mitocondria-keap1-nrf2",
+      "brand": "drinkhrw",
+      "type": "revision",
+      "portada": "img/papers/cheng-2023-hidrogeno-mitocondria-keap1-nrf2.jpg",
+      "title": "Hydrogen: A Rising Star in Gas Medicine as a Mitochondria-Targeting Nutrient via Activating Keap1-Nrf2 Antioxidant System",
+      "cite": "Cheng, Long, Zhao & Liu · Antioxidants (MDPI) · 2023",
+      "n": "Revisión (múltiples modelos de enfermedad)",
+      "loc": "Center for Mitochondrial Biology and Medicine, Xi'an Jiaotong University, China",
+      "dur": "—",
+      "method": "Revisión de la evidencia sobre el hidrógeno molecular (H2) como gas medicinal, centrada en el mecanismo de targeting mitocondrial vía activación del sistema antioxidante de fase II Keap1-Nrf2 en distintos modelos de enfermedad.",
+      "results": [
+        "El H2 es la molécula diatómica más pequeña; no tóxica y de fácil acceso, con efectos preventivos y terapéuticos en sistemas respiratorio, cardiovascular y nervioso central.",
+        "Propone que el efecto protector del H2 depende principalmente de su capacidad para penetrar la célula y regular la homeostasis mitocondrial activando la vía Keap1-Nrf2, más que del barrido directo de radicales libres.",
+        "Las mitocondrias son la principal fuente y diana de las especies reactivas de oxígeno, lo que ubica al H2 como nutriente dirigido a la mitocondria."
+      ],
+      "pdf": "estudios/extra/cheng-2023-hidrogeno-mitocondria-keap1-nrf2.pdf",
+      "doi": "10.3390/antiox12122062",
+      "note": "Respalda hidrógeno molecular (H2 Tablets / drinkHRW) y mitocondrias. Verificado contra el PDF original."
+    },
+    {
+      "id": "extra-zhang-2023-mitocondria-hidrogeno-molecular-funciones",
+      "brand": "drinkhrw",
+      "type": "revision",
+      "portada": "img/papers/zhang-2023-mitocondria-hidrogeno-molecular-funciones.jpg",
+      "title": "Mitochondria: one of the vital hubs for molecular hydrogen's biological functions",
+      "cite": "Zhang, Xie, Ma et al. · Frontiers in Cell and Developmental Biology · 2023",
+      "n": "Revisión (evidencia experimental en animales, plantas y microorganismos)",
+      "loc": "Beijing University of Technology / Beijing Molecular Hydrogen Research Center, China",
+      "dur": "—",
+      "method": "Revisión que sintetiza la evidencia experimental sobre el impacto del hidrógeno molecular (H2) en la función mitocondrial y las vías mitocondriales que subyacen a sus efectos biológicos, ademas del metabolismo del H2 en organismos eucariotas.",
+      "results": [
+        "Documenta efectos biológicos diversos del H2 en animales, plantas y microorganismos; >2000 estudios y >100 ensayos clínicos en 15 años.",
+        "Identifica la mitocondria (producción de ATP, señalización de Ca2+, regulación de ROS, apoptosis) como hub central de las funciones del H2, incluyendo el complejo I.",
+        "Propone que el H2 puede regular el control de calidad mitocondrial según el grado de daño, y plantea posible actividad hidrogenasa en mitocondrias de plantas y animales superiores."
+      ],
+      "pdf": "estudios/extra/zhang-2023-mitocondria-hidrogeno-molecular-funciones.pdf",
+      "doi": "10.3389/fcell.2023.1283820",
+      "note": "Respalda hidrógeno molecular (H2 Tablets / drinkHRW) y su acción mitocondrial. Verificado contra el PDF original."
+    },
+    {
+      "id": "extra-oschman-2015-grounding-inflamacion-cicatrizacion-revision",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/oschman-2015-grounding-inflamacion-cicatrizacion-revision.jpg",
+      "title": "The effects of grounding (earthing) on inflammation, the immune response, wound healing, and prevention and treatment of chronic inflammatory and autoimmune diseases",
+      "cite": "Oschman, Chevalier & Brown · Journal of Inflammation Research · 2015",
+      "n": "Revisión/hipótesis (integra estudios piloto y 20 casos con imagen infrarroja)",
+      "loc": "Nature's Own Research Association, EE.UU. / University of California Irvine / University of Oregon",
+      "dur": "—",
+      "method": "Artículo de hipótesis y revisión que integra estudios multidisciplinarios sobre el contacto eléctricamente conductivo del cuerpo con la Tierra (grounding) y sus efectos sobre inflamación, respuesta inmune y cicatrización; usa el modelo de dolor muscular de aparición tardía (DOMS).",
+      "results": [
+        "El grounding produce diferencias medibles en concentraciones de glóbulos blancos, citoquinas y otras moléculas de la respuesta inflamatoria.",
+        "Reduce o previene los signos cardinales de inflamación tras lesión y acelera la cicatrización (documentado con imagen infrarroja en 20 casos).",
+        "Hipótesis: los electrones de la Tierra crean un microambiente antioxidante alrededor del campo de reparación, limitando el daño por ROS y la inflamación 'silenciosa'."
+      ],
+      "pdf": "estudios/extra/oschman-2015-grounding-inflamacion-cicatrizacion-revision.pdf",
+      "doi": "10.2147/JIR.S69656",
+      "note": "Respalda bioelectricidad / rol de electrones y antioxidantes en inflamación y cicatrización. Verificado contra el PDF original."
+    },
+    {
+      "id": "extra-waisberg-2024-luz-nir-roja-mitocondria-sans",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/waisberg-2024-luz-nir-roja-mitocondria-sans.jpg",
+      "title": "Near infrared/red light therapy a potential countermeasure for mitochondrial dysfunction in spaceflight associated neuro-ocular syndrome (SANS)",
+      "cite": "Waisberg, Ong, Masalkhi & Lee · Eye (Nature) · 2024",
+      "n": "Artículo de perspectiva/comentario",
+      "loc": "University of Cambridge, Reino Unido / University of Michigan / University College Dublin / Houston Methodist, EE.UU.",
+      "dur": "—",
+      "method": "Comentario científico que propone la terapia de luz roja / infrarrojo cercano (NIR) como contramedida no invasiva para la disfunción mitocondrial y el estrés oxidativo asociados al síndrome neuro-ocular del vuelo espacial (SANS).",
+      "results": [
+        "El vuelo espacial prolongado induce estrés y disfunción mitocondrial (evidenciado por análisis multi-ómicos), implicado en el SANS.",
+        "Las mitocondrias generan y reciben ROS; su deterioro contribuye al estrés oxidativo ocular; los fotorreceptores y axones de células ganglionares retinianas son ricos en mitocondrias.",
+        "La luz roja/NIR es absorbida por la mitocondria y se plantea como contramedida sin efectos secundarios para mejorar su función."
+      ],
+      "pdf": "estudios/extra/waisberg-2024-luz-nir-roja-mitocondria-sans.pdf",
+      "doi": "10.1038/s41433-024-03091-4",
+      "note": "Respalda fotobiomodulación / luz roja-infrarroja y mitocondrias (fototerapia). Verificado contra el PDF original."
+    },
+    {
+      "id": "extra-becker-1972-estimulacion-electrica-regeneracion-extremidades-mamiferos",
+      "brand": "all",
+      "type": "animal",
+      "portada": "img/papers/becker-1972-estimulacion-electrica-regeneracion-extremidades-mamiferos.jpg",
+      "title": "Electrical Stimulation of Partial Limb Regeneration in Mammals",
+      "cite": "Becker & Spadaro · Bulletin of the New York Academy of Medicine · 1972",
+      "n": "Modelo experimental en mamíferos (ratas)",
+      "loc": "Veterans Administration Hospital / SUNY Upstate Medical Center, Syracuse, EE.UU.",
+      "dur": "—",
+      "method": "Estudio experimental de bioelectricidad: aplicación de corriente eléctrica continua de baja intensidad en muñones de amputación de extremidades de mamíferos para inducir respuestas regenerativas tipo blastema, comparado con la regeneración completa de anfibios.",
+      "results": [
+        "La estimulación eléctrica indujo respuestas regenerativas parciales (formación de blastema y crecimiento de tejidos) en extremidades amputadas de mamíferos, normalmente incapaces de regenerar.",
+        "Establece la relación entre el estado bioeléctrico de las células y la dirección del crecimiento/regeneración tisular.",
+        "Sustenta que las corrientes eléctricas endógenas y aplicadas controlan procesos de reparación y regeneración."
+      ],
+      "pdf": "estudios/extra/becker-1972-estimulacion-electrica-regeneracion-extremidades-mamiferos.pdf",
+      "doi": "PMC1806700",
+      "note": "Respalda bioelectricidad y regeneración por estimulación eléctrica (base conceptual de terapias de campo/PEMF). Verificado contra el PDF original."
+    },
+    {
+      "id": "extra-chevalier-2014-grounding-flujo-sanguineo-facial-rct",
+      "brand": "all",
+      "type": "rct",
+      "portada": "img/papers/chevalier-2014-grounding-flujo-sanguineo-facial-rct.jpg",
+      "title": "Grounding the Human Body Improves Facial Blood Flow Regulation: Results of a Randomized, Placebo Controlled Pilot Study",
+      "cite": "Chevalier · Journal of Cosmetics, Dermatological Sciences and Applications · 2014",
+      "n": "40 sujetos (27 grounded, 13 sham-grounded como control)",
+      "loc": "Developmental and Cell Biology Department, University of California at Irvine, EE.UU.",
+      "dur": "Sesión de al menos 1 hora",
+      "method": "Estudio piloto doble ciego, aleatorizado y controlado con placebo: sujetos conectados a tierra (o sham) durante al menos 1 h en un sillón con manta, almohada y parches conductivos conectados a la toma de tierra. Flujo sanguíneo facial registrado de forma no invasiva con cámara de imagen de contraste de speckle láser (LSCI).",
+      "results": [
+        "La regulación del flujo sanguíneo facial mejoró claramente en los sujetos conectados a tierra, pero no en los sham-grounded.",
+        "Sugiere que el grounding mejora la circulación periférica/facial, relevante para perfusión y regeneración tisular.",
+        "Refuerza los efectos fisiológicos del contacto conductivo con la carga negativa de la Tierra observados en otros estudios de earthing."
+      ],
+      "pdf": "estudios/extra/chevalier-2014-grounding-flujo-sanguineo-facial-rct.pdf",
+      "doi": "10.4236/jcdsa.2014.45039",
+      "note": "RCT piloto que respalda bioelectricidad/grounding y circulación. Verificado contra el PDF original."
     }
   ]
 }
