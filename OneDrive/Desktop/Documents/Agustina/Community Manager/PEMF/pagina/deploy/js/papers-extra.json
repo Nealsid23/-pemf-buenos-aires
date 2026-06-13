@@ -560,6 +560,66 @@
       "pdf": "estudios/extra/chevalier-2014-grounding-flujo-sanguineo-facial-rct.pdf",
       "doi": "10.4236/jcdsa.2014.45039",
       "note": "RCT piloto que respalda bioelectricidad/grounding y circulación. Verificado contra el PDF original."
+    },
+    {
+      "id": "extra-zadro-2022-reiki-mental-health",
+      "brand": "all",
+      "type": "meta",
+      "portada": "img/papers/zadro-2022-reiki-mental-health.jpg",
+      "title": "Does Reiki Benefit Mental Health Symptoms Above Placebo?",
+      "cite": "Zadro S, Stapleton P · Frontiers in Psychology · 2022",
+      "n": "Revisión sistemática de 14 RCTs",
+      "loc": "Bond University, Australia",
+      "dur": "—",
+      "method": "Revisión sistemática (Cochrane ROB 2) de ensayos aleatorizados que comparan Reiki —una terapia de biocampo donde el terapeuta canaliza energía hacia el paciente— contra placebo en síntomas de salud mental.",
+      "results": [
+        "Reiki mostró un efecto terapéutico mayor que el placebo en varios síntomas de salud mental",
+        "Evidencia GRADE alta para estrés y depresión clínicamente relevantes; moderada-alta para ansiedad",
+        "Sin efectos adversos reportados"
+      ],
+      "pdf": "estudios/extra/zadro-2022-reiki-mental-health.pdf",
+      "doi": "10.3389/fpsyg.2022.897312",
+      "note": "Reiki como terapia de biocampo (energía sutil): evidencia de efecto sobre estrés, ansiedad y depresión por encima del placebo. Verificado contra el PDF original (CC-BY)."
+    },
+    {
+      "id": "extra-tabatabaee-2016-therapeutic-touch-cancer",
+      "brand": "all",
+      "type": "rct",
+      "portada": "img/papers/tabatabaee-2016-therapeutic-touch-cancer.jpg",
+      "title": "Effect of Therapeutic Touch on Pain Related Parameters in Patients with Cancer: A Randomized Clinical Trial",
+      "cite": "Tabatabaee A, et al · Mater Sociomed · 2016",
+      "n": "Ensayo clínico aleatorizado, 3 grupos",
+      "loc": "Shahid Beheshti University, Irán",
+      "dur": "—",
+      "method": "Ensayo aleatorizado que evalúa el Toque Terapéutico (Therapeutic Touch, terapia de biocampo) frente a control en parámetros de dolor de pacientes oncológicos.",
+      "results": [
+        "El Toque Terapéutico mejoró significativamente los parámetros de dolor (actividad, ánimo, caminar, relaciones, sueño)",
+        "Diferencia significativa entre grupos al final de las sesiones (p=0.001)",
+        "Se sugiere como método complementario para el manejo del dolor"
+      ],
+      "pdf": "estudios/extra/tabatabaee-2016-therapeutic-touch-cancer.pdf",
+      "doi": "10.5455/msm.2016.28.220-223",
+      "note": "Toque Terapéutico (biocampo): RCT con efecto real sobre el dolor en cáncer. Verificado contra el PDF original (CC-BY-NC)."
+    },
+    {
+      "id": "extra-valenti-2024-sound-matrix-mitochondria",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/valenti-2024-sound-matrix-mitochondria.jpg",
+      "title": "Sound Matrix Shaping of Living Matter: From Macrosystems to Cell Microenvironment, Where Mitochondria Act as Energy Portals in Detecting and Processing Sound Vibrations",
+      "cite": "Valenti D, Atlante A · Int. J. Molecular Sciences · 2024",
+      "n": "Revisión",
+      "loc": "IBIOM-CNR, Italia",
+      "dur": "—",
+      "method": "Revisión de la evidencia sobre cómo la vibración y el sonido modulan la función biológica, con foco en la mitocondria como organelo que detecta y procesa las vibraciones sonoras.",
+      "results": [
+        "Cada célula vibra a frecuencias definidas, generando una 'firma sonora' propia",
+        "Las mitocondrias actúan como portales de energía que transducen información biológica del sonido",
+        "La función mitocondrial puede modularse mediante vibración/sonido"
+      ],
+      "pdf": "estudios/extra/valenti-2024-sound-matrix-mitochondria.pdf",
+      "doi": "10.3390/ijms25136841",
+      "note": "Sonido y vibración como matriz de la materia viva, vía mitocondria: base del paradigma de resonancia/sonido. Verificado contra el PDF original (CC-BY)."
     }
   ]
 }
