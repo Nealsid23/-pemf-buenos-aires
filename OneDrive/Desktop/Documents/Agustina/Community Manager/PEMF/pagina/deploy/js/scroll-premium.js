@@ -395,6 +395,119 @@
     requestAnimationFrame(frame);
   }
 
+  /* ────────────────────────────────────────────
+     11 · ENCONTRÁ TU PRODUCTO — escenario coreografiado
+     Un solo motor escribe el transform de cada tarjeta:
+     profundidad por scroll + tilt al mouse + lift al hover.
+     ──────────────────────────────────────────── */
+  function initQuizStage() {
+    var section = document.querySelector('.quiz-section');
+    if (!section) return;
+    var cards = [].slice.call(section.querySelectorAll('.quiz-card'));
+    if (!cards.length) return;
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        section.classList.add('qs-in');
+        io.disconnect();
+        // tras la entrada, el motor rAF toma el control del transform
+        setTimeout(function () { section.classList.add('qs-ready'); }, 1500);
+      });
+    }, { threshold: 0.25 });
+    io.observe(section);
+
+    var state = cards.map(function (el, i) {
+      return { el: el, h: 0, tx: 0, ty: 0, lift: 0, rx: 0, ry: 0,
+               depth: (i % 2 ? -1 : 1) * (7 + i * 3) };
+    });
+    if (canHover) {
+      state.forEach(function (s) {
+        s.el.addEventListener('mouseenter', function () { s.h = 1; });
+        s.el.addEventListener('mouseleave', function () { s.h = 0; s.tx = 0; s.ty = 0; });
+        s.el.addEventListener('mousemove', function (e) {
+          var r = s.el.getBoundingClientRect();
+          s.tx = ((e.clientX - r.left) / r.width - 0.5) * 2;
+          s.ty = ((e.clientY - r.top) / r.height - 0.5) * 2;
+        });
+      });
+    }
+    // pulso guía que recorre las tarjetas (se pausa con el mouse encima)
+    var pi = 0, paused = false;
+    section.addEventListener('mouseenter', function () {
+      paused = true;
+      cards.forEach(function (c) { c.classList.remove('qs-pulse'); });
+    });
+    section.addEventListener('mouseleave', function () { paused = false; });
+    setInterval(function () {
+      if (paused || !section.classList.contains('qs-ready')) return;
+      cards.forEach(function (c) { c.classList.remove('qs-pulse'); });
+      cards[pi % cards.length].classList.add('qs-pulse');
+      pi++;
+    }, 2600);
+
+    function frame() {
+      if (section.classList.contains('qs-ready')) {
+        var r = section.getBoundingClientRect();
+        var p = ((r.top + r.height / 2) - window.innerHeight / 2) / window.innerHeight;
+        p = Math.max(-0.8, Math.min(0.8, p));
+        state.forEach(function (s) {
+          s.lift += ((s.h ? -10 : 0) - s.lift) * 0.1;
+          s.rx += ((s.h ? s.ty * -6 : 0) - s.rx) * 0.12;
+          s.ry += ((s.h ? s.tx * 6 : 0) - s.ry) * 0.12;
+          var py = p * s.depth * 2.4;
+          s.el.style.transform =
+            'perspective(800px) translateY(' + (py + s.lift).toFixed(2) + 'px)' +
+            ' rotateX(' + s.rx.toFixed(2) + 'deg) rotateY(' + s.ry.toFixed(2) + 'deg)';
+        });
+      }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  /* ────────────────────────────────────────────
+     12 · PROBLEMA — fotos vivas (Ken Burns ligado al scroll)
+     ──────────────────────────────────────────── */
+  function initProblemaLive() {
+    var imgs = [].map.call(document.querySelectorAll('.problem-card .prob-photo img'), function (el, i) {
+      return { el: el, dir: i % 2 ? 1 : -1, y: 0 };
+    });
+    if (!imgs.length) return;
+    function frame() {
+      var vc = window.innerHeight / 2;
+      imgs.forEach(function (it) {
+        var r = it.el.getBoundingClientRect();
+        if (r.bottom < -100 || r.top > window.innerHeight + 100) return;
+        var goal = (((r.top + r.height / 2) - vc) / window.innerHeight) * 16 * it.dir;
+        it.y += (goal - it.y) * 0.08;
+        it.el.style.transform = 'scale(1.14) translateY(' + it.y.toFixed(2) + 'px)';
+      });
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  /* ────────────────────────────────────────────
+     13 · CÓMO COMPRAR — línea de progreso que se dibuja
+     ──────────────────────────────────────────── */
+  function initComoTimeline() {
+    var grid = document.querySelector('.como-grid');
+    if (!grid) return;
+    grid.insertAdjacentHTML('afterbegin', '<div class="como-line" aria-hidden="true"></div>');
+    var line = grid.querySelector('.como-line');
+    var sx = 0;
+    function frame() {
+      var r = grid.getBoundingClientRect();
+      var p = Math.min(1, Math.max(0, (window.innerHeight * 0.88 - r.top) / (r.height + window.innerHeight * 0.25)));
+      var e = p * p * (3 - 2 * p);
+      sx += (e - sx) * 0.09;
+      line.style.transform = 'scaleX(' + sx.toFixed(4) + ')';
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
   /* ──────────────────────────────────────────── */
   function init() {
     initAutoTag();        // debe correr antes que initReveals
@@ -407,6 +520,9 @@
     initParallax();
     initVelocity();
     initMech3D();
+    initQuizStage();
+    initProblemaLive();
+    initComoTimeline();
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);

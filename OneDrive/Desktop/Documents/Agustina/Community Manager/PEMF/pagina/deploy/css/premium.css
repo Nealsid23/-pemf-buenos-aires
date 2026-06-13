@@ -660,6 +660,102 @@
 .ig-follow svg { width: 17px; height: 17px; fill: #fff; }
 
 /* ════════════════════════════════════════════
+   ENCONTRÁ TU PRODUCTO — escenario 3D coreografiado
+   ════════════════════════════════════════════ */
+.quiz-cards { perspective: 1000px; }
+.quiz-card { position: relative; will-change: transform; transition: box-shadow .5s ease; }
+/* entrada: las tarjetas se "paran" desde el plano */
+.anim-ready .quiz-section .quiz-card {
+  opacity: 0;
+  transform: rotateX(18deg) translateY(48px) scale(.95);
+}
+.anim-ready .quiz-section.qs-in .quiz-card {
+  opacity: 1;
+  transform: none;
+  transition: opacity 1s cubic-bezier(.22,1,.36,1), transform 1s cubic-bezier(.22,1,.36,1), box-shadow .5s ease;
+}
+.anim-ready .quiz-section.qs-in .quiz-card:nth-child(1) { transition-delay: 0s; }
+.anim-ready .quiz-section.qs-in .quiz-card:nth-child(2) { transition-delay: .12s; }
+.anim-ready .quiz-section.qs-in .quiz-card:nth-child(3) { transition-delay: .24s; }
+.anim-ready .quiz-section.qs-in .quiz-card:nth-child(4) { transition-delay: .36s; }
+/* cuando el motor JS toma el control, la transición de transform se apaga */
+.anim-ready .quiz-section.qs-ready .quiz-card { transition: opacity 1s, box-shadow .5s ease; }
+/* pulso guía que recorre las tarjetas */
+.quiz-card.qs-pulse {
+  box-shadow: 0 18px 44px rgba(26,79,182,.16), 0 0 0 2px rgba(103,204,233,.55);
+}
+.quiz-card.qs-pulse .quiz-icon { animation: qiPop .7s cubic-bezier(.34,1.56,.64,1); }
+@keyframes qiPop { 50% { transform: scale(1.14) rotate(-5deg); } }
+/* los íconos respiran */
+.anim-ready .quiz-icon { animation: qiBreath 4.5s ease-in-out infinite; }
+.quiz-card:nth-child(2) .quiz-icon { animation-delay: 1.1s; }
+.quiz-card:nth-child(3) .quiz-icon { animation-delay: 2.2s; }
+.quiz-card:nth-child(4) .quiz-icon { animation-delay: 3.3s; }
+@keyframes qiBreath { 50% { transform: translateY(-4px); } }
+
+/* ════════════════════════════════════════════
+   PROBLEMA — tarjetas que se paran + fotos vivas
+   ════════════════════════════════════════════ */
+.problem-grid { perspective: 1100px; }
+.anim-ready .problem-card.reveal:not(.in) {
+  transform: rotateX(16deg) translateY(56px) scale(.96);
+}
+.prob-photo { overflow: hidden; }
+.prob-photo img { will-change: transform; transform: scale(1.14); }
+
+/* ════════════════════════════════════════════
+   CÓMO COMPRAR — línea de progreso + numerales
+   ════════════════════════════════════════════ */
+.como-grid { position: relative; perspective: 900px; }
+.anim-ready .como-card.reveal:not(.in) {
+  transform: rotateX(14deg) translateY(48px) scale(.97);
+}
+.como-card { position: relative; overflow: hidden; }
+/* numeral gigante de fondo */
+.como-card .como-step-num {
+  position: absolute;
+  top: 6px;
+  right: 14px;
+  font-family: 'Figtree', sans-serif;
+  font-size: 92px;
+  font-weight: 900;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(26,79,182,.16);
+  background: none;
+  width: auto; height: auto;
+  box-shadow: none;
+  pointer-events: none;
+}
+.como-card:hover .como-step-num { -webkit-text-stroke-color: rgba(103,204,233,.55); }
+/* línea de progreso que se dibuja al scrollear (inyectada por JS) */
+.como-line {
+  position: absolute;
+  top: -28px;
+  left: 2%;
+  right: 2%;
+  height: 2.5px;
+  z-index: 0;
+  background: linear-gradient(90deg, var(--sky), var(--blue));
+  border-radius: 2px;
+  transform-origin: left center;
+  transform: scaleX(0);
+  will-change: transform;
+}
+.como-line::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  background: var(--blue);
+  transform: translateY(-50%);
+  box-shadow: 0 0 0 5px rgba(26,79,182,.15), 0 0 14px rgba(103,204,233,.8);
+}
+.como-card { z-index: 1; }
+
+/* ════════════════════════════════════════════
    MOBILE
    ════════════════════════════════════════════ */
 @media (max-width: 768px) {
@@ -687,6 +783,8 @@
   .ig-strip, .ig-hashtags { margin: 0 -20px; }
   .ig-band { margin-top: 48px; }
   .mech-rings { inset: -4% -6%; }
+  .como-line { display: none; }
+  .como-card .como-step-num { font-size: 64px; }
 }
 
 /* ════════════════════════════════════════════
@@ -696,6 +794,9 @@
   .anim-ready [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; clip-path: none !important; }
   .anim-ready .w-rev > span { animation: none !important; transform: none !important; }
   .const-item, .ev-paper, .quizcta-card, [data-tilt] { transform: none !important; transition: none !important; }
-  .ig-strip-track, .ig-hash-track, .mech-rings i, .mech-shine::before, .anim-ready .step { animation: none !important; }
+  .ig-strip-track, .ig-hash-track, .mech-rings i, .mech-shine::before, .anim-ready .step, .anim-ready .quiz-icon { animation: none !important; }
+  .anim-ready .quiz-section .quiz-card { opacity: 1 !important; transform: none !important; }
+  .prob-photo img { transform: none !important; }
+  .como-line { transform: scaleX(1) !important; }
   * { animation-duration: .001s !important; }
 }
