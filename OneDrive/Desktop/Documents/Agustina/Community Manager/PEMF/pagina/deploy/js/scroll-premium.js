@@ -330,7 +330,7 @@
         if (el) grids.push(el);
       });
     }
-    var tickers = [].slice.call(document.querySelectorAll('.ticker-row, .ig-strip-track, .ig-hash-track'));
+    var tickers = [].slice.call(document.querySelectorAll('.ticker-row, .ig-strip-track'));
     function frame() {
       var y = window.scrollY;
       v += ((y - lastY) - v) * 0.12;                // velocidad con inercia
@@ -340,8 +340,8 @@
       grids.forEach(function (g) {
         g.style.transform = 'skewY(' + skew.toFixed(3) + 'deg)';
       });
-      // los testimonios aceleran cuando scrolleás rápido
-      var rate = 1 + Math.min(2.5, Math.abs(v) * 0.06);
+      // los testimonios aceleran apenas cuando scrolleás rápido
+      var rate = 1 + Math.min(1.1, Math.abs(v) * 0.035);
       tickers.forEach(function (t) {
         var anims = t.getAnimations ? t.getAnimations() : [];
         anims.forEach(function (a) { a.playbackRate = rate; });
@@ -362,9 +362,38 @@
     var section = document.getElementById('tecnologia') || panel;
     var host = panel.parentElement;
     host.classList.add('mech-stage-host');
-    // anillos de energía detrás del panel + barrido de luz adentro
-    host.insertAdjacentHTML('afterbegin', '<div class="mech-rings"><i></i><i></i><i></i></div>');
-    panel.insertAdjacentHTML('beforeend', '<div class="mech-shine"></div>');
+    // aurora detrás del panel + borde de luz + barrido adentro
+    host.insertAdjacentHTML('afterbegin', '<div class="mech-aura"></div>');
+    panel.insertAdjacentHTML('beforeend', '<div class="mech-shine"></div><div class="mech-border"></div>');
+
+    // cambio de tarjeta más dinámico: swing 3D + blur con overshoot,
+    // y el producto entra con un pop. Va por WAAPI para no chocar con
+    // las animaciones CSS card-in/out del script original.
+    var prevGo = window.goMech;
+    if (typeof prevGo === 'function') {
+      window.goMech = function (idx, dir) {
+        prevGo(idx, dir);
+        var d = (dir === 'prev') ? -1 : 1;
+        setTimeout(function () {
+          var card = document.getElementById('mech-card');
+          var img = document.getElementById('mech-img');
+          if (card && card.animate) {
+            card.animate([
+              { transform: 'perspective(900px) rotateY(' + (d * 18) + 'deg) translateX(' + (d * 60) + 'px) scale(.9)', opacity: 0, filter: 'blur(12px)' },
+              { transform: 'perspective(900px) rotateY(' + (d * -4) + 'deg) translateX(' + (d * -8) + 'px) scale(1.02)', opacity: 1, filter: 'blur(0px)', offset: 0.72 },
+              { transform: 'perspective(900px) rotateY(0deg) translateX(0px) scale(1)', opacity: 1, filter: 'blur(0px)' }
+            ], { duration: 720, easing: 'cubic-bezier(.3,.9,.32,1)' });
+          }
+          if (img && img.animate) {
+            img.animate([
+              { transform: 'scale(.55) rotate(' + (d * -12) + 'deg)', opacity: 0 },
+              { transform: 'scale(1.1) rotate(' + (d * 2.5) + 'deg)', opacity: 1, offset: 0.72 },
+              { transform: 'scale(1) rotate(0deg)', opacity: 1 }
+            ], { duration: 850, delay: 90, easing: 'cubic-bezier(.34,1.45,.64,1)', fill: 'backwards' });
+          }
+        }, 255);
+      };
+    }
 
     var tx = 0, ty = 0, mx = 0, my = 0, sr = 0;
     if (canHover) {
@@ -496,10 +525,19 @@
      ──────────────────────────────────────────── */
   function initProblemaFocus() {
     var grid = document.querySelector('.problem-grid');
-    if (!grid) return;
+    var section = document.getElementById('problema');
+    if (!grid || !section) return;
     var cards = [].slice.call(grid.querySelectorAll('.problem-card'));
     if (cards.length < 2) return;
     var idx = 0, visible = false, paused = false, started = false;
+
+    // backdrop: la foto en foco llena la sección con zoom-out (más encuadre)
+    section.classList.add('pb-host');
+    section.insertAdjacentHTML('afterbegin',
+      '<div class="pb-backdrop" aria-hidden="true"><img class="bda" alt=""/><img class="bdb" alt=""/><div class="pb-veil"></div></div>');
+    var bdA = section.querySelector('.bda');
+    var bdB = section.querySelector('.bdb');
+    var useA = true;
 
     new IntersectionObserver(function (entries) {
       entries.forEach(function (en) { visible = en.isIntersecting; });
@@ -507,6 +545,8 @@
 
     function clear() {
       cards.forEach(function (c) { c.classList.remove('pb-focus', 'pb-dim'); });
+      bdA.classList.remove('on');
+      bdB.classList.remove('on');
     }
     // el mouse del usuario manda: el loop se corre a un costado
     grid.addEventListener('mouseenter', function () { paused = true; clear(); });
@@ -525,28 +565,20 @@
         c.classList.toggle('pb-focus', i === f);
         c.classList.toggle('pb-dim', i !== f);
       });
+      // crossfade del backdrop con la foto de la tarjeta en foco
+      var photo = cards[f].querySelector('.prob-photo img');
+      if (photo) {
+        var show = useA ? bdA : bdB;
+        var hide = useA ? bdB : bdA;
+        useA = !useA;
+        show.src = photo.currentSrc || photo.src;
+        show.classList.remove('zooming');
+        void show.offsetWidth;               // reinicia la animación de zoom
+        show.classList.add('on', 'zooming');
+        hide.classList.remove('on');
+      }
       idx++;
-    }, 3300);
-  }
-
-  /* ────────────────────────────────────────────
-     13 · CÓMO COMPRAR — línea de progreso que se dibuja
-     ──────────────────────────────────────────── */
-  function initComoTimeline() {
-    var grid = document.querySelector('.como-grid');
-    if (!grid) return;
-    grid.insertAdjacentHTML('afterbegin', '<div class="como-line" aria-hidden="true"></div>');
-    var line = grid.querySelector('.como-line');
-    var sx = 0;
-    function frame() {
-      var r = grid.getBoundingClientRect();
-      var p = Math.min(1, Math.max(0, (window.innerHeight * 0.88 - r.top) / (r.height + window.innerHeight * 0.25)));
-      var e = p * p * (3 - 2 * p);
-      sx += (e - sx) * 0.09;
-      line.style.transform = 'scaleX(' + sx.toFixed(4) + ')';
-      requestAnimationFrame(frame);
-    }
-    requestAnimationFrame(frame);
+    }, 3400);
   }
 
   /* ──────────────────────────────────────────── */
@@ -564,7 +596,6 @@
     initQuizStage();
     initProblemaLive();
     initProblemaFocus();
-    initComoTimeline();
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);

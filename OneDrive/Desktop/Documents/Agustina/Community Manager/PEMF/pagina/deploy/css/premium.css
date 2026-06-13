@@ -394,6 +394,10 @@
   transition: box-shadow .3s ease;
 }
 
+/* ── Testimonios: ritmo más calmo (important: el style del body pisa) ── */
+.ticker-row.row-fwd { animation-duration: 80s !important; }
+.ticker-row.row-rev { animation-duration: 96s !important; }
+
 /* ── Refinamientos sobre componentes existentes ── */
 
 /* sombras azuladas en vez de grises en tarjetas clave */
@@ -440,35 +444,55 @@
   0%, 64% { transform: translateX(-260%) skewX(-14deg); }
   84%, 100% { transform: translateX(640%) skewX(-14deg); }
 }
-/* anillos de energía orbitando detrás del panel */
-.mech-rings {
+/* aurora: dos masas de luz que derivan detrás del panel */
+.mech-aura {
   position: absolute;
-  inset: -10% -14%;
+  inset: -16%;
   pointer-events: none;
   z-index: 0;
+  filter: blur(58px);
 }
-.mech-rings i {
+.mech-aura::before, .mech-aura::after {
+  content: '';
   position: absolute;
-  inset: 0;
+  width: 56%;
+  height: 56%;
   border-radius: 50%;
-  border: 1.5px dashed rgba(103,204,233,.28);
-  animation: ringSpin 28s linear infinite;
 }
-.mech-rings i:nth-child(2) {
-  inset: 7%;
-  border-style: solid;
-  border-color: rgba(103,204,233,.14);
-  animation-direction: reverse;
-  animation-duration: 38s;
+.mech-aura::before {
+  left: 0; top: 8%;
+  background: rgba(103,204,233,.35);
+  animation: auraDrift 11s ease-in-out infinite alternate;
 }
-.mech-rings i:nth-child(3) {
-  inset: -7%;
-  border: 0;
-  background: radial-gradient(circle, rgba(26,79,182,.16), transparent 62%);
-  animation: ringPulse 5.5s ease-in-out infinite;
+.mech-aura::after {
+  right: 0; bottom: 4%;
+  background: rgba(26,79,182,.32);
+  animation: auraDrift 14s ease-in-out infinite alternate-reverse;
 }
-@keyframes ringSpin  { to { transform: rotate(360deg); } }
-@keyframes ringPulse { 50% { opacity: .45; transform: scale(1.07); } }
+@keyframes auraDrift {
+  from { transform: translate(-7%, -5%) scale(.9); }
+  to   { transform: translate(11%, 11%) scale(1.14); }
+}
+/* borde de luz que recorre el contorno del panel */
+@property --mang { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+.mech-border {
+  position: absolute;
+  inset: -1.5px;
+  border-radius: 30px;
+  padding: 1.5px;
+  background: conic-gradient(from var(--mang),
+    transparent 0deg,
+    rgba(103,204,233,.95) 36deg,
+    rgba(26,79,182,.45) 70deg,
+    transparent 110deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: mangSpin 5.5s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+@keyframes mangSpin { to { --mang: 360deg; } }
 /* línea de progreso + entrada de pasos (se re-anima al cambiar de mecanismo) */
 .steps { position: relative; }
 .steps::before {
@@ -519,36 +543,6 @@
   color: transparent;
 }
 .ig-band-sub { font-size: 15px; color: var(--muted); margin-top: 6px; }
-
-/* marquee de hashtags — relleno y contorno alternados */
-.ig-hashtags {
-  overflow: hidden;
-  margin: 0 -32px 26px;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-}
-.ig-hash-track {
-  display: flex;
-  align-items: center;
-  gap: 26px;
-  width: max-content;
-  animation: hashSide 26s linear infinite;
-  will-change: transform;
-}
-@keyframes hashSide { to { transform: translateX(-50%); } }
-.ig-hash-track span {
-  font-family: 'Figtree', sans-serif;
-  font-size: clamp(26px, 3vw, 38px);
-  font-weight: 900;
-  letter-spacing: -.02em;
-  color: var(--slate);
-  white-space: nowrap;
-}
-.ig-hash-track span.hollow {
-  color: transparent;
-  -webkit-text-stroke: 1.5px rgba(26,79,182,.45);
-}
-.ig-hash-track i { color: var(--sky); font-style: normal; font-size: 22px; }
 
 /* tira horizontal de reels */
 .ig-strip {
@@ -704,6 +698,44 @@
 }
 .prob-photo { overflow: hidden; }
 .prob-photo img { will-change: transform; transform: scale(1.14); }
+/* backdrop cinematográfico: la foto en foco llena toda la sección
+   y su encuadre se abre (zoom-out) revelando más de la escena */
+.pb-host { position: relative; }
+.pb-host > .section-inner { position: relative; z-index: 1; }
+.pb-backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+.pb-backdrop img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.35);
+  transition: opacity 1.2s ease;
+  will-change: transform, opacity;
+}
+.pb-backdrop img.on { opacity: .5; }
+.pb-backdrop img.zooming { animation: pbZoomOut 3.4s cubic-bezier(.25,.55,.3,1) forwards; }
+@keyframes pbZoomOut {
+  from { transform: scale(1.35); }
+  to   { transform: scale(1.02); }
+}
+.pb-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    rgba(250,248,244,.95) 0%,
+    rgba(250,248,244,.55) 30%,
+    rgba(250,248,244,.45) 65%,
+    rgba(250,248,244,.92) 100%);
+}
+
 /* loop de foco: una tarjeta pasa al frente, las demás se desenfocan */
 .pb-stage .problem-card {
   transition: transform 1.05s cubic-bezier(.22,1,.36,1), filter 1.05s cubic-bezier(.22,1,.36,1), opacity 1.05s cubic-bezier(.22,1,.36,1), box-shadow .7s ease !important;
@@ -720,58 +752,6 @@
   filter: blur(2.5px) saturate(.85);
   opacity: .7;
 }
-
-/* ════════════════════════════════════════════
-   CÓMO COMPRAR — línea de progreso + numerales
-   ════════════════════════════════════════════ */
-.como-grid { position: relative; perspective: 900px; }
-.anim-ready .como-card.reveal:not(.in) {
-  transform: rotateX(14deg) translateY(48px) scale(.97);
-}
-.como-card { position: relative; overflow: hidden; }
-/* numeral gigante de fondo */
-.como-card .como-step-num {
-  position: absolute;
-  top: 6px;
-  right: 14px;
-  font-family: 'Figtree', sans-serif;
-  font-size: 92px;
-  font-weight: 900;
-  line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 1.5px rgba(26,79,182,.16);
-  background: none;
-  width: auto; height: auto;
-  box-shadow: none;
-  pointer-events: none;
-}
-.como-card:hover .como-step-num { -webkit-text-stroke-color: rgba(103,204,233,.55); }
-/* línea de progreso que se dibuja al scrollear (inyectada por JS) */
-.como-line {
-  position: absolute;
-  top: -28px;
-  left: 2%;
-  right: 2%;
-  height: 2.5px;
-  z-index: 0;
-  background: linear-gradient(90deg, var(--sky), var(--blue));
-  border-radius: 2px;
-  transform-origin: left center;
-  transform: scaleX(0);
-  will-change: transform;
-}
-.como-line::after {
-  content: '';
-  position: absolute;
-  right: -5px;
-  top: 50%;
-  width: 11px; height: 11px;
-  border-radius: 50%;
-  background: var(--blue);
-  transform: translateY(-50%);
-  box-shadow: 0 0 0 5px rgba(26,79,182,.15), 0 0 14px rgba(103,204,233,.8);
-}
-.como-card { z-index: 1; }
 
 /* ════════════════════════════════════════════
    MOBILE
@@ -798,11 +778,9 @@
   .bg-orb { filter: blur(60px); }
   .orb-sky { width: 300px; height: 300px; }
   .ig-card { width: 190px; border-radius: 14px; }
-  .ig-strip, .ig-hashtags { margin: 0 -20px; }
+  .ig-strip { margin: 0 -20px; }
   .ig-band { margin-top: 48px; }
-  .mech-rings { inset: -4% -6%; }
-  .como-line { display: none; }
-  .como-card .como-step-num { font-size: 64px; }
+  .mech-aura { inset: -8%; filter: blur(40px); }
 }
 
 /* ════════════════════════════════════════════
@@ -812,9 +790,9 @@
   .anim-ready [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; clip-path: none !important; }
   .anim-ready .w-rev > span { animation: none !important; transform: none !important; }
   .const-item, .ev-paper, .quizcta-card, [data-tilt] { transform: none !important; transition: none !important; }
-  .ig-strip-track, .ig-hash-track, .mech-rings i, .mech-shine::before, .anim-ready .step, .anim-ready .quiz-icon { animation: none !important; }
+  .ig-strip-track, .mech-aura::before, .mech-aura::after, .mech-border, .mech-shine::before, .anim-ready .step, .anim-ready .quiz-icon, .pb-backdrop img { animation: none !important; }
+  .pb-backdrop img { opacity: 0 !important; }
   .anim-ready .quiz-section .quiz-card { opacity: 1 !important; transform: none !important; }
   .prob-photo img { transform: none !important; }
-  .como-line { transform: scaleX(1) !important; }
   * { animation-duration: .001s !important; }
 }
