@@ -700,6 +700,66 @@
       "pdf": "estudios/extra/schwartz-2010-integrinas-matriz-mecanotransduccion.pdf",
       "doi": "10.1101/cshperspect.a005066",
       "note": "Mecanotransducción: cómo el tejido conectivo/matriz convierte fuerzas físicas en señales celulares. Base para entender por qué los estímulos físicos (incluidos campos y vibración) influyen en la biología celular. Verificado contra el PDF (PMC, acceso abierto)."
+    },
+    {
+      "id": "extra-fischer-2018-mitocondria-puntos-gatillo-miofasciales",
+      "brand": "all",
+      "type": "piloto",
+      "portada": "img/papers/fischer-2018-mitocondria-puntos-gatillo-miofasciales.jpg",
+      "title": "Evaluation of Mitochondrial Function in Chronic Myofascial Trigger Points — A Prospective Cohort Pilot Study Using High-Resolution Respirometry",
+      "cite": "Fischer MJ, Horvath G, Krismer M, et al · BMC Musculoskeletal Disorders · 2018",
+      "n": "20 hombres sanos (10 con dolor miofascial en trapecio, 10 en glúteo medio)",
+      "loc": "Medical University of Innsbruck, Austria",
+      "dur": "—",
+      "method": "Estudio piloto que estableció una técnica de biopsia mínimamente invasiva para obtener muestras de puntos gatillo miofasciales (zonas hiperirritables de la fascia del músculo) y evaluar su función mitocondrial mediante respirometría de alta resolución, comparándolas con músculo control.",
+      "results": [
+        "Establecieron una técnica de biopsia mínimamente invasiva, factible y segura, para muestrear puntos gatillo y medir su función mitocondrial por respirometría de alta resolución",
+        "Se observaron diferencias en la respiración mitocondrial entre los puntos gatillo y el músculo control (resultados preliminares de un estudio piloto)",
+        "Los puntos gatillo miofasciales podrían relacionarse con alteración mitocondrial y zonas hipóxicas dentro del músculo"
+      ],
+      "pdf": "estudios/extra/fischer-2018-mitocondria-puntos-gatillo-miofasciales.pdf",
+      "doi": "10.1186/s12891-018-2307-0",
+      "note": "Mitocondria y dolor miofascial: conecta la disfunción energética celular con los puntos gatillo de la fascia. Verificado contra el PDF original (BMC, CC-BY)."
+    },
+    {
+      "id": "extra-vodyanoy-2015-sistema-primo-vascular-bong-han-kim",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/vodyanoy-2015-sistema-primo-vascular-bong-han-kim.jpg",
+      "title": "Primo-Vascular System as Presented by Bong Han Kim",
+      "cite": "Vodyanoy V, Pustovyy O, Globa L, Sorokulova I · Evidence-Based Complementary and Alternative Medicine · 2015",
+      "n": "Revisión histórico-científica",
+      "loc": "Auburn University, EE. UU.",
+      "dur": "—",
+      "method": "Revisión que recupera y reexamina, con criterio científico moderno, los trabajos de Bong Han Kim (años 1960) sobre el 'sistema primo-vascular': una red de nódulos y vasos distinta de la sangre y la linfa, que él asoció a la regeneración tisular y a los meridianos de acupuntura.",
+      "results": [
+        "Kim describió un sistema de nódulos y vasos diferenciable de los sistemas vascular sanguíneo y linfático, que relacionó con la regeneración de tejidos",
+        "Reconstruyen las técnicas de tinción que Kim usó (no divulgadas en su momento), lo que había dificultado la replicación moderna",
+        "Aporta una posible base anatómica para los meridianos de la medicina tradicional china / biocampo, hoy objeto de re-estudio"
+      ],
+      "pdf": "estudios/extra/vodyanoy-2015-sistema-primo-vascular-bong-han-kim.pdf",
+      "doi": "10.1155/2015/361974",
+      "note": "Sistema primo-vascular / meridianos: revisión de la evidencia anatómica clásica detrás del biocampo y la acupuntura. Verificado contra el PDF original (eCAM, Hindawi, CC-BY)."
+    },
+    {
+      "id": "extra-hoyle-2017-actina-circadiana-cicatrizacion",
+      "brand": "all",
+      "type": "animal",
+      "portada": "img/papers/hoyle-2017-actina-circadiana-cicatrizacion.jpg",
+      "title": "Circadian Actin Dynamics Drive Rhythmic Fibroblast Mobilisation During Wound Healing",
+      "cite": "Hoyle NP, Seinkmane E, Putker M, et al · Science Translational Medicine · 2017",
+      "n": "Fibroblastos en cultivo y heridas cutáneas en ratón",
+      "loc": "MRC Laboratory of Molecular Biology, Cambridge, Reino Unido",
+      "dur": "—",
+      "method": "Mediante un cribado proteómico de proteínas de expresión rítmica, estudiaron cómo el reloj circadiano propio de los fibroblastos regula la dinámica de la actina y, con ello, la migración celular y la cicatrización de heridas, en cultivo y en ratones.",
+      "results": [
+        "El reloj interno del fibroblasto impone un ritmo de ~24 h a la dinámica de la actina, modulando la migración y la adhesión celular",
+        "Las heridas producidas durante la fase activa del ratón cicatrizan mejor (mayor invasión de fibroblastos) que las de la fase de reposo",
+        "La eficacia de la cicatrización depende de la hora del día: el tiempo biológico regula la reparación del tejido conectivo"
+      ],
+      "pdf": "estudios/extra/hoyle-2017-actina-circadiana-cicatrizacion.pdf",
+      "doi": "10.1126/scitranslmed.aal2774",
+      "note": "Ritmos circadianos y cicatrización: el reloj celular del fibroblasto regula la reparación del tejido conectivo. Respalda el peso de los ritmos biológicos (luz/día-noche) en la regeneración. Verificado contra el PDF (manuscrito de autor en PMC)."
     }
   ]
 }

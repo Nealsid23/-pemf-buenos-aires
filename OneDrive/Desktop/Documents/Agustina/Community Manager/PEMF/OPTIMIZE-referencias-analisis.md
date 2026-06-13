@@ -122,9 +122,18 @@ Armstrong & Johnson "Water Intake/Balance" (Nutrients 2018, hidratación general
 | Dedic, Okur & Roke | Hyaluronan Orders Water Molecules in its Nanoscale Extended Hydration Shells | Science Advances 7 (2021): eabf2558 | 10.1126/sciadv.abf2558 | 🟢 | **SUBIDO** `extra-dedic-2021-hyaluronan-orders-water` (Science Advances, CC-BY) |
 | Schwartz, Martin A. | Integrins and Extracellular Matrix in Mechanotransduction | Cold Spring Harbor Perspectives in Biology 2(12) (2010): a005066 | 10.1101/cshperspect.a005066 | 🟢 | **SUBIDO** `extra-schwartz-2010-integrinas-matriz-mecanotransduccion` (PMC, OA) |
 
+### 🔬 Papers procesados (lote D — Cap 3)
+| Autor | Título | Fuente / Año | DOI | Relev. | Estado |
+|---|---|---|---|---|---|
+| Fischer, M. J. et al. (libro lo cita como "Fucher") | Evaluation of Mitochondrial Function in Chronic Myofascial Trigger Points — Pilot Study Using High-Resolution Respirometry | BMC Musculoskeletal Disorders 19:288 (2018) | 10.1186/s12891-018-2307-0 | 🟢 | **SUBIDO** `extra-fischer-2018-mitocondria-puntos-gatillo-miofasciales` (BMC, CC-BY) |
+| Vodyanoy, V. et al. | Primo-Vascular System as Presented by Bong Han Kim | Evidence-Based Compl. & Alt. Med. 2015: 361974 | 10.1155/2015/361974 | 🟡 | **SUBIDO** `extra-vodyanoy-2015-sistema-primo-vascular-bong-han-kim` (eCAM, Hindawi, CC-BY) — biocampo/meridianos |
+| Hoyle, N. P. et al. (O'Neill lab) | Circadian Actin Dynamics Drive Rhythmic Fibroblast Mobilisation During Wound Healing | Science Translational Medicine 9(415) (2017) | 10.1126/scitranslmed.aal2774 | 🟢 | **SUBIDO** `extra-hoyle-2017-actina-circadiana-cicatrizacion` (manuscrito de autor en PMC; revista no-OA pero PDF verificado) |
+
 **Ya subidos en lotes previos (Cap 3):** Oschman 2015 grounding (`extra-oschman-2015-grounding-…`), Li/Zheng-Fu-Pollack 2020 flujo inducido EZ (`extra-li-pollack-2020-flujo-inducido-…`).
 
-**Candidatos Cap 3 pendientes / a revisar OA:** Cosic (otros papers RRM: IJS 2014/2015, Applied Sciences 2019, Nonlinear Biomedical Physics 2007); Ho Mae-Wan (agua cristalina líquida superconductora + colágeno, Forum on Immunopathological Diseases 2011 — Begell House, paywall probable); Fucher et al. (función mitocondrial en puntos gatillo miofasciales, JMD 2018); Hoyle/Krieger (dinámica circadiana de actina en cicatrización, Sci Transl Med 2017); Stecco (regulación fascial, Clinical Anatomy 2021 — paywall probable); Vodyanoy (sistema primo-vascular de Bong Han Kim, eCAM 2015 — Hindawi OA); Guimberteau (*Architecture of Human Living Fascia* — libro); Hunt *The Rainbow and the Worm* (libro).
+**Candidatos Cap 3 pendientes / a revisar OA:** Cosic (otros papers RRM: IJS 2014/2015, Applied Sciences 2019, Nonlinear Biomedical Physics 2007 — concepto RRM ya cubierto por Cosic 2016 SUBIDO, baja prioridad); Ho Mae-Wan (agua cristalina líquida superconductora + colágeno, Forum on Immunopathological Diseases 2011 — Begell House, paywall probable → PENDIENTES); Stecco (regulación fascial, Clinical Anatomy 2021 — paywall probable); Guimberteau (*Architecture of Human Living Fascia* — libro); Hunt *The Rainbow and the Worm* (libro).
+
+**Cap 3 — estado:** 🟢 SUBIDOS = 7 (Cosic 2016, Dedic 2021, Schwartz 2010 [lote C] + Fischer 2018, Vodyanoy 2015, Hoyle 2017 [lote D] + Oschman, Li-Pollack [previos]). Núcleo del capítulo cubierto; resto = baja prioridad / paywall / libros.
 
 ## RESTO DE CAPÍTULOS (4 en adelante)
 *CHAPTER FOUR empieza al pie de la pág. PDF 218 (Aguilar-López "Mitochondria: An Integrative Hub…", Frontiers Cell Dev Biol 2020). Referencias hasta pág. PDF 263 (264 = ACKNOWLEDGMENTS). Cap 4 = mitocondria/circadiano/melatonina/ROS. Se completan por lotes con el mismo formato.*
