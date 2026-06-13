@@ -14,3 +14,5 @@ Papers relevantes citados en *OPTIMIZE* que NO se pudieron descargar de una fuen
 
 ## Notas
 - **Ikeya & Woodward 2021** ("Cellular Autofluorescence Is Magnetic Field Sensitive", PNAS, 10.1073/pnas.2018043118) está disponible en abierto, PERO existe un estudio de replicación publicado que NO reprodujo el efecto (bioRxiv 2022.05.15.491784 / PMC10319795). Por ser un resultado científicamente disputado, NO se subió al centro para no exponer al cliente a una crítica fácil. El tema de "campo magnético + autofluorescencia de flavinas vía pares de radicales" ya queda cubierto por Usselman 2016 y la revisión de Zadeh-Haghighi 2022, ambos sólidos. Reconsiderar si se quiere.
+
+- **Zadbood et al. 2017** - "How We Transmit Memories to Other Brains" (Cerebral Cortex, Oxford, DOI 10.1093/cercor/bhx202). Consciencia/transmision entre cerebros. Paywall (Oxford) + preprint bioRxiv bloquea (403). Conseguir manualmente.

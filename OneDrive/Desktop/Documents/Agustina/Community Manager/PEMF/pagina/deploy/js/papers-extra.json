@@ -620,6 +620,26 @@
       "pdf": "estudios/extra/valenti-2024-sound-matrix-mitochondria.pdf",
       "doi": "10.3390/ijms25136841",
       "note": "Sonido y vibración como matriz de la materia viva, vía mitocondria: base del paradigma de resonancia/sonido. Verificado contra el PDF original (CC-BY)."
+    },
+    {
+      "id": "extra-toppi-2016-eeg-hyperscanning-cooperation",
+      "brand": "all",
+      "type": "piloto",
+      "portada": "img/papers/toppi-2016-eeg-hyperscanning-cooperation.jpg",
+      "title": "Investigating Cooperative Behavior in Ecological Settings: An EEG Hyperscanning Study",
+      "cite": "Toppi J, et al · PLOS One · 2016",
+      "n": "Pares de pilotos (hyperscanning EEG)",
+      "loc": "Sapienza Università di Roma, Italia",
+      "dur": "—",
+      "method": "Hyperscanning EEG de pares de pilotos durante un vuelo simulado, midiendo la conectividad inter-cerebral (cerebro a cerebro) según el grado de cooperación de cada fase.",
+      "results": [
+        "En las fases más cooperativas aparecieron patrones densos de conectividad entre cerebros (áreas frontales y parietales)",
+        "En las fases no cooperativas la conectividad inter-cerebral cayó casi a cero",
+        "La sincronización cerebro-a-cerebro es un indicador medible del grado de cooperación humana"
+      ],
+      "pdf": "estudios/extra/toppi-2016-eeg-hyperscanning-cooperation.pdf",
+      "doi": "10.1371/journal.pone.0154236",
+      "note": "Sincronización entre cerebros (consciencia/conexión): cuando las personas cooperan, sus cerebros se conectan medible­mente. Verificado contra el PDF original (CC-BY)."
     }
   ]
 }
