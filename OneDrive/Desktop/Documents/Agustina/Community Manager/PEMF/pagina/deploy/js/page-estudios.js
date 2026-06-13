@@ -716,86 +716,6 @@ const studies=[
    results:['Vitaminas B mejoran función cognitiva en adultos mayores con deficiencia','B9+B12 reducen homocisteína, factor de riesgo para declive cognitivo','Efecto consistente en ánimo en subgrupos con deficiencia de B12/folato'],
    pdf:'estudios/neuro-gum/markun-2021-vitaminB-cognition-meta-analysis.pdf',doi:'10.3390/nu13030923',note:''},
 
-  /* ══ OPTIMIZE BOOK - Centro de Información ════════ */
-  {id:'opt-01',brand:'all',type:'revision',portada:null,
-   title:'The Microbiome and Butyrate Regulate Energy Metabolism and Autoimmunity',
-   cite:'Donohoe T, Grunau D, Minot SS · Microbiome · 2011',
-   n:'Meta-análisis',loc:'OPTIMIZE Book Bibliography',dur:'—',
-   method:'Análisis bibliográfico de la relación entre microbiota intestinal, producción de butirato y regulación del metabolismo energético y la autoinmunidad.',
-   results:['Butirato activa sirtuinas y genes de longevidad (SIRT1, FOXO3)','La microbiota de personas sanas produce metabolitos que regulan la energía celular','El equilibrio de la microbiota es fundamental para la activación de genes de regeneración'],
-   pdf:'#',doi:'',note:'TIER-1 HYBRID | PEMF Score: 4/10 | Quantum Score: 1/5 | Relevancia directa para mecanismo de productos PEMF (activación de cascadas naturales de curación)'},
-
-  {id:'opt-02',brand:'all',type:'revision',portada:null,
-   title:'The Role of the Gut Microbiota in Neuroinflammation',
-   cite:'Haeir M, Fanni RM, Loureiro-Vieira S · Nature Reviews Neurology · 2021',
-   n:'Meta-análisis',loc:'OPTIMIZE Book Bibliography',dur:'—',
-   method:'Revisión de mecanismos por los cuales el microbiota intestinal modula la inflamación del sistema nervioso central.',
-   results:['Lipopolisacáridos bacterianos y citoquinas pro-inflamatorias activan la neuroinflamación','La microbiota sana produce metabolitos neuroprotectores','El eje microbiota-gut-brain es regulable por campos electromagnéticos externos'],
-   pdf:'#',doi:'',note:'TIER-2 PEMF | PEMF Score: 4/10 | Quantum Score: 0/5 | Explica cómo PEMF activa el sistema nervioso a través de la microbiota'},
-
-  {id:'opt-03',brand:'all',type:'revision',portada:null,
-   title:'Microbiota Modulators of Blood Brain Barrier Integrity and Neuroinflammation',
-   cite:'Gaspar MC, Prados A, Blasco-Baque F · Brain Microbes · 2021',
-   n:'Meta-análisis',loc:'OPTIMIZE Book Bibliography',dur:'—',
-   method:'Análisis de cómo metabolitos bacterianos modulan la integridad de la barrera hematoencefálica y previenen neuroinflamación.',
-   results:['Metabolitos bacterianos especiales mantienen la integridad de tight junctions cerebrales','Prevención de infiltración de células proinflamatorias al SNC','Restauración de coherencia neurológica y función cognitiva'],
-   pdf:'#',doi:'',note:'TIER-2 PEMF | PEMF Score: 4/10 | Quantum Score: 0/5 | Mecanismo de cómo PEMF protege el sistema nervioso'},
-
-  {id:'opt-04',brand:'all',type:'revision',portada:null,
-   title:'Neurochemistry of the Microbiota-Brain-Immune Axis',
-   cite:'His BF, Kamysheuskaya A, Hasan MM · Molecular Neurobiology · 2022',
-   n:'Meta-análisis',loc:'OPTIMIZE Book Bibliography',dur:'—',
-   method:'Análisis de neurotransmisores bacterianos y su impacto en el eje microbiota-cerebro-inmune.',
-   results:['La microbiota produce GABA, serotonina y otros neurotransmisores clave','Estos metabolitos regulan el equilibrio autonómico y la coherencia neural','Campos electromagnéticos optimizan esta producción metabólica'],
-   pdf:'#',doi:'',note:'TIER-2 PEMF | PEMF Score: 3/10 | Quantum Score: 0/5 | Explicación neurobiológica del mecanismo PEMF'},
-
-  {id:'opt-05',brand:'all',type:'revision',portada:null,
-   title:'Impact of Bacterial Metabolites on Gut Intestinal Inflammation',
-   cite:'Farges MC, Serfaty-Lacrosniere C, Veronese N · Cell Host Microbe · 2023',
-   n:'Meta-análisis',loc:'OPTIMIZE Book Bibliography',dur:'—',
-   method:'Estudio de cómo los metabolitos bacterianos (especialmente butirato y propionato) modulan la inflamación intestinal.',
-   results:['Butirato sella el intestino bloqueando la inflamación sistémica','La composición de la microbiota determina la respuesta antiinflamatoria','PEMF favorece la producción de bacterias productoras de butirato'],
-   pdf:'#',doi:'',note:'TIER-2 PEMF | PEMF Score: 3/10 | Quantum Score: 0/5 | Conexión directa entre PEMF y sellar el intestino'},
-
-  {id:'opt-06',brand:'all',type:'revision',portada:null,
-   title:'Hidden Messages in Water: The Hidden Truth About Water',
-   cite:'Emoto M · Beyond Words Publishing · 2004',
-   n:'—',loc:'OPTIMIZE Book Bibliography',dur:'—',
-   method:'Investigación sobre la estructura cristalina del agua y su respuesta a campos electromagnéticos y frecuencias.',
-   results:['El agua responde a campos electromagnéticos reorganizando su estructura cristalina','La coherencia del agua intracelular es fundamental para la salud','Campos pulsados PEMF pueden restaurar la coherencia del agua en el cuerpo'],
-   pdf:'#',doi:'',note:'TIER-2 HYBRID | PEMF Score: 6/10 | Quantum Score: 3/5 | Paradigma cuántico del agua como medio de información'},
-
-  {id:'opt-07',brand:'all',type:'revision',portada:null,
-   title:'The Body Electric: Electromagnetism and the Foundation of Life',
-   cite:'Becker RO, Selden G · HarperCollins · 1985',
-   n:'—',loc:'OPTIMIZE Book Bibliography',dur:'—',
-   method:'Investigación fundamental sobre bioelectricidad como regulador de regeneración celular y función biológica.',
-   results:['Corrientes DC endógenas guían la regeneración de tejidos y huesos','Campos EM externos pueden potenciar o inhibir regeneración','Base científica directa de por qué funcionan los parches PEMF'],
-   pdf:'#',doi:'',note:'TIER-1 PEMF | PEMF Score: 8/10 | Quantum Score: 2/5 | Fundamento científico de bioelectricidad para PEMF'},
-
-  {id:'opt-08',brand:'all',type:'revision',portada:null,
-   title:'Lifespan: Why We Age and Why We Don\'t Have To',
-   cite:'Sinclair DA, LaPlante MD · Atria Books · 2019',
-   n:'—',loc:'OPTIMIZE Book Bibliography',dur:'—',
-   method:'Teoría informacional del envejecimiento: epigenética, sirtuinas y NAD+ como reguladores del reloj biológico.',
-   results:['El envejecimiento es pérdida de información epigenética, no daño de ADN','NAD+ y sirtuinas son reguladores del rejuvenecimiento celular','X39 GHK-Cu actúa exactamente como predice la teoría de Sinclair'],
-   pdf:'#',doi:'',note:'TIER-2 HYBRID | PEMF Score: 7/10 | Quantum Score: 1/5 | Mecanismo de X39 y longevidad'},
-
-  {id:'opt-09',brand:'all',type:'revision',portada:null,
-   title:'The Fourth Phase of Water: Beyond Solid, Liquid, and Vapor',
-   cite:'Pollack GH · Ebner & Sons · 2013',
-   n:'—',loc:'OPTIMIZE Book Bibliography',dur:'—',
-   method:'Descubrimiento de la cuarta fase del agua (EZ water) como estructura ordenada en superficies hidrofílicas.',
-   results:['EZ water es la fase natural del agua intracelular en células sanas','Luz infrarroja amplifica la capa EZ (base de fotobiomodulación)','Agua estructurada tiene mayor densidad de energía que agua común'],
-   pdf:'#',doi:'',note:'TIER-2 HYBRID | PEMF Score: 7/10 | Quantum Score: 2/5 | Base de agua Analemma y coherencia celular'},
-
-  {id:'opt-10',brand:'all',type:'revision',portada:null,
-   title:'Quantum Healing: Exploring Possibilities for Perfect Health',
-   cite:'Chopra D · Random House · 1989',
-   n:'—',loc:'OPTIMIZE Book Bibliography',dur:'—',
-   method:'Investigación sobre consciencia, intención y campos cuánticos en la curación biológica.',
-   results:['La consciencia influye en la expresión génica y la curación celular','Los campos cuánticos conectan mente y materia','La intención y coherencia son fundamentales en la medicina cuántica'],
-   pdf:'#',doi:'',note:'TIER-3 QUANTUM | PEMF Score: 3/10 | Quantum Score: 5/5 | Paradigma cuántico de medicina y consciencia'},
 ];
 
 /* ══ STATE ════════════════════════════════════════════ */
@@ -1693,9 +1613,15 @@ function recomputeEstudiosStats(){
   const rct=studies.filter(s=>s.type==='rct').length;
   const rev=studies.filter(s=>s.type==='revision'||s.type==='meta').length;
   const hum=studies.filter(s=>['rct','piloto','factibilidad','seguridad'].includes(s.type)).length;
-  HERO.estudios.stats=[{n,l:'Publicaciones'},{n:hum,l:'Ensayos humanos'},{n:rct,l:'RCT controlados'},{n:rev,l:'Revisiones'}];
+  const vals=[n,hum,rct,rev], labels=['Publicaciones','Ensayos humanos','RCT controlados','Revisiones'];
+  HERO.estudios.stats=vals.map((v,i)=>({n:v,l:labels[i]}));
   HERO.estudios.sub=n+' publicaciones verificadas con metodología, participantes y PDF original. Seleccionadas por rigor, no por resultado favorable.';
-  if(currentView==='estudios') updateHeroContent(HERO.estudios);
+  if(currentView==='estudios'){
+    // escribe el número final directamente (robusto, sin depender del timing del count-up)
+    const ns=document.querySelectorAll('.stat-n'), ls=document.querySelectorAll('.stat-l');
+    vals.forEach((v,i)=>{ if(ns[i]){ns[i].dataset.target=v;ns[i].textContent=v;} if(ls[i])ls[i].textContent=labels[i]; });
+    const sub=document.querySelector('.hero-sub'); if(sub) sub.textContent=HERO.estudios.sub;
+  }
 }
 
 /* ══ INIT ═════════════════════════════════════════════ */
@@ -1749,4 +1675,24 @@ window.addEventListener('optimizeDataLoaded', (event) => {
 
   console.log('[OPTIMIZE Centro de Información] Datos integrados exitosamente');
 });
+
+/* ══ PAPERS EXTRA — índice editable (js/papers-extra.json) ════════════
+   Permite agregar/sacar papers desde un archivo de datos, sin tocar código.
+   Ver el campo _README dentro del JSON para las instrucciones. */
+fetch('js/papers-extra.json')
+  .then(r => r.ok ? r.json() : null)
+  .then(d => {
+    if (!d || !Array.isArray(d.papers) || !d.papers.length) return;
+    const validos = d.papers.filter(p => p && p.id && p.title);
+    if (!validos.length) return;
+    studies.push(...validos);
+    if (currentView === 'estudios') render(false);
+    // espera a que el count-up inicial del hero (≈1.6s) termine, para que el
+    // recálculo sea la última escritura y el número refleje el total real
+    setTimeout(() => {
+      if (typeof recomputeEstudiosStats === 'function') recomputeEstudiosStats();
+    }, 1800);
+    console.log('[Papers extra] ' + validos.length + ' agregados desde papers-extra.json');
+  })
+  .catch(() => {/* sin índice extra: la página funciona con los papers base */});
 

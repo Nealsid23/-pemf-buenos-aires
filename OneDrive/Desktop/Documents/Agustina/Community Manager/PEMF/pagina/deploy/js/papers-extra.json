@@ -1,0 +1,20 @@
+{
+  "_README": "Indice editable de papers adicionales del Centro de Informacion. Para AGREGAR un paper: (1) poné el PDF en deploy/estudios/extra/NOMBRE.pdf  (2) poné la imagen de la primera pagina en deploy/img/papers/NOMBRE.jpg  (3) copiá el bloque de _EJEMPLO dentro de \"papers\" y completá los datos. Para SACAR un paper: borrá su bloque. brand admite: lifewave | drinkhrw | gamma | neurogum | myvitalc | analemma | all. type admite: rct | piloto | meta | revision | animal | vitro | seguridad | factibilidad.",
+  "_EJEMPLO": {
+    "id": "extra-01",
+    "brand": "drinkhrw",
+    "type": "rct",
+    "portada": "img/papers/NOMBRE.jpg",
+    "title": "Título del estudio en su idioma original",
+    "cite": "Apellido A, Apellido B · Revista · Año",
+    "n": "120 participantes",
+    "loc": "Universidad, País",
+    "dur": "8 semanas",
+    "method": "Resumen breve del método del estudio.",
+    "results": ["Hallazgo 1", "Hallazgo 2", "Hallazgo 3"],
+    "pdf": "estudios/extra/NOMBRE.pdf",
+    "doi": "10.xxxx/xxxxx",
+    "note": ""
+  },
+  "papers": []
+}

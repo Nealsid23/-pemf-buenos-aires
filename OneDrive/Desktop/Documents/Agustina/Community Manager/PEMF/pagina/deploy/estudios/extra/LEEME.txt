@@ -1,0 +1,1 @@
+Carpeta para PDFs de papers agregados manualmente. Ver js/papers-extra.json
