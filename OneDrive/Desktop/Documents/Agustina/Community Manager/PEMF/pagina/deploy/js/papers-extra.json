@@ -11,10 +11,35 @@
     "loc": "Universidad, País",
     "dur": "8 semanas",
     "method": "Resumen breve del método del estudio.",
-    "results": ["Hallazgo 1", "Hallazgo 2", "Hallazgo 3"],
+    "results": [
+      "Hallazgo 1",
+      "Hallazgo 2",
+      "Hallazgo 3"
+    ],
     "pdf": "estudios/extra/NOMBRE.pdf",
     "doi": "10.xxxx/xxxxx",
     "note": ""
   },
-  "papers": []
+  "papers": [
+    {
+      "id": "extra-binhi-2023",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/binhi-2023.jpg",
+      "title": "Statistical Amplification of the Effects of Weak Magnetic Fields in Cellular Translation",
+      "cite": "Binhi VN · Cells (MDPI) · 2023",
+      "n": "Modelo teórico-matemático",
+      "loc": "Prokhorov General Physics Institute, Moscú",
+      "dur": "—",
+      "method": "Modelo matemático que propone que la traducción celular (síntesis de proteínas) involucra pares intermedios de radicales con electrones de spin correlacionado, sensibles al campo magnético externo débil.",
+      "results": [
+        "Un campo magnético débil modifica la probabilidad de errores en la síntesis de proteínas por amplificación estadística",
+        "El efecto alcanza niveles de varios por ciento: magnitudes observables y verificables experimentalmente",
+        "Identifica el sitio activo de la maquinaria bioquímica donde ocurren los efectos magnéticos primarios, sin requerir tiempos de relajación de spin largos (~1µs)"
+      ],
+      "pdf": "estudios/extra/binhi-2023.pdf",
+      "doi": "10.3390/cells12050724",
+      "note": "Paradigma cuántico: describe un mecanismo concreto (pares de radicales con spin de electrones) por el cual campos magnéticos débiles influyen en la biología celular — fundamento del efecto de los campos electromagnéticos en el cuerpo. Verificado contra el PDF original (acceso abierto CC-BY)."
+    }
+  ]
 }
