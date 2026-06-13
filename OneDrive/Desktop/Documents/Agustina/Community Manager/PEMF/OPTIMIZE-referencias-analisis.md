@@ -146,10 +146,69 @@ Armstrong & Johnson "Water Intake/Balance" (Nutrients 2018, hidratación general
 | Demine, S., Renard, P. & Arnould, T. | Mitochondrial Uncoupling: A Key Controller of Biological Processes in Physiology and Diseases | Cells 8(8) (2019): 795 | 10.3390/cells8080795 | 🟢 | **SUBIDO** `extra-demine-2019-desacople-mitocondrial` (MDPI, CC-BY) |
 | Clemente-Suárez, V. J. et al. | Mitochondrial Transfer as a Novel Therapeutic Approach in Disease Diagnosis and Treatment | IJMS 24(10) (2023): 8848 | 10.3390/ijms24108848 | 🟢 | **SUBIDO** `extra-clemente-suarez-2023-transferencia-mitocondrial` (MDPI, CC-BY) |
 
-**Candidatos Cap 4 fuertes pendientes (próximos lotes):** Chernet & Levin 2013 (potenciales bioeléctricos y cáncer → PENDIENTES, manuscrito de autor); Chen/Manzanares/Levin/Mafe 2023 (modelo bioeléctrico de regeneración en planaria, J Theor Biol — Elsevier, verificar OA); Chung 2017 (ejercicio/frío y biogénesis mitocondrial, J Exerc Nutr Biochem — PMC OA); Liu et al. 2021 (transferencia mitocondrial intercelular, Signal Transduct Target Ther — OA); Marie et al. 2018 (espectro de la luz sobre estrés oxidativo y daño mitocondrial en EPR, Cell Death & Disease — OA); Marino/Cullen/Becker 1979 (cicatrización ósea con campos eléctricos ELF — paywall probable); Cheng 2023 (hidrógeno-mitocondria) y otros ya SUBIDOS en lotes previos. Falta leer págs. PDF 223–225+ para mapear el resto del capítulo.
+**Candidatos Cap 4 fuertes pendientes (próximos lotes):** Chernet & Levin 2013 (potenciales bioeléctricos y cáncer → PENDIENTES, manuscrito de autor); Chen/Manzanares/Levin/Mafe 2023 (modelo bioeléctrico de regeneración en planaria, J Theor Biol — Elsevier, verificar OA); Chung 2017 (ejercicio/frío y biogénesis mitocondrial, J Exerc Nutr Biochem — PMC OA); Liu et al. 2021 (transferencia mitocondrial intercelular, Signal Transduct Target Ther — OA); Marie et al. 2018 (espectro de la luz sobre estrés oxidativo y daño mitocondrial en EPR, Cell Death & Disease — OA); Marino/Cullen/Becker 1979 (cicatrización ósea con campos eléctricos ELF — paywall probable); Cheng 2023 (hidrógeno-mitocondria) y otros ya SUBIDOS en lotes previos.
 
-## RESTO DE CAPÍTULOS (5 en adelante)
-*Por mapear: leer desde la pág. PDF 225+ para localizar el inicio de CHAPTER FIVE. Referencias hasta pág. PDF 263 (264 = ACKNOWLEDGMENTS). Se completan por lotes con el mismo formato.*
+### 🔬 Papers procesados (lote F — Cap 4, vía agentes en paralelo)
+| Autor | Título | Fuente / Año | DOI | Estado |
+|---|---|---|---|---|
+| Chung J, Park J, Lim K | Exercise and Cold Exposure on Mitochondrial Biogenesis… | J Exerc Nutr Biochem 21(2) (2017) | 10.20463/jenb.2017.0020 | **SUBIDO** `extra-chung-2017-biogenesis-mitocondrial-ejercicio-frio` |
+| Liu D, Gao Y, et al | Intercellular Mitochondrial Transfer as a Means of Tissue Revitalization | Signal Transduct Target Ther 6:65 (2021) | 10.1038/s41392-020-00440-z | **SUBIDO** `extra-liu-2021-transferencia-mitocondrial-revitalizacion-tejidos` |
+| Marie M, et al | Light Action Spectrum on Oxidative Stress and Mitochondrial Damage in A2E-Loaded RPE Cells | Cell Death & Disease 9 (2018) | 10.1038/s41419-018-0331-5 | **SUBIDO** `extra-marie-2018-espectro-luz-estres-oxidativo-mitocondria-rpe` |
+
+**Cap 4 — estado:** Cap 4 = págs PDF 218(pie)–228. SUBIDOS: Alvarez-Lorenzo, Demine, Clemente-Suárez (lote E) + Chung, Liu, Marie (lote F). A PENDIENTES: Chernet & Levin 2013, Chen/Manzanares/Levin/Mafe 2023, Marino/Becker 1979, Lee 2024 (ACS Nano). Capítulo dado por cubierto.
+
+---
+
+## CAPÍTULO 5 — referencias págs. PDF 228–235 ✅ PROCESADO (agente paralelo)
+
+**Tema:** biología de la LUZ — ritmos circadianos, fotobiomodulación (luz roja/NIR y azul), melatonina, mitocondria y **emisión ultradébil de fotones / biofotones**. Inicio Cap 5 = p228 (Aguida et al., NIR/ROS/Spike). Fin = p235 (CHAPTER SIX).
+
+| Autor | Título | Fuente / Año | DOI | Estado |
+|---|---|---|---|---|
+| Aguida B, et al | NIR Light Triggers ROS to Downregulate Inflammatory Cytokines (Spike) | Antioxidants 12 (2023) | 10.3390/antiox12101824 | **SUBIDO** `extra-aguda-2023-nir-ros-citoquinas-spike` |
+| van Wijk E, et al | Imaging of Ultra-Weak Photon Emission in a Rheumatoid Arthritis Mouse Model | PLOS ONE (2013) | 10.1371/journal.pone.0084579 | **SUBIDO** `extra-vanwijk-2013-emision-fotonica-artritis-raton` |
+| Van Wijk R, et al | Integrating Ultra-Weak Photon Emission Analysis in Mitochondrial Research | Front Physiol 11 (2020) | 10.3389/fphys.2020.00717 | **SUBIDO** `extra-vanwijk-2020-emision-fotonica-mitocondria-revision` |
+| Wunsch A, Matuschka K | Red and NIR Light Treatment… Intradermal Collagen Density Increase | Photomed Laser Surg (2014) | 10.1089/pho.2013.3616 | **SUBIDO** `extra-wunsch-2014-luz-roja-nir-piel-colageno-rct` |
+
+PENDIENTES Cap 5: Barolet 2021 (luz/óxido nítrico, Elsevier). Powner 2024 ya estaba SUBIDO (no duplicado).
+
+---
+
+## CAPÍTULO 6 — referencias págs. PDF 235–241 ✅ PROCESADO (agente paralelo)
+
+**Tema:** entorno y naturaleza — *forest bathing*, iones negativos del aire, **resonancia Schumann / actividad geomagnética**, ritmos circadianos, exposición al frío (grasa parda/mitocondria), grounding. Inicio Cap 6 = p235 (Antonelli, forest bathing). Fin = p241 (CHAPTER SEVEN).
+
+| Autor | Título | Fuente / Año | DOI | Estado |
+|---|---|---|---|---|
+| McCraty R, Atkinson M, et al | Synchronization of Human Autonomic Nervous System Rhythms with Geomagnetic Activity | IJERPH 14(7) (2017) | 10.3390/ijerph14070770 | **SUBIDO** `extra-mccraty-2017-geomagnetismo-sistema-nervioso-autonomo` |
+| Yau WW, et al | Chronic Cold Exposure Induces Autophagy… Thermogenesis in Brown Adipose Tissue | iScience 24 (2021) | 10.1016/j.isci.2021.102434 | **SUBIDO** `extra-yau-2021-exposicion-frio-autofagia-grasa-parda` |
+
+Ya SUBIDOS antes (geomagnetismo, Cap 6): timofejeva-2017, timofejeva-2021-heart-rhythm, wang-2019-geomagnetic-brain-alpha. PENDIENTES Cap 6: Price 2021 (ELF/Schumann), von Schulze 2022 (calor/mitocondria). Iones negativos del aire: descartados por baja calidad/disputados.
+
+---
+
+## CAPÍTULO 7 — referencias págs. PDF 242–252 ✅ AMPLIADO (agente paralelo)
+
+**Tema (prioridad del cliente):** consciencia, **biocampo/biofield**, Reiki, coherencia cardíaca, **sincronización entre cerebros**, sonido/vibración. Inicio Cap 7 = p242 (Anderson & Taylor, Biofield Therapies in Cardiovascular Disease). Fin Cap 7 = p252; CHAPTER EIGHT (microbioma) = p253; ACKNOWLEDGMENTS = p265 (corrección: no p264).
+
+| Autor | Título | Fuente / Año | DOI | Estado |
+|---|---|---|---|---|
+| Jain S, Hammerschlag R, et al | Clinical Studies of Biofield Therapies | Glob Adv Health Med (2015) | 10.7453/gahmj.2015.034.suppl | **SUBIDO** `extra-jain-2015-biofield-estudios-clinicos` |
+| Hammerschlag R, Levin M, McCraty R, et al | Biofield Physiology: A Framework for an Emerging Discipline | Glob Adv Health Med (2015) | 10.7453/gahmj.2015.015.suppl | **SUBIDO** `extra-hammerschlag-2015-biofield-fisiologia` |
+| Fishburn FA, et al | Interpersonal Neural Synchronization as a Biological Mechanism for Shared Intentionality | Soc Cogn Affect Neurosci (2018) | 10.1093/scan/nsy060 | **SUBIDO** `extra-fishburn-2018-sincronizacion-neural-interpersonal` |
+| Goldstein P, Dumas G, et al | Brain-to-Brain Coupling During Handholding Is Associated with Pain Reduction | PNAS (2018) | 10.1073/pnas.1703643115 | **SUBIDO** `extra-goldstein-2018-acoplamiento-cerebro-dolor` |
+| Bartel L, Mosabbir A | Possible Mechanisms for the Effects of Sound Vibration on Human Health | Healthcare 9 (2021) | 10.3390/healthcare9050597 | **SUBIDO** `extra-bartel-2021-vibracion-sonora-salud` |
+| Perry G, Polito V, Thompson WF | Rhythmic Chanting and Mystical States across Traditions | Brain Sciences 11 (2021) | 10.3390/brainsci11010101 | **SUBIDO** `extra-perry-2021-canto-ritmico-estados-misticos` |
+| Pinna T, Edwards DJ | Interoception, Vagal Tone, and Emotional Regulation (revisión sistemática) | Front Psychol 11 (2020) | 10.3389/fpsyg.2020.01792 | **SUBIDO** `extra-pinna-2020-interocepcion-tono-vagal` |
+| He S, et al | Exploring Entrainment Patterns of Human Emotion in Social Media | PLOS ONE (2016) | 10.1371/journal.pone.0150630 | **SUBIDO** `extra-he-2016-contagio-emocional-redes` |
+| Babcock NS, Kurian P, et al | Ultraviolet Superradiance from Mega-Networks of Tryptophan… | J Phys Chem B (2024) | 10.1021/acs.jpcb.3c07936 | **SUBIDO** `extra-babcock-2024-superradiancia-triptofano` |
+
+Ya SUBIDOS antes (Cap 7): zadro-2022 (Reiki), tabatabaee-2016 (toque terapéutico), valenti-2024 (sonido/mitocondria), toppi-2016 (hyperscanning). PENDIENTES Cap 7: vanderVaart 2009 (revisión Reiki), Timofejeva 2021 (HeartMath, MDPI 403), Tiller 1996 (coherencia cardíaca), Thrane 2014 (Reiki), Stuart 1978 (memoria no-local), Zadbood 2017 (transmisión de memoria).
+
+---
+
+## ESTADO GLOBAL
+Capítulos 1–7 procesados (Cap 8 = microbioma y Cap 9 = libros/medicina tradicional, fuera de foco para el centro). Catálogo `papers-extra.json` = **58 papers**. Pendientes documentados en `estudios/extra/PENDIENTES-paywall.md`.
 
 ## Resumen por tipo (del análisis OCR previo, a verificar al transcribir)
 - 📕 Libros: ~54

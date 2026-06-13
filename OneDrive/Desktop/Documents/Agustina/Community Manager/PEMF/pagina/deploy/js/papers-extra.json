@@ -820,6 +820,366 @@
       "pdf": "estudios/extra/clemente-suarez-2023-transferencia-mitocondrial.pdf",
       "doi": "10.3390/ijms24108848",
       "note": "Transferencia de mitocondrias entre células como terapia regenerativa. Refuerza el papel central de la energía mitocondrial en la salud. Verificado contra el PDF original (IJMS, MDPI, CC-BY)."
+    },
+    {
+      "id": "extra-chung-2017-biogenesis-mitocondrial-ejercicio-frio",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/chung-2017-biogenesis-mitocondrial-ejercicio-frio.jpg",
+      "title": "The Effects of Exercise and Cold Exposure on Mitochondrial Biogenesis in Skeletal Muscle and White Adipose Tissue",
+      "cite": "Chung J, Park J, Lim K · J Exerc Nutr Biochem · 2017",
+      "n": "Revisión",
+      "loc": "Hallym University, Corea del Sur",
+      "dur": "—",
+      "method": "Revisión de cómo dos estímulos ambientales (ejercicio y exposición al frío) aumentan la demanda energética celular y disparan la biogénesis mitocondrial, con foco en la vía del coactivador PGC-1α en músculo esquelético y tejido adiposo blanco.",
+      "results": [
+        "El ejercicio y el frío elevan la expresión de PGC-1α, el regulador maestro de la creación de nuevas mitocondrias",
+        "Ambos estímulos pueden inducir el pardeamiento (browning) del tejido adiposo blanco, aumentando su capacidad de quemar energía",
+        "Plantea estos estímulos no farmacológicos como estrategia para mejorar la función mitocondrial"
+      ],
+      "note": "Base para entender cómo estímulos físicos no invasivos mejoran la salud mitocondrial. Verificado contra el PDF original (J Exerc Nutr Biochem, acceso abierto).",
+      "pdf": "estudios/extra/chung-2017-biogenesis-mitocondrial-ejercicio-frio.pdf",
+      "doi": "10.20463/jenb.2017.0020"
+    },
+    {
+      "id": "extra-liu-2021-transferencia-mitocondrial-revitalizacion-tejidos",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/liu-2021-transferencia-mitocondrial-revitalizacion-tejidos.jpg",
+      "title": "Intercellular Mitochondrial Transfer as a Means of Tissue Revitalization",
+      "cite": "Liu D, Gao Y, et al · Signal Transduction and Targeted Therapy · 2021",
+      "n": "Revisión",
+      "loc": "Shanghai Jiao Tong University, China / University of Western Australia",
+      "dur": "—",
+      "method": "Revisión del fenómeno de transferencia de mitocondrias de una célula a otra, describiendo sus mecanismos (nanotúbulos, vesículas) y su papel en condiciones fisiológicas y en la reparación de tejidos dañados.",
+      "results": [
+        "Las células pueden transferir mitocondrias entre sí para rescatar a células estresadas o con mitocondrias dañadas",
+        "La transferencia mitocondrial ocurre también en condiciones fisiológicas normales, no solo ante daño",
+        "Se perfila como base de estrategias para revitalizar tejidos mediante el aporte de mitocondrias sanas"
+      ],
+      "note": "Documenta la mitocondria como unidad transferible y reparadora, clave para la regeneración tisular a nivel energético. Verificado contra el PDF original (Signal Transduction and Targeted Therapy, Springer Nature, acceso abierto).",
+      "pdf": "estudios/extra/liu-2021-transferencia-mitocondrial-revitalizacion-tejidos.pdf",
+      "doi": "10.1038/s41392-020-00440-z"
+    },
+    {
+      "id": "extra-marie-2018-espectro-luz-estres-oxidativo-mitocondria-rpe",
+      "brand": "all",
+      "type": "vitro",
+      "portada": "img/papers/marie-2018-espectro-luz-estres-oxidativo-mitocondria-rpe.jpg",
+      "title": "Light Action Spectrum on Oxidative Stress and Mitochondrial Damage in A2E-Loaded Retinal Pigment Epithelium Cells",
+      "cite": "Marie M, et al · Cell Death & Disease · 2018",
+      "n": "Estudio in vitro (células de epitelio pigmentario retiniano)",
+      "loc": "Institut de la Vision (Sorbonne), Francia",
+      "dur": "—",
+      "method": "Estudio in vitro que expuso células del epitelio pigmentario de la retina cargadas con el fotosensibilizador A2E a bandas estrechas de luz de distintas longitudes de onda, midiendo estrés oxidativo y daño mitocondrial.",
+      "results": [
+        "La luz azul-violeta generó altos niveles de especies reactivas de oxígeno",
+        "Provocó agrupamiento perinuclear de las mitocondrias con caída del potencial de membrana y de la respiración",
+        "Identificó una franja específica del espectro como la más tóxica para la mitocondria"
+      ],
+      "note": "Demuestra que la longitud de onda de la luz determina su impacto sobre la función mitocondrial, fundamento de la fotobiomodulación. Verificado contra el PDF original (Cell Death & Disease, Springer Nature, CC BY).",
+      "pdf": "estudios/extra/marie-2018-espectro-luz-estres-oxidativo-mitocondria-rpe.pdf",
+      "doi": "10.1038/s41419-018-0331-5"
+    },
+    {
+      "id": "extra-aguda-2023-nir-ros-citoquinas-spike",
+      "brand": "all",
+      "type": "vitro",
+      "portada": "img/papers/aguda-2023-nir-ros-citoquinas-spike.jpg",
+      "title": "Near-Infrared Light Exposure Triggers ROS to Downregulate Inflammatory Cytokines Induced by SARS-CoV-2 Spike Protein in Human Cell Culture",
+      "cite": "Aguida B, Chabi M-M, Baouz S, et al · Antioxidants · 2023",
+      "n": "Cultivos de células humanas (in vitro)",
+      "loc": "University of Westminster (RU) / Sorbonne Université (Francia)",
+      "dur": "—",
+      "method": "Cultivos celulares humanos expuestos a la proteína Spike del SARS-CoV-2 e irradiados con luz infrarroja cercana (NIR); se midió la producción de especies reactivas de oxígeno (ROS) y la liberación de citoquinas inflamatorias.",
+      "results": [
+        "La luz NIR generó un pulso transitorio y controlado de ROS dentro de la célula",
+        "Ese pulso redujo significativamente las citoquinas inflamatorias (incluida la IL-6) inducidas por la proteína Spike",
+        "Sugiere un mecanismo por el cual la luz NIR modula la respuesta inflamatoria a nivel celular"
+      ],
+      "note": "Fotobiomodulación con luz infrarroja cercana modulando la inflamación vía señalización redox mitocondrial. Verificado contra el PDF original (Antioxidants, MDPI, CC BY).",
+      "pdf": "estudios/extra/aguda-2023-nir-ros-citoquinas-spike.pdf",
+      "doi": "10.3390/antiox12101824"
+    },
+    {
+      "id": "extra-vanwijk-2013-emision-fotonica-artritis-raton",
+      "brand": "all",
+      "type": "animal",
+      "portada": "img/papers/vanwijk-2013-emision-fotonica-artritis-raton.jpg",
+      "title": "Imaging of Ultra-Weak Photon Emission in a Rheumatoid Arthritis Mouse Model",
+      "cite": "van Wijk E, Kobayashi M, van Wijk R, van der Greef J · PLOS ONE · 2013",
+      "n": "Modelo murino de artritis reumatoide",
+      "loc": "Leiden University, Países Bajos / Samueli Institute, EE. UU.",
+      "dur": "—",
+      "method": "Captura de imágenes de la emisión ultradébil de fotones (biofotones) de las patas de ratones con artritis reumatoide inducida, comparando miembros inflamados con controles sanos mediante cámara fotomultiplicadora.",
+      "results": [
+        "La emisión ultradébil de fotones fue significativamente mayor en las patas con artritis que en las sanas",
+        "La intensidad luminosa se correlacionó con el grado de inflamación y de estrés oxidativo del tejido",
+        "Valida la emisión de biofotones como ventana no invasiva al estado redox de un tejido vivo"
+      ],
+      "note": "Evidencia revisada por pares de que los tejidos vivos emiten luz ultradébil ligada al estado oxidativo (base del concepto de biofotones/biocampo). Verificado contra el PDF original (PLOS ONE, CC BY).",
+      "pdf": "estudios/extra/vanwijk-2013-emision-fotonica-artritis-raton.pdf",
+      "doi": "10.1371/journal.pone.0084579"
+    },
+    {
+      "id": "extra-vanwijk-2020-emision-fotonica-mitocondria-revision",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/vanwijk-2020-emision-fotonica-mitocondria-revision.jpg",
+      "title": "Integrating Ultra-Weak Photon Emission Analysis in Mitochondrial Research",
+      "cite": "Van Wijk R, Van Wijk EPA, Pang J, et al · Frontiers in Physiology · 2020",
+      "n": "Revisión",
+      "loc": "Meluna Research, Países Bajos / Shandong First Medical University, China",
+      "dur": "—",
+      "method": "Revisión que integra la evidencia sobre la emisión ultradébil de fotones (biofotones) y su origen en el metabolismo mitocondrial y el estrés oxidativo, proponiendo su uso como biomarcador no invasivo.",
+      "results": [
+        "La emisión ultradébil de fotones se origina en especies reactivas de oxígeno generadas mayormente en la mitocondria",
+        "La intensidad y el espectro de la emisión reflejan el estado energético y oxidativo de la célula",
+        "Plantea la medición de biofotones como herramienta para evaluar la función mitocondrial in vivo"
+      ],
+      "note": "Vincula explícitamente biofotones, mitocondria y estado redox; sustenta el marco de luz/biocampo. Verificado contra el PDF original (Frontiers in Physiology, CC BY).",
+      "pdf": "estudios/extra/vanwijk-2020-emision-fotonica-mitocondria-revision.pdf",
+      "doi": "10.3389/fphys.2020.00717"
+    },
+    {
+      "id": "extra-wunsch-2014-luz-roja-nir-piel-colageno-rct",
+      "brand": "all",
+      "type": "rct",
+      "portada": "img/papers/wunsch-2014-luz-roja-nir-piel-colageno-rct.jpg",
+      "title": "A Controlled Trial to Determine the Efficacy of Red and Near-Infrared Light Treatment in Patient Satisfaction, Reduction of Fine Lines, Wrinkles, Skin Roughness, and Intradermal Collagen Density Increase",
+      "cite": "Wunsch A, Matuschka K · Photomedicine and Laser Surgery · 2014",
+      "n": "113 participantes (ensayo controlado)",
+      "loc": "Medical Light Consulting, Heidelberg, Alemania",
+      "dur": "30 sesiones",
+      "method": "Ensayo controlado: participantes tratados con fotobiomodulación policromática no térmica (luz roja y NIR) frente a grupo control. Se evaluó satisfacción, líneas finas, arrugas, rugosidad cutánea y densidad de colágeno intradérmico por ecografía.",
+      "results": [
+        "El grupo tratado mostró mejoras significativas en satisfacción, textura y aspecto de la piel",
+        "Aumentó de forma medible la densidad de colágeno intradérmico frente al control",
+        "La fotobiomodulación policromática de gran superficie resultó segura y eficaz"
+      ],
+      "note": "Ensayo controlado en humanos que muestra efecto regenerador de la luz roja/NIR (fotobiomodulación) sobre la piel y el colágeno. Verificado contra el PDF original (Photomedicine and Laser Surgery, acceso abierto vía PMC).",
+      "pdf": "estudios/extra/wunsch-2014-luz-roja-nir-piel-colageno-rct.pdf",
+      "doi": "10.1089/pho.2013.3616"
+    },
+    {
+      "id": "extra-mccraty-2017-geomagnetismo-sistema-nervioso-autonomo",
+      "brand": "all",
+      "type": "piloto",
+      "portada": "img/papers/mccraty-2017-geomagnetismo-sistema-nervioso-autonomo.jpg",
+      "title": "Synchronization of Human Autonomic Nervous System Rhythms with Geomagnetic Activity in Human Subjects",
+      "cite": "McCraty R, Atkinson M, Stolc V, et al · Int. J. Environmental Research and Public Health · 2017",
+      "n": "16 participantes monitorizados durante 5 meses (HRV continua)",
+      "loc": "HeartMath Institute (EE. UU.), NASA Ames, Prince Sultan Cardiac Center (Arabia Saudita), Univ. de Lituania",
+      "dur": "5 meses",
+      "method": "Estudio de campo: 16 personas usaron registro continuo de variabilidad de la frecuencia cardíaca (HRV) durante 5 meses, correlacionando los ritmos del sistema nervioso autónomo con índices de actividad geomagnética, viento solar y resonancias Schumann mediante análisis espectral.",
+      "results": [
+        "Se detectó acoplamiento entre la actividad geomagnética/solar y la función del sistema nervioso autónomo humano",
+        "Los ritmos de la HRV se sincronizaron con frecuencias del campo magnético terrestre y resonancias Schumann",
+        "Los efectos variaron entre individuos pero fueron consistentes en el grupo a lo largo del tiempo"
+      ],
+      "note": "Vincula los campos geomagnéticos terrestres con la regulación autonómica y la coherencia cardíaca humana, eje central del enfoque de campos electromagnéticos y biocampo. Verificado contra el PDF original (IJERPH, MDPI, CC BY).",
+      "pdf": "estudios/extra/mccraty-2017-geomagnetismo-sistema-nervioso-autonomo.pdf",
+      "doi": "10.3390/ijerph14070770"
+    },
+    {
+      "id": "extra-yau-2021-exposicion-frio-autofagia-grasa-parda",
+      "brand": "all",
+      "type": "animal",
+      "portada": "img/papers/yau-2021-exposicion-frio-autofagia-grasa-parda.jpg",
+      "title": "Chronic Cold Exposure Induces Autophagy to Promote Fatty Acid Oxidation, Mitochondrial Turnover, and Thermogenesis in Brown Adipose Tissue",
+      "cite": "Yau WW, Wong KA, Zhou J, et al · iScience (Cell Press) · 2021",
+      "n": "Modelo murino (tejido adiposo pardo)",
+      "loc": "Duke-NUS Medical School / National University of Singapore",
+      "dur": "Exposición crónica al frío",
+      "method": "Estudio en ratón: se sometió a los animales a exposición crónica al frío y se analizó la activación del tejido adiposo pardo, midiendo autofagia/mitofagia, oxidación de ácidos grasos, recambio mitocondrial y termogénesis.",
+      "results": [
+        "El frío crónico estimuló la beta-oxidación en la grasa parda para aumentar la termogénesis",
+        "Activó la mitofagia como control de calidad mitocondrial",
+        "La autofagia resultó crítica para sostener la función y la termogénesis mitocondrial"
+      ],
+      "note": "Evidencia mecanística de cómo un estímulo ambiental natural (frío) mejora la calidad y el recambio mitocondrial. Verificado contra el PDF original (iScience, Cell Press, CC BY).",
+      "pdf": "estudios/extra/yau-2021-exposicion-frio-autofagia-grasa-parda.pdf",
+      "doi": "10.1016/j.isci.2021.102434"
+    },
+    {
+      "id": "extra-jain-2015-biofield-estudios-clinicos",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/jain-2015-biofield-estudios-clinicos.jpg",
+      "title": "Clinical Studies of Biofield Therapies: Summary, Methodological Challenges, and Recommendations",
+      "cite": "Jain S, Hammerschlag R, Mills P, et al · Global Advances in Health and Medicine · 2015",
+      "n": "Revisión metodológica de ensayos clínicos de terapias de biocampo",
+      "loc": "University of California San Diego / Consciousness and Healing Initiative, EE. UU.",
+      "dur": "—",
+      "method": "Revisión de la evidencia clínica de terapias de biocampo (Reiki, Therapeutic Touch, Healing Touch), con análisis de la calidad metodológica y recomendaciones para futuros ensayos.",
+      "results": [
+        "La mayor evidencia clínica de biocampo es para la reducción del dolor",
+        "Señala señales prometedoras en fatiga relacionada con el cáncer y calidad de vida",
+        "Identifica limitaciones de diseño (cegamiento, controles, tamaño muestral) y recomienda estandarización"
+      ],
+      "note": "Revisión central del campo del biocampo por el grupo de la Consciousness and Healing Initiative. Verificado contra el PDF original (Global Advances in Health and Medicine, acceso abierto).",
+      "pdf": "estudios/extra/jain-2015-biofield-estudios-clinicos.pdf",
+      "doi": "10.7453/gahmj.2015.034.suppl"
+    },
+    {
+      "id": "extra-hammerschlag-2015-biofield-fisiologia",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/hammerschlag-2015-biofield-fisiologia.jpg",
+      "title": "Biofield Physiology: A Framework for an Emerging Discipline",
+      "cite": "Hammerschlag R, Levin M, McCraty R, et al · Global Advances in Health and Medicine · 2015",
+      "n": "Revisión / marco conceptual",
+      "loc": "The Institute for Integrative Health, Baltimore / Institute of HeartMath, EE. UU.",
+      "dur": "—",
+      "method": "Revisión que propone un marco fisiológico para el estudio del biocampo, integrando campos electromagnéticos endógenos medibles (corazón, cerebro) y su papel en la regulación del organismo.",
+      "results": [
+        "Propone el biocampo como campo de regulación biológica con base electromagnética medible",
+        "Vincula la fisiología del corazón (HeartMath) y la actividad bioeléctrica celular (Levin)",
+        "Plantea una agenda de investigación interdisciplinaria para una disciplina emergente"
+      ],
+      "note": "Marco fisiológico del biocampo con coautoría de McCraty (coherencia cardíaca) y Levin (bioelectricidad). Verificado contra el PDF original (Global Advances in Health and Medicine, acceso abierto).",
+      "pdf": "estudios/extra/hammerschlag-2015-biofield-fisiologia.pdf",
+      "doi": "10.7453/gahmj.2015.015.suppl"
+    },
+    {
+      "id": "extra-fishburn-2018-sincronizacion-neural-interpersonal",
+      "brand": "all",
+      "type": "piloto",
+      "portada": "img/papers/fishburn-2018-sincronizacion-neural-interpersonal.jpg",
+      "title": "Putting Our Heads Together: Interpersonal Neural Synchronization as a Biological Mechanism for Shared Intentionality",
+      "cite": "Fishburn FA, Murty VP, Hlutkowsky CO, et al · Social Cognitive and Affective Neuroscience · 2018",
+      "n": "Hyperscanning fNIRS en díadas",
+      "loc": "University of Pittsburgh, EE. UU.",
+      "dur": "—",
+      "method": "Hyperscanning con fNIRS en pares de personas durante tareas cooperativas frente a competitivas/individuales, midiendo la sincronización neural interpersonal en la corteza prefrontal.",
+      "results": [
+        "La sincronización neural interpersonal aumenta durante la cooperación",
+        "La sincronía se asocia con la intencionalidad compartida, no solo con la actividad conjunta",
+        "Aporta evidencia de un mecanismo biológico de acoplamiento entre cerebros"
+      ],
+      "note": "Sincronía cerebro-a-cerebro durante la interacción cooperativa. Verificado contra el PDF original (Social Cognitive and Affective Neuroscience, Oxford, acceso abierto).",
+      "pdf": "estudios/extra/fishburn-2018-sincronizacion-neural-interpersonal.pdf",
+      "doi": "10.1093/scan/nsy060"
+    },
+    {
+      "id": "extra-goldstein-2018-acoplamiento-cerebro-dolor",
+      "brand": "all",
+      "type": "piloto",
+      "portada": "img/papers/goldstein-2018-acoplamiento-cerebro-dolor.jpg",
+      "title": "Brain-to-Brain Coupling During Handholding Is Associated with Pain Reduction",
+      "cite": "Goldstein P, Weissman-Fogel I, Dumas G, Shamay-Tsoory SG · PNAS · 2018",
+      "n": "Hyperscanning EEG en parejas (22 díadas)",
+      "loc": "University of Haifa, Israel / University of Colorado Boulder, EE. UU.",
+      "dur": "—",
+      "method": "Hyperscanning EEG en parejas mientras una persona sentía dolor; se comparó tomarse de la mano frente a no tener contacto, midiendo el acoplamiento cerebro-a-cerebro y la intensidad del dolor reportada.",
+      "results": [
+        "Tomarse de la mano aumentó el acoplamiento entre los cerebros de la pareja",
+        "Mayor acoplamiento cerebro-a-cerebro se asoció con mayor reducción del dolor",
+        "Mayor empatía del acompañante predijo mayor sincronía y analgesia"
+      ],
+      "note": "Sincronización entre cerebros y su correlato con la reducción del dolor por contacto. Verificado contra el PDF original (PNAS, acceso abierto).",
+      "pdf": "estudios/extra/goldstein-2018-acoplamiento-cerebro-dolor.pdf",
+      "doi": "10.1073/pnas.1703643115"
+    },
+    {
+      "id": "extra-bartel-2021-vibracion-sonora-salud",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/bartel-2021-vibracion-sonora-salud.jpg",
+      "title": "Possible Mechanisms for the Effects of Sound Vibration on Human Health",
+      "cite": "Bartel L, Mosabbir A · Healthcare · 2021",
+      "n": "Revisión",
+      "loc": "University of Toronto, Canadá",
+      "dur": "—",
+      "method": "Revisión de los mecanismos fisiológicos por los que la vibración sonora (incluida la estimulación vibroacústica) podría afectar la salud: resonancia celular, óxido nítrico, ritmos cerebrales y modulación autonómica.",
+      "results": [
+        "Propone vías por las que la vibración de baja frecuencia influye en células y tejidos",
+        "Vincula la estimulación vibroacústica con cambios en ritmos cerebrales y flujo sanguíneo",
+        "Sugiere aplicaciones en dolor, Parkinson y fibromialgia, señalando que la evidencia clínica aún es preliminar"
+      ],
+      "note": "Mecanismos de sonido/vibración sobre el organismo. Verificado contra el PDF original (Healthcare, MDPI, acceso abierto).",
+      "pdf": "estudios/extra/bartel-2021-vibracion-sonora-salud.pdf",
+      "doi": "10.3390/healthcare9050597"
+    },
+    {
+      "id": "extra-perry-2021-canto-ritmico-estados-misticos",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/perry-2021-canto-ritmico-estados-misticos.jpg",
+      "title": "Rhythmic Chanting and Mystical States across Traditions",
+      "cite": "Perry G, Polito V, Thompson WF · Brain Sciences · 2021",
+      "n": "Revisión interdisciplinaria",
+      "loc": "Macquarie University, Australia",
+      "dur": "—",
+      "method": "Revisión que examina el canto rítmico (mantra, kirtan, etc.) a través de tradiciones y su asociación con estados alterados de consciencia, integrando neurociencia, psicología y musicología.",
+      "results": [
+        "El canto rítmico se asocia con estados místicos y de absorción",
+        "Describe correlatos fisiológicos: cambios en respiración, ritmo cardíaco y actividad cerebral",
+        "Propone marcos de cómo el sonido/vibración rítmica modula la consciencia"
+      ],
+      "note": "Sonido/vibración y estados de consciencia. Verificado contra el PDF original (Brain Sciences, MDPI, acceso abierto).",
+      "pdf": "estudios/extra/perry-2021-canto-ritmico-estados-misticos.pdf",
+      "doi": "10.3390/brainsci11010101"
+    },
+    {
+      "id": "extra-pinna-2020-interocepcion-tono-vagal",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/pinna-2020-interocepcion-tono-vagal.jpg",
+      "title": "A Systematic Review of Associations Between Interoception, Vagal Tone, and Emotional Regulation",
+      "cite": "Pinna T, Edwards DJ · Frontiers in Psychology · 2020",
+      "n": "Revisión sistemática",
+      "loc": "Swansea University, Reino Unido",
+      "dur": "—",
+      "method": "Revisión sistemática de la asociación entre la interocepción, el tono vagal (variabilidad de la frecuencia cardíaca) y la regulación emocional.",
+      "results": [
+        "Mayor tono vagal/HRV se asocia con mejor regulación emocional",
+        "La interocepción se vincula al bienestar y a la flexibilidad psicológica",
+        "Apoya intervenciones que modulan la actividad vagal para la salud mental"
+      ],
+      "note": "Tono vagal / coherencia autonómica (HRV) y regulación emocional, base fisiológica de la coherencia cardíaca. Verificado contra el PDF original (Frontiers in Psychology, acceso abierto).",
+      "pdf": "estudios/extra/pinna-2020-interocepcion-tono-vagal.pdf",
+      "doi": "10.3389/fpsyg.2020.01792"
+    },
+    {
+      "id": "extra-he-2016-contagio-emocional-redes",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/he-2016-contagio-emocional-redes.jpg",
+      "title": "Exploring Entrainment Patterns of Human Emotion in Social Media",
+      "cite": "He S, Zheng X, Zeng D, Luo C, Zhang Z · PLOS ONE · 2016",
+      "n": "Estudio observacional de gran escala en redes sociales",
+      "loc": "Chinese Academy of Sciences, China / University of Arizona, EE. UU.",
+      "dur": "—",
+      "method": "Análisis de patrones de entrainment (arrastre/sincronización) de las emociones humanas en datos masivos de redes sociales.",
+      "results": [
+        "Las emociones muestran patrones de arrastre/sincronización entre individuos",
+        "Identifica dinámicas de contagio emocional a escala poblacional",
+        "Aporta evidencia cuantitativa de sincronía emocional colectiva"
+      ],
+      "note": "Sincronización/arrastre emocional entre personas, relacionado con la sincronía interpersonal. Verificado contra el PDF original (PLOS ONE, acceso abierto).",
+      "pdf": "estudios/extra/he-2016-contagio-emocional-redes.pdf",
+      "doi": "10.1371/journal.pone.0150630"
+    },
+    {
+      "id": "extra-babcock-2024-superradiancia-triptofano",
+      "brand": "all",
+      "type": "vitro",
+      "portada": "img/papers/babcock-2024-superradiancia-triptofano.jpg",
+      "title": "Ultraviolet Superradiance from Mega-Networks of Tryptophan in Biological Architectures",
+      "cite": "Babcock NS, Montes-Cabrera G, Oberhofer KE, et al · J. Physical Chemistry B · 2024",
+      "n": "Estudio teórico-computacional de óptica cuántica",
+      "loc": "Howard University, EE. UU. / EPFL, Suiza",
+      "dur": "—",
+      "method": "Modelado de óptica cuántica de redes de triptófano en estructuras biológicas (microtúbulos, proteínas de membrana), evaluando efectos colectivos de superradiancia ultravioleta.",
+      "results": [
+        "Las megarredes de triptófano pueden exhibir superradiancia cuántica colectiva en el ultravioleta",
+        "Estos efectos colectivos son robustos a temperatura biológica",
+        "Sugiere un posible canal de señalización fotónica/cuántica en arquitecturas celulares"
+      ],
+      "note": "Base físico-cuántica de los biofotones y de hipótesis sobre consciencia en microtúbulos; es un estudio teórico, no clínico. Verificado contra el PDF original (J. Phys. Chem. B, ACS, acceso abierto).",
+      "pdf": "estudios/extra/babcock-2024-superradiancia-triptofano.pdf",
+      "doi": "10.1021/acs.jpcb.3c07936"
     }
   ]
 }
