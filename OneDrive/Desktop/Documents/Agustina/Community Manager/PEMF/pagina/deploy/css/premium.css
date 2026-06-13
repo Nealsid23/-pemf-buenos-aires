@@ -334,15 +334,15 @@
 }
 .anim-ready [data-reveal]:not(.revealed) {
   opacity: 0;
-  transform: translateY(28px);
+  transform: translateY(20px);
 }
-.anim-ready [data-reveal="left"]:not(.revealed)  { transform: translateX(-46px); }
-.anim-ready [data-reveal="right"]:not(.revealed) { transform: translateX(46px); }
-.anim-ready [data-reveal="zoom"]:not(.revealed)  { transform: scale(.9); }
+.anim-ready [data-reveal="left"]:not(.revealed)  { transform: translateX(-28px); }
+.anim-ready [data-reveal="right"]:not(.revealed) { transform: translateX(28px); }
+.anim-ready [data-reveal="zoom"]:not(.revealed)  { transform: scale(.94); }
 .anim-ready [data-reveal="mask"]:not(.revealed)  {
   opacity: 1;
-  clip-path: inset(10% 10% 10% 10% round 28px);
-  transform: scale(1.06);
+  clip-path: inset(6% 6% 6% 6% round 24px);
+  transform: scale(1.03);
 }
 .anim-ready [data-reveal].revealed {
   opacity: 1;
@@ -359,8 +359,8 @@
 }
 .anim-ready .reveal:not(.in) {
   opacity: 0;
-  transform: translateY(42px) scale(.985);
-  filter: blur(7px);
+  transform: translateY(24px) scale(.99);
+  filter: blur(4px);
 }
 .anim-ready .reveal.in {
   opacity: 1;
@@ -438,7 +438,7 @@
   width: 45%;
   background: linear-gradient(105deg, transparent 20%, rgba(255,255,255,.09) 50%, transparent 80%);
   transform: translateX(-260%) skewX(-14deg);
-  animation: mechShine 7s ease-in-out infinite 2.2s;
+  animation: mechShine 11s ease-in-out infinite 3s;
 }
 @keyframes mechShine {
   0%, 64% { transform: translateX(-260%) skewX(-14deg); }
@@ -461,17 +461,17 @@
 }
 .mech-aura::before {
   left: 0; top: 8%;
-  background: rgba(103,204,233,.35);
-  animation: auraDrift 11s ease-in-out infinite alternate;
+  background: rgba(103,204,233,.25);
+  animation: auraDrift 16s ease-in-out infinite alternate;
 }
 .mech-aura::after {
   right: 0; bottom: 4%;
-  background: rgba(26,79,182,.32);
-  animation: auraDrift 14s ease-in-out infinite alternate-reverse;
+  background: rgba(26,79,182,.22);
+  animation: auraDrift 20s ease-in-out infinite alternate-reverse;
 }
 @keyframes auraDrift {
-  from { transform: translate(-7%, -5%) scale(.9); }
-  to   { transform: translate(11%, 11%) scale(1.14); }
+  from { transform: translate(-4%, -3%) scale(.95); }
+  to   { transform: translate(6%, 6%) scale(1.08); }
 }
 /* borde de luz que recorre el contorno del panel */
 @property --mang { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
@@ -482,13 +482,13 @@
   padding: 1.5px;
   background: conic-gradient(from var(--mang),
     transparent 0deg,
-    rgba(103,204,233,.95) 36deg,
-    rgba(26,79,182,.45) 70deg,
+    rgba(103,204,233,.6) 36deg,
+    rgba(26,79,182,.3) 70deg,
     transparent 110deg);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  animation: mangSpin 5.5s linear infinite;
+  animation: mangSpin 9s linear infinite;
   pointer-events: none;
   z-index: 2;
 }
@@ -509,7 +509,7 @@
 .anim-ready .step:nth-child(2) { animation-delay: .22s; }
 .anim-ready .step:nth-child(3) { animation-delay: .38s; }
 .anim-ready .step:nth-child(4) { animation-delay: .54s; }
-@keyframes stepIn { from { opacity: 0; transform: translateX(-28px); } }
+@keyframes stepIn { from { opacity: 0; transform: translateX(-16px); } }
 .step-num { position: relative; z-index: 1; }
 
 /* ════════════════════════════════════════════
@@ -556,7 +556,7 @@
   display: flex;
   gap: 18px;
   width: max-content;
-  animation: stripSide 38s linear infinite;
+  animation: stripSide 60s linear infinite;
   will-change: transform;
 }
 @keyframes stripSide { to { transform: translateX(-50%); } }
@@ -663,7 +663,7 @@
    con caché viejo o sin JS, las tarjetas siempre se ven. */
 .quiz-section.qs-prep .quiz-card {
   opacity: 0;
-  transform: rotateX(18deg) translateY(48px) scale(.95);
+  transform: rotateX(10deg) translateY(30px) scale(.97);
 }
 .anim-ready .quiz-section.qs-in .quiz-card {
   opacity: 1;
@@ -694,7 +694,7 @@
    ════════════════════════════════════════════ */
 .problem-grid { perspective: 1100px; }
 .anim-ready .problem-card.reveal:not(.in) {
-  transform: rotateX(16deg) translateY(56px) scale(.96);
+  transform: rotateX(9deg) translateY(34px) scale(.98);
 }
 .prob-photo { overflow: hidden; }
 .prob-photo img { will-change: transform; transform: scale(1.14); }
@@ -720,11 +720,11 @@
   transition: opacity 1.2s ease;
   will-change: transform, opacity;
 }
-.pb-backdrop img.on { opacity: .5; }
-.pb-backdrop img.zooming { animation: pbZoomOut 3.4s cubic-bezier(.25,.55,.3,1) forwards; }
+.pb-backdrop img.on { opacity: .3; }
+.pb-backdrop img.zooming { animation: pbZoomOut 4.6s cubic-bezier(.25,.55,.3,1) forwards; }
 @keyframes pbZoomOut {
-  from { transform: scale(1.35); }
-  to   { transform: scale(1.02); }
+  from { transform: scale(1.16); }
+  to   { transform: scale(1.03); }
 }
 .pb-veil {
   position: absolute;
@@ -743,14 +743,14 @@
   will-change: transform, filter;
 }
 .anim-ready .pb-stage .problem-card.pb-focus {
-  transform: scale(1.055) translateY(-6px);
+  transform: scale(1.035) translateY(-4px);
   z-index: 5;
-  box-shadow: 0 30px 64px -12px rgba(26,79,182,.32);
+  box-shadow: 0 26px 56px -12px rgba(26,79,182,.28);
 }
 .anim-ready .pb-stage .problem-card.pb-dim {
-  transform: scale(.962);
-  filter: blur(2.5px) saturate(.85);
-  opacity: .7;
+  transform: scale(.975);
+  filter: blur(1.5px) saturate(.9);
+  opacity: .82;
 }
 
 /* ════════════════════════════════════════════

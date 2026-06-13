@@ -57,8 +57,8 @@
       return {
         el: el,
         shadow: el.querySelector('.const-shadow'),
-        amp: 8 + (i % 3) * 5,                       // amplitud de flotación
-        period: 3800 + i * 900,                      // ms por ciclo
+        amp: 5 + (i % 3) * 3,                        // flotación suave (público mayor)
+        period: 5600 + i * 1100,                     // ms por ciclo, lento
         phase: i * 1.7,
         depth: parseFloat(el.getAttribute('data-depth') || '1'), // 0.5 lejos … 1.4 cerca
         scatterX: 0, scatterY: 0, scatterR: 0,
@@ -78,9 +78,9 @@
         var iy = (r.top - sRect.top) + r.height / 2;
         var dx = ix - cx, dy = iy - cy;
         var len = Math.sqrt(dx * dx + dy * dy) || 1;
-        it.scatterX = (dx / len) * 260;
-        it.scatterY = (dy / len) * 200 - 80;
-        it.scatterR = (dx >= 0 ? 1 : -1) * (18 + it.depth * 14);
+        it.scatterX = (dx / len) * 200;
+        it.scatterY = (dy / len) * 150 - 60;
+        it.scatterR = (dx >= 0 ? 1 : -1) * (10 + it.depth * 8);
       });
     }
     computeScatter();
@@ -114,8 +114,8 @@
         // flotación idle
         var fy = Math.sin((t / it.period) * Math.PI * 2 + it.phase) * it.amp;
         // parallax con inercia
-        it.mx += ((tx * 18 * it.depth) - it.mx) * 0.06;
-        it.my += ((ty * 12 * it.depth) - it.my) * 0.06;
+        it.mx += ((tx * 8 * it.depth) - it.mx) * 0.05;
+        it.my += ((ty * 5 * it.depth) - it.my) * 0.05;
         // dispersión por scroll
         var sx = it.scatterX * prog;
         var sy = it.scatterY * prog;
@@ -142,7 +142,7 @@
   function initTilt() {
     if (!canHover) return;
     document.querySelectorAll('[data-tilt]').forEach(function (el) {
-      var max = parseFloat(el.getAttribute('data-tilt')) || 7;
+      var max = parseFloat(el.getAttribute('data-tilt')) || 4;
       var raf = null;
       el.addEventListener('mousemove', function (e) {
         if (raf) return;
@@ -291,11 +291,11 @@
      ──────────────────────────────────────────── */
   function initParallax() {
     var conf = [
-      { sel: '.how-bg-wrap',        f: 0.12 },
-      { sel: '.nosotros-photo img', f: 0.09 },
-      { sel: '.ev-fan',             f: 0.05 },
-      { sel: '.hero-v2 .orb-sky',   f: -0.22 },
-      { sel: '.hero-v2 .orb-blue',  f: 0.14 }
+      { sel: '.how-bg-wrap',        f: 0.07 },
+      { sel: '.nosotros-photo img', f: 0.05 },
+      { sel: '.ev-fan',             f: 0.04 },
+      { sel: '.hero-v2 .orb-sky',   f: -0.12 },
+      { sel: '.hero-v2 .orb-blue',  f: 0.08 }
     ];
     var mobile = window.matchMedia('(max-width: 768px)').matches;
     var targets = [];
@@ -309,42 +309,9 @@
       targets.forEach(function (t) {
         var r = t.el.getBoundingClientRect();
         var goal = ((r.top + r.height / 2) - vc) * t.f;
-        goal = Math.max(-110, Math.min(110, goal)); // capado: secciones altas
+        goal = Math.max(-70, Math.min(70, goal));   // capado: secciones altas
         t.y += (goal - t.y) * 0.08;                 // inercia fluida
         t.el.style.transform = 'translate3d(0,' + (-t.y).toFixed(2) + 'px,0)';
-      });
-      requestAnimationFrame(frame);
-    }
-    requestAnimationFrame(frame);
-  }
-
-  /* ────────────────────────────────────────────
-     9 · VELOCIDAD DE SCROLL — ticker y skew de grillas
-     ──────────────────────────────────────────── */
-  function initVelocity() {
-    var lastY = window.scrollY, v = 0;
-    var grids = [];
-    if (canHover) {
-      ['.prod-grid', '.problem-grid'].forEach(function (sel) {
-        var el = document.querySelector(sel);
-        if (el) grids.push(el);
-      });
-    }
-    var tickers = [].slice.call(document.querySelectorAll('.ticker-row, .ig-strip-track'));
-    function frame() {
-      var y = window.scrollY;
-      v += ((y - lastY) - v) * 0.12;                // velocidad con inercia
-      lastY = y;
-      // las grillas se inclinan apenas con el envión del scroll
-      var skew = Math.max(-1.4, Math.min(1.4, v * 0.05));
-      grids.forEach(function (g) {
-        g.style.transform = 'skewY(' + skew.toFixed(3) + 'deg)';
-      });
-      // los testimonios aceleran apenas cuando scrolleás rápido
-      var rate = 1 + Math.min(1.1, Math.abs(v) * 0.035);
-      tickers.forEach(function (t) {
-        var anims = t.getAnimations ? t.getAnimations() : [];
-        anims.forEach(function (a) { a.playbackRate = rate; });
       });
       requestAnimationFrame(frame);
     }
@@ -379,17 +346,17 @@
           var img = document.getElementById('mech-img');
           if (card && card.animate) {
             card.animate([
-              { transform: 'perspective(900px) rotateY(' + (d * 18) + 'deg) translateX(' + (d * 60) + 'px) scale(.9)', opacity: 0, filter: 'blur(12px)' },
-              { transform: 'perspective(900px) rotateY(' + (d * -4) + 'deg) translateX(' + (d * -8) + 'px) scale(1.02)', opacity: 1, filter: 'blur(0px)', offset: 0.72 },
+              { transform: 'perspective(900px) rotateY(' + (d * 9) + 'deg) translateX(' + (d * 34) + 'px) scale(.96)', opacity: 0, filter: 'blur(6px)' },
+              { transform: 'perspective(900px) rotateY(' + (d * -2) + 'deg) translateX(' + (d * -4) + 'px) scale(1.008)', opacity: 1, filter: 'blur(0px)', offset: 0.72 },
               { transform: 'perspective(900px) rotateY(0deg) translateX(0px) scale(1)', opacity: 1, filter: 'blur(0px)' }
-            ], { duration: 720, easing: 'cubic-bezier(.3,.9,.32,1)' });
+            ], { duration: 640, easing: 'cubic-bezier(.3,.9,.32,1)' });
           }
           if (img && img.animate) {
             img.animate([
-              { transform: 'scale(.55) rotate(' + (d * -12) + 'deg)', opacity: 0 },
-              { transform: 'scale(1.1) rotate(' + (d * 2.5) + 'deg)', opacity: 1, offset: 0.72 },
+              { transform: 'scale(.74) rotate(' + (d * -6) + 'deg)', opacity: 0 },
+              { transform: 'scale(1.05) rotate(' + (d * 1.5) + 'deg)', opacity: 1, offset: 0.72 },
               { transform: 'scale(1) rotate(0deg)', opacity: 1 }
-            ], { duration: 850, delay: 90, easing: 'cubic-bezier(.34,1.45,.64,1)', fill: 'backwards' });
+            ], { duration: 720, delay: 80, easing: 'cubic-bezier(.34,1.3,.64,1)', fill: 'backwards' });
           }
         }, 255);
       };
@@ -412,11 +379,11 @@
       // rotación base ligada al scroll: el panel "mira" al centro del viewport
       var r = section.getBoundingClientRect();
       var p = ((r.top + r.height / 2) - window.innerHeight / 2) / window.innerHeight;
-      var goal = Math.max(-9, Math.min(9, p * 16));
-      sr += (goal - sr) * 0.07;
+      var goal = Math.max(-4.5, Math.min(4.5, p * 8));
+      sr += (goal - sr) * 0.06;
       // tilt de mouse con inercia
-      mx += ((tx * 6) - mx) * 0.08;
-      my += ((ty * -6) - my) * 0.08;
+      mx += ((tx * 3) - mx) * 0.07;
+      my += ((ty * -3) - my) * 0.07;
       panel.style.transform =
         'perspective(1200px) rotateX(' + (sr + my).toFixed(2) + 'deg) rotateY(' + mx.toFixed(2) + 'deg)';
       requestAnimationFrame(frame);
@@ -449,7 +416,7 @@
 
     var state = cards.map(function (el, i) {
       return { el: el, h: 0, tx: 0, ty: 0, lift: 0, rx: 0, ry: 0,
-               depth: (i % 2 ? -1 : 1) * (7 + i * 3) };
+               depth: (i % 2 ? -1 : 1) * (4 + i * 1.5) };
     });
     if (canHover) {
       state.forEach(function (s) {
@@ -474,7 +441,7 @@
       cards.forEach(function (c) { c.classList.remove('qs-pulse'); });
       cards[pi % cards.length].classList.add('qs-pulse');
       pi++;
-    }, 2600);
+    }, 3800);
 
     function frame() {
       if (section.classList.contains('qs-ready')) {
@@ -482,10 +449,10 @@
         var p = ((r.top + r.height / 2) - window.innerHeight / 2) / window.innerHeight;
         p = Math.max(-0.8, Math.min(0.8, p));
         state.forEach(function (s) {
-          s.lift += ((s.h ? -10 : 0) - s.lift) * 0.1;
-          s.rx += ((s.h ? s.ty * -6 : 0) - s.rx) * 0.12;
-          s.ry += ((s.h ? s.tx * 6 : 0) - s.ry) * 0.12;
-          var py = p * s.depth * 2.4;
+          s.lift += ((s.h ? -6 : 0) - s.lift) * 0.1;
+          s.rx += ((s.h ? s.ty * -3.5 : 0) - s.rx) * 0.12;
+          s.ry += ((s.h ? s.tx * 3.5 : 0) - s.ry) * 0.12;
+          var py = p * s.depth * 1.4;
           s.el.style.transform =
             'perspective(800px) translateY(' + (py + s.lift).toFixed(2) + 'px)' +
             ' rotateX(' + s.rx.toFixed(2) + 'deg) rotateY(' + s.ry.toFixed(2) + 'deg)';
@@ -509,7 +476,7 @@
       imgs.forEach(function (it) {
         var r = it.el.getBoundingClientRect();
         if (r.bottom < -100 || r.top > window.innerHeight + 100) return;
-        var goal = (((r.top + r.height / 2) - vc) / window.innerHeight) * 16 * it.dir;
+        var goal = (((r.top + r.height / 2) - vc) / window.innerHeight) * 8 * it.dir;
         it.y += (goal - it.y) * 0.08;
         it.el.style.transform = 'scale(1.14) translateY(' + it.y.toFixed(2) + 'px)';
       });
@@ -578,7 +545,7 @@
         hide.classList.remove('on');
       }
       idx++;
-    }, 3400);
+    }, 4600);
   }
 
   /* ──────────────────────────────────────────── */
@@ -591,7 +558,6 @@
     initCounters();
     initTitleReveals();
     initParallax();
-    initVelocity();
     initMech3D();
     initQuizStage();
     initProblemaLive();
