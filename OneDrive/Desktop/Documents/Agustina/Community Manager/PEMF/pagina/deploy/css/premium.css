@@ -664,8 +664,10 @@
    ════════════════════════════════════════════ */
 .quiz-cards { perspective: 1000px; }
 .quiz-card { position: relative; will-change: transform; transition: box-shadow .5s ease; }
-/* entrada: las tarjetas se "paran" desde el plano */
-.anim-ready .quiz-section .quiz-card {
+/* entrada: las tarjetas se "paran" desde el plano.
+   El estado oculto solo existe si el JS marcó la sección (qs-prep):
+   con caché viejo o sin JS, las tarjetas siempre se ven. */
+.quiz-section.qs-prep .quiz-card {
   opacity: 0;
   transform: rotateX(18deg) translateY(48px) scale(.95);
 }
@@ -702,6 +704,22 @@
 }
 .prob-photo { overflow: hidden; }
 .prob-photo img { will-change: transform; transform: scale(1.14); }
+/* loop de foco: una tarjeta pasa al frente, las demás se desenfocan */
+.pb-stage .problem-card {
+  transition: transform 1.05s cubic-bezier(.22,1,.36,1), filter 1.05s cubic-bezier(.22,1,.36,1), opacity 1.05s cubic-bezier(.22,1,.36,1), box-shadow .7s ease !important;
+  transition-delay: 0s !important;
+  will-change: transform, filter;
+}
+.anim-ready .pb-stage .problem-card.pb-focus {
+  transform: scale(1.055) translateY(-6px);
+  z-index: 5;
+  box-shadow: 0 30px 64px -12px rgba(26,79,182,.32);
+}
+.anim-ready .pb-stage .problem-card.pb-dim {
+  transform: scale(.962);
+  filter: blur(2.5px) saturate(.85);
+  opacity: .7;
+}
 
 /* ════════════════════════════════════════════
    CÓMO COMPRAR — línea de progreso + numerales

@@ -405,6 +405,7 @@
     if (!section) return;
     var cards = [].slice.call(section.querySelectorAll('.quiz-card'));
     if (!cards.length) return;
+    section.classList.add('qs-prep');
 
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
@@ -489,6 +490,46 @@
   }
 
   /* ────────────────────────────────────────────
+     12b · PROBLEMA — loop de foco: cada tarjeta toma el
+     centro de atención, las demás se desenfocan, y vuelve
+     fluidamente a su lugar antes de pasar a la siguiente.
+     ──────────────────────────────────────────── */
+  function initProblemaFocus() {
+    var grid = document.querySelector('.problem-grid');
+    if (!grid) return;
+    var cards = [].slice.call(grid.querySelectorAll('.problem-card'));
+    if (cards.length < 2) return;
+    var idx = 0, visible = false, paused = false, started = false;
+
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { visible = en.isIntersecting; });
+    }, { threshold: 0.3 }).observe(grid);
+
+    function clear() {
+      cards.forEach(function (c) { c.classList.remove('pb-focus', 'pb-dim'); });
+    }
+    // el mouse del usuario manda: el loop se corre a un costado
+    grid.addEventListener('mouseenter', function () { paused = true; clear(); });
+    grid.addEventListener('mouseleave', function () { paused = false; });
+
+    setInterval(function () {
+      if (!visible || paused) { if (!paused) clear(); return; }
+      if (!started) {
+        // arranca recién cuando la entrada de las tarjetas terminó
+        if (!cards.every(function (c) { return c.classList.contains('in'); })) return;
+        grid.classList.add('pb-stage');
+        started = true;
+      }
+      var f = idx % cards.length;
+      cards.forEach(function (c, i) {
+        c.classList.toggle('pb-focus', i === f);
+        c.classList.toggle('pb-dim', i !== f);
+      });
+      idx++;
+    }, 3300);
+  }
+
+  /* ────────────────────────────────────────────
      13 · CÓMO COMPRAR — línea de progreso que se dibuja
      ──────────────────────────────────────────── */
   function initComoTimeline() {
@@ -522,6 +563,7 @@
     initMech3D();
     initQuizStage();
     initProblemaLive();
+    initProblemaFocus();
     initComoTimeline();
   }
   if (document.readyState === 'loading') {
