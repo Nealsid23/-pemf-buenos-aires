@@ -135,8 +135,21 @@ Armstrong & Johnson "Water Intake/Balance" (Nutrients 2018, hidratación general
 
 **Cap 3 — estado:** 🟢 SUBIDOS = 7 (Cosic 2016, Dedic 2021, Schwartz 2010 [lote C] + Fischer 2018, Vodyanoy 2015, Hoyle 2017 [lote D] + Oschman, Li-Pollack [previos]). Núcleo del capítulo cubierto; resto = baja prioridad / paywall / libros.
 
-## RESTO DE CAPÍTULOS (4 en adelante)
-*CHAPTER FOUR empieza al pie de la pág. PDF 218 (Aguilar-López "Mitochondria: An Integrative Hub…", Frontiers Cell Dev Biol 2020). Referencias hasta pág. PDF 263 (264 = ACKNOWLEDGMENTS). Cap 4 = mitocondria/circadiano/melatonina/ROS. Se completan por lotes con el mismo formato.*
+## CAPÍTULO 4 — referencias págs. PDF 218 (pie) – 225 aprox. 🔄 EN PROCESO
+
+**Tema dominante (capítulo grande):** MITOCONDRIA y BIOELECTRICIDAD. Mitocondria (función, desacople, transferencia entre células, biogénesis, ROS), bioelectricidad y morfogénesis (Michael Levin: potenciales de membrana, regeneración de planaria, cáncer), canales iónicos, **piezoelectricidad y campos EM en regeneración de tejidos**, electrocéuticos, luz/fotobiomodulación sobre mitocondria, hidrógeno molecular. Es el capítulo **más rico para PEMF** (campos/señales eléctricas que regulan la biología celular y la regeneración).
+
+### 🔬 Papers procesados (lote E — Cap 4)
+| Autor | Título | Fuente / Año | DOI | Relev. | Estado |
+|---|---|---|---|---|---|
+| Alvarez-Lorenzo, C. et al. | Physical Stimuli-Emitting Scaffolds: The Role of Piezoelectricity in Tissue Regeneration | Materials Today Bio 22 (2023): 100740 | 10.1016/j.mtbio.2023.100740 | 🟢 | **SUBIDO** `extra-alvarez-lorenzo-2023-piezoelectricidad-regeneracion-tejidos` (CC-BY-NC-ND) — piezoelectricidad/bioeléctrica |
+| Demine, S., Renard, P. & Arnould, T. | Mitochondrial Uncoupling: A Key Controller of Biological Processes in Physiology and Diseases | Cells 8(8) (2019): 795 | 10.3390/cells8080795 | 🟢 | **SUBIDO** `extra-demine-2019-desacople-mitocondrial` (MDPI, CC-BY) |
+| Clemente-Suárez, V. J. et al. | Mitochondrial Transfer as a Novel Therapeutic Approach in Disease Diagnosis and Treatment | IJMS 24(10) (2023): 8848 | 10.3390/ijms24108848 | 🟢 | **SUBIDO** `extra-clemente-suarez-2023-transferencia-mitocondrial` (MDPI, CC-BY) |
+
+**Candidatos Cap 4 fuertes pendientes (próximos lotes):** Chernet & Levin 2013 (potenciales bioeléctricos y cáncer → PENDIENTES, manuscrito de autor); Chen/Manzanares/Levin/Mafe 2023 (modelo bioeléctrico de regeneración en planaria, J Theor Biol — Elsevier, verificar OA); Chung 2017 (ejercicio/frío y biogénesis mitocondrial, J Exerc Nutr Biochem — PMC OA); Liu et al. 2021 (transferencia mitocondrial intercelular, Signal Transduct Target Ther — OA); Marie et al. 2018 (espectro de la luz sobre estrés oxidativo y daño mitocondrial en EPR, Cell Death & Disease — OA); Marino/Cullen/Becker 1979 (cicatrización ósea con campos eléctricos ELF — paywall probable); Cheng 2023 (hidrógeno-mitocondria) y otros ya SUBIDOS en lotes previos. Falta leer págs. PDF 223–225+ para mapear el resto del capítulo.
+
+## RESTO DE CAPÍTULOS (5 en adelante)
+*Por mapear: leer desde la pág. PDF 225+ para localizar el inicio de CHAPTER FIVE. Referencias hasta pág. PDF 263 (264 = ACKNOWLEDGMENTS). Se completan por lotes con el mismo formato.*
 
 ## Resumen por tipo (del análisis OCR previo, a verificar al transcribir)
 - 📕 Libros: ~54

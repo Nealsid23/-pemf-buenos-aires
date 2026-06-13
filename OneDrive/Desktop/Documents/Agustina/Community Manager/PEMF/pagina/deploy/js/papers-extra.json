@@ -760,6 +760,66 @@
       "pdf": "estudios/extra/hoyle-2017-actina-circadiana-cicatrizacion.pdf",
       "doi": "10.1126/scitranslmed.aal2774",
       "note": "Ritmos circadianos y cicatrización: el reloj celular del fibroblasto regula la reparación del tejido conectivo. Respalda el peso de los ritmos biológicos (luz/día-noche) en la regeneración. Verificado contra el PDF (manuscrito de autor en PMC)."
+    },
+    {
+      "id": "extra-alvarez-lorenzo-2023-piezoelectricidad-regeneracion-tejidos",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/alvarez-lorenzo-2023-piezoelectricidad-regeneracion-tejidos.jpg",
+      "title": "Physical Stimuli-Emitting Scaffolds: The Role of Piezoelectricity in Tissue Regeneration",
+      "cite": "Alvarez-Lorenzo C, Zarur M, Seijo-Rabina A, et al · Materials Today Bio · 2023",
+      "n": "Revisión",
+      "loc": "Universidade de Santiago de Compostela, España",
+      "dur": "—",
+      "method": "Revisión sobre el uso de materiales piezoeléctricos —que generan cargas y campos eléctricos al deformarse— como andamios para medicina regenerativa: cómo la 'piezoestimulación' aporta señales eléctricas a las células para reparar hueso, cartílago y heridas.",
+      "results": [
+        "Los materiales piezoeléctricos convierten estímulos mecánicos (presión, ultrasonido, movimiento) en señales eléctricas locales que activan la regeneración celular",
+        "Esa estimulación eléctrica favorece la reparación de hueso, cartílago y heridas crónicas sin fuentes externas de corriente",
+        "Confirma que las señales eléctricas son un regulador central de la regeneración de tejidos (el mismo principio bioeléctrico que aprovecha PEMF)"
+      ],
+      "pdf": "estudios/extra/alvarez-lorenzo-2023-piezoelectricidad-regeneracion-tejidos.pdf",
+      "doi": "10.1016/j.mtbio.2023.100740",
+      "note": "Piezoelectricidad y regeneración: la estimulación eléctrica local repara hueso, cartílago y heridas. Base del principio bioeléctrico detrás de PEMF. Verificado contra el PDF original (Materials Today Bio, CC-BY-NC-ND)."
+    },
+    {
+      "id": "extra-demine-2019-desacople-mitocondrial",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/demine-2019-desacople-mitocondrial.jpg",
+      "title": "Mitochondrial Uncoupling: A Key Controller of Biological Processes in Physiology and Diseases",
+      "cite": "Demine S, Renard P, Arnould T · Cells · 2019",
+      "n": "Revisión",
+      "loc": "University of Namur / ULB, Bélgica",
+      "dur": "—",
+      "method": "Revisión sobre el 'desacople mitocondrial': la disociación entre el potencial de membrana de la mitocondria y su uso para producir ATP. Analiza las proteínas y compuestos que lo regulan y su papel fisiológico.",
+      "results": [
+        "El desacople mitocondrial, antes visto como disfunción, es en realidad un proceso fisiológico regulado (p. ej. por las proteínas UCP)",
+        "Participa en la termogénesis (producción de calor), el control de los radicales libres (ROS) y la protección celular",
+        "Modular el desacople mitocondrial abre vías terapéuticas en obesidad, enfermedades metabólicas y neurodegenerativas"
+      ],
+      "pdf": "estudios/extra/demine-2019-desacople-mitocondrial.pdf",
+      "doi": "10.3390/cells8080795",
+      "note": "Función mitocondrial: el desacople controlado regula energía, calor y radicales libres. Contexto para entender cómo se modula la salud mitocondrial. Verificado contra el PDF original (Cells, MDPI, CC-BY)."
+    },
+    {
+      "id": "extra-clemente-suarez-2023-transferencia-mitocondrial",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/clemente-suarez-2023-transferencia-mitocondrial.jpg",
+      "title": "Mitochondrial Transfer as a Novel Therapeutic Approach in Disease Diagnosis and Treatment",
+      "cite": "Clemente-Suárez VJ, Martín-Rodríguez A, Yáñez-Sepúlveda R, Tornero-Aguilera JF · Int. J. Molecular Sciences · 2023",
+      "n": "Revisión",
+      "loc": "Universidad Europea de Madrid, España",
+      "dur": "—",
+      "method": "Revisión sobre la 'transferencia mitocondrial': el traspaso de mitocondrias sanas entre células (por ejemplo, vía nanotubos de túnel) y su potencial como herramienta terapéutica y diagnóstica.",
+      "results": [
+        "Las células pueden transferirse mitocondrias entre sí, rescatando a las que tienen mitocondrias dañadas",
+        "La disfunción mitocondrial es un denominador común de numerosas enfermedades (neurodegenerativas, metabólicas, cáncer)",
+        "La transferencia mitocondrial emerge como estrategia para restaurar la energía celular en tejidos dañados"
+      ],
+      "pdf": "estudios/extra/clemente-suarez-2023-transferencia-mitocondrial.pdf",
+      "doi": "10.3390/ijms24108848",
+      "note": "Transferencia de mitocondrias entre células como terapia regenerativa. Refuerza el papel central de la energía mitocondrial en la salud. Verificado contra el PDF original (IJMS, MDPI, CC-BY)."
     }
   ]
 }
