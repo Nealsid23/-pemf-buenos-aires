@@ -50,7 +50,7 @@ Transcripción completa leyendo el escaneo (OCR automático descartado). Estado:
 | Page, Moser, Chen & Dutton | Natural Engineering Principles of Electron Tunnelling in Biological Oxidation-Reduction | Nature 402 (1999): 47-52 | 10.1038/46972 | 🟡 | pendiente medium (Nature) |
 | Pandey, Saha & Ganguly | Vibration-Based Biomimetic Odor Classification | Scientific Reports 11 (2021): 11386 | 10.1038/s41598-021-90592-x | 🟡 | pendiente medium |
 | Pluznick, Jennifer L. et al. | Functional Expression of the Olfactory Signaling System in the Kidney | PNAS 106(6) (2009): 2059-2064 | 10.1073/pnas.0812859106 | 🟡 | pendiente medium |
-| Rodriguez-Santana & Bagayoko | Emerging Evidence on the Crystalline Water-Light Interface in Ophthalmology and Therapeutic Implications in Photobiomodulation | Photomedicine and Laser Surgery 32 (2014) | 10.1089/pho.2013.3682 | 🟢 | pendiente (agua/luz/fotobiomodulación — alta) |
+| Rodríguez-Santana & Santana-Blank (no "Bagayoko") | Emerging Evidence on the Crystalline Water-Light Interface in Ophthalmology and Therapeutic Implications in Photobiomodulation: First Communication | Photomedicine and Laser Surgery 32(4) (2014) | 10.1089/pho.2013.3682 | 🟢 | **PAYWALL** (Liebert, sin OA verificable) → PENDIENTES |
 | Spehr/Gisselmann et al. | Identification of a Testicular Odorant Receptor Mediating Human Sperm Chemotaxis | Science 299(5615) (2003): 2054-2058 | 10.1126/science.1080376 | 🟡 | pendiente medium (Science) |
 | Solov'yov, Chang & Schulten | Vibrationally Assisted Electron Transfer Mechanism of Olfaction: Myth or Reality? | Phys. Chem. Chem. Phys. 14(40) (2012): 13861-13871 | 10.1039/c2cp41436h | 🟡 | pendiente medium |
 | Stovbun/Zlenko, Bukhvostov, Buchachenko et al. | Magnetic Field and Nuclear Spin Influence on the DNA Synthesis Rate | Scientific Reports 13:465 (2023) | 10.1038/s41598-022-26744-4 | 🟢 | **SUBIDO** `extra-zlenko-2023-magnetic-dna-synthesis` |
@@ -63,21 +63,56 @@ Transcripción completa leyendo el escaneo (OCR automático descartado). Estado:
 ### ⚪ Descartadas (baja relevancia — física histórica/doble rendija)
 Bartoli "Complementarity in the Double-Slit Experiment" (Phys. Rev. D, 1980); Davisson "The Diffraction of Electrons by a Crystal of Nickel" (1928); Einstein "Concerning an Heuristic Point of View Toward the Emission and Transformation of Light" (1905/1965); NobelPrize.org / Encyclopaedia Britannica (webs).
 
-**Capítulo 1 — resumen:** 🟢 alta = 11 papers (7 SUBIDOS, 2 PAYWALL→pendientes, 1 DISPUTADO no subido, 1 alta pendiente: Rodriguez-Santana). 🟡 media = ~20 (pendientes, conceptuales de túnel/coherencia/olfato). ⚪ descartadas = 4+webs.
+**Capítulo 1 — resumen:** 🟢 alta = 11 papers (7 SUBIDOS, 3 PAYWALL→pendientes [Kim, Buchachenko, Rodríguez-Santana], 1 DISPUTADO no subido). 🟡 media = ~20 (pendientes, conceptuales de túnel/coherencia/olfato). ⚪ descartadas = 4+webs.
 
 ---
 
-## CAPÍTULO 2 — *(muestra del inicio)*
-| Tipo | Autor | Título | Fuente / Año | Relev. | ¿Ya en el centro? |
+## CAPÍTULO 2 — COMPLETO (págs. PDF 206 medio – 213; book 208–213) ✅ PROCESADO
+
+**Tema dominante:** el AGUA (agua estructurada / coherente / EZ water de Pollack) e HIDRÓGENO MOLECULAR. Es el capítulo que más respalda **Analemma** (agua coherente/estructurada) y **drinkhrw / H2 Tablets** (hidrógeno molecular). El Cap 2 empieza a media pág. PDF 206 y termina en la pág. PDF 213 (la pág. PDF 214 abre CHAPTER THREE).
+
+### 🔬 Papers / estudios — 🟢 ALTA y 🟡 MEDIA
+| Autor | Título | Fuente / Año | DOI | Relev. | Estado |
 |---|---|---|---|---|---|
-| 🔬 | Alberola, J. & Coll, F. | Marine Therapy and its Healing Properties | Current Aging Science 6(1) (2013): 63-75 | 🟡 | — |
-| 🔬 | **Analemma** | Effects on Gut Microbiome — Double-Blind Placebo Study (2022) | analemma-water.com (2019) | 🟢 | ✅ **Sí** (ya está en Estudios) |
-| 🔬 | Arani, R., Bono, I., Del Giudice, E. & Preparata, G. | QED Coherence and the Thermodynamics of Water | Int. J. Modern Physics B 9 (1995): 1813-1842 | 🟢 | — |
+| Alberola, J. & Coll, F. | Marine Therapy and its Healing Properties | Current Aging Science 6(1) (2013): 63-75 | — | 🟡 | no procesado (talasoterapia, tangencial) |
+| **Analemma** | Effects on Gut Microbiome — Double-Blind Placebo Study | analemma-water.com (2022) | — | 🟢 | ✅ **YA en el centro** (Estudios) — no duplicar |
+| Arani, Bono, Del Giudice & Preparata | QED Coherence and the Thermodynamics of Water | Int. J. Modern Physics B 9 (1995): 1813-1842 | 10.1142/S0217979295000744 | 🟢 | **PAYWALL** (World Scientific) → PENDIENTES. Tema cubierto por Bono 2012 (SUBIDO) |
+| Barancik, M. et al. (incl. LeBaron, Bolli) | Molecular and Cellular Mechanisms Associated with Effects of Molecular Hydrogen in Cardiovascular and Central Nervous Systems | Antioxidants 9(12) (2020): 1281 | 10.3390/antiox9121281 | 🟢 | **SUBIDO** `extra-barancik-2020-molecular-hydrogen-cardiovascular-cns` |
+| Batmanghelidj, F. | Pain: A Need for Paradigm Change | Anticancer Research 7(5B) (1987): 971-989 | — | ⚪ | descartado (autor controvertido, agua/dolor) |
+| Bellissent-Funel, M.-C. et al. | Water Determines the Structure and Dynamics of Proteins | Chemical Reviews 116(13) (2016): 7673-7697 | 10.1021/acs.chemrev.5b00664 | 🟡 | no procesado (ACS, paywall probable; conceptual) |
+| Bono, I., Del Giudice, E., Gamberale, L., Henry, M. | Emergence of the Coherent Structure of Liquid Water | Water 4(3) (2012): 510-532 | 10.3390/w4030510 | 🟢 | **SUBIDO** `extra-bono-2012-coherent-structure-liquid-water` |
+| Davenas, E. et al. | Human Basophil Degranulation Triggered by Very Dilute Antiserum Against IgE | Nature 333 (1988): 816-818 | — | ⚪ | descartado (memoria del agua, disputado) |
+| Davidson, R., Lauritzen, A., Seneff, S. | Biological Water Dynamics and Entropy: A Biophysical Origin of Cancer and Other Diseases | Entropy 15(9) (2013): 3822-3876 | 10.3390/e15093822 | 🟡 | OA disponible, no subido (conceptual/Seneff, baja prioridad) |
+| De Ninno, A., Castellano, Del Giudice | The Supramolecular Structure of Liquid Water and Quantum Coherent Processes in Biology | J. Physics: Conf. Series 442 (2013): 012033 | 10.1088/1742-6596/442/1/012033 | 🟡 | no procesado (cubierto por Bono 2012) |
+| De Ninno, Antonella | Dynamics of Formation of the Exclusion Zone Near Hydrophilic Surfaces | Chemical Physics Letters 667 (2017): 322-326 | 10.1016/j.cplett.2016.11.066 | 🟢 | **PAYWALL** (Elsevier, sin OA) → PENDIENTES |
+| Ebrahim, S. & Azab, A. | Biological Effects of Magnetic Water on Human and Animals | Biomedical Sciences 3(4) (2017): 78-85 | — | 🟢 | no procesado (revista predatoria/baja calidad; agua magnética) |
+| Hwang, S. G. et al. | Effect of Antioxidant Water on the Bioactivities of Cells | Int. J. Cell Biology 2017: 1917239 | 10.1155/2017/1917239 | 🟡 | OA disponible, no subido (baja prioridad) |
+| Kang, K.-M. et al. (Nakao) | Effects of Drinking Hydrogen-Rich Water on the Quality of Life of Patients Treated with Radiotherapy for Liver Tumors | Medical Gas Research 1(1) (2011): 11 | 10.1186/2045-9912-1-11 | 🟢 | **SUBIDO** `extra-kang-2011-hydrogen-rich-water-liver-radiotherapy` (RCT humano) |
+| Kerch, Garry | Role of Changes in State of Bound Water and Tissue Stiffness in Development of Age-Related Diseases | Polymers 12(6) (2020): 1362 | 10.3390/polym12061362 | 🟡 | OA disponible, no subido (baja prioridad) |
+| Korotkov, K. G. et al. | Influence of Drinking Structured Water to Human Psychophysiology | J. Applied Biochem. & Bioeng. 6 (2019) | — | ⚪ | descartado (Korotkov, baja calidad) |
+| LeBaron, T. W., Sharpe, R., Ohno, K. | Electrolyzed-Reduced Water: Review I. Molecular Hydrogen Is the Exclusive Agent Responsible for the Therapeutic Effects | IJMS 23(23) (2022): 14750 | 10.3390/ijms232314750 | 🟢 | **SUBIDO** `extra-lebaron-2022-electrolyzed-reduced-water-h2` |
+| Li, Z. & Pollack, G. H. | On the Driver of Blood Circulation Beyond the Heart | PLOS One 18(10) (2023): e0288236 | 10.1371/journal.pone.0288236 | 🟢 | **SUBIDO** `extra-li-pollack-2023-blood-circulation-beyond-heart` |
+| Lindinger, M. I. | Structured Water: Effects on Animals | J. Animal Science 99(5) (2021) | — | 🟡 | no procesado |
+| Ling, Gilbert (varias) | Nano-Protoplasm / A Physical Theory of the Living State / etc. | Phys. Chem. Phys. Med. NMR; Scanning Microscopy | — | 🟡 | no procesado (agua celular, histórico) |
+| Rohani, M. & Pollack, G. | Flow through Horizontal Tubes Submerged in Water in the Absence of a Pressure Gradient | Langmuir 29(22) (2013) | 10.1021/la400945c | 🟢 | no procesado (Pollack/EZ; cubierto por Li-Pollack 2023 SUBIDO; ACS paywall probable) |
+| Shen, Y., Theodorou, Li, Pollack | Ultraviolet (UV) Light Effect on the Electrical Potential of Interfacial Water | Colloids & Surfaces A 650 (2022): 129446 | 10.1016/j.colsurfa.2022.129446 | 🟢 | **PAYWALL** (Elsevier, no OA) → PENDIENTES |
+| Szent-Györgyi, A. | Introduction to a Submolecular Biology | Academic Press, 1960 | — | 🟡 | libro (no paper) |
+| Ye, T. & Pollack, G. H. | Which Waters Hydrate Best? A Study Using Brine-Shrimp Cysts | bioRxiv (2020) | — | 🟢 | no procesado (preprint sin revisión por pares; cubierto por Li-Pollack 2023) |
+| Yıldız, F., LeBaron, T. W., Alwazeer, D. | A Comprehensive Review of Molecular Hydrogen as a Novel Nutrition Therapy in Relieving Oxidative Stress and Diseases | Biochem. Biophys. Reports 41 (2025): 101933 | 10.1016/j.bbrep.2025.101933 | 🟢 | **SUBIDO** `extra-yildiz-2025-molecular-hydrogen-nutrition-review` |
+| Yu, A., Carlson, P., Pollack, G. | Unexpected Axial Flow Through Hydrophilic Tubes: Implications for Energetics of Water | Eur. Phys. J. Special Topics 223 (2013) | — | 🟢 | no procesado (Springer paywall probable; Pollack/EZ, cubierto por Li-Pollack 2023) |
+| Zheng, J.-M., Chin, Khijniak, Pollack | Surfaces and Interfacial Water: Evidence That Hydrophilic Surfaces Have Long-Range Impact | Advances in Colloid and Interface Science 127 (2006): 19-27 | 10.1016/j.cis.2006.07.002 | 🟢 | **PAYWALL** (Elsevier, sin OA) → PENDIENTES. Paper fundacional de EZ water |
+| Zheng, Y. & Zhu, D. | Molecular Hydrogen Therapy Ameliorates Organ Damage Induced by Sepsis | Oxidative Medicine and Cellular Longevity 2016: 5806057 | 10.1155/2016/5806057 | 🟢 | **SUBIDO** `extra-zheng-2016-molecular-hydrogen-sepsis-organ-damage` |
+| Zuo, G., Hu, J., Fang, H. | Effect of the Ordered Water on Protein Folding: An Off-Lattice Gō-Like Model Study | Physical Review E 79 (2009): 031925 | — | 🟡 | no procesado (APS paywall probable; conceptual) |
+
+### ⚪ Descartadas (baja relevancia — rituales del agua, geografía sagrada, tratamiento de aguas, pseudociencia)
+Armstrong & Johnson "Water Intake/Balance" (Nutrients 2018, hidratación general); Batmanghelidj; Cusack "Scotland's Sacred Waters"; Davenas (memoria del agua); Emoto *The Hidden Messages in Water* (libro pseudociencia); Geesink & Meijer (NeuroQuantology/Quantum Biosystems, baja calidad) ×3; Katsth "Heavy Metals Removal"; Lorenzo "Water Homeostasis in Muscle"; Maestro "Two States in Liquid Water"; Marci/Lichtenstein *Water Memory* (video); Mitchell "Chemical Composition of Adult Human Body"; Mojica "Structured Water and Cancer"; Montagnier "DNA Waves and Water" (disputado); Pollack *The Fourth Phase of Water* (libro); Pomès & Roux; Popielska "Water in Pyramid Texts"; Quinton 1904; Rabia "Activated Alumina"; Ramsey "Biologically Structured Water" ×4 (revista de baja calidad); Raptim/Analemma report (web producto, ya cubierto); GlycanAge/Analemma (web); Singh "Sacrality of Waterfront"; Tankersley "Zeolite Water at Tikal"; Vidal-Lorenzo "Mayan Rain Divinities"; Wu "Point-of-Use Drinking Water Treatment"; Yang "PPCPs in Drinking Water".
+
+**Capítulo 2 — resumen:** 🟢 alta procesables ≈ 13. **SUBIDOS = 7** (Bono, Li-Pollack, LeBaron, Barancik, Kang, Zheng-sepsis, Yıldız). **PAYWALL → PENDIENTES = 4** (Arani 1995, De Ninno EZ 2017, Shen UV 2022, Zheng 2006 EZ fundacional). No procesados/cubiertos = Rohani, Ye, Yu (Pollack/EZ, ya cubiertos por Li-Pollack 2023), Ebrahim (revista baja calidad). 🟡 media OA disponibles no subidos por baja prioridad (Davidson, Hwang, Kerch). Analemma microbiome ya estaba en el centro (no duplicado).
 
 ---
 
-## RESTO DE CAPÍTULOS
-*Pendiente de procesar (págs. 204–263). Se irán completando por lotes con el mismo formato.*
+## RESTO DE CAPÍTULOS (3 en adelante)
+*Pendiente de procesar. CHAPTER THREE empieza en pág. PDF 214 (book 214). Referencias hasta pág. PDF 263 (264 = ACKNOWLEDGMENTS). Se completarán por lotes con el mismo formato.*
 
 ## Resumen por tipo (del análisis OCR previo, a verificar al transcribir)
 - 📕 Libros: ~54

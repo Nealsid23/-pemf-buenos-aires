@@ -180,6 +180,206 @@
       "pdf": "estudios/extra/bennett-onyango-2021-tunneling-brain-mitochondria.pdf",
       "doi": "10.3390/biomedicines9020225",
       "note": "Conecta biología cuántica (túnel de protones y electrones) con la función mitocondrial cerebral y el envejecimiento — sostiene el foco en mitocondrias y energía celular. Verificado contra el PDF original (acceso abierto CC-BY)."
+    },
+    {
+      "id": "extra-bono-2012-coherent-structure-liquid-water",
+      "brand": "analemma",
+      "type": "revision",
+      "portada": "img/papers/bono-2012-coherent-structure-liquid-water.jpg",
+      "title": "Emergence of the Coherent Structure of Liquid Water",
+      "cite": "Bono I, Del Giudice E, Gamberale L, Henry M · Water (MDPI) · 2012",
+      "n": "Modelo teórico (electrodinámica cuántica)",
+      "loc": "Université de Strasbourg (Francia) e investigadores independientes, Italia",
+      "dur": "—",
+      "method": "Análisis de electrodinámica cuántica (QED) de la interacción de las moléculas de agua con el campo electromagnético radiativo, buscando transiciones de fase desde la fase vapor a una fase condensada en la que todas las moléculas oscilan al unísono.",
+      "results": [
+        "Predice una transición de fase en la que las moléculas de agua oscilan en sincronía con un campo electromagnético autoatrapado dentro de regiones mesoscópicas llamadas Dominios de Coherencia",
+        "Las propiedades de esa fase condensada coherente resultan compatibles con las propiedades fenomenológicas conocidas del agua líquida",
+        "Calcula con buena precisión el valor observado de la densidad crítica del agua, dando sustento teórico al concepto de agua coherente"
+      ],
+      "pdf": "estudios/extra/bono-2012-coherent-structure-liquid-water.pdf",
+      "doi": "10.3390/w4030510",
+      "note": "Base teórica del concepto de agua estructurada/coherente (Dominios de Coherencia) que sustenta Analemma — describe cómo el agua puede organizarse en una fase coherente acoplada al campo electromagnético. Verificado contra el PDF original (acceso abierto CC-BY)."
+    },
+    {
+      "id": "extra-li-pollack-2023-blood-circulation-beyond-heart",
+      "brand": "analemma",
+      "type": "animal",
+      "portada": "img/papers/li-pollack-2023-blood-circulation-beyond-heart.jpg",
+      "title": "On the driver of blood circulation beyond the heart",
+      "cite": "Li Z, Pollack GH · PLOS One · 2023",
+      "n": "Modelo de embrión de pollo de 3 días (n=6 para la medición con IR)",
+      "loc": "Department of Bioengineering, University of Washington, Seattle, EE.UU.",
+      "dur": "—",
+      "method": "Embriones de pollo de 3 días con el corazón detenido, para comprobar si la luz infrarroja (IR) puede impulsar el flujo sanguíneo sin presión generada por el corazón. Se midió la velocidad del flujo postmortem con y sin energía infrarroja.",
+      "results": [
+        "Tras detener el corazón, la sangre siguió fluyendo durante unos 50 minutos, aunque a menor velocidad",
+        "Al introducir luz infrarroja, el flujo postmortem aumentó de ~41,1 ± 25,6 µm/s a ~153,0 ± 59,5 µm/s (n=6)",
+        "Al disminuir la energía infrarroja en condiciones por lo demás fisiológicas, la sangre dejó de fluir: existe un mecanismo de impulsión del flujo dependiente de IR, basado en los vasos, que complementa al corazón"
+      ],
+      "pdf": "estudios/extra/li-pollack-2023-blood-circulation-beyond-heart.pdf",
+      "doi": "10.1371/journal.pone.0288236",
+      "note": "Del laboratorio de Gerald Pollack (agua EZ): muestra que la luz infrarroja —absorbida por el agua interfacial— puede impulsar el flujo sanguíneo, vinculando agua estructurada y luz con la fisiología. Verificado contra el PDF original (acceso abierto CC-BY)."
+    },
+    {
+      "id": "extra-lebaron-2022-electrolyzed-reduced-water-h2",
+      "brand": "drinkhrw",
+      "type": "revision",
+      "portada": "img/papers/lebaron-2022-electrolyzed-reduced-water-h2.jpg",
+      "title": "Electrolyzed-Reduced Water: Review I. Molecular Hydrogen Is the Exclusive Agent Responsible for the Therapeutic Effects",
+      "cite": "LeBaron TW, Sharpe R, Ohno K · Int. J. Molecular Sciences (MDPI) · 2022",
+      "n": "Revisión científica",
+      "loc": "Slovak Academy of Sciences (Eslovaquia), Molecular Hydrogen Institute (EE.UU.) y Nagoya University (Japón)",
+      "dur": "—",
+      "method": "Revisión crítica de la literatura sobre el agua alcalina electrolizada-reducida (ERW), separando las propiedades reales (hidrógeno molecular disuelto) de las afirmaciones pseudocientíficas (microclusters, estructura del agua alterada, hidrógeno activo, etc.).",
+      "results": [
+        "Los beneficios terapéuticos atribuidos al agua electrolizada-reducida se explican por el hidrógeno molecular (H2) disuelto, no por propiedades enigmáticas como microclusters o estructura alterada",
+        "El potencial redox negativo y el pH alcalino no son los responsables de los efectos biológicos; el H2 es el agente activo",
+        "Aporta un marco riguroso para distinguir el mecanismo real del hidrógeno molecular del marketing pseudocientífico que lo rodea"
+      ],
+      "pdf": "estudios/extra/lebaron-2022-electrolyzed-reduced-water-h2.pdf",
+      "doi": "10.3390/ijms232314750",
+      "note": "Sustenta el producto de hidrógeno molecular (H2 Tablets): aclara con rigor que el agente terapéutico del agua hidrogenada es el H2 disuelto. Verificado contra el PDF original (acceso abierto CC-BY)."
+    },
+    {
+      "id": "extra-barancik-2020-molecular-hydrogen-cardiovascular-cns",
+      "brand": "drinkhrw",
+      "type": "revision",
+      "portada": "img/papers/barancik-2020-molecular-hydrogen-cardiovascular-cns.jpg",
+      "title": "Molecular and Cellular Mechanisms Associated with Effects of Molecular Hydrogen in Cardiovascular and Central Nervous Systems",
+      "cite": "Barancik M, Kura B, LeBaron TW, Bolli R, Buday J, Slezak J · Antioxidants (MDPI) · 2020",
+      "n": "Revisión científica",
+      "loc": "Slovak Academy of Sciences y Comenius University (Eslovaquia), University of Louisville (EE.UU.), Charles University (Chequia)",
+      "dur": "—",
+      "method": "Revisión de los mecanismos moleculares y celulares por los que el hidrógeno molecular (H2) ejerce efectos protectores en los sistemas cardiovascular y nervioso central, donde el estrés oxidativo es un factor central de enfermedad.",
+      "results": [
+        "El hidrógeno molecular actúa como antioxidante selectivo y modula vías de señalización, reduciendo el estrés oxidativo y la inflamación en los tejidos cardiovascular y nervioso",
+        "Regula la expresión de genes y enzimas antioxidantes y disminuye la liberación de citoquinas proinflamatorias",
+        "Se perfila como terapia emergente con efectos positivos demostrados en modelos de enfermedad cardiovascular y neurológica"
+      ],
+      "pdf": "estudios/extra/barancik-2020-molecular-hydrogen-cardiovascular-cns.pdf",
+      "doi": "10.3390/antiox9121281",
+      "note": "Sostiene el producto de hidrógeno molecular (H2 Tablets): detalla cómo el H2 protege corazón y cerebro reduciendo estrés oxidativo. Verificado contra el PDF original (acceso abierto CC-BY)."
+    },
+    {
+      "id": "extra-kang-2011-hydrogen-rich-water-liver-radiotherapy",
+      "brand": "drinkhrw",
+      "type": "rct",
+      "portada": "img/papers/kang-2011-hydrogen-rich-water-liver-radiotherapy.jpg",
+      "title": "Effects of drinking hydrogen-rich water on the quality of life of patients treated with radiotherapy for liver tumors",
+      "cite": "Kang KM, Kang YN, Choi IB, Gu Y, Kawamura T, Toyoda Y, Nakao A · Medical Gas Research · 2011",
+      "n": "49 pacientes con tumores hepáticos en radioterapia",
+      "loc": "The Catholic University of Korea (Corea del Sur) y University of Pittsburgh (EE.UU.)",
+      "dur": "6 semanas",
+      "method": "Estudio aleatorizado y controlado con placebo: 49 pacientes en radioterapia por tumores hepáticos malignos bebieron agua rica en hidrógeno (0,55-0,65 mM, generada con una varilla de magnesio metálico) o agua placebo. Se midió la calidad de vida (cuestionario QLQ-C30 de la EORTC) y marcadores de estrés oxidativo en sangre.",
+      "results": [
+        "El consumo de agua rica en hidrógeno durante 6 semanas redujo los metabolitos reactivos del oxígeno en sangre y mantuvo el poder antioxidante biológico",
+        "Los puntajes de calidad de vida durante la radioterapia mejoraron significativamente frente al grupo placebo",
+        "No hubo diferencia en la respuesta del tumor a la radioterapia: el hidrógeno redujo el daño oxidativo sin comprometer el efecto antitumoral"
+      ],
+      "pdf": "estudios/extra/kang-2011-hydrogen-rich-water-liver-radiotherapy.pdf",
+      "doi": "10.1186/2045-9912-1-11",
+      "note": "Ensayo clínico aleatorizado en humanos que respalda el producto de hidrógeno molecular (H2 Tablets): el agua hidrogenada mejoró la calidad de vida y bajó el estrés oxidativo en pacientes oncológicos. Verificado contra el PDF original (acceso abierto CC-BY)."
+    },
+    {
+      "id": "extra-zheng-2016-molecular-hydrogen-sepsis-organ-damage",
+      "brand": "drinkhrw",
+      "type": "revision",
+      "portada": "img/papers/zheng-2016-molecular-hydrogen-sepsis-organ-damage.jpg",
+      "title": "Molecular Hydrogen Therapy Ameliorates Organ Damage Induced by Sepsis",
+      "cite": "Zheng Y, Zhu D · Oxidative Medicine and Cellular Longevity · 2016",
+      "n": "Revisión de experimentos (mayormente en animales)",
+      "loc": "Zhongshan Hospital, Fudan University, Shanghái, China",
+      "dur": "—",
+      "method": "Revisión de la evidencia sobre la terapia con hidrógeno molecular frente a la sepsis, analizando su efecto sobre signos vitales, funciones de distintos órganos (cerebro, pulmón, hígado, riñón, intestino) y tasa de supervivencia.",
+      "results": [
+        "La terapia con hidrógeno molecular reduce de forma significativa la liberación de factores inflamatorios y el daño por estrés oxidativo",
+        "Disminuye el daño de la función de varios órganos provocado por la sepsis y mejora la tasa de supervivencia en los modelos estudiados",
+        "Se presenta como un método prometedor frente a la sepsis, coherente con los efectos antioxidantes y antiinflamatorios del H2"
+      ],
+      "pdf": "estudios/extra/zheng-2016-molecular-hydrogen-sepsis-organ-damage.pdf",
+      "doi": "10.1155/2016/5806057",
+      "note": "Sostiene el producto de hidrógeno molecular (H2 Tablets): muestra el efecto protector del H2 sobre múltiples órganos vía reducción de inflamación y estrés oxidativo. Verificado contra el PDF original (acceso abierto CC-BY)."
+    },
+    {
+      "id": "extra-yildiz-2025-molecular-hydrogen-nutrition-review",
+      "brand": "drinkhrw",
+      "type": "revision",
+      "portada": "img/papers/yildiz-lebaron-2025-molecular-hydrogen-nutrition-review.jpg",
+      "title": "A comprehensive review of molecular hydrogen as a novel nutrition therapy in relieving oxidative stress and diseases: Mechanisms and perspectives",
+      "cite": "Yildiz F, LeBaron TW, Alwazeer D · Biochemistry and Biophysics Reports · 2025",
+      "n": "Revisión científica",
+      "loc": "Igdir University (Türkiye) y Molecular Hydrogen Institute / Southern Utah University (EE.UU.)",
+      "dur": "—",
+      "method": "Revisión integral del hidrógeno molecular (H2) como terapia nutricional frente al estrés oxidativo y las enfermedades, sintetizando mecanismos de acción y evidencia experimental y clínica de las dos últimas décadas.",
+      "results": [
+        "El H2 es un antioxidante selectivo: neutraliza los oxidantes más dañinos (radical hidroxilo y peroxinitrito) sin afectar a las especies reactivas con función fisiológica",
+        "Presenta efectos antiinflamatorios, antioxidantes, anticancerígenos, antiapoptóticos y antialérgicos, y actúa como molécula señalizadora que regula el balance redox y la expresión de enzimas antioxidantes",
+        "Estudios experimentales y clínicos muestran el potencial del hidrógeno como terapia nutricional para mejorar la función vascular, el metabolismo energético y la protección del sistema nervioso"
+      ],
+      "pdf": "estudios/extra/yildiz-lebaron-2025-molecular-hydrogen-nutrition-review.pdf",
+      "doi": "10.1016/j.bbrep.2025.101933",
+      "note": "Revisión reciente que sostiene el producto de hidrógeno molecular (H2 Tablets): resume mecanismos y beneficios del H2 como terapia nutricional antioxidante. Verificado contra el PDF original (acceso abierto CC-BY-NC-ND)."
+    },
+    {
+      "id": "extra-timofejeva-2021-heart-rhythm-magnetic-field",
+      "brand": "all",
+      "type": "Estudio observacional multicéntrico",
+      "portada": "img/papers/timofejeva-2021-heart-rhythm-magnetic-field.jpg",
+      "title": "Estudio global de la sincronización del ritmo cardíaco humano con el campo magnético variable de la Tierra",
+      "cite": "Timofejeva, McCraty, Atkinson et al. · Applied Sciences (MDPI) · 2021",
+      "n": "104 participantes",
+      "loc": "California, Lituania, Arabia Saudita, Nueva Zelanda e Inglaterra",
+      "dur": "15 días de monitoreo continuo",
+      "method": "Monitoreo ambulatorio continuo de variabilidad de la frecuencia cardíaca (HRV) en 5 sitios, sincronizado con una red calibrada de magnetómetros que registró la intensidad del campo magnético local (LMF).",
+      "results": [
+        "La actividad del sistema nervioso autónomo (reflejada en la HRV) puede sincronizarse con cambios en la amplitud de las frecuencias resonantes del campo geomagnético y las resonancias de Schumann.",
+        "Se identificaron patrones de sincronización entre la fisiología humana y el campo magnético terrestre variable en el tiempo, a escala global.",
+        "Las condiciones geomagnéticas influyen sobre los ritmos producidos por el corazón y el cerebro."
+      ],
+      "pdf": "estudios/extra/timofejeva-2021-heart-rhythm-magnetic-field.pdf",
+      "doi": "10.3390/app11072935",
+      "note": "OPTIMIZE (C. Clinton), referencias cap. 6. Sustenta la sensibilidad humana a campos magnéticos ambientales y resonancias de Schumann. Acceso abierto (MDPI). · Verificado contra el PDF original"
+    },
+    {
+      "id": "extra-timofejeva-2017-group-sync-magnetic-field",
+      "brand": "all",
+      "type": "Estudio observacional / metodológico",
+      "portada": "img/papers/timofejeva-2017-group-sync-magnetic-field.jpg",
+      "title": "Identificación de la sincronización fisiológica de un grupo con el campo magnético de la Tierra",
+      "cite": "Timofejeva, McCraty, Atkinson et al. · Int. J. Environ. Res. Public Health (IJERPH) · 2017",
+      "n": "20 individuos",
+      "loc": "Lituania",
+      "dur": "2 semanas",
+      "method": "Desarrollo y validación de una técnica de análisis para evaluar el grado de sincronización entre el estado fisiológico de un grupo (intervalos entre latidos cardíacos) y los cambios del campo magnético terrestre; agrupamiento de patrones de sincronización similares.",
+      "results": [
+        "Se identificaron clusters de patrones de sincronización fisiológica similares dentro del grupo durante el período de dos semanas.",
+        "El estado fisiológico colectivo del grupo mostró sincronización mensurable con las variaciones del campo magnético de la Tierra.",
+        "Aporta una metodología validada para cuantificar la influencia del campo geomagnético sobre la fisiología humana."
+      ],
+      "pdf": "estudios/extra/timofejeva-2017-group-sync-magnetic-field.pdf",
+      "doi": "10.3390/ijerph14090998",
+      "note": "OPTIMIZE (C. Clinton), referencias cap. 6. Respalda la interacción entre campos magnéticos ambientales y la fisiología humana. Acceso abierto (IJERPH). · Verificado contra el PDF original"
+    },
+    {
+      "id": "extra-wang-2019-geomagnetic-brain-alpha",
+      "brand": "all",
+      "type": "Estudio experimental",
+      "portada": "img/papers/wang-2019-geomagnetic-brain-alpha.jpg",
+      "title": "Transducción del campo geomagnético evidenciada por la actividad de banda alfa en el cerebro humano",
+      "cite": "Wang, Hilburn, Wu et al. (Kirschvink) · eNeuro · 2019",
+      "n": "Participantes adultos (cámara de Faraday)",
+      "loc": "Caltech, EE. UU.",
+      "dur": "Sesiones experimentales con EEG",
+      "method": "Registro de EEG dentro de una cámara de Faraday blindada mientras se rotaban campos magnéticos de intensidad terrestre de forma controlada; análisis de oscilaciones de banda alfa.",
+      "results": [
+        "Se observó una respuesta cerebral específica y repetible: caída de la amplitud de las oscilaciones alfa (8–13 Hz), denominada desincronización alfa relacionada con eventos (alpha-ERD).",
+        "La respuesta se desencadenó ante rotaciones ecológicamente relevantes del campo magnético terrestre.",
+        "Constituye evidencia de un sentido geomagnético humano: el cerebro humano transduce (detecta) cambios en el campo magnético de la Tierra."
+      ],
+      "pdf": "estudios/extra/wang-2019-geomagnetic-brain-alpha.pdf",
+      "doi": "10.1523/ENEURO.0483-18.2019",
+      "note": "OPTIMIZE (C. Clinton), referencias cap. 6. Evidencia directa de magnetorrecepción en humanos; respalda la base biofísica de la sensibilidad a campos magnéticos. Acceso abierto (eNeuro/Caltech). · Verificado contra el PDF original"
     }
   ]
 }
