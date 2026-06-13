@@ -640,6 +640,66 @@
       "pdf": "estudios/extra/toppi-2016-eeg-hyperscanning-cooperation.pdf",
       "doi": "10.1371/journal.pone.0154236",
       "note": "Sincronización entre cerebros (consciencia/conexión): cuando las personas cooperan, sus cerebros se conectan medible­mente. Verificado contra el PDF original (CC-BY)."
+    },
+    {
+      "id": "extra-dedic-2021-hyaluronan-orders-water",
+      "brand": "analemma",
+      "type": "vitro",
+      "portada": "img/papers/dedic-2021-hyaluronan-orders-water.jpg",
+      "title": "Hyaluronan Orders Water Molecules in its Nanoscale Extended Hydration Shells",
+      "cite": "Dedic J, Okur HI, Roke S · Science Advances · 2021",
+      "n": "Mediciones biofísicas (dispersión de segundo armónico, fs-ESHS)",
+      "loc": "EPFL, Suiza (Lab. de Biofotónica Fundamental)",
+      "dur": "—",
+      "method": "Mediante dispersión elástica de segundo armónico con pulsos de femtosegundos (fs-ESHS) y modelado óptico no lineal, midieron cómo el ácido hialurónico —un biopolímero abundante en la matriz extracelular y el líquido sinovial de las articulaciones— organiza el agua a su alrededor.",
+      "results": [
+        "El hialurónico ordena el agua en capas de hidratación extendidas, aumentando las correlaciones de orientación agua-agua mucho más allá de su superficie",
+        "Esa capa de agua ordenada se extiende hasta ~475 nm, equivalente a unas 1600 moléculas de agua alineadas",
+        "Aparece un fuerte efecto isotópico (×4,3 al cambiar H2O por D2O) atribuible a efectos cuánticos nucleares: el agua biológica no es un solvente pasivo, sino estructura"
+      ],
+      "pdf": "estudios/extra/dedic-2021-hyaluronan-orders-water.pdf",
+      "doi": "10.1126/sciadv.abf2558",
+      "note": "Agua estructurada alrededor de biomoléculas: respalda que el agua del cuerpo se organiza en capas ordenadas (relevante para Analemma / agua coherente). Verificado contra el PDF original (Science Advances, CC-BY)."
+    },
+    {
+      "id": "extra-cosic-2016-luz-resonancias-em-biomoleculas",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/cosic-2016-luz-resonancias-em-biomoleculas.jpg",
+      "title": "Environmental Light and Its Relationship with Electromagnetic Resonances of Biomolecular Interactions, as Predicted by the Resonant Recognition Model",
+      "cite": "Cosic I, Cosic D, Lazar K · Int. J. Environmental Research and Public Health · 2016",
+      "n": "Análisis computacional (Resonant Recognition Model)",
+      "loc": "RMIT University, Australia",
+      "dur": "—",
+      "method": "Aplican el Modelo de Reconocimiento Resonante (RRM) —que propone que las interacciones entre biomoléculas se basan en resonancias electromagnéticas a frecuencias específicas en el infrarrojo, visible y ultravioleta— para analizar la relación entre la luz ambiental y las funciones biológicas de proteínas y ADN.",
+      "results": [
+        "Las interacciones biológicas se agrupan por su frecuencia de resonancia en 'superfamilias' funcionales",
+        "El espectro RRM de las funciones analizadas cae dentro de los rangos infrarrojo, visible y ultravioleta: las mismas frecuencias de la luz ambiental",
+        "Sugiere que la luz (incluida la solar) puede activar resonantemente actividades biológicas específicas de proteínas y ADN"
+      ],
+      "pdf": "estudios/extra/cosic-2016-luz-resonancias-em-biomoleculas.pdf",
+      "doi": "10.3390/ijerph13070647",
+      "note": "Resonancias electromagnéticas de biomoléculas y su relación con la luz: marco teórico (RRM) que conecta campos EM/luz con la actividad de proteínas y ADN. Verificado contra el PDF original (IJERPH, MDPI, CC-BY)."
+    },
+    {
+      "id": "extra-schwartz-2010-integrinas-matriz-mecanotransduccion",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/schwartz-2010-integrinas-matriz-mecanotransduccion.jpg",
+      "title": "Integrins and Extracellular Matrix in Mechanotransduction",
+      "cite": "Schwartz MA · Cold Spring Harbor Perspectives in Biology · 2010",
+      "n": "Revisión",
+      "loc": "University of Virginia, EE. UU.",
+      "dur": "—",
+      "method": "Revisión sobre cómo las integrinas conectan mecánicamente la matriz extracelular con el citoesqueleto de actina, y cómo las fuerzas físicas que atraviesan esas adhesiones se transducen en señales bioquímicas (mecanotransducción).",
+      "results": [
+        "Las integrinas unen las fibrillas de la matriz extracelular con los filamentos de actina, transmitiendo fuerzas entre el interior y el exterior de la célula",
+        "Esas fuerzas mecánicas activan vías de señalización y programas génicos que controlan la supervivencia, el destino y el comportamiento celular",
+        "Las células 'sienten' las propiedades físicas de su entorno (rigidez, tensión) a través de las adhesiones mediadas por integrinas"
+      ],
+      "pdf": "estudios/extra/schwartz-2010-integrinas-matriz-mecanotransduccion.pdf",
+      "doi": "10.1101/cshperspect.a005066",
+      "note": "Mecanotransducción: cómo el tejido conectivo/matriz convierte fuerzas físicas en señales celulares. Base para entender por qué los estímulos físicos (incluidos campos y vibración) influyen en la biología celular. Verificado contra el PDF (PMC, acceso abierto)."
     }
   ]
 }

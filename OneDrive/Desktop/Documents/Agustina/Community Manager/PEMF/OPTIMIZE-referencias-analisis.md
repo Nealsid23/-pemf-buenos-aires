@@ -111,8 +111,23 @@ Armstrong & Johnson "Water Intake/Balance" (Nutrients 2018, hidratación general
 
 ---
 
-## RESTO DE CAPÍTULOS (3 en adelante)
-*Pendiente de procesar. CHAPTER THREE empieza en pág. PDF 214 (book 214). Referencias hasta pág. PDF 263 (264 = ACKNOWLEDGMENTS). Se completarán por lotes con el mismo formato.*
+## CAPÍTULO 3 — referencias págs. PDF 214–218 (book 215–219) 🔄 EN PROCESO
+
+**Tema dominante:** la FASCIA y el TEJIDO CONECTIVO como sistema bioeléctrico/óptico — agua cristalina líquida y estructurada alineada con colágeno, modelo de reconocimiento resonante (Cosic, resonancias EM de biomoléculas e interacción con la luz), interacciones ADN-EM, mecanotransducción de la matriz, ritmos circadianos del fibroblasto. Respalda **PEMF** (campos/resonancias EM en biomoléculas), **Analemma** (agua estructurada/ordenada en torno a biomoléculas) y la idea del cuerpo como matriz viva conductora.
+
+### 🔬 Papers procesados este lote (lote C — Cap 3)
+| Autor | Título | Fuente / Año | DOI | Relev. | Estado |
+|---|---|---|---|---|---|
+| Cosic, Cosic & Lazar | Environmental Light and Its Relationship with Electromagnetic Resonances of Biomolecular Interactions… (Resonant Recognition Model) | IJERPH 13(7) (2016): 647 | 10.3390/ijerph13070647 | 🟢 | **SUBIDO** `extra-cosic-2016-luz-resonancias-em-biomoleculas` (MDPI, CC-BY) |
+| Dedic, Okur & Roke | Hyaluronan Orders Water Molecules in its Nanoscale Extended Hydration Shells | Science Advances 7 (2021): eabf2558 | 10.1126/sciadv.abf2558 | 🟢 | **SUBIDO** `extra-dedic-2021-hyaluronan-orders-water` (Science Advances, CC-BY) |
+| Schwartz, Martin A. | Integrins and Extracellular Matrix in Mechanotransduction | Cold Spring Harbor Perspectives in Biology 2(12) (2010): a005066 | 10.1101/cshperspect.a005066 | 🟢 | **SUBIDO** `extra-schwartz-2010-integrinas-matriz-mecanotransduccion` (PMC, OA) |
+
+**Ya subidos en lotes previos (Cap 3):** Oschman 2015 grounding (`extra-oschman-2015-grounding-…`), Li/Zheng-Fu-Pollack 2020 flujo inducido EZ (`extra-li-pollack-2020-flujo-inducido-…`).
+
+**Candidatos Cap 3 pendientes / a revisar OA:** Cosic (otros papers RRM: IJS 2014/2015, Applied Sciences 2019, Nonlinear Biomedical Physics 2007); Ho Mae-Wan (agua cristalina líquida superconductora + colágeno, Forum on Immunopathological Diseases 2011 — Begell House, paywall probable); Fucher et al. (función mitocondrial en puntos gatillo miofasciales, JMD 2018); Hoyle/Krieger (dinámica circadiana de actina en cicatrización, Sci Transl Med 2017); Stecco (regulación fascial, Clinical Anatomy 2021 — paywall probable); Vodyanoy (sistema primo-vascular de Bong Han Kim, eCAM 2015 — Hindawi OA); Guimberteau (*Architecture of Human Living Fascia* — libro); Hunt *The Rainbow and the Worm* (libro).
+
+## RESTO DE CAPÍTULOS (4 en adelante)
+*CHAPTER FOUR empieza al pie de la pág. PDF 218 (Aguilar-López "Mitochondria: An Integrative Hub…", Frontiers Cell Dev Biol 2020). Referencias hasta pág. PDF 263 (264 = ACKNOWLEDGMENTS). Cap 4 = mitocondria/circadiano/melatonina/ROS. Se completan por lotes con el mismo formato.*
 
 ## Resumen por tipo (del análisis OCR previo, a verificar al transcribir)
 - 📕 Libros: ~54
