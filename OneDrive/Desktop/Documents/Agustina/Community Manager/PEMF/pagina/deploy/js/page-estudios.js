@@ -1687,7 +1687,19 @@ new IntersectionObserver(entries=>{
   });
 },{threshold:.5}).observe(document.querySelector('.stats-row'));
 
+/* ══ CONTADOR DINÁMICO DEL HERO (refleja el array real de papers) ══ */
+function recomputeEstudiosStats(){
+  const n=studies.length;
+  const rct=studies.filter(s=>s.type==='rct').length;
+  const rev=studies.filter(s=>s.type==='revision'||s.type==='meta').length;
+  const hum=studies.filter(s=>['rct','piloto','factibilidad','seguridad'].includes(s.type)).length;
+  HERO.estudios.stats=[{n,l:'Publicaciones'},{n:hum,l:'Ensayos humanos'},{n:rct,l:'RCT controlados'},{n:rev,l:'Revisiones'}];
+  HERO.estudios.sub=n+' publicaciones verificadas con metodología, participantes y PDF original. Seleccionadas por rigor, no por resultado favorable.';
+  if(currentView==='estudios') updateHeroContent(HERO.estudios);
+}
+
 /* ══ INIT ═════════════════════════════════════════════ */
+recomputeEstudiosStats();
 render(false);
 
 /* ══ OPTIMIZE CENTRO DE INFORMACIÓN INTEGRATION ════════ */
@@ -1731,6 +1743,9 @@ window.addEventListener('optimizeDataLoaded', (event) => {
   } else if (cView === 'biblioteca') {
     render(false);
   }
+
+  // refrescar contador del hero con el total real tras la carga async
+  if (typeof recomputeEstudiosStats === 'function') recomputeEstudiosStats();
 
   console.log('[OPTIMIZE Centro de Información] Datos integrados exitosamente');
 });
