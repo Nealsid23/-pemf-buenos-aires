@@ -40,6 +40,146 @@
       "pdf": "estudios/extra/binhi-2023.pdf",
       "doi": "10.3390/cells12050724",
       "note": "Paradigma cuántico: describe un mecanismo concreto (pares de radicales con spin de electrones) por el cual campos magnéticos débiles influyen en la biología celular — fundamento del efecto de los campos electromagnéticos en el cuerpo. Verificado contra el PDF original (acceso abierto CC-BY)."
+    },
+    {
+      "id": "extra-vanhuizen-2019-magnetic-stemcells",
+      "brand": "all",
+      "type": "animal",
+      "portada": "img/papers/vanhuizen-2019-magnetic-stemcells.jpg",
+      "title": "Weak magnetic fields alter stem cell-mediated growth",
+      "cite": "Van Huizen AV, Beane WS, et al · Science Advances · 2019",
+      "n": "Modelo de regeneración en planaria (Schmidtea mediterranea), n≥12 por condición",
+      "loc": "Western Michigan University y University of Colorado Boulder, EE.UU.",
+      "dur": "Exposición durante las primeras 72 h de regeneración; lectura a 3 días",
+      "method": "Planarias amputadas expuestas a campos magnéticos débiles estáticos (<1 mT) de distinta intensidad durante la regeneración. Se midió el tamaño del blastema, los niveles de especies reactivas de oxígeno (ROS) en la herida y la expresión de Hsp70, con inhibición de SOD por RNAi para manipular ROS.",
+      "results": [
+        "El efecto depende de la intensidad del campo: 100-400 µT redujeron significativamente el crecimiento de tejido nuevo, mientras que 500 µT lo aumentaron",
+        "Los campos magnéticos débiles actúan modificando la acumulación de ROS en el sitio de la herida: a 200 µT los ROS desaparecían y a 500 µT subían (intensidad media 61,7 vs 17,7 en controles; n=12; P<0,01)",
+        "Aumentar los ROS (inhibición de SOD) rescató por completo la regeneración bloqueada, confirmando que el campo magnético regula el crecimiento celular vía ROS y Hsp70"
+      ],
+      "pdf": "estudios/extra/vanhuizen-2019-magnetic-stemcells.pdf",
+      "doi": "10.1126/sciadv.aau7201",
+      "note": "Demuestra in vivo que campos magnéticos débiles modulan la proliferación de células madre y la regeneración de tejido a través de ROS — base biológica directa del efecto terapéutico de los campos electromagnéticos (PEMF). Verificado contra el PDF original (acceso abierto CC-BY)."
+    },
+    {
+      "id": "extra-usselman-2016-quantum-ros",
+      "brand": "all",
+      "type": "vitro",
+      "portada": "img/papers/usselman-2016-quantum-ros.jpg",
+      "title": "The Quantum Biology of Reactive Oxygen Species Partitioning Impacts Cellular Bioenergetics",
+      "cite": "Usselman RJ, Ritz T, Martino CF, et al · Scientific Reports (Nature) · 2016",
+      "n": "Cultivos de células endoteliales humanas (HUVEC), promedio de 3 experimentos independientes",
+      "loc": "Montana State University y Florida Institute of Technology (EE.UU.), con CONICET–Universidad de Belgrano, Buenos Aires",
+      "dur": "—",
+      "method": "Células humanas vivas expuestas a un campo magnético estático de 50 µT solo (control) o combinado con un campo de radiofrecuencia de 1,4 MHz a resonancia de Zeeman. Se midieron superóxido y peróxido de hidrógeno (ROS) y la bioenergética celular (respiración mitocondrial OCR y glucólisis ECAR) con un analizador Seahorse.",
+      "results": [
+        "El campo magnético a resonancia de Zeeman alteró la producción de ROS en células vivas: en orientación perpendicular bajó el superóxido un 36% y el peróxido un 21%",
+        "Esos cambios en los ROS modificaron la bioenergética celular: la glucólisis (ECAR) subió hasta 100% en orientación perpendicular y la respiración mitocondrial (OCR) subió 54% en orientación paralela",
+        "Es evidencia de coherencia cuántica (mezcla singlete-triplete en pares de radicales) operando en células vivas y conectando el nivel atómico con la energía celular"
+      ],
+      "pdf": "estudios/extra/usselman-2016-quantum-ros.pdf",
+      "doi": "10.1038/srep38543",
+      "note": "Paradigma cuántico aplicado: muestra que un campo magnético débil influye en la producción de radicales libres (ROS) y en la energía de células humanas vivas mediante coherencia de spin de electrones — mecanismo cuántico que sostiene el efecto de los campos electromagnéticos sobre las mitocondrias. Verificado contra el PDF original (acceso abierto CC-BY)."
+    },
+    {
+      "id": "extra-zlenko-2023-magnetic-dna-synthesis",
+      "brand": "all",
+      "type": "vitro",
+      "portada": "img/papers/zlenko-2023-magnetic-dna-synthesis.jpg",
+      "title": "Magnetic field and nuclear spin influence on the DNA synthesis rate",
+      "cite": "Stovbun SV, Zlenko DV, Buchachenko AL, et al · Scientific Reports (Nature) · 2023",
+      "n": "Ensayo enzimático in vitro de síntesis de ADN",
+      "loc": "N.N. Semenov Federal Research Center for Chemical Physics (RAS), Rusia",
+      "dur": "—",
+      "method": "Se midió la velocidad de la síntesis enzimática de ADN bajo campos magnéticos externos de distinta intensidad, comparando iones de magnesio sin spin (24Mg) frente a iones magnéticos con spin nuclear (25Mg). Se propone un mecanismo de competencia entre interacciones Zeeman y Fermi.",
+      "results": [
+        "Con magnesio sin spin, la velocidad de síntesis de ADN bajaba de forma monótona al aumentar el campo magnético",
+        "Con magnesio magnético (spin nuclear), la dependencia era no monótona y mostraba un mínimo marcado en 80-100 mT: el spin nuclear cambia cualitativamente la respuesta al campo",
+        "Confirma el efecto isotópico magnético en una reacción bioquímica central (síntesis de ADN), evidencia de un mecanismo cuántico de spin sensible al campo magnético"
+      ],
+      "pdf": "estudios/extra/zlenko-2023-magnetic-dna-synthesis.pdf",
+      "doi": "10.1038/s41598-022-26744-4",
+      "note": "Paradigma cuántico: demuestra que el campo magnético y el spin nuclear regulan la velocidad de la síntesis de ADN — base de cómo los campos magnéticos influyen en procesos bioquímicos fundamentales. Verificado contra el PDF original (acceso abierto CC-BY)."
+    },
+    {
+      "id": "extra-mo-2013-magnetic-shielding-neuroblastoma",
+      "brand": "all",
+      "type": "vitro",
+      "portada": "img/papers/mo-2013-magnetic-shielding-neuroblastoma.jpg",
+      "title": "Magnetic Shielding Accelerates the Proliferation of Human Neuroblastoma Cell by Promoting G1-Phase Progression",
+      "cite": "Mo WC, Liu Y, Bartlett PF, He RQ · PLOS One · 2013",
+      "n": "Cultivos de células de neuroblastoma humano (SH-SY5Y)",
+      "loc": "Institute of Biophysics, Chinese Academy of Sciences (Beijing) y University of Queensland (Australia)",
+      "dur": "Exposición continua",
+      "method": "Células de neuroblastoma humano expuestas de forma continua a un campo hipomagnético (apantallamiento del campo geomagnético, HMF) frente a controles en el campo geomagnético normal. Se analizó la proliferación y la progresión del ciclo celular.",
+      "results": [
+        "El apantallamiento del campo magnético (entorno hipomagnético) aumentó significativamente la proliferación de las células de neuroblastoma humano",
+        "La aceleración se debió a un avance del ciclo celular en la fase G1, sin afectar la fase G2/M",
+        "Demuestra que la ausencia del campo geomagnético natural altera el ritmo de división celular: la célula es sensible al entorno magnético"
+      ],
+      "pdf": "estudios/extra/mo-2013-magnetic-shielding-neuroblastoma.pdf",
+      "doi": "10.1371/journal.pone.0054775",
+      "note": "Evidencia de que las células humanas detectan y responden al campo magnético del ambiente (su ausencia acelera la proliferación) — sostiene la idea de que los campos magnéticos modulan la biología celular. Verificado contra el PDF original (acceso abierto CC-BY)."
+    },
+    {
+      "id": "extra-zadehhaghighi-2022-radical-pair-magnetic-biology",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/zadehhaghighi-2022-radical-pair-magnetic-biology.jpg",
+      "title": "Magnetic field effects in biology from the perspective of the radical pair mechanism",
+      "cite": "Zadeh-Haghighi H, Simon C · Journal of the Royal Society Interface · 2022",
+      "n": "Revisión de cientos de estudios",
+      "loc": "Institute for Quantum Science and Technology, University of Calgary, Canadá",
+      "dur": "—",
+      "method": "Revisión integral de la evidencia de efectos de campos magnéticos débiles en sistemas biológicos (estáticos, hipomagnéticos, oscilantes e isotópicos), proponiendo el mecanismo de pares de radicales (radical pair mechanism) como modelo unificador basado en la dinámica cuántica de spin de electrones.",
+      "results": [
+        "Cientos de estudios muestran que campos magnéticos débiles influyen significativamente en la biología, pese a que su energía es mucho menor que la energía térmica",
+        "El mecanismo de pares de radicales —dinámica cuántica de spin de electrones y núcleos— explica de forma unificada estos efectos, no solo la magnetorrecepción de las aves",
+        "La magnetosensibilidad está extendida por toda la biología y abarca funciones fisiológicas diversas; los pares de radicales y las especies reactivas de oxígeno son moléculas candidatas centrales"
+      ],
+      "pdf": "estudios/extra/zadehhaghighi-2022-radical-pair-magnetic-biology.pdf",
+      "doi": "10.1098/rsif.2022.0325",
+      "note": "Revisión de referencia del paradigma cuántico aplicado a la biología: fundamenta por qué campos magnéticos débiles (como los de PEMF) producen efectos biológicos reales a través de la química de spin. Verificado contra el PDF original (acceso abierto CC-BY)."
+    },
+    {
+      "id": "extra-chae-2022-human-magnetic-sense",
+      "brand": "all",
+      "type": "piloto",
+      "portada": "img/papers/chae-2022-human-magnetic-sense.jpg",
+      "title": "Human magnetic sense is mediated by a light and magnetic field resonance-dependent mechanism",
+      "cite": "Chae KS, Kim SC, Kwon HJ, Kim Y · Scientific Reports (Nature) · 2022",
+      "n": "Sujetos humanos (experimento de silla giratoria, elección forzada de 2 alternativas)",
+      "loc": "Kyungpook National University, Corea del Sur",
+      "dur": "—",
+      "method": "Experimento de orientación magnética en humanos con silla giratoria y paradigma de elección forzada, variando la longitud de onda de la luz y aplicando campos de radiofrecuencia a la frecuencia de Larmor para probar un mecanismo de resonancia de campo magnético.",
+      "results": [
+        "Demuestra la existencia de un sentido magnético humano: la orientación de los sujetos respondía al campo geomagnético",
+        "El efecto dependía críticamente de la luz azul que llega a los ojos y de la longitud de onda incidente",
+        "Un campo de radiofrecuencia a la frecuencia de Larmor alteraba o aumentaba la capacidad de orientarse, evidencia de un mecanismo de magnetorrecepción cuántico (par de radicales) dependiente de luz"
+      ],
+      "pdf": "estudios/extra/chae-2022-human-magnetic-sense.pdf",
+      "doi": "10.1038/s41598-022-12460-6",
+      "note": "Paradigma cuántico en humanos: el cuerpo humano detecta el campo magnético mediante un mecanismo de resonancia dependiente de luz (pares de radicales en criptocromos) — vincula luz, campo magnético y biología cuántica. Verificado contra el PDF original (acceso abierto CC-BY)."
+    },
+    {
+      "id": "extra-bennett-onyango-2021-tunneling-brain-mitochondria",
+      "brand": "all",
+      "type": "revision",
+      "portada": "img/papers/bennett-onyango-2021-tunneling-brain-mitochondria.jpg",
+      "title": "Energy, Entropy and Quantum Tunneling of Protons and Electrons in Brain Mitochondria",
+      "cite": "Bennett JP Jr, Onyango IG · Biomedicines (MDPI) · 2021",
+      "n": "Revisión",
+      "loc": "Neurodegeneration Therapeutics (EE.UU.) y St. Anne's University Hospital, Brno (Chequia)",
+      "dur": "—",
+      "method": "Revisión de la bioenergética del cerebro: cómo se produce el ATP por fosforilación oxidativa en las mitocondrias mediante la cadena de transporte de electrones, y el papel del túnel cuántico de protones y electrones en ese proceso y en las enfermedades neurodegenerativas del envejecimiento.",
+      "results": [
+        "El cerebro consume energía de forma desproporcionada (20-25% de la glucosa y el oxígeno del cuerpo); el ATP se genera por transferencia de electrones acoplada a protones en la cadena mitocondrial",
+        "El túnel cuántico de electrones y de protones facilita la separación necesaria entre el oxígeno y los electrones que fluyen por la cadena de transporte",
+        "La función de esta cadena está reducida en cerebros con enfermedades neurodegenerativas; las terapias mitocondriales buscan corregir esos déficits"
+      ],
+      "pdf": "estudios/extra/bennett-onyango-2021-tunneling-brain-mitochondria.pdf",
+      "doi": "10.3390/biomedicines9020225",
+      "note": "Conecta biología cuántica (túnel de protones y electrones) con la función mitocondrial cerebral y el envejecimiento — sostiene el foco en mitocondrias y energía celular. Verificado contra el PDF original (acceso abierto CC-BY)."
     }
   ]
 }
