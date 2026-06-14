@@ -75,7 +75,7 @@
 
   /* ── Fuentes: grafo XYZ con líneas e interacción ── */
   function sceneFuentes(){
-    const ppl=(data.people||[]).slice(0,mobile?6:9);
+    const ppl=(data.people||[]).slice().sort((a,b)=>(b.foto?1:0)-(a.foto?1:0)).slice(0,mobile?6:9);
     const svgNS='http://www.w3.org/2000/svg';
     const svg=document.createElementNS(svgNS,'svg'); svg.setAttribute('class','hs-links');
     root().appendChild(svg);
