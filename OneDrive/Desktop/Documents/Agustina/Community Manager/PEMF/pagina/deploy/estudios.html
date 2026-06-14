@@ -210,6 +210,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
 }
 .search-input::placeholder{color:var(--mist)}
 
+/* ═══ ZOOM EN IMÁGENES DEL MODAL ═════════════════════ */
+#m-paper-portada,#m-book-gallery .mbg-slide{touch-action:none;overflow:hidden}
+#m-paper-portada img,#m-book-gallery .mbg-slide img{will-change:transform}
+
 /* ═══ FILTERBAR (compacta) ═══════════════════════════ */
 .filterbar{display:flex;flex-direction:column;gap:10px}
 .filterbar-search{display:flex;align-items:center;gap:10px;padding:9px 14px;background:#fff;border-radius:12px;border:1.5px solid var(--border);transition:border-color .2s,box-shadow .2s}
@@ -930,6 +934,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
 </div>
 
 <script src="js/papers-data.js"></script>
+<script src="js/img-zoom.js"></script>
 <script src="js/page-estudios.js" defer></script>
 
 <!-- Parallax sutil de los orbes del hero al scrollear (modo calmo) -->

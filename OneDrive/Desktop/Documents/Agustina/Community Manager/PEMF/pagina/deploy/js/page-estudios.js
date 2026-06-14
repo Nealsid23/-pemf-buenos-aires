@@ -1012,6 +1012,7 @@ function openLibroModal(id){
   document.getElementById('mbg-slide-1').innerHTML=makeSlide(l.toc_img,'Índice');
   mbgGoto(0);
   document.getElementById('m-book-gallery').style.display='block';
+  if(window.attachZoom){ ['mbg-slide-0','mbg-slide-1'].forEach(sid=>{ const z=window.attachZoom(document.getElementById(sid)); if(z)z.reset(); }); }
 
   document.getElementById('m-badges').innerHTML=
     `<span class="type-badge" style="color:#374151;background:#f3f4f6">Lectura recomendada</span>
@@ -1146,6 +1147,7 @@ function openModal(id){
   if(s.portada){
     document.getElementById('m-paper-portada-img').src=s.portada;
     pp.style.display='block';
+    if(window.attachZoom){ const z=window.attachZoom(pp); if(z)z.reset(); }
   } else { pp.style.display='none'; }
   const b=B[s.brand],t=T[s.type]||T.piloto;
   document.getElementById('m-badges').innerHTML=
@@ -1202,6 +1204,7 @@ function openModal(id){
 }
 function closeModal(){
   const ov=document.getElementById('overlay');
+  ['m-paper-portada','mbg-slide-0','mbg-slide-1'].forEach(id=>{const el=document.getElementById(id); if(el&&el._zoom)el._zoom.reset();});
   ov.style.opacity='0';
   document.querySelector('.library').style.cssText='transition:transform .4s ease,filter .4s ease';
   setTimeout(()=>{ov.style.display='none';document.body.style.overflow='';document.querySelector('.library').style.cssText=''},320);
