@@ -1,0 +1,20 @@
+import { chromium } from 'playwright';
+const b=await chromium.launch();const p=await b.newPage();
+await p.setViewportSize({width:1280,height:1000});
+const errs=[];p.on('console',m=>{if(m.type()==='error')errs.push(m.text())});p.on('pageerror',e=>errs.push('PE:'+e.message));
+await p.goto('http://127.0.0.1:8787/estudios.html',{waitUntil:'domcontentloaded'});
+await p.waitForTimeout(2800);
+const o={};
+o.methodOnCards=await p.$$eval('#grid .card .card-method',e=>e.length);
+o.menuBtns=await p.$$eval('#menus-estudios .fb-btn',e=>e.map(x=>x.textContent.trim()));
+o.proVisible=await p.$eval('#pro-toggle',e=>getComputedStyle(e).display!=='none');
+// activar modo pro
+await p.click('#pro-toggle'); await p.waitForTimeout(500);
+o.fundChips=await p.$$eval('#grid .card .fund-chip',e=>e.length);
+o.firstFund=await p.$eval('#grid .card .fund-chip',e=>e.textContent.trim()).catch(()=>null);
+o.firstType=await p.$eval('#grid .card .type-badge',e=>e.textContent.trim()).catch(()=>null);
+await p.evaluate(()=>document.querySelector('.filter-wrap').scrollIntoView());
+await p.screenshot({path:'tools/shot_pro.png'});
+o.errs=errs;
+console.log(JSON.stringify(o));
+await b.close();

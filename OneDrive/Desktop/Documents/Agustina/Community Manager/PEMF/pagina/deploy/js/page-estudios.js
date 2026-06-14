@@ -36,6 +36,21 @@ const TemasPapers={
   'microbioma':   {l:'Microbioma y metabolismo',   c:'#ea580c',bg:'#fff7ed',tc:'#9a3412'},
 };
 
+/* ══ RIGOR (nivel de evidencia) + FINANCIAMIENTO (modo pro) ══ */
+const RigorCfg={
+  alta:      {l:'Alta evidencia',         c:'#15803d'},
+  moderada:  {l:'Evidencia moderada',     c:'#1e40af'},
+  preliminar:{l:'Preliminar',             c:'#b45309'},
+  preclinica:{l:'Preclínica/exploratoria',c:'#9d174d'},
+};
+function tierOf(s){ const e=(T[s.type]||{}).ev||1; return e>=4?'alta':e===3?'moderada':e===2?'preliminar':'preclinica'; }
+function fundingFlag(s){
+  const note=(s.note||'').toLowerCase();
+  if(/fabricante|financiad/.test(note)) return {l:'Financiado por fabricante',c:'#92400e',bg:'#fef3c7'};
+  if(/no publicad|preprint|sin revisi/.test(note)) return {l:'No revisado por pares',c:'#9a3412',bg:'#ffedd5'};
+  return {l:'Independiente',c:'#15803d',bg:'#dcfce7'};
+}
+
 /* ══ TEMAS (biblioteca) ═══════════════════════════════ */
 const Temas={
   bioelectricidad:{l:'Bioelectricidad',  c:'#1a4fb6',bg:'#eff6ff',tc:'#1e40af'},
@@ -433,7 +448,8 @@ const profesionales=[
 const studies=[...(window.STUDIES_BASE||[])];
 
 /* ══ STATE ════════════════════════════════════════════ */
-let aBrand='all', aType='all', aTemaPaper='all', q='';
+let aBrand='all', aType='all', aTemaPaper='all', aRigor='all', q='';
+let proMode=false;
 let aTema='all', qBib='';
 let aGuiaCat='all', qGuia='';
 let aCampo='all', qProf='', aTipoFuente='all';
@@ -452,6 +468,7 @@ function getFiltered(){
     if(aBrand!=='all'&&s.brand!==aBrand)return false;
     if(aType!=='all'&&s.type!==aType)return false;
     if(aTemaPaper!=='all'&&!(Array.isArray(s.temas)&&s.temas.includes(aTemaPaper)))return false;
+    if(aRigor!=='all'&&tierOf(s)!==aRigor)return false;
     return match(s,sq);
   });
 }
@@ -540,8 +557,9 @@ function render(animate=true){
   if(currentView==='guias'){renderGuias();return;}
   if(currentView==='profesionales'){renderProfesionales();return;}
   const list=getFiltered();
+  if(proMode) list.sort((a,b)=>((T[b.type]||{}).ev||0)-((T[a.type]||{}).ev||0));
   updatePillCounts();
-  clearBtn.classList.toggle('visible',(aBrand!=='all'||aType!=='all'||aTemaPaper!=='all'||q.length>0));
+  clearBtn.classList.toggle('visible',(aBrand!=='all'||aType!=='all'||aTemaPaper!=='all'||aRigor!=='all'||q.length>0));
   countLine.textContent='';
   const _cn1=document.createElement('strong');
   _cn1.textContent=list.length===studies.length?studies.length:list.length;
@@ -580,7 +598,9 @@ function render(animate=true){
   <div class="card-info">
     <h3 class="card-title">${s.titulo_es || s.title}</h3>
     <p class="card-cite">${s.cite}</p>
+    ${s.method?`<p class="card-method">${s.method}</p>`:''}
     <div class="meta-chips">
+      ${proMode?`<span class="fund-chip" style="color:${fundingFlag(s).c};background:${fundingFlag(s).bg}">${fundingFlag(s).l}</span>`:''}
       <span class="meta-chip">${s.n}</span>
       ${s.dur&&s.dur!=='—'?`<span class="meta-chip">${s.dur}</span>`:''}
       <span class="meta-chip">${s.loc}</span>
@@ -750,6 +770,7 @@ document.querySelectorAll('.view-btn').forEach(btn=>{
     document.getElementById(filterMap[currentView]).style.display='';
     clearBtn.classList.remove('visible');
     if(typeof refreshFilterbar==='function') refreshFilterbar(currentView);
+    { const pt=document.getElementById('pro-toggle'); if(pt) pt.style.display=currentView==='estudios'?'':'none'; }
     if(window.HeroScenes) HeroScenes.setScene(currentView);
     transitionHero(currentView);
     render();
@@ -1243,6 +1264,7 @@ const FB_DIMS = {
     {key:'brand', label:'Producto', cfg:B,          get:()=>aBrand,     set:v=>{aBrand=v;setBrandTint(aBrand);}},
     {key:'type',  label:'Diseño',   cfg:T,          get:()=>aType,      set:v=>aType=v},
     {key:'tema',  label:'Tema',     cfg:TemasPapers,get:()=>aTemaPaper, set:v=>aTemaPaper=v},
+    {key:'rigor', label:'Rigor',    cfg:RigorCfg,   get:()=>aRigor,     set:v=>aRigor=v},
   ],
   biblioteca: [ {key:'tema', label:'Tema', cfg:Temas, get:()=>aTema, set:v=>aTema=v} ],
   guias: [ {key:'cat', label:'Categoría', cfg:CatGuias, get:()=>aGuiaCat, set:v=>aGuiaCat=v} ],
@@ -1258,6 +1280,7 @@ function fbItemMatches(view,d,s,val){
     if(d.key==='brand')return s.brand===val;
     if(d.key==='type')return s.type===val;
     if(d.key==='tema')return Array.isArray(s.temas)&&s.temas.includes(val);
+    if(d.key==='rigor')return tierOf(s)===val;
   }
   if(view==='biblioteca')return s.tema===val;
   if(view==='guias')return s.categoria===val;
@@ -1331,6 +1354,16 @@ clearBtn.addEventListener('click',()=>{
   refreshFilterbar(currentView); render();
 });
 ['estudios','biblioteca','guias','profesionales'].forEach(buildFilterbar);
+
+/* ══ MODO PROFESIONAL ═════════════════════════════════ */
+const proToggle=document.getElementById('pro-toggle');
+if(proToggle){
+  proToggle.addEventListener('click',()=>{
+    proMode=!proMode;
+    proToggle.classList.toggle('on',proMode);
+    render();
+  });
+}
 
 /* ══ PAGE BRAND TINT ══════════════════════════════════ */
 const pageTint=document.getElementById('page-tint');
