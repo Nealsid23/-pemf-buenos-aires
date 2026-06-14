@@ -736,7 +736,7 @@ const studies=[
 ];
 
 /* ══ STATE ════════════════════════════════════════════ */
-let aBrand='all', aType='all', q='';
+let aBrand='all', aType='all', aTemaPaper='all', q='';
 let aTema='all', qBib='';
 let aGuiaCat='all', qGuia='';
 let aCampo='all', qProf='', aTipoFuente='all';
@@ -745,13 +745,16 @@ let ioObserver;
 
 function match(s, sq){
   if(!sq) return true;
-  return [s.title,s.cite,s.method,...s.results,B[s.brand].l].some(x=>x.toLowerCase().includes(sq));
+  const temaLabels=(s.temas||[]).map(t=>TemasPapers[t]?TemasPapers[t].l:'').join(' ');
+  return [s.title,s.titulo_es||'',s.cite,s.method,...s.results,B[s.brand].l,temaLabels]
+    .some(x=>String(x).toLowerCase().includes(sq));
 }
 function getFiltered(){
   const sq=q.toLowerCase();
   return studies.filter(s=>{
     if(aBrand!=='all'&&s.brand!==aBrand)return false;
     if(aType!=='all'&&s.type!==aType)return false;
+    if(aTemaPaper!=='all'&&!(Array.isArray(s.temas)&&s.temas.includes(aTemaPaper)))return false;
     return match(s,sq);
   });
 }
@@ -760,28 +763,44 @@ function getFiltered(){
 function updatePillCounts(){
   const sq=q.toLowerCase();
   // brand pills: count matching type+search for each brand
+  const hasTema=s=>aTemaPaper==='all'||(Array.isArray(s.temas)&&s.temas.includes(aTemaPaper));
   document.querySelectorAll('[data-brand]:not([data-brand="all"])').forEach(btn=>{
     const key=btn.dataset.brand;
     const c=studies.filter(s=>{
       if(s.brand!==key)return false;
       if(aType!=='all'&&s.type!==aType)return false;
+      if(!hasTema(s))return false;
       return match(s,sq);
     }).length;
     const pc=btn.querySelector('.pc');
     if(pc){pc.textContent=c||'';animatePc(pc)}
     btn.style.opacity=(c===0&&aBrand!==key)?'.35':'1';
   });
-  // type pills: count matching brand+search for each type
+  // type pills: count matching brand+tema+search for each type
   document.querySelectorAll('[data-type]:not([data-type="all"])').forEach(btn=>{
     const key=btn.dataset.type;
     const c=studies.filter(s=>{
       if(aBrand!=='all'&&s.brand!==aBrand)return false;
       if(s.type!==key)return false;
+      if(!hasTema(s))return false;
       return match(s,sq);
     }).length;
     const pc=btn.querySelector('.pc');
     if(pc){pc.textContent=c||'';animatePc(pc)}
     btn.style.opacity=(c===0&&aType!==key)?'.35':'1';
+  });
+  // tema pills: count matching brand+type+search for each tema
+  document.querySelectorAll('#tema-papers-pills .pill:not([data-temapaper="all"])').forEach(btn=>{
+    const key=btn.dataset.temapaper;
+    const c=studies.filter(s=>{
+      if(aBrand!=='all'&&s.brand!==aBrand)return false;
+      if(aType!=='all'&&s.type!==aType)return false;
+      if(!(Array.isArray(s.temas)&&s.temas.includes(key)))return false;
+      return match(s,sq);
+    }).length;
+    const pc=btn.querySelector('.pc');
+    if(pc){pc.textContent=c||'';animatePc(pc)}
+    btn.style.opacity=(c===0&&aTemaPaper!==key)?'.35':'1';
   });
   // "all" pills show current total
   const list=getFiltered();
@@ -789,6 +808,8 @@ function updatePillCounts(){
   if(abpc){abpc.textContent=list.length;animatePc(abpc)}
   const atpc=document.querySelector('[data-type="all"] .pc');
   if(atpc){atpc.textContent=list.length;animatePc(atpc)}
+  const atmpc=document.querySelector('[data-temapaper="all"] .pc');
+  if(atmpc){atmpc.textContent=list.length;animatePc(atmpc)}
 }
 function animatePc(el){
   el.style.transform='scale(1.4)';
@@ -823,7 +844,7 @@ function render(animate=true){
   if(currentView==='profesionales'){renderProfesionales();return;}
   const list=getFiltered();
   updatePillCounts();
-  clearBtn.classList.toggle('visible',(aBrand!=='all'||aType!=='all'||q.length>0));
+  clearBtn.classList.toggle('visible',(aBrand!=='all'||aType!=='all'||aTemaPaper!=='all'||q.length>0));
   countLine.textContent='';
   const _cn1=document.createElement('strong');
   _cn1.textContent=list.length===studies.length?studies.length:list.length;
@@ -860,7 +881,7 @@ function render(animate=true){
     : `<div class="card-hook" style="background:${b.bg}"><div class="hook-kf" style="color:${b.c}">Hallazgo clave</div><p class="hook-text" style="color:${b.tc}">${hook}</p></div>`
   }
   <div class="card-info">
-    <h3 class="card-title">${s.title}</h3>
+    <h3 class="card-title">${s.titulo_es || s.title}</h3>
     <p class="card-cite">${s.cite}</p>
     <div class="meta-chips">
       <span class="meta-chip">${s.n}</span>
@@ -1433,8 +1454,11 @@ function openModal(id){
      <span class="brand-tag" style="color:${b.c};background:${b.c}1c">
        <span class="brand-dot" style="background:${b.c}"></span>${b.l}
      </span>`;
-  document.getElementById('m-title').textContent=s.title;
-  document.getElementById('m-cite').textContent=s.cite;
+  const escHtml=x=>String(x||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  document.getElementById('m-title').textContent=s.titulo_es || s.title;
+  document.getElementById('m-cite').innerHTML=
+    (s.titulo_es && s.title ? `<span style="font-style:italic;color:var(--mist)">${escHtml(s.title)}</span><br>` : '')
+    + escHtml(s.cite);
   document.getElementById('modal-header').style.background=`linear-gradient(145deg,${b.bg} 0%,#fff 60%)`;
   document.getElementById('m-meta').innerHTML=`
     <div class="mbox"><span class="mbox-n" style="color:${b.c}">${s.n}</span><span class="mbox-l">Participantes</span></div>
@@ -1527,6 +1551,14 @@ document.querySelectorAll('[data-type]').forEach(btn=>{
     aType=btn.dataset.type;render();
   });
 });
+document.querySelectorAll('[data-temapaper]').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('[data-temapaper]').forEach(b=>{b.classList.remove('on');setPill(b,false)});
+    btn.classList.add('on');
+    setPill(btn,true,btn.dataset.temapaper!=='all'?TemasPapers[btn.dataset.temapaper]?.c:null);
+    aTemaPaper=btn.dataset.temapaper;render();
+  });
+});
 document.getElementById('search').addEventListener('input',e=>{q=e.target.value;render()});
 document.getElementById('search-bib').addEventListener('input',e=>{qBib=e.target.value;render()});
 document.getElementById('search-guia').addEventListener('input',e=>{qGuia=e.target.value;render()});
@@ -1561,15 +1593,17 @@ document.querySelectorAll('[data-tema]').forEach(btn=>{
   });
 });
 clearBtn.addEventListener('click',()=>{
-  aBrand='all';aType='all';q='';
+  aBrand='all';aType='all';aTemaPaper='all';q='';
   document.getElementById('search').value='';
   document.querySelectorAll('[data-brand]').forEach(b=>{const on=b.dataset.brand==='all';b.classList.toggle('on',on);setPill(b,on,B[b.dataset.brand]?.c)});
   document.querySelectorAll('[data-type]').forEach(b=>{const on=b.dataset.type==='all';b.classList.toggle('on',on);setPill(b,on,null)});
+  document.querySelectorAll('[data-temapaper]').forEach(b=>{const on=b.dataset.temapaper==='all';b.classList.toggle('on',on);setPill(b,on,null)});
   setBrandTint('all');render();
 });
 // init active pills
 setPill(document.querySelector('[data-brand="all"]'),true,null);
 setPill(document.querySelector('[data-type="all"]'),true,null);
+setPill(document.querySelector('[data-temapaper="all"]'),true,null);
 
 /* ══ PAGE BRAND TINT ══════════════════════════════════ */
 const pageTint=document.getElementById('page-tint');
