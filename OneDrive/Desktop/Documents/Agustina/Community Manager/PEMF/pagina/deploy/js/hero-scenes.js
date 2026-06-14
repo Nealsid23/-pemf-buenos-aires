@@ -27,18 +27,21 @@
     });
   }
   function updateDeck(p,sc){
-    const sp=mobile?18:30;
-    const lag=reduce?0:sc*0.4; // contra-scroll: el mazo se queda en vista mientras se abre
+    // flythrough: las cartas vienen al frente una por una al scrollear (se aprecia cada una)
+    const total=layers.filter(n=>n._d&&n._d.deck).length||1;
+    const focus=p*(total-1);
+    const lag=reduce?0:sc*0.42; // contra-scroll para que el mazo quede en vista
     for(let i=0;i<layers.length;i++){
       const n=layers[i], d=n._d; if(!d||!d.deck)continue;
-      const mid=(d.total-1)/2, off=d.index-mid;
-      const sx=off*p*sp + (reduce?0:mx*8);
-      const sy=(Math.abs(off)*-5 + off*3)*p + lag;
-      const rz=off*p*5;
-      const ry=reduce?0:mx*6;
-      n.style.transform='translate(-50%,-50%) translate3d('+sx+'px,'+sy+'px,'+(d.index*2)+'px) rotateZ('+rz+'deg) rotateY('+ry+'deg)';
-      n.style.zIndex=String(d.index);
-      n.style.opacity='1';
+      const rel=d.index-focus;                 // 0 = en foco; >0 detrás; <0 ya pasó
+      const z = rel>=0 ? -rel*250 : -rel*150;  // detrás se alejan; pasadas vienen al frente
+      const tx = rel*-16 + (reduce?0:mx*14);
+      const ty = rel*9 + lag;
+      const ry = rel*5 + (reduce?0:mx*5);
+      const op = rel>=0 ? Math.max(0,1-rel*0.17) : Math.max(0,1+rel*0.55);
+      n.style.transform='translate(-50%,-50%) translate3d('+tx+'px,'+ty+'px,'+z+'px) rotateY('+ry+'deg)';
+      n.style.opacity=String(op);
+      n.style.zIndex=String(1000-Math.round(Math.abs(rel)*10));
     }
   }
 
@@ -91,17 +94,19 @@
     if(!simNodes.length)return;
     const B=simBounds, cx=(B.xmin+B.xmax)/2, cy=(B.ymin+B.ymax)/2;
     for(let i=0;i<simNodes.length;i++){
-      const a=simNodes[i];
+      const a=simNodes[i]; if(a.zoff===undefined)a.zoff=0;
       a.vx+=(cx-a.x)*0.0007; a.vy+=(cy-a.y)*0.0007;
-      for(let j=0;j<simNodes.length;j++){ if(i===j)continue; const b=simNodes[j]; const dx=a.x-b.x,dy=a.y-b.y,d2=dx*dx+dy*dy+1; if(d2<26000){ const f=420/d2; a.vx+=dx*f*0.05; a.vy+=dy*f*0.05; } }
+      for(let j=0;j<simNodes.length;j++){ if(i===j)continue; const b=simNodes[j]; const dx=a.x-b.x,dy=a.y-b.y,d2=dx*dx+dy*dy+1; if(d2<26000){ const f=420/d2; a.vx+=dx*f*0.05; a.vy+=dy*f*0.05; if(d2<9000){ a.zoff+=(i>j?1:-1)*9; } } }
       if(!reduce){ a.vx+=Math.sin(t*0.5+a.ph)*0.04; a.vy+=Math.cos(t*0.45+a.ph)*0.04; }
       a.vx*=0.90; a.vy*=0.90; a.x+=a.vx; a.y+=a.vy;
+      a.zoff*=0.86; if(a.zoff>140)a.zoff=140; if(a.zoff<-140)a.zoff=-140;
       if(a.x<B.xmin){a.x=B.xmin;a.vx*=-.5;} if(a.x>B.xmax){a.x=B.xmax;a.vx*=-.5;}
       if(a.y<B.ymin){a.y=B.ymin;a.vy*=-.5;} if(a.y>B.ymax){a.y=B.ymax;a.vy*=-.5;}
-      const z=reduce?0:Math.sin(t*0.6+a.ph)*48;
-      const par=reduce?0:mx*16*((z+48)/96);
-      a.el.style.transform='translate3d('+(a.x+par)+'px,'+a.y+'px,'+z+'px)';
-      a.el.style.zIndex=String(50+Math.round(z));
+      const z=(reduce?0:Math.sin(t*0.6+a.ph)*38)+a.zoff;   // esquive por delante/detrás al chocar
+      const par=reduce?0:mx*16*((z+90)/180);
+      const sc2=1+z/900;                                   // leve escala con la profundidad
+      a.el.style.transform='translate3d('+(a.x+par)+'px,'+a.y+'px,'+z+'px) scale('+sc2+')';
+      a.el.style.zIndex=String(200+Math.round(z));
     }
     let li=0;
     for(let i=0;i<simNodes.length;i++)for(let j=i+1;j<simNodes.length;j++){
