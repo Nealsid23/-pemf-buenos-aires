@@ -1405,6 +1405,7 @@ function recomputeEstudiosStats(){
 /* ══ INIT ═════════════════════════════════════════════ */
 recomputeEstudiosStats();
 render(false);
+if(window.HeroScenes) HeroScenes.init({papers:studies, books:lecturas, people:profesionales});
 
 /* ══ OPTIMIZE CENTRO DE INFORMACIÓN INTEGRATION ════════ */
 window.addEventListener('optimizeDataLoaded', (event) => {
