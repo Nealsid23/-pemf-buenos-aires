@@ -1284,7 +1284,7 @@ function buildFilterbar(view){
     const panel=document.createElement('div'); panel.className='fb-panel';
     wrap.appendChild(btn); wrap.appendChild(panel); menus.appendChild(wrap);
     d._btn=btn; d._panel=panel; d._wrap=wrap;
-    btn.addEventListener('click',ev=>{ ev.stopPropagation(); const open=fbOpen&&fbOpen.panel===panel; fbClose(); if(!open){ renderPanel(view,dims,d); panel.classList.add('open'); btn.setAttribute('aria-expanded','true'); fbOpen={panel,btn,wrap}; } });
+    btn.addEventListener('click',ev=>{ ev.stopPropagation(); const open=fbOpen&&fbOpen.panel===panel; fbClose(); if(!open){ renderPanel(view,dims,d); panel.style.left='0'; panel.style.right='auto'; panel.classList.add('open'); btn.setAttribute('aria-expanded','true'); fbOpen={panel,btn,wrap}; const r=panel.getBoundingClientRect(); if(r.right>window.innerWidth-8){ panel.style.left='auto'; panel.style.right='0'; } } });
   });
   refreshFilterbar(view);
 }
