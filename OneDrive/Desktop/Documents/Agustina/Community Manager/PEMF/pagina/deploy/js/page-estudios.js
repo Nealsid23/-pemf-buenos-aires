@@ -19,6 +19,23 @@ const T={
   seguridad:   {l:'Seguridad',     sc:'Seguridad',    ev:2,el:'Preliminar', tc:'#374151',bg:'#f3f4f6'},
 };
 
+/* ══ TEMAS (papers / evidencia) ═══════════════════════ */
+const TemasPapers={
+  'campos-em':    {l:'Campos EM y PEMF',          c:'#1a4fb6',bg:'#eff6ff',tc:'#1e40af'},
+  'agua-h2':      {l:'Agua e hidrógeno',           c:'#0369a1',bg:'#f0f9ff',tc:'#0c4a6e'},
+  'mitocondria':  {l:'Mitocondria y energía',      c:'#b45309',bg:'#fffbeb',tc:'#78350f'},
+  'luz':          {l:'Luz y fotobiomodulación',    c:'#d97706',bg:'#fff7ed',tc:'#9a3412'},
+  'quantum':      {l:'Biología cuántica',          c:'#059669',bg:'#ecfdf5',tc:'#064e3b'},
+  'fascia':       {l:'Fascia y tejido conectivo',  c:'#0d9488',bg:'#f0fdfa',tc:'#115e59'},
+  'biocampo':     {l:'Biocampo y consciencia',     c:'#7c3aed',bg:'#f5f3ff',tc:'#5b21b6'},
+  'longevidad':   {l:'Longevidad y epigenética',   c:'#9333ea',bg:'#faf5ff',tc:'#6b21a8'},
+  'neuro':        {l:'Neurociencia y cognición',   c:'#4338ca',bg:'#eef2ff',tc:'#312e81'},
+  'sueno':        {l:'Sueño y sistema nervioso',   c:'#0891b2',bg:'#ecfeff',tc:'#155e75'},
+  'dolor':        {l:'Dolor y regeneración',       c:'#dc2626',bg:'#fef2f2',tc:'#991b1b'},
+  'antioxidantes':{l:'Antioxidantes y estrés ox.', c:'#65a30d',bg:'#f7fee7',tc:'#3f6212'},
+  'microbioma':   {l:'Microbioma y metabolismo',   c:'#ea580c',bg:'#fff7ed',tc:'#9a3412'},
+};
+
 /* ══ TEMAS (biblioteca) ═══════════════════════════════ */
 const Temas={
   bioelectricidad:{l:'Bioelectricidad',  c:'#1a4fb6',bg:'#eff6ff',tc:'#1e40af'},
