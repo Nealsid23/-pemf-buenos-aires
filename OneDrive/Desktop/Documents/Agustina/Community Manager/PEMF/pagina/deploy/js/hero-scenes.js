@@ -47,19 +47,27 @@
 
   /* ── Biblioteca: estante 3D ── */
   function sceneBiblioteca(){
+    const bg=el('hs-libbg','<img src="img/biblioteca-bg.png" alt="">');
+    add(bg,{bg:true});
     const bks=(data.books||[]).slice(0,mobile?6:10);
     bks.forEach((b,i)=>{
       const n=el('hs-book','<img src="'+b.cover+'" alt="" loading="lazy">');
-      n.style.left='62%'; n.style.top='46%';
+      n.style.left='60%'; n.style.top='49%';
       add(n,{shelf:true,index:i,total:bks.length});
     });
   }
-  function updateShelf(p){
+  function updateShelf(p,sc){
     for(let i=0;i<layers.length;i++){
-      const n=layers[i], d=n._d; if(!d||!d.shelf)continue;
+      const n=layers[i], d=n._d; if(!d)continue;
+      if(d.bg){
+        const px=reduce?0:mx*-16; const py=reduce?0:my*-10;
+        n.style.transform='translate3d('+px+'px,'+(py - sc*0.04)+'px,0) scale(1.1)';
+        continue;
+      }
+      if(!d.shelf)continue;
       const focus=p*(d.total-1), rel=d.index-focus;
-      const x=rel*(mobile?115:150), z=-Math.abs(rel)*230, ry=rel*-18;
-      const op=Math.max(.12,1-Math.abs(rel)*.42);
+      const x=rel*(mobile?120:160), z=-Math.abs(rel)*250, ry=rel*-20;
+      const op=Math.max(.1,1-Math.abs(rel)*.42);
       n.style.transform='translate(-50%,-50%) translate3d('+x+'px,0,'+z+'px) rotateY('+ry+'deg)';
       n.style.opacity=op; n.style.zIndex=String(100-Math.round(Math.abs(rel)*10));
     }
@@ -125,7 +133,7 @@
       const hero=document.querySelector('.hero'); const heroH=(hero&&hero.offsetHeight)||560;
       const p=Math.min(1,Math.max(0,sc/heroH));
       if(view==='estudios') updateDeck(p,sc);
-      else if(view==='biblioteca') updateShelf(p);
+      else if(view==='biblioteca') updateShelf(p,sc);
       else if(view==='profesionales') updateFuentes(t);
     }
     requestAnimationFrame(frame);
