@@ -111,7 +111,7 @@ Armstrong & Johnson "Water Intake/Balance" (Nutrients 2018, hidratación general
 
 ---
 
-## CAPÍTULO 3 — referencias págs. PDF 214–218 (book 215–219) 🔄 EN PROCESO
+## CAPÍTULO 3 — referencias págs. PDF 214–218 (book 215–219) ✅ PROCESADO
 
 **Tema dominante:** la FASCIA y el TEJIDO CONECTIVO como sistema bioeléctrico/óptico — agua cristalina líquida y estructurada alineada con colágeno, modelo de reconocimiento resonante (Cosic, resonancias EM de biomoléculas e interacción con la luz), interacciones ADN-EM, mecanotransducción de la matriz, ritmos circadianos del fibroblasto. Respalda **PEMF** (campos/resonancias EM en biomoléculas), **Analemma** (agua estructurada/ordenada en torno a biomoléculas) y la idea del cuerpo como matriz viva conductora.
 
@@ -135,7 +135,7 @@ Armstrong & Johnson "Water Intake/Balance" (Nutrients 2018, hidratación general
 
 **Cap 3 — estado:** 🟢 SUBIDOS = 7 (Cosic 2016, Dedic 2021, Schwartz 2010 [lote C] + Fischer 2018, Vodyanoy 2015, Hoyle 2017 [lote D] + Oschman, Li-Pollack [previos]). Núcleo del capítulo cubierto; resto = baja prioridad / paywall / libros.
 
-## CAPÍTULO 4 — referencias págs. PDF 218 (pie) – 225 aprox. 🔄 EN PROCESO
+## CAPÍTULO 4 — referencias págs. PDF 218 (pie) – 225 aprox. ✅ PROCESADO
 
 **Tema dominante (capítulo grande):** MITOCONDRIA y BIOELECTRICIDAD. Mitocondria (función, desacople, transferencia entre células, biogénesis, ROS), bioelectricidad y morfogénesis (Michael Levin: potenciales de membrana, regeneración de planaria, cáncer), canales iónicos, **piezoelectricidad y campos EM en regeneración de tejidos**, electrocéuticos, luz/fotobiomodulación sobre mitocondria, hidrógeno molecular. Es el capítulo **más rico para PEMF** (campos/señales eléctricas que regulan la biología celular y la regeneración).
 

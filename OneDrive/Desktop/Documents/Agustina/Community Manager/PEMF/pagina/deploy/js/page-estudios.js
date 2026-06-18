@@ -1499,6 +1499,7 @@ fetch('js/papers-extra.json')
     if (!validos.length) return;
     studies.push(...validos);
     if (currentView === 'estudios') render(false);
+    if (window.HeroScenes && currentView === 'estudios') HeroScenes.setScene('estudios'); // reabanico con la cantidad real
     // espera a que el count-up inicial del hero (≈1.6s) termine, para que el
     // recálculo sea la última escritura y el número refleje el total real
     setTimeout(() => {

@@ -17,7 +17,15 @@
     if(nums[0]){ nums[0].setAttribute('data-countup',String(floor)); nums[0].setAttribute('data-suffix','+'); nums[0].textContent=floor+'+'; }
     if(nums[1]){ nums[1].setAttribute('data-countup',String(brands)); nums[1].textContent=String(brands); }
     const fan=document.querySelector('#evidencia .ev-fan');
-    if(fan){ const sel=pick(papers,6); if(sel.length) fan.innerHTML=sel.map(p=>'<div class="ev-paper"><img src="'+p.portada+'" alt="" loading="lazy"></div>').join(''); }
+    if(fan){
+      const cuantos=Math.max(5,Math.round(total/4.5)); // ~1 representativo cada 4-5 papers reales
+      const sel=pick(papers,cuantos);
+      if(sel.length){
+        fan.innerHTML=sel.map(p=>'<div class="ev-paper"><img src="'+p.portada+'" alt="" loading="lazy"></div>').join('');
+        // re-inicializa el abanico (scroll) sobre los nuevos papers
+        if(window.PEMF_initEvidenceFan) requestAnimationFrame(()=>window.PEMF_initEvidenceFan());
+      }
+    }
   }
   function run(){
     const base=Array.isArray(window.STUDIES_BASE)?window.STUDIES_BASE.slice():[];

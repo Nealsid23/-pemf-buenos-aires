@@ -7,7 +7,7 @@
 (function(){
   const root=()=>document.getElementById('hero-scene');
   const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let layers=[],view='estudios',mx=0,my=0,data={papers:[],books:[],people:[]};
+  let layers=[],view='estudios',mx=0,my=0,fanMx=0,fanMy=0,data={papers:[],books:[],people:[]};
   let mobile=window.matchMedia&&window.matchMedia('(max-width:640px)').matches;
   let simNodes=[],simLinks=[],simBounds={xmin:0,xmax:0,ymin:0,ymax:0};
   function el(cls,html){const d=document.createElement('div');d.className='hs-layer '+cls;if(html)d.innerHTML=html;return d;}
@@ -15,34 +15,32 @@
   function add(node,opt){node._d=opt;root().appendChild(node);layers.push(node);}
   function rnd(a,b){return a+Math.random()*(b-a);}
 
-  /* ── Evidencia: mazo de cartas ── */
+  /* ── Evidencia: abanico de papers reactivo al MOUSE ── */
   function sceneEvidencia(){
     const imgs=data.papers.filter(p=>p.portada);
-    const total=Math.min(mobile?13:23, imgs.length||1);
-    const sel=imgs.slice(0,total);
+    if(!imgs.length)return;
+    const N=Math.max(5, Math.round(imgs.length/4.5)); // ~1 representativo cada 4-5 papers reales
+    const step=imgs.length/N, sel=[];
+    for(let k=0;k<N;k++) sel.push(imgs[Math.min(imgs.length-1,Math.floor(k*step))]);
+    const wrap=document.createElement('div'); wrap.className='hs-fan';
+    root().appendChild(wrap); layers.push(wrap); wrap._d={fan:true};
+    const spread=Math.min(mobile?70:104, 9*(N-1)); // grados totales del abanico (escala con N)
     sel.forEach((p,i)=>{
-      const n=el('hs-paper','<img src="'+p.portada+'" alt="" loading="lazy">');
-      n.style.left='66%'; n.style.top='44%';
-      add(n,{deck:true,index:i,total:sel.length});
+      const card=document.createElement('div'); card.className='hs-fancard';
+      card.innerHTML='<img src="'+p.portada+'" alt="" loading="lazy">';
+      const rot=(i-(N-1)/2)*(spread/Math.max(1,N-1));
+      const ty=-Math.abs(rot)*0.7;
+      card.style.transform='translate(-50%,-50%) rotate('+rot.toFixed(2)+'deg) translateY('+ty.toFixed(1)+'px)';
+      card.style.zIndex=String(100-Math.abs(Math.round(rot)));
+      wrap.appendChild(card);
     });
   }
-  function updateDeck(p,sc){
-    // flythrough: las cartas vienen al frente una por una al scrollear (se aprecia cada una)
-    const total=layers.filter(n=>n._d&&n._d.deck).length||1;
-    const focus=p*(total-1);
-    const lag=reduce?0:sc*0.42; // contra-scroll para que el mazo quede en vista
-    for(let i=0;i<layers.length;i++){
-      const n=layers[i], d=n._d; if(!d||!d.deck)continue;
-      const rel=d.index-focus;                 // 0 = en foco; >0 detrás; <0 ya pasó
-      const z = rel>=0 ? -rel*250 : -rel*150;  // detrás se alejan; pasadas vienen al frente
-      const tx = rel*-16 + (reduce?0:mx*14);
-      const ty = rel*9 + lag;
-      const ry = rel*5 + (reduce?0:mx*5);
-      const op = rel>=0 ? Math.max(0,1-rel*0.17) : Math.max(0,1+rel*0.55);
-      n.style.transform='translate(-50%,-50%) translate3d('+tx+'px,'+ty+'px,'+z+'px) rotateY('+ry+'deg)';
-      n.style.opacity=String(op);
-      n.style.zIndex=String(1000-Math.round(Math.abs(rel)*10));
-    }
+  function updateFan(){
+    let wrap=null; for(let i=0;i<layers.length;i++){ if(layers[i]._d&&layers[i]._d.fan){wrap=layers[i];break;} }
+    if(!wrap)return;
+    const rx=reduce?0:-fanMy*9, ry=reduce?0:fanMx*18;
+    const idle=reduce?0:Math.sin(performance.now()/1500)*1.6;
+    wrap.style.transform='rotateX('+rx.toFixed(2)+'deg) rotateY('+(ry+idle).toFixed(2)+'deg)';
   }
 
   /* ── Biblioteca: estante 3D ── */
@@ -132,7 +130,7 @@
       const sc=window.scrollY||0, t=performance.now()/1000;
       const hero=document.querySelector('.hero'); const heroH=(hero&&hero.offsetHeight)||560;
       const p=Math.min(1,Math.max(0,sc/heroH));
-      if(view==='estudios') updateDeck(p,sc);
+      if(view==='estudios') updateFan();
       else if(view==='biblioteca') updateShelf(p,sc);
       else if(view==='profesionales') updateFuentes(t);
     }
@@ -140,7 +138,12 @@
   }
   function init(d){
     data=d||data; if(!root())return;
-    window.addEventListener('mousemove',e=>{mx=(e.clientX/window.innerWidth-.5)*2;my=(e.clientY/window.innerHeight-.5)*2;},{passive:true});
+    window.addEventListener('mousemove',e=>{
+      mx=(e.clientX/window.innerWidth-.5)*2;my=(e.clientY/window.innerHeight-.5)*2;
+      const hero=document.querySelector('.hero'); if(hero){const r=hero.getBoundingClientRect();
+        fanMx=Math.max(-1,Math.min(1,((e.clientX-r.left)/r.width-.5)*2));
+        fanMy=Math.max(-1,Math.min(1,((e.clientY-r.top)/r.height-.5)*2));}
+    },{passive:true});
     window.addEventListener('resize',()=>{mobile=window.matchMedia&&window.matchMedia('(max-width:640px)').matches; if(view==='profesionales')seedFuentes();},{passive:true});
     setScene('estudios');
     requestAnimationFrame(frame);
