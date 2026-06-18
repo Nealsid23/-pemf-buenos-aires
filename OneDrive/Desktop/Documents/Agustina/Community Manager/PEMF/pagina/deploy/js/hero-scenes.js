@@ -40,15 +40,18 @@
     if(!wrap)return;
     const N=wrap._d.n, cards=wrap._d.cards;
     // foco: mouse izq → primera carta, der → última (recorre el abanico)
-    const idle=reduce?0:Math.sin(performance.now()/2600)*0.4;
+    const idle=reduce?0:Math.sin(performance.now()/2600)*0.35;
     const f=Math.max(0,Math.min(N-1,((fanMx+1)/2)*(N-1)+idle));
     for(let i=0;i<N;i++){
       const c=cards[i], d=Math.abs(i-f);
-      const b=Math.max(0,1-d/1.4);          // 1 en la carta enfocada, cae con la distancia
-      const lift=-b*70, zz=b*150, sc=1+b*0.45; // se levanta, viene al frente y se agranda
-      c.style.transform='translate(-50%,-50%) rotate('+c._rot.toFixed(2)+'deg) translateY('+(c._ty+lift).toFixed(1)+'px) translateZ('+zz.toFixed(1)+'px) scale('+sc.toFixed(3)+')';
-      c.style.zIndex=String(100+Math.round(b*100));
-      c.classList.toggle('is-focus',d<0.6);
+      const b=Math.max(0,1-d/1.1);              // ~1 sólo en la carta seleccionada
+      const eb=b*b*(3-2*b);                     // suavizado (smoothstep) para un "pop" más nítido
+      const rot=c._rot*(1-eb*0.92);             // la carta elegida se endereza (queda vertical y legible)
+      const lift=-eb*95, zz=eb*240, sc=1+eb*0.75; // se levanta, sale al frente y se agranda bastante
+      c.style.transform='translate(-50%,-50%) rotate('+rot.toFixed(2)+'deg) translateY('+(c._ty+lift).toFixed(1)+'px) translateZ('+zz.toFixed(1)+'px) scale('+sc.toFixed(3)+')';
+      c.style.zIndex=String(100+Math.round(eb*120));
+      c.style.filter='brightness('+(0.62+0.38*eb).toFixed(2)+')'; // las no elegidas quedan en penumbra
+      c.classList.toggle('is-focus',d<0.55);
     }
   }
 
