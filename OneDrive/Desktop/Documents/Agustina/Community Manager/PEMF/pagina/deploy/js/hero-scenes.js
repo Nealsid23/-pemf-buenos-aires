@@ -15,32 +15,59 @@
   function add(node,opt){node._d=opt;root().appendChild(node);layers.push(node);}
   function rnd(a,b){return a+Math.random()*(b-a);}
 
-  /* ── Evidencia: abanico de papers reactivo al MOUSE ── */
+  /* ── Evidencia: coverflow de papers — el mouse pasa de un paper a otro ── */
   function sceneEvidencia(){
     const imgs=data.papers.filter(p=>p.portada);
     if(!imgs.length)return;
-    const N=Math.max(5, Math.round(imgs.length/4.5)); // ~1 representativo cada 4-5 papers reales
-    const step=imgs.length/N, sel=[];
-    for(let k=0;k<N;k++) sel.push(imgs[Math.min(imgs.length-1,Math.floor(k*step))]);
-    const wrap=document.createElement('div'); wrap.className='hs-fan';
-    root().appendChild(wrap); layers.push(wrap); wrap._d={fan:true};
-    const spread=Math.min(mobile?70:104, 9*(N-1)); // grados totales del abanico (escala con N)
-    sel.forEach((p,i)=>{
-      const card=document.createElement('div'); card.className='hs-fancard';
+    // muestreo representativo: hasta ~16 papers para hojear (12 en móvil)
+    const N=Math.min(imgs.length, mobile?12:16);
+    const stepS=imgs.length/N, sel=[];
+    for(let k=0;k<N;k++) sel.push(imgs[Math.min(imgs.length-1,Math.floor(k*stepS))]);
+    const wrap=document.createElement('div'); wrap.className='hs-cf';
+    root().appendChild(wrap); layers.push(wrap);
+    const cards=[];
+    sel.forEach((p)=>{
+      const card=document.createElement('div'); card.className='hs-cfcard';
       card.innerHTML='<img src="'+p.portada+'" alt="" loading="lazy">';
-      const rot=(i-(N-1)/2)*(spread/Math.max(1,N-1));
-      const ty=-Math.abs(rot)*0.7;
-      card.style.transform='translate(-50%,-50%) rotate('+rot.toFixed(2)+'deg) translateY('+ty.toFixed(1)+'px)';
-      card.style.zIndex=String(100-Math.abs(Math.round(rot)));
-      wrap.appendChild(card);
+      card._p=p; wrap.appendChild(card); cards.push(card);
     });
+    const info=document.createElement('div'); info.className='hs-cfinfo';
+    info.innerHTML='<h4></h4><p class="m"></p><p class="r"></p>';
+    root().appendChild(info);
+    wrap._d={cf:true,cards:cards,info:info,n:N,cur:-1};
+    layers.push(info);
   }
-  function updateFan(){
-    let wrap=null; for(let i=0;i<layers.length;i++){ if(layers[i]._d&&layers[i]._d.fan){wrap=layers[i];break;} }
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  function updateCoverflow(){
+    let wrap=null; for(let i=0;i<layers.length;i++){ if(layers[i]._d&&layers[i]._d.cf){wrap=layers[i];break;} }
     if(!wrap)return;
-    const rx=reduce?0:-fanMy*9, ry=reduce?0:fanMx*18;
-    const idle=reduce?0:Math.sin(performance.now()/1500)*1.6;
-    wrap.style.transform='rotateX('+rx.toFixed(2)+'deg) rotateY('+(ry+idle).toFixed(2)+'deg)';
+    const d=wrap._d, N=d.n, cards=d.cards;
+    // foco: mouse izq → primer paper, centro → del medio, der → último
+    const idle=reduce?0:Math.sin(performance.now()/2600)*0.35;
+    const f=Math.max(0,Math.min(N-1,((fanMx+1)/2)*(N-1)+idle));
+    const sp=mobile?92:150;          // separación horizontal entre tarjetas
+    for(let i=0;i<N;i++){
+      const off=i-f, ad=Math.abs(off), sgn=Math.sign(off);
+      const x   = sgn*Math.pow(ad,0.82)*sp;
+      const z   = -ad*150 + (ad<0.5? 110:0);
+      const ry  = Math.max(-58,Math.min(58,-off*30));
+      const scl = ad<0.5? 1.18 : Math.max(0.5, 1-ad*0.15);
+      const op  = ad>5?0:Math.max(0,Math.min(1,1.15-(ad-3.2)*0.32));
+      const c=cards[i];
+      c.style.transform='translate(-50%,-50%) translate3d('+x.toFixed(1)+'px,0,'+z.toFixed(1)+'px) rotateY('+ry.toFixed(1)+'deg) scale('+scl.toFixed(3)+')';
+      c.style.zIndex=String(200-Math.round(ad*10));
+      c.style.opacity=op.toFixed(2);
+      c.classList.toggle('is-focus',ad<0.5);
+    }
+    // panel de texto del paper centrado
+    const ci=Math.round(f);
+    if(ci!==d.cur && cards[ci]){
+      d.cur=ci; const p=cards[ci]._p, inf=d.info;
+      inf.querySelector('h4').textContent=p.titulo_es||p.title||'';
+      const m=inf.querySelector('.m'), r=inf.querySelector('.r');
+      m.innerHTML=p.method?('<b>Método:</b> '+esc(p.method)):'';
+      r.innerHTML=p.results?('<b>Resultado:</b> '+esc(p.results)):'';
+    }
   }
 
   /* ── Biblioteca: estante 3D ── */
@@ -130,7 +157,7 @@
       const sc=window.scrollY||0, t=performance.now()/1000;
       const hero=document.querySelector('.hero'); const heroH=(hero&&hero.offsetHeight)||560;
       const p=Math.min(1,Math.max(0,sc/heroH));
-      if(view==='estudios') updateFan();
+      if(view==='estudios') updateCoverflow();
       else if(view==='biblioteca') updateShelf(p,sc);
       else if(view==='profesionales') updateFuentes(t);
     }
