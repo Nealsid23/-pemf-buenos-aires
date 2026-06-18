@@ -101,13 +101,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
 .hero-scrim{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,#060d1f 0%,rgba(6,13,31,.82) 30%,rgba(6,13,31,.25) 62%,rgba(6,13,31,0) 85%)}
 .hs-layer{position:absolute;will-change:transform,opacity;transform-style:preserve-3d;backface-visibility:hidden;-webkit-backface-visibility:hidden}
 /* Abanico de papers (carta levantada sigue al mouse) */
-.hs-fan{position:absolute;left:38%;width:56%;top:4%;height:88%;transform-style:preserve-3d;will-change:transform}
-.hs-fancard{position:absolute;top:50%;left:50%;width:clamp(170px,19vw,265px);aspect-ratio:1/1.32;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 24px 60px rgba(0,0,0,.5);transform-origin:50% 120%;will-change:transform;transition:transform .14s var(--out),box-shadow .2s}
+.hs-fan{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}
+.hs-fancard{position:absolute;top:62%;left:60%;width:clamp(170px,18.5vw,260px);aspect-ratio:1/1.32;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 22px 55px rgba(0,0,0,.55);transform-origin:50% 168%;will-change:transform,opacity;transition:transform .16s var(--out),box-shadow .2s,filter .2s}
 .hs-fancard img{width:100%;height:100%;object-fit:cover;object-position:top center}
 .hs-fancard::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,24,56,.5),transparent 45%)}
-.hs-fancard.is-focus{box-shadow:0 34px 90px rgba(0,0,0,.6),0 0 0 2px rgba(96,165,250,.55),0 0 40px rgba(96,165,250,.3)}
+.hs-fancard.is-focus{box-shadow:0 36px 95px rgba(0,0,0,.62),0 0 0 2px rgba(96,165,250,.6),0 0 46px rgba(96,165,250,.35)}
 .hs-fancard.is-focus::after{opacity:0}
-@media(max-width:640px){.hs-fan{left:0;width:100%;top:6%;height:80%}}
+@media(max-width:640px){.hs-fancard{top:60%;left:50%}}
 .hs-libbg{position:absolute;inset:0;z-index:0;will-change:transform}
 .hs-libbg img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:.5;filter:saturate(1.05)}
 .hs-libbg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 62% 45%,transparent 30%,rgba(6,13,31,.55) 100%)}

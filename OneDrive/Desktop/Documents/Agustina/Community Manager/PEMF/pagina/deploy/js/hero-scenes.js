@@ -15,7 +15,7 @@
   function add(node,opt){node._d=opt;root().appendChild(node);layers.push(node);}
   function rnd(a,b){return a+Math.random()*(b-a);}
 
-  /* ── Evidencia: abanico de papers — el mouse pasa la carta levantada ── */
+  /* ── Evidencia: abanico giratorio — el mouse hace rotar TODO el abanico ── */
   function sceneEvidencia(){
     const imgs=data.papers.filter(p=>p.portada);
     if(!imgs.length)return;
@@ -24,13 +24,10 @@
     for(let k=0;k<N;k++) sel.push(imgs[Math.min(imgs.length-1,Math.floor(k*step))]);
     const wrap=document.createElement('div'); wrap.className='hs-fan';
     root().appendChild(wrap); layers.push(wrap);
-    const spread=Math.min(mobile?80:120, 10*(N-1)); // grados totales del abanico
     const cards=[];
-    sel.forEach((p,i)=>{
+    sel.forEach((p)=>{
       const card=document.createElement('div'); card.className='hs-fancard';
       card.innerHTML='<img src="'+p.portada+'" alt="" loading="lazy">';
-      card._rot=(i-(N-1)/2)*(spread/Math.max(1,N-1));
-      card._ty=-Math.abs(card._rot)*0.7;
       wrap.appendChild(card); cards.push(card);
     });
     wrap._d={fan:true,cards:cards,n:N};
@@ -39,19 +36,23 @@
     let wrap=null; for(let i=0;i<layers.length;i++){ if(layers[i]._d&&layers[i]._d.fan){wrap=layers[i];break;} }
     if(!wrap)return;
     const N=wrap._d.n, cards=wrap._d.cards;
-    // foco: mouse izq → primera carta, der → última (recorre el abanico)
-    const idle=reduce?0:Math.sin(performance.now()/2600)*0.35;
+    const per=mobile?9:7;                         // grados por carta (separación del abanico)
+    const visN=mobile?5:7;                        // cuántas cartas se ven a cada lado del centro
+    // el mouse rota TODO el abanico: la carta que llega al centro se endereza y crece
+    const idle=reduce?0:Math.sin(performance.now()/3000)*0.3;
     const f=Math.max(0,Math.min(N-1,((fanMx+1)/2)*(N-1)+idle));
     for(let i=0;i<N;i++){
-      const c=cards[i], d=Math.abs(i-f);
-      const b=Math.max(0,1-d/1.1);              // ~1 sólo en la carta seleccionada
-      const eb=b*b*(3-2*b);                     // suavizado (smoothstep) para un "pop" más nítido
-      const rot=c._rot*(1-eb*0.92);             // la carta elegida se endereza (queda vertical y legible)
-      const lift=-eb*95, zz=eb*240, sc=1+eb*0.75; // se levanta, sale al frente y se agranda bastante
-      c.style.transform='translate(-50%,-50%) rotate('+rot.toFixed(2)+'deg) translateY('+(c._ty+lift).toFixed(1)+'px) translateZ('+zz.toFixed(1)+'px) scale('+sc.toFixed(3)+')';
-      c.style.zIndex=String(100+Math.round(eb*120));
-      c.style.filter='brightness('+(0.62+0.38*eb).toFixed(2)+')'; // las no elegidas quedan en penumbra
-      c.classList.toggle('is-focus',d<0.55);
+      const c=cards[i], off=i-f, ad=Math.abs(off);
+      const rot=off*per;                          // toda la baraja gira; la del centro queda vertical
+      const b=Math.max(0,1-ad/1.0);               // ~1 sólo en la carta del centro
+      const eb=b*b*(3-2*b);                        // smoothstep → "pop" nítido
+      const lift=-eb*70, zz=eb*230, sc=1+eb*0.6;  // la central se levanta, sale al frente y crece
+      const op=ad>visN?0:Math.min(1,(visN-ad+1)/1.5); // las de los extremos se desvanecen
+      c.style.transform='translate(-50%,-50%) rotate('+rot.toFixed(2)+'deg) translateY('+lift.toFixed(1)+'px) translateZ('+zz.toFixed(1)+'px) scale('+sc.toFixed(3)+')';
+      c.style.zIndex=String(200-Math.round(ad*4)+Math.round(eb*120));
+      c.style.opacity=op.toFixed(2);
+      c.style.filter='brightness('+(0.6+0.4*eb).toFixed(2)+')';
+      c.classList.toggle('is-focus',ad<0.5);
     }
   }
 
