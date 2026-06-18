@@ -101,13 +101,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
 .hero-scrim{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,#060d1f 0%,rgba(6,13,31,.82) 30%,rgba(6,13,31,.25) 62%,rgba(6,13,31,0) 85%)}
 .hs-layer{position:absolute;will-change:transform,opacity;transform-style:preserve-3d;backface-visibility:hidden;-webkit-backface-visibility:hidden}
 /* Abanico de papers (carta levantada sigue al mouse) */
-.hs-fan{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}
-.hs-fancard{position:absolute;top:62%;left:60%;width:clamp(170px,18.5vw,260px);aspect-ratio:1/1.32;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 22px 55px rgba(0,0,0,.55);transform-origin:50% 168%;will-change:transform,opacity;transition:transform .16s var(--out),box-shadow .2s,filter .2s}
-.hs-fancard img{width:100%;height:100%;object-fit:cover;object-position:top center}
-.hs-fancard::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,24,56,.5),transparent 45%)}
-.hs-fancard.is-focus{box-shadow:0 36px 95px rgba(0,0,0,.62),0 0 0 2px rgba(96,165,250,.6),0 0 46px rgba(96,165,250,.35)}
-.hs-fancard.is-focus::after{opacity:0}
-@media(max-width:640px){.hs-fancard{top:60%;left:50%}}
+.hs-fan{position:absolute;inset:0}
+.hs-fancard{position:absolute;top:74%;left:60%;width:clamp(180px,19vw,250px);aspect-ratio:3/4;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 30px 70px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.16);transform:translate(-50%,-50%) rotate(var(--rot,0deg)) translateY(var(--ty,0px));transform-origin:50% 120%;will-change:transform}
+.hs-fancard img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.hs-fancard::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,24,56,.55),transparent 45%)}
+@media(max-width:640px){.hs-fancard{top:70%;left:50%;width:170px}}
 .hs-libbg{position:absolute;inset:0;z-index:0;will-change:transform}
 .hs-libbg img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:.5;filter:saturate(1.05)}
 .hs-libbg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 62% 45%,transparent 30%,rgba(6,13,31,.55) 100%)}

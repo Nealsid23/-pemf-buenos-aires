@@ -15,7 +15,7 @@
   function add(node,opt){node._d=opt;root().appendChild(node);layers.push(node);}
   function rnd(a,b){return a+Math.random()*(b-a);}
 
-  /* ── Evidencia: abanico giratorio — el mouse hace rotar TODO el abanico ── */
+  /* ── Evidencia: abanico que se despliega (estilo landing) ── */
   function sceneEvidencia(){
     const imgs=data.papers.filter(p=>p.portada);
     if(!imgs.length)return;
@@ -24,35 +24,30 @@
     for(let k=0;k<N;k++) sel.push(imgs[Math.min(imgs.length-1,Math.floor(k*step))]);
     const wrap=document.createElement('div'); wrap.className='hs-fan';
     root().appendChild(wrap); layers.push(wrap);
+    const spread=Math.min(120, 14*(N-1)); // mismo cálculo que el abanico de la landing
     const cards=[];
-    sel.forEach((p)=>{
+    sel.forEach((p,i)=>{
       const card=document.createElement('div'); card.className='hs-fancard';
       card.innerHTML='<img src="'+p.portada+'" alt="" loading="lazy">';
+      card._rot=(i-(N-1)/2)*(spread/Math.max(1,N-1)); // ángulo final de la carta
+      card._ty=-Math.abs(card._rot)*0.8;
       wrap.appendChild(card); cards.push(card);
     });
-    wrap._d={fan:true,cards:cards,n:N};
+    wrap._d={fan:true,cards:cards,n:N,t0:performance.now()};
   }
-  function updateFan(){
+  function updateFan(scrollP){
     let wrap=null; for(let i=0;i<layers.length;i++){ if(layers[i]._d&&layers[i]._d.fan){wrap=layers[i];break;} }
     if(!wrap)return;
-    const N=wrap._d.n, cards=wrap._d.cards;
-    const per=mobile?9:7;                         // grados por carta (separación del abanico)
-    const visN=mobile?5:7;                        // cuántas cartas se ven a cada lado del centro
-    // el mouse rota TODO el abanico: la carta que llega al centro se endereza y crece
-    const idle=reduce?0:Math.sin(performance.now()/3000)*0.3;
-    const f=Math.max(0,Math.min(N-1,((fanMx+1)/2)*(N-1)+idle));
-    for(let i=0;i<N;i++){
-      const c=cards[i], off=i-f, ad=Math.abs(off);
-      const rot=off*per;                          // toda la baraja gira; la del centro queda vertical
-      const b=Math.max(0,1-ad/1.0);               // ~1 sólo en la carta del centro
-      const eb=b*b*(3-2*b);                        // smoothstep → "pop" nítido
-      const lift=-eb*70, zz=eb*230, sc=1+eb*0.6;  // la central se levanta, sale al frente y crece
-      const op=ad>visN?0:Math.min(1,(visN-ad+1)/1.5); // las de los extremos se desvanecen
-      c.style.transform='translate(-50%,-50%) rotate('+rot.toFixed(2)+'deg) translateY('+lift.toFixed(1)+'px) translateZ('+zz.toFixed(1)+'px) scale('+sc.toFixed(3)+')';
-      c.style.zIndex=String(200-Math.round(ad*4)+Math.round(eb*120));
-      c.style.opacity=op.toFixed(2);
-      c.style.filter='brightness('+(0.6+0.4*eb).toFixed(2)+')';
-      c.classList.toggle('is-focus',ad<0.5);
+    const cards=wrap._d.cards;
+    // se despliega: apertura por intro (al cargar) y por scroll, lo que sea mayor (como la landing)
+    const intro=reduce?1:Math.min(1,(performance.now()-wrap._d.t0)/1400);
+    let p=Math.max(intro, scrollP||0); p=p*p*(3-2*p); // smoothstep
+    const breathe=reduce?0:(Math.sin(performance.now()/2600)*0.5+0.5)*0.06; // respiración suave
+    const e=Math.min(1,p+breathe*p);
+    for(let i=0;i<cards.length;i++){
+      const c=cards[i];
+      c.style.setProperty('--rot',(c._rot*e).toFixed(2)+'deg');
+      c.style.setProperty('--ty',(c._ty*e).toFixed(2)+'px');
     }
   }
 
@@ -143,7 +138,7 @@
       const sc=window.scrollY||0, t=performance.now()/1000;
       const hero=document.querySelector('.hero'); const heroH=(hero&&hero.offsetHeight)||560;
       const p=Math.min(1,Math.max(0,sc/heroH));
-      if(view==='estudios') updateFan();
+      if(view==='estudios') updateFan(p);
       else if(view==='biblioteca') updateShelf(p,sc);
       else if(view==='profesionales') updateFuentes(t);
     }
