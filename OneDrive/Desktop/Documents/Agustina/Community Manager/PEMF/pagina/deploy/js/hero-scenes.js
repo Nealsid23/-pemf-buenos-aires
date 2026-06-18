@@ -39,14 +39,17 @@
     let wrap=null; for(let i=0;i<layers.length;i++){ if(layers[i]._d&&layers[i]._d.fan){wrap=layers[i];break;} }
     if(!wrap)return;
     const cards=wrap._d.cards;
-    // se despliega: apertura por intro (al cargar) y por scroll, lo que sea mayor (como la landing)
-    const intro=reduce?1:Math.min(1,(performance.now()-wrap._d.t0)/1400);
-    let p=Math.max(intro, scrollP||0); p=p*p*(3-2*p); // smoothstep
-    const breathe=reduce?0:(Math.sin(performance.now()/2600)*0.5+0.5)*0.06; // respiración suave
-    const e=Math.min(1,p+breathe*p);
+    // se despliega como la landing: el intro lo abre ~60% y el scroll lo termina de abrir
+    const intro=reduce?1:Math.min(1,(performance.now()-wrap._d.t0)/1300);
+    const ei=intro*intro*(3-2*intro);
+    let open=Math.min(1,Math.max(ei*0.6, scrollP||0));
+    const e=open*open*(3-2*open);            // smoothstep de apertura
+    // reacciona al mouse: todo el abanico se hamaca; + respiración suave
+    const sway=reduce?0:fanMx*10;
+    const breathe=reduce?0:Math.sin(performance.now()/1500)*2.2;
     for(let i=0;i<cards.length;i++){
       const c=cards[i];
-      c.style.setProperty('--rot',(c._rot*e).toFixed(2)+'deg');
+      c.style.setProperty('--rot',(c._rot*e + sway + breathe).toFixed(2)+'deg');
       c.style.setProperty('--ty',(c._ty*e).toFixed(2)+'px');
     }
   }
