@@ -1471,6 +1471,426 @@
     "biocampo",
     "luz"
    ]
+  },
+  {
+   "id": "extra-zheng-pollack-2006-interfacial-water",
+   "brand": "analemma",
+   "type": "vitro",
+   "portada": "img/papers/zheng-pollack-2006-interfacial-water.jpg",
+   "title": "Surfaces and interfacial water: Evidence that hydrophilic surfaces have long-range impact",
+   "cite": "Zheng JM, Chin WC, Khijniak E, Khijniak E Jr, Pollack GH · Advances in Colloid and Interface Science · 2006",
+   "n": "Experimentos in vitro (hidrogeles, tejidos biológicos, polímeros, monocapas)",
+   "loc": "University of Washington, Seattle",
+   "dur": "—",
+   "method": "Observación microscópica de la exclusión de solutos coloidales y moleculares cerca de superficies hidrofílicas, con mediciones de potencial eléctrico, espectros de absorción UV-Vis, imágenes infrarrojas y resonancia magnética (NMR).",
+   "results": [
+    "Los solutos son excluidos de la vecindad de superficies hidrofílicas hasta distancias de cientos de micrones — órdenes de magnitud más lejos que las 'pocas capas moleculares' aceptadas",
+    "La zona libre de solutos es una fase de agua físicamente distinta, menos móvil, que coexiste indefinidamente con el agua normal contigua",
+    "El fenómeno se observó en geles artificiales y naturales, tejidos biológicos, polímeros hidrofílicos, monocapas y perlas de intercambio iónico"
+   ],
+   "pdf": "estudios/extra/zheng-pollack-2006-interfacial-water.pdf",
+   "doi": "10.1016/j.cis.2006.07.002",
+   "note": "El paper FUNDACIONAL del agua EZ del laboratorio de Gerald Pollack: la primera demostración sistemática peer-reviewed de que el agua se ordena a gran escala junto a superficies hidrofílicas — el cimiento histórico del concepto de agua estructurada que sustenta Analemma. Verificado contra el PDF original.",
+   "titulo_es": "Superficies y agua interfacial: evidencia de que las superficies hidrofílicas tienen impacto de largo alcance",
+   "temas": [
+    "agua-h2",
+    "quantum"
+   ]
+  },
+  {
+   "id": "extra-deninno-2017-exclusion-zone-dynamics",
+   "brand": "analemma",
+   "type": "vitro",
+   "portada": "img/papers/deninno-2017-exclusion-zone-dynamics.jpg",
+   "title": "Dynamics of Formation of the Exclusion Zone near Hydrophilic Surfaces",
+   "cite": "De Ninno A · Chemical Physics Letters · 2017",
+   "n": "Análisis teórico-experimental (superficies de Nafion y geles poliacrílicos)",
+   "loc": "ENEA, Frascati, Italia",
+   "dur": "—",
+   "method": "Análisis de la ley de formación de la zona de exclusión (proceso difusivo) y modelo teórico del puente de hidrógeno capaz de explicar la configuración hexagonal de larga vida observada cerca de la superficie de Nafion.",
+   "results": [
+    "La formación de la EZ sigue una ley difusiva y excluye solutos a cientos de micrones de la superficie",
+    "Los modelos convencionales de agua (mezcla de puentes H estables y distorsionados) NO pueden explicar la configuración hexagonal de larga vida observada",
+    "Propone un marco teórico del puente de hidrógeno que explica las propiedades más llamativas de esta agua"
+   ],
+   "pdf": "estudios/extra/deninno-2017-exclusion-zone-dynamics.pdf",
+   "doi": "10.1016/j.cplett.2016.11.066",
+   "note": "Confirmación independiente (laboratorio estatal italiano ENEA) de la fenomenología del agua EZ de Pollack, con un marco teórico propio — suma una segunda fuente institucional al concepto de agua estructurada detrás de Analemma. Verificado contra el PDF original.",
+   "titulo_es": "Dinámica de formación de la zona de exclusión cerca de superficies hidrofílicas",
+   "temas": [
+    "agua-h2",
+    "quantum"
+   ]
+  },
+  {
+   "id": "extra-arani-1995-qed-coherence-water",
+   "brand": "analemma",
+   "type": "revision",
+   "portada": "img/papers/arani-1995-qed-coherence-water.jpg",
+   "title": "QED Coherence and the Thermodynamics of Water",
+   "cite": "Arani R, Bono I, Del Giudice E, Preparata G · International Journal of Modern Physics B · 1995",
+   "n": "Modelo teórico (electrodinámica cuántica)",
+   "loc": "Universidad de Milán · INFN, Italia",
+   "dur": "—",
+   "method": "Desarrollo teórico en electrodinámica cuántica (QED): por encima de una densidad crítica, un conjunto de moléculas de agua evoluciona hacia un estado fundamental coherente en el que las moléculas oscilan en fase con el campo electromagnético.",
+   "results": [
+    "El agua líquida consiste en dos fases coexistentes: una fase coherente (moléculas oscilando en fase con el campo EM) y una fase normal poblada por excitaciones térmicas",
+    "El modelo reproduce satisfactoriamente las cantidades termodinámicas observadas del agua y sus conocidas anomalías",
+    "Base física de los 'dominios de coherencia' del agua"
+   ],
+   "pdf": "estudios/extra/arani-1995-qed-coherence-water.pdf",
+   "doi": "10.1142/S0217979295000744",
+   "note": "El paper madre de la teoría de dominios de coherencia del agua (Del Giudice y Preparata): el fundamento teórico-cuántico más citado del agua coherente — completa, junto a Bono 2012 (ya indexado), la base física profunda de Analemma. Verificado contra el PDF original.",
+   "titulo_es": "Coherencia QED y la termodinámica del agua",
+   "temas": [
+    "agua-h2",
+    "quantum"
+   ]
+  },
+  {
+   "id": "extra-baek-2014-emf-cell-reprogramming",
+   "brand": "all",
+   "type": "vitro",
+   "portada": "img/papers/baek-2014-emf-cell-reprogramming.jpg",
+   "title": "Electromagnetic Fields Mediate Efficient Cell Reprogramming into a Pluripotent State",
+   "cite": "Baek S, Quan X, Kim S, Lengner C, Park JK, Kim J · ACS Nano · 2014",
+   "n": "Fibroblastos somáticos (in vitro)",
+   "loc": "Dongguk University, Seúl + University of Pennsylvania",
+   "dur": "—",
+   "method": "Exposición de células somáticas en reprogramación a campos electromagnéticos de frecuencia extremadamente baja (EL-EMF), midiendo la eficiencia de conversión a células pluripotentes y los mecanismos epigenéticos implicados.",
+   "results": [
+    "Los campos EM de baja frecuencia aumentaron drásticamente la eficiencia de la reprogramación celular hacia pluripotencia",
+    "El efecto opera vía activación epigenética (regulador de cromatina), sin modificación genética",
+    "Publicado en ACS Nano, una de las revistas de nanociencia de mayor impacto"
+   ],
+   "pdf": "estudios/extra/baek-2014-emf-cell-reprogramming.pdf",
+   "doi": "10.1021/nn5052483",
+   "note": "Evidencia de alto impacto de que los campos electromagnéticos pueden dirigir el destino celular hasta el nivel de la pluripotencia — respaldo mecanístico de primer nivel para el paradigma PEMF y los claims regenerativos del catálogo. Verificado contra el PDF original.",
+   "titulo_es": "Los campos electromagnéticos median la reprogramación celular eficiente hacia un estado pluripotente",
+   "temas": [
+    "campos-em",
+    "quantum"
+   ]
+  },
+  {
+   "id": "extra-buchachenko-2023-longevity-magnetic-field",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/buchachenko-2023-longevity-magnetic-field.jpg",
+   "title": "Does Biological Longevity Depend on the Magnetic Fields?",
+   "cite": "Buchachenko AL · Russian Journal of Physical Chemistry B · 2023",
+   "n": "Revisión (química de spin y efectos isotópicos magnéticos)",
+   "loc": "Academia Rusa de Ciencias · Universidad Estatal de Moscú",
+   "dur": "—",
+   "method": "Revisión del efecto isotópico magnético en la síntesis de ADN: polimerasas cargadas con iones 25Mg²⁺, 43Ca²⁺ y 67Zn²⁺ (núcleos magnéticos) versus sus isótopos no magnéticos, y análisis del mecanismo de par de radicales enzimático.",
+   "results": [
+    "Los iones con núcleos magnéticos reducen la velocidad de síntesis de ADN 3-5 veces respecto a los no magnéticos — un efecto isotópico enorme",
+    "La síntesis, el daño y la reparación del ADN están magnéticamente controlados, con mecanismo físico fundamentado (transferencia de electrón y par de radicales)",
+    "Discute el vínculo entre campos magnéticos, límite de Hayflick y longevidad biológica"
+   ],
+   "pdf": "estudios/extra/buchachenko-2023-longevity-magnetic-field.pdf",
+   "doi": "10.1134/S1990793123010037",
+   "note": "Del padre de la química de spin (Buchachenko): los procesos centrales del genoma responden al magnetismo nuclear y externo — fundamento químico-cuántico del efecto de campos magnéticos sobre la biología, en línea con Binhi 2023 ya indexado. Verificado contra el PDF original.",
+   "titulo_es": "¿Depende la longevidad biológica de los campos magnéticos?",
+   "temas": [
+    "campos-em",
+    "longevidad"
+   ]
+  },
+  {
+   "id": "extra-mcclanahan-1983-electric-field-bone",
+   "brand": "all",
+   "type": "animal",
+   "portada": "img/papers/mcclanahan-1983-electric-field-bone.jpg",
+   "title": "The Influence of Electric Field Exposure on Bone Growth and Fracture Repair in Rats",
+   "cite": "McClanahan BJ, Phillips RD · Bioelectromagnetics · 1983",
+   "n": "Ratas (osteotomías de fíbula)",
+   "loc": "Pacific Northwest Laboratory, Richland, WA",
+   "dur": "14-30 días según experimento",
+   "method": "Exposición de ratas a un campo eléctrico de 60 Hz a 100 kV/m (20 h/día). Se midió crecimiento óseo (área cortical y cavidad medular de la tibia) y reparación de osteotomías fibulares (resistencia a la deformación y fuerza de ruptura) a distintos tiempos.",
+   "results": [
+    "El campo eléctrico de 60 Hz NO alteró el crecimiento óseo en ratas inmaduras",
+    "La reparación de fracturas fue MÁS LENTA en los animales expuestos a los días 16-20, igualándose recién al día 26",
+    "Resultado negativo/cautelar: la exposición pasiva a campos eléctricos de red no acelera — y puede retrasar — la reparación ósea"
+   ],
+   "pdf": "estudios/extra/mcclanahan-1983-electric-field-bone.pdf",
+   "doi": "10.1002/bem.2250040104",
+   "note": "Resultado negativo incluido a propósito (como el de Yang 2023 en gamma): un campo eléctrico crónico de 60 Hz no mejoró y hasta retrasó la reparación ósea. Aporta el contraste honesto — no todo campo electromagnético es terapéutico: importan frecuencia, forma y dosis, que es exactamente la premisa del PEMF pulsado. Verificado contra el PDF original.",
+   "titulo_es": "La influencia de la exposición a campos eléctricos sobre el crecimiento óseo y la reparación de fracturas en ratas",
+   "temas": [
+    "campos-em",
+    "dolor"
+   ]
+  },
+  {
+   "id": "extra-cervera-2023-planaria-bioelectric-model",
+   "brand": "all",
+   "type": "vitro",
+   "portada": "img/papers/cervera-2023-planaria-bioelectric-model.jpg",
+   "title": "Transplantation of fragments from different planaria: A bioelectrical model for head regeneration",
+   "cite": "Cervera J, Manzanares JA, Levin M, Mafe S · Journal of Theoretical Biology · 2023",
+   "n": "Modelo bioeléctrico computacional (planaria)",
+   "loc": "Universitat de València + Tufts University (lab. Michael Levin)",
+   "dur": "—",
+   "method": "Modelo bioeléctrico de los potenciales de membrana a lo largo del eje primario de la planaria, que simula qué morfología emerge al trasplantar tejido entre planarias de distintas especies y formas de cabeza.",
+   "results": [
+    "Los patrones de potencial eléctrico a través del eje corporal predicen la morfología de la regeneración (incluidos animales de dos cabezas genéticamente normales)",
+    "El modelo reproduce cualitativamente los efectos de trasplantes y quimeras espaciales",
+    "La información de patrón corporal se almacena en gradientes bioeléctricos, no solo en los genes"
+   ],
+   "pdf": "estudios/extra/cervera-2023-planaria-bioelectric-model.pdf",
+   "doi": "10.1016/j.jtbi.2022.111356",
+   "note": "Del laboratorio de Michael Levin (Tufts/Harvard Wyss): la bioelectricidad dicta la forma en la regeneración — el patrón corporal es información eléctrica editable. Pilar contemporáneo del paradigma bioeléctrico que heredó el trabajo de Robert Becker. Verificado contra el PDF original (acceso abierto CC BY-NC-ND).",
+   "titulo_es": "Trasplante de fragmentos de distintas planarias: un modelo bioeléctrico de la regeneración de la cabeza",
+   "temas": [
+    "campos-em",
+    "quantum"
+   ]
+  },
+  {
+   "id": "extra-lee-burke-2024-mitochondria-voltage-imaging",
+   "brand": "all",
+   "type": "vitro",
+   "portada": "img/papers/lee-burke-2024-mitochondria-voltage-imaging.jpg",
+   "title": "Super-Resolution Imaging of Voltages in the Interior of Individual, Vital Mitochondria",
+   "cite": "Lee C, Wallace DC, Burke PJ · ACS Nano · 2024",
+   "n": "Mitocondrias vivas aisladas (microscopía de super-resolución)",
+   "loc": "University of California / Children's Hospital of Philadelphia",
+   "dur": "—",
+   "method": "Microscopía de super-resolución sobre mitocondrias funcionales aisladas, midiendo el potencial de membrana en tiempo real y por posición ante sustratos e inhibidores de la cadena de transporte de electrones, con modelo de la señal de los colorantes de voltaje.",
+   "results": [
+    "Primera visualización en super-resolución del voltaje dentro de mitocondrias individuales vivas, en distintos estados metabólicos",
+    "El potencial de membrana puede seguirse en el tiempo y en el espacio, incluso en estructuras submitocondriales",
+    "Coautoría de Douglas Wallace, fundador de la medicina mitocondrial moderna"
+   ],
+   "pdf": "estudios/extra/lee-burke-2024-mitochondria-voltage-imaging.pdf",
+   "doi": "10.1021/acsnano.3c02768",
+   "note": "La bioelectricidad mitocondrial hecha visible: la mitocondria es literalmente un dispositivo de voltaje que ahora se puede filmar. Sostiene con ciencia de frontera todos los claims energético-mitocondriales del catálogo. Verificado contra el PDF original.",
+   "titulo_es": "Imágenes de super-resolución de los voltajes en el interior de mitocondrias individuales vivas",
+   "temas": [
+    "mitocondria",
+    "campos-em"
+   ]
+  },
+  {
+   "id": "extra-barolet-2021-no-release-red-nir",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/barolet-2021-no-release-red-nir.jpg",
+   "title": "Light-induced nitric oxide release in the skin beyond UVA and blue light: Red & near-infrared wavelengths",
+   "cite": "Barolet AC, Litvinov IV, Barolet D · Nitric Oxide (Elsevier) · 2021",
+   "n": "Revisión científica",
+   "loc": "McGill University, Montreal",
+   "dur": "—",
+   "method": "Revisión de la fotólisis de los depósitos cutáneos de derivados de óxido nítrico (NO): mecanismos no enzimáticos por los que la irradiación de la piel moviliza NO al torrente sanguíneo, comparando UVA/azul con las longitudes de onda rojas/NIR más seguras.",
+   "results": [
+    "La piel almacena un reservorio de compuestos que liberan NO al ser irradiados, bajando la presión arterial",
+    "Las longitudes de onda rojas/NIR pueden movilizar NO sin el daño asociado al UV y la luz azul",
+    "El NO fotoliberado es un mecanismo vasodilatador y de señalización sistémico, no solo local"
+   ],
+   "pdf": "estudios/extra/barolet-2021-no-release-red-nir.pdf",
+   "doi": "10.1016/j.niox.2021.09.003",
+   "note": "Mecanismo directo para la fototerapia de parches y dispositivos de luz roja del catálogo: la luz roja/NIR sobre la piel libera óxido nítrico — vasodilatación y señalización medibles sin fármacos. Verificado contra el PDF original (acceso abierto CC BY-NC-ND).",
+   "titulo_es": "Liberación de óxido nítrico en la piel inducida por luz más allá del UVA y la luz azul: longitudes de onda rojas e infrarrojas cercanas",
+   "temas": [
+    "luz"
+   ]
+  },
+  {
+   "id": "extra-rodriguez-santana-2014-crystalline-water-light-eye",
+   "brand": "all",
+   "type": "piloto",
+   "portada": "img/papers/rodriguez-santana-2014-crystalline-water-light-eye.jpg",
+   "title": "Emerging Evidence on the Crystalline Water-Light Interface in Ophthalmology and Therapeutic Implications in Photobiomodulation: First Communication",
+   "cite": "Rodríguez-Santana E, Santana-Blank L · Photomedicine and Laser Surgery · 2014",
+   "n": "Análisis retrospectivo de imágenes quirúrgicas y de resonancia",
+   "loc": "Venezuela",
+   "dur": "—",
+   "method": "Análisis retrospectivo de microscopía quirúrgica (cirugía de agujero macular) y resonancia magnética por difusión, buscando expresiones de la zona de exclusión (EZ, cuarta fase del agua) en retina y nervio óptico.",
+   "results": [
+    "Las imágenes quirúrgicas muestran líneas blanquecinas continuas indicativas de ordenamiento del agua en la interfaz colágeno-cristales",
+    "El coeficiente de difusión aparente muestra un eje paralelo al nervio óptico compatible con una expresión ocular de la EZ",
+    "Sugiere un nuevo entendimiento del entorno bioenergético del ojo con implicancias para fotobiomodulación"
+   ],
+   "pdf": "estudios/extra/rodriguez-santana-2014-crystalline-water-light-eye.pdf",
+   "doi": "10.1089/pho.2013.3682",
+   "note": "Puente clínico entre agua estructurada y luz terapéutica: la EZ aparece en tejido ocular humano real. Conecta el concepto de Pollack (Analemma) con la fotobiomodulación (parches y dispositivos de luz). Verificado contra el PDF original.",
+   "titulo_es": "Evidencia emergente sobre la interfaz agua cristalina-luz en oftalmología e implicancias terapéuticas en fotobiomodulación",
+   "temas": [
+    "luz",
+    "agua-h2"
+   ]
+  },
+  {
+   "id": "extra-price-2021-natural-elf-fields",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/price-2021-natural-elf-fields.jpg",
+   "title": "Natural ELF fields in the atmosphere and in living organisms",
+   "cite": "Price C, Williams E, Elhalel G, Sentman D · International Journal of Biometeorology · 2021",
+   "n": "Revisión (biometeorología y electrofisiología comparada)",
+   "loc": "Tel Aviv University + MIT",
+   "dur": "—",
+   "method": "Comparación de los espectros de la actividad eléctrica de vertebrados e invertebrados con las resonancias electromagnéticas naturales de la atmósfera (resonancias de Schumann, <50 Hz) generadas por la actividad global de rayos.",
+   "results": [
+    "La mayor parte de la actividad eléctrica biológica ocurre en frecuencias extremadamente bajas (ELF), con máximos bajo 50 Hz — igual que el fondo atmosférico natural",
+    "En algunos animales el espectro eléctrico es difícil de distinguir del campo atmosférico natural generado por rayos",
+    "Propone que los campos de resonancia atmosféricos moldearon evolutivamente la electricidad celular"
+   ],
+   "pdf": "estudios/extra/price-2021-natural-elf-fields.pdf",
+   "doi": "10.1007/s00484-020-01864-6",
+   "note": "Coautoría del MIT: las frecuencias eléctricas de la vida coinciden con las resonancias naturales de la Tierra (Schumann) — marco evolutivo para el grounding y para entender por qué los campos artificiales desincronizan y los naturales sincronizan. Verificado contra el PDF original.",
+   "titulo_es": "Campos ELF naturales en la atmósfera y en los organismos vivos",
+   "temas": [
+    "campos-em"
+   ]
+  },
+  {
+   "id": "extra-vonschulze-2022-heat-mitochondria",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/vonschulze-2022-heat-mitochondria.jpg",
+   "title": "Heat and mitochondrial bioenergetics",
+   "cite": "Von Schulze AT, Geiger PC · Current Opinion in Physiology · 2022",
+   "n": "Revisión científica",
+   "loc": "Stowers Institute + University of Kansas Medical Center",
+   "dur": "—",
+   "method": "Revisión de los efectos del tratamiento térmico recurrente sobre la función respiratoria mitocondrial: estrés agudo (menos ATP, más ROS) que activa AMPK, Nrf2, PGC-1α, NRF-1 y la respuesta de choque térmico (HSF1).",
+   "results": [
+    "El calor recurrente mejora la función respiratoria mitocondrial y reduce la producción de ROS con el tiempo",
+    "El estrés térmico agudo activa en cascada los programas de control de calidad mitocondrial: mitofagia, autofagia mediada por chaperonas y biogénesis",
+    "El tratamiento térmico es una opción no farmacológica atractiva para condiciones con disfunción mitocondrial"
+   ],
+   "pdf": "estudios/extra/vonschulze-2022-heat-mitochondria.pdf",
+   "doi": "10.1016/j.cophys.2022.100553",
+   "note": "La base científica del sauna y el calor terapéutico: hormesis térmica que renueva la mitocondria. Complementa a Chung 2017 (frío) — juntos cubren los dos polos de la hormesis térmica del paradigma. Verificado contra el PDF original.",
+   "titulo_es": "Calor y bioenergética mitocondrial",
+   "temas": [
+    "mitocondria"
+   ]
+  },
+  {
+   "id": "extra-tiller-mccraty-1996-cardiac-coherence",
+   "brand": "all",
+   "type": "piloto",
+   "portada": "img/papers/tiller-mccraty-1996-cardiac-coherence.jpg",
+   "title": "Cardiac Coherence: A New, Noninvasive Measure of Autonomic Nervous System Order",
+   "cite": "Tiller WA, McCraty R, Atkinson M · Alternative Therapies in Health and Medicine · 1996",
+   "n": "N=20 (entrenados en la técnica Freeze-Frame)",
+   "loc": "Stanford University + Institute of HeartMath",
+   "dur": "Sesiones de laboratorio y condiciones reales de trabajo",
+   "method": "Análisis de densidad espectral de potencia de los intervalos R-R del ECG en 20 sujetos entrenados en autorregulación emocional (Freeze-Frame), en laboratorio y en el trabajo: 5 minutos de línea de base seguidos de 5 minutos de expresión emocional positiva.",
+   "results": [
+    "Se discriminan tres modos del sistema nervioso autónomo: función normal, 'entrainment' (arrastre) y coherencia interna — los dos últimos nuevos para la literatura",
+    "En el modo entrainment, otros sistemas fisiológicos se acoplan a la frecuencia de ~0.1 Hz",
+    "Las emociones positivas (apreciación) desplazan el balance simpático-vagal hacia un orden beneficioso — sugerente para hipertensión y falla cardíaca"
+   ],
+   "pdf": "estudios/extra/tiller-mccraty-1996-cardiac-coherence.pdf",
+   "doi": "",
+   "note": "El paper fundacional de la coherencia cardíaca (HeartMath + Stanford): definió la métrica que hoy usan los wearables de HRV y que el catálogo emplea en AEON y en todo el discurso de coherencia. Verificado contra el PDF original (escaneo).",
+   "titulo_es": "Coherencia cardíaca: una nueva medida no invasiva del orden del sistema nervioso autónomo",
+   "temas": [
+    "biocampo"
+   ]
+  },
+  {
+   "id": "extra-vandervaart-2009-reiki-systematic-review",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/vandervaart-2009-reiki-systematic-review.jpg",
+   "title": "A Systematic Review of the Therapeutic Effects of Reiki",
+   "cite": "vanderVaart S, Gijsen VMGJ, de Wildt SN, Koren G · Journal of Alternative and Complementary Medicine · 2009",
+   "n": "12 ensayos incluidos",
+   "loc": "University of Toronto / Hospital for Sick Children",
+   "dur": "—",
+   "method": "Búsqueda sistemática en Medline, EMBASE, Cochrane y Google Scholar. Calidad de reporte evaluada con criterios CONSORT modificados y calidad metodológica con la escala de Jadad. Inclusión: control adecuado, intervención con practicante de Reiki, humanos.",
+   "results": [
+    "9 de los 12 ensayos detectaron un efecto terapéutico significativo del Reiki",
+    "Sin embargo, 11 de los 12 estudios calificaron 'pobre' en calidad metodológica (Jadad); todos fallaron en al menos un área clave (aleatorización, cegamiento o seguimiento)",
+    "Conclusión: los resultados son prometedores pero la baja calidad impide una conclusión definitiva — se necesitan ensayos rigurosos"
+   ],
+   "pdf": "estudios/extra/vandervaart-2009-reiki-systematic-review.pdf",
+   "doi": "10.1089/acm.2009.0036",
+   "note": "La revisión honesta del Reiki: la mayoría de los ensayos ve efecto, pero la calidad metodológica es baja y se dice sin vueltas. Presentar el biocampo con esta franqueza (efecto prometedor + evidencia aún débil) es lo que protege la credibilidad del resto del centro. Verificado contra el PDF original.",
+   "titulo_es": "Revisión sistemática de los efectos terapéuticos del Reiki",
+   "temas": [
+    "biocampo"
+   ]
+  },
+  {
+   "id": "extra-thrane-2014-reiki-pain-anxiety",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/thrane-2014-reiki-pain-anxiety.jpg",
+   "title": "Effect of Reiki Therapy on Pain and Anxiety in Adults: An In-Depth Literature Review of Randomized Trials with Effect Size Calculations",
+   "cite": "Thrane S, Cohen SM · Pain Management Nursing · 2014",
+   "n": "7 estudios aleatorizados (cáncer, post-quirúrgicos, adultos mayores)",
+   "loc": "University of Pittsburgh School of Nursing",
+   "dur": "—",
+   "method": "Búsqueda sistemática en 8 bases de datos; inclusión solo de ensayos aleatorizados con grupo control publicados desde 2000 que midieran dolor o ansiedad; cálculo del tamaño de efecto (d de Cohen) para todos los estudios. Financiado por el NIH (NINR).",
+   "results": [
+    "7 ensayos aleatorizados cumplieron los criterios: 4 en pacientes oncológicos, 1 post-quirúrgico, 2 en adultos mayores de la comunidad",
+    "Los tamaños de efecto calculados para dolor y ansiedad resultaron de rango pequeño a moderado según el estudio",
+    "Los autores concluyen que el Reiki puede ser un complemento útil y de bajo riesgo, y piden ensayos con mayor rigor y potencia"
+   ],
+   "pdf": "estudios/extra/thrane-2014-reiki-pain-anxiety.pdf",
+   "doi": "10.1016/j.pmn.2013.07.002",
+   "note": "Complementa a vanderVaart 2009 y Zadro 2022: revisión financiada por el NIH que cuantifica (d de Cohen) el efecto del Reiki en dolor y ansiedad en ensayos aleatorizados. Cierra la tríada de evidencia honesta sobre terapias de biocampo. Verificado contra el PDF original.",
+   "titulo_es": "Efecto de la terapia Reiki sobre el dolor y la ansiedad en adultos: revisión en profundidad de ensayos aleatorizados con cálculo de tamaños de efecto",
+   "temas": [
+    "biocampo",
+    "dolor"
+   ]
+  },
+  {
+   "id": "extra-stuart-1978-nonlocal-memory",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/stuart-1978-nonlocal-memory.jpg",
+   "title": "On the Stability and Non-local Properties of Memory",
+   "cite": "Stuart CIJM, Takahashi Y, Umezawa H · Journal of Theoretical Biology · 1978",
+   "n": "Modelo teórico (teoría cuántica de campos)",
+   "loc": "University of Alberta, Canadá",
+   "dur": "—",
+   "method": "Modelo del cerebro como sistema físico mixto: la parte electroquímica neuronal interactúa con un modo cooperativo cuántico macroscópico. Se analiza cómo un estado ordenado emergente puede dar cuenta de la estabilidad y no-localidad de la memoria.",
+   "results": [
+    "Propone que la memoria no reside en sinapsis puntuales sino en un estado cuántico ordenado distribuido — por eso es estable y no-local",
+    "El formalismo (teoría cuántica de campos de Umezawa) fundó la línea de investigación del 'cerebro cuántico'",
+    "Antecedente directo de los modelos modernos de coherencia neuronal y conciencia de campo"
+   ],
+   "pdf": "estudios/extra/stuart-1978-nonlocal-memory.pdf",
+   "doi": "10.1016/0022-5193(78)90307-2",
+   "note": "El paper clásico del 'cerebro cuántico' (Umezawa, uno de los grandes de la teoría cuántica de campos): la memoria como estado de campo distribuido. Fundamento histórico para la sección de conciencia y biocampo. Verificado contra el PDF original.",
+   "titulo_es": "Sobre la estabilidad y las propiedades no-locales de la memoria",
+   "temas": [
+    "quantum",
+    "neuro"
+   ]
+  },
+  {
+   "id": "extra-zadbood-2017-shared-neural-representations",
+   "brand": "all",
+   "type": "piloto",
+   "portada": "img/papers/zadbood-2017-shared-neural-representations.jpg",
+   "title": "How We Transmit Memories to Other Brains: Constructing Shared Neural Representations Via Communication",
+   "cite": "Zadbood A, Chen J, Leong YC, Norman KA, Hasson U · Cerebral Cortex · 2017",
+   "n": "fMRI: espectadores, narradores y oyentes naïve",
+   "loc": "Princeton Neuroscience Institute",
+   "dur": "—",
+   "method": "fMRI con tarea de comunicación verbal: se registraron los patrones neuronales al ver escenas de una película, al recordarlas en voz alta y en oyentes que solo escucharon el relato, comparando los patrones entre las tres condiciones.",
+   "results": [
+    "Los patrones neuronales específicos de cada evento en la red por defecto se comparten entre codificación, recuerdo y construcción del mismo episodio",
+    "El cerebro del oyente reconstruye la escena con patrones que se asemejan a los del cerebro que la vivió",
+    "Primera demostración directa de la 'transmisión' de memorias entre cerebros vía comunicación"
+   ],
+   "pdf": "estudios/extra/zadbood-2017-shared-neural-representations.pdf",
+   "doi": "10.1093/cercor/bhx202",
+   "note": "De Princeton (lab. de Uri Hasson): contar una experiencia literalmente replica los patrones cerebrales del que la vivió en el que la escucha. Base neurocientífica de la co-regulación y la sincronización interpersonal — complementa a Fishburn 2018 y Goldstein 2018 ya indexados. Verificado contra el PDF original.",
+   "titulo_es": "Cómo transmitimos memorias a otros cerebros: la construcción de representaciones neuronales compartidas a través de la comunicación",
+   "temas": [
+    "neuro",
+    "biocampo"
+   ]
   }
  ]
 }
