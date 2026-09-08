@@ -401,7 +401,7 @@
   {
    "id": "extra-timofejeva-2021-heart-rhythm-magnetic-field",
    "brand": "all",
-   "type": "Estudio observacional multicéntrico",
+   "type": "revision",
    "portada": "img/papers/timofejeva-2021-heart-rhythm-magnetic-field.jpg",
    "title": "Global Study of Human Heart Rhythm Synchronization with the Earth's Time-Varying Magnetic Field",
    "cite": "Timofejeva, McCraty, Atkinson et al. · Applied Sciences (MDPI) · 2021",
@@ -426,7 +426,7 @@
   {
    "id": "extra-timofejeva-2017-group-sync-magnetic-field",
    "brand": "all",
-   "type": "Estudio observacional / metodológico",
+   "type": "revision",
    "portada": "img/papers/timofejeva-2017-group-sync-magnetic-field.jpg",
    "title": "Identification of a Group's Physiological Synchronization with the Earth's Magnetic Field",
    "cite": "Timofejeva, McCraty, Atkinson et al. · Int. J. Environ. Res. Public Health (IJERPH) · 2017",
@@ -451,7 +451,7 @@
   {
    "id": "extra-wang-2019-geomagnetic-brain-alpha",
    "brand": "all",
-   "type": "Estudio experimental",
+   "type": "piloto",
    "portada": "img/papers/wang-2019-geomagnetic-brain-alpha.jpg",
    "title": "Transduction of the Geomagnetic Field as Evidenced from Alpha-band Activity in the Human Brain",
    "cite": "Wang, Hilburn, Wu et al. (Kirschvink) · eNeuro · 2019",

@@ -212,6 +212,17 @@ const grid=document.getElementById('grid');
 const countLine=document.getElementById('count-line');
 const clearBtn=document.getElementById('clear-btn');
 
+function attachCardToggle(){
+  document.querySelectorAll('.card').forEach(card=>{
+    card.addEventListener('click',e=>{
+      if(e.target.closest('.pdf-btn'))return;
+      e.stopPropagation();
+      card.classList.toggle('is-collapsed');
+      card.classList.toggle('is-expanded');
+    });
+  });
+}
+
 function setupObserver(){
   if(ioObserver)ioObserver.disconnect();
   ioObserver=new IntersectionObserver(entries=>{
@@ -254,11 +265,10 @@ function render(animate=true){
   const doInsert=()=>{
     grid.innerHTML=list.map(s=>{
       const b=B[s.brand],t=T[s.type]||T.piloto;
-      const hook=s.results[0].length>110?s.results[0].slice(0,110)+'…':s.results[0];
       const segs=[1,2,3,4,5].map(i=>
         `<span class="ev-seg${i<=t.ev?' on':''}"`+(i<=t.ev?` style="background:${b.c}"`:'')+'></span>'
       ).join('');
-      return `<div class="card" data-bc="${b.c}" data-modal-id="${s.id}">
+      return `<div class="card is-collapsed" data-bc="${b.c}" data-modal-id="${s.id}">
   <div class="card-top" style="background:${b.lg}"></div>
   <div class="card-head" style="background:${b.bg}">
     <span class="brand-tag" style="color:${b.c};background:${b.c}1c">
@@ -266,30 +276,38 @@ function render(animate=true){
     </span>
     <span class="type-badge" style="color:${t.tc};background:${t.bg}">${t.sc}</span>
   </div>
-  ${s.portada
-    ? `<div class="paper-portada"><img src="${s.portada}" alt="${s.title}" loading="lazy"><div class="paper-portada-bar">Primera página</div></div>`
-    : `<div class="card-hook" style="background:${b.bg}"><div class="hook-kf" style="color:${b.c}">Hallazgo clave</div><p class="hook-text" style="color:${b.tc}">${hook}</p></div>`
-  }
-  <div class="card-info">
-    <h3 class="card-title">${s.titulo_es || s.title}</h3>
-    <p class="card-cite">${s.cite}</p>
-    ${s.method?`<p class="card-method">${s.method}</p>`:''}
-    <div class="meta-chips">
-      ${proMode?`<span class="fund-chip" style="color:${fundingFlag(s).c};background:${fundingFlag(s).bg}">${fundingFlag(s).l}</span>`:''}
-      <span class="meta-chip">${s.n}</span>
-      ${s.dur&&s.dur!=='—'?`<span class="meta-chip">${s.dur}</span>`:''}
-      <span class="meta-chip">${s.loc}</span>
+  <div class="card-state-collapsed">
+    <div class="card-collapsed-head">
+      <h3 class="card-collapsed-title">${s.titulo_es || s.title}</h3>
+      <div class="card-collapsed-toggle" title="Expandir">↓</div>
     </div>
   </div>
-  <div class="card-foot">
-    <div class="ev-row">
-      <div class="ev-bar">${segs}</div>
-      <span class="ev-lbl">Evidencia ${t.el}</span>
+  <div class="card-state-expanded">
+    ${s.portada ? `<div class="card-expanded-portada"><img src="${s.portada}" alt="${s.title}" loading="lazy"></div>` : ''}
+    <div class="card-info">
+      <p class="card-cite">${s.cite}</p>
+      ${s.method?`<p class="card-method">${s.method}</p>`:''}
+      <div class="card-expanded-results">
+        ${Array.isArray(s.results) ? s.results.map(r=>`<div class="card-expanded-result">${r}</div>`).join('') : ''}
+      </div>
+      <div class="card-expanded-chips">
+        ${proMode?`<span class="fund-chip" style="color:${fundingFlag(s).c};background:${fundingFlag(s).bg}">${fundingFlag(s).l}</span>`:''}
+        <span class="meta-chip">${s.n}</span>
+        ${s.dur&&s.dur!=='—'?`<span class="meta-chip">${s.dur}</span>`:''}
+        <span class="meta-chip">${s.loc}</span>
+      </div>
     </div>
-    <a href="${s.pdf}" target="_blank" class="pdf-btn" style="color:${b.c};border-color:${b.c}55">PDF ↓</a>
+    <div class="card-foot">
+      <div class="ev-row">
+        <div class="ev-bar">${segs}</div>
+        <span class="ev-lbl">Evidencia ${t.el}</span>
+      </div>
+      <a href="${s.pdf}" target="_blank" onclick="event.stopPropagation()" class="pdf-btn" style="color:${b.c};border-color:${b.c}55">PDF ↓</a>
+    </div>
   </div>
 </div>`;
     }).join('');
+    attachCardToggle();
     setupObserver();
   };
 
