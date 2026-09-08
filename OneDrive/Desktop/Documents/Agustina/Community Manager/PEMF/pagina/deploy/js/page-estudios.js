@@ -442,6 +442,10 @@ function render(animate=true){
     <h3 class="card-title">${s.titulo_es || s.title}</h3>
     <p class="card-cite">${s.cite}</p>
     ${s.method?`<p class="card-method">${s.method}</p>`:''}
+    <div class="card-badges">
+      <span class="badge badge-evidence">${t.el}</span>
+      ${proMode?`<span class="badge badge-${fundingFlag(s).l.toLowerCase().replace(/ /g,'-')}">${fundingFlag(s).l}</span>`:''}
+    </div>
     <div class="meta-chips">
       ${proMode?`<span class="fund-chip" style="color:${fundingFlag(s).c};background:${fundingFlag(s).bg}">${fundingFlag(s).l}</span>`:''}
       <span class="meta-chip">${s.n}</span>

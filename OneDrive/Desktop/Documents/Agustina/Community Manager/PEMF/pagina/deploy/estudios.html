@@ -453,6 +453,20 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
 }
 @keyframes rippleOut{to{transform:scale(50);opacity:0}}
 
+/* ═══ PAPER BADGES ═══════════════════════════════════ */
+.card-badges{
+  display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;
+}
+.badge{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:9px;font-weight:700;letter-spacing:.06em;
+  padding:3px 8px;border-radius:100px;white-space:nowrap;
+}
+.badge-evidence{background:linear-gradient(135deg,#e7f6ec,#dcfce7);color:#15803d}
+.badge-funded{background:#fef3c7;color:#92400e}
+.badge-independent{background:#e7f6ec;color:#15803d}
+.badge-unreview{background:#ffedd5;color:#9a3412}
+
 /* ═══ EMPTY STATE ════════════════════════════════════ */
 .empty-state{
   grid-column:1/-1;text-align:center;padding:90px 20px;
