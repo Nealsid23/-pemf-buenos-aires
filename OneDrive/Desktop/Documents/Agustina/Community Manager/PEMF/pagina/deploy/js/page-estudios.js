@@ -212,32 +212,73 @@ const grid=document.getElementById('grid');
 const countLine=document.getElementById('count-line');
 const clearBtn=document.getElementById('clear-btn');
 
-function attachCardToggle(){
-  const cards=document.querySelectorAll('.card');
-  cards.forEach((card,i)=>{
+function attachCardClick(){
+  document.querySelectorAll('.card').forEach(card=>{
     card.addEventListener('click',e=>{
       if(e.target.closest('.pdf-btn'))return;
       e.stopPropagation();
-      const isExpanding=card.classList.contains('is-collapsed');
-      const companion=i%2===0?cards[i+1]:cards[i-1];
-      if(isExpanding){
-        card.classList.remove('is-collapsed');
-        card.classList.add('is-expanded');
-        if(companion&&companion.classList.contains('is-collapsed')){
-          companion.classList.remove('is-collapsed');
-          companion.classList.add('is-expanded');
-        }
-      }else{
-        card.classList.add('is-collapsed');
-        card.classList.remove('is-expanded');
-        if(companion&&companion.classList.contains('is-expanded')){
-          companion.classList.add('is-collapsed');
-          companion.classList.remove('is-expanded');
-        }
-      }
+      const s={
+        id:card.dataset.paperId,
+        titulo_es:card.dataset.paperTitle,
+        cite:card.dataset.paperCite,
+        portada:card.dataset.paperPortada,
+        method:card.dataset.paperMethod,
+        results:JSON.parse(card.dataset.paperResults.replace(/&quot;/g,'"')),
+        n:card.dataset.paperN,
+        dur:card.dataset.paperDur,
+        loc:card.dataset.paperLoc,
+        pdf:card.dataset.paperPdf,
+        c:card.dataset.paperBrandColor,
+        el:card.dataset.paperTypeLevel
+      };
+      openPaperModal(s);
     });
   });
 }
+
+function openPaperModal(s){
+  const modal=document.getElementById('paper-modal');
+  const modalTitle=document.querySelector('.modal-title');
+  const modalCite=document.querySelector('.modal-cite');
+  const modalPortada=document.getElementById('m-paper-portada');
+  const modalMethod=document.getElementById('m-paper-method');
+  const modalResults=document.getElementById('m-paper-results');
+  const modalChips=document.getElementById('m-paper-chips');
+  const modalEvidence=document.getElementById('m-paper-evidence');
+  const modalPdf=document.getElementById('m-paper-pdf');
+
+  modalTitle.textContent=s.titulo_es;
+  modalCite.textContent=s.cite;
+
+  if(s.portada){
+    modalPortada.innerHTML=`<img src="${s.portada}" alt="${s.titulo_es}" style="max-width:100%;max-height:400px;object-fit:contain;border-radius:10px">`;
+  }else{
+    modalPortada.innerHTML='<div style="text-align:center;color:var(--mist);padding:40px;font-size:14px">Sin portada disponible</div>';
+  }
+
+  modalMethod.innerHTML=s.method?`<strong>Método:</strong> ${s.method}`:'';
+  modalResults.innerHTML=`<strong>Resultados:</strong><ul style="margin:10px 0;padding-left:20px;list-style:none">${(s.results||[]).map(r=>`<li style="margin:8px 0;padding-left:20px;position:relative"><span style="position:absolute;left:0;color:${s.c};font-weight:700">→</span>${r}</li>`).join('')}</ul>`;
+
+  modalChips.innerHTML=`<strong>Datos:</strong> <span class="meta-chip">${s.n}</span> ${s.dur&&s.dur!=='—'?`<span class="meta-chip">${s.dur}</span>`:''}  <span class="meta-chip">${s.loc}</span>`;
+
+  const segs=[1,2,3,4,5].map((i,idx)=>idx<parseInt(Object.entries(T).find(([k,v])=>v.el===s.el)?.[1]?.ev||1)?`<span class="ev-seg on" style="background:${s.c}"></span>`:`<span class="ev-seg"></span>`).join('');
+  modalEvidence.innerHTML=`<strong>Evidencia:</strong> <div style="display:flex;gap:3px;align-items:center">${segs} <span style="font-size:12px;color:var(--mist)">${s.el}</span></div>`;
+
+  modalPdf.href=s.pdf;
+
+  const overlay=document.getElementById('paper-overlay');
+  overlay.classList.add('open');
+}
+
+document.getElementById('paper-modal-close').addEventListener('click',()=>{
+  document.getElementById('paper-overlay').classList.remove('open');
+});
+
+document.getElementById('paper-overlay').addEventListener('click',e=>{
+  if(e.target.id==='paper-overlay'){
+    document.getElementById('paper-overlay').classList.remove('open');
+  }
+});
 
 function setupObserver(){
   if(ioObserver)ioObserver.disconnect();
@@ -281,10 +322,11 @@ function render(animate=true){
   const doInsert=()=>{
     grid.innerHTML=list.map(s=>{
       const b=B[s.brand],t=T[s.type]||T.piloto;
+      const hook=s.results[0].length>110?s.results[0].slice(0,110)+'…':s.results[0];
       const segs=[1,2,3,4,5].map(i=>
         `<span class="ev-seg${i<=t.ev?' on':''}"`+(i<=t.ev?` style="background:${b.c}"`:'')+'></span>'
       ).join('');
-      return `<div class="card is-collapsed" data-bc="${b.c}" data-modal-id="${s.id}">
+      return `<div class="card" data-bc="${b.c}" data-paper-id="${s.id}" data-paper-title="${(s.titulo_es || s.title).replace(/"/g,'&quot;')}" data-paper-cite="${s.cite.replace(/"/g,'&quot;')}" data-paper-portada="${s.portada || ''}" data-paper-method="${(s.method || '').replace(/"/g,'&quot;')}" data-paper-results="${JSON.stringify(s.results || []).replace(/"/g,'&quot;')}" data-paper-n="${s.n}" data-paper-dur="${s.dur}" data-paper-loc="${s.loc}" data-paper-pdf="${s.pdf}" data-paper-promode="${proMode}" data-paper-funding='${proMode?JSON.stringify(fundingFlag(s)):''}'data-paper-brand-color="${b.c}" data-paper-type-level="${t.el}">
   <div class="card-top" style="background:${b.lg}"></div>
   <div class="card-head" style="background:${b.bg}">
     <span class="brand-tag" style="color:${b.c};background:${b.c}1c">
@@ -292,38 +334,31 @@ function render(animate=true){
     </span>
     <span class="type-badge" style="color:${t.tc};background:${t.bg}">${t.sc}</span>
   </div>
-  <div class="card-state-collapsed">
-    <div class="card-collapsed-head">
-      <h3 class="card-collapsed-title">${s.titulo_es || s.title}</h3>
-      <div class="card-collapsed-toggle" title="Expandir">↓</div>
+  ${s.portada
+    ? `<div class="paper-portada"><img src="${s.portada}" alt="${s.title}" loading="lazy"><div class="paper-portada-bar">Primera página</div></div>`
+    : `<div class="card-hook" style="background:${b.bg}"><div class="hook-kf" style="color:${b.c}">Hallazgo clave</div><p class="hook-text" style="color:${b.tc}">${hook}</p></div>`
+  }
+  <div class="card-info">
+    <h3 class="card-title">${s.titulo_es || s.title}</h3>
+    <p class="card-cite">${s.cite}</p>
+    ${s.method?`<p class="card-method">${s.method}</p>`:''}
+    <div class="meta-chips">
+      ${proMode?`<span class="fund-chip" style="color:${fundingFlag(s).c};background:${fundingFlag(s).bg}">${fundingFlag(s).l}</span>`:''}
+      <span class="meta-chip">${s.n}</span>
+      ${s.dur&&s.dur!=='—'?`<span class="meta-chip">${s.dur}</span>`:''}
+      <span class="meta-chip">${s.loc}</span>
     </div>
   </div>
-  <div class="card-state-expanded">
-    ${s.portada ? `<div class="card-expanded-portada"><img src="${s.portada}" alt="${s.title}" loading="lazy"></div>` : ''}
-    <div class="card-info">
-      <p class="card-cite">${s.cite}</p>
-      ${s.method?`<p class="card-method">${s.method}</p>`:''}
-      <div class="card-expanded-results">
-        ${Array.isArray(s.results) ? s.results.map(r=>`<div class="card-expanded-result">${r}</div>`).join('') : ''}
-      </div>
-      <div class="card-expanded-chips">
-        ${proMode?`<span class="fund-chip" style="color:${fundingFlag(s).c};background:${fundingFlag(s).bg}">${fundingFlag(s).l}</span>`:''}
-        <span class="meta-chip">${s.n}</span>
-        ${s.dur&&s.dur!=='—'?`<span class="meta-chip">${s.dur}</span>`:''}
-        <span class="meta-chip">${s.loc}</span>
-      </div>
+  <div class="card-foot">
+    <div class="ev-row">
+      <div class="ev-bar">${segs}</div>
+      <span class="ev-lbl">Evidencia ${t.el}</span>
     </div>
-    <div class="card-foot">
-      <div class="ev-row">
-        <div class="ev-bar">${segs}</div>
-        <span class="ev-lbl">Evidencia ${t.el}</span>
-      </div>
-      <a href="${s.pdf}" target="_blank" onclick="event.stopPropagation()" class="pdf-btn" style="color:${b.c};border-color:${b.c}55">PDF ↓</a>
-    </div>
+    <a href="${s.pdf}" target="_blank" class="pdf-btn" style="color:${b.c};border-color:${b.c}55">PDF ↓</a>
   </div>
 </div>`;
     }).join('');
-    attachCardToggle();
+    attachCardClick();
     setupObserver();
   };
 

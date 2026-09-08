@@ -453,33 +453,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
 }
 @keyframes rippleOut{to{transform:scale(50);opacity:0}}
 
-/* ═══ EXPANDIBLE CARD STATES ═════════════════════════ */
-.card-state-collapsed,.card-state-expanded{transition:opacity .35s var(--ease),max-height .35s var(--ease),margin .35s var(--ease);overflow:hidden}
-.card.is-collapsed .card-state-collapsed{opacity:1;max-height:200px}
-.card.is-collapsed .card-state-expanded{opacity:0;max-height:0;margin:0}
-.card.is-expanded .card-state-collapsed{opacity:0;max-height:0;margin:0}
-.card.is-expanded .card-state-expanded{opacity:1;max-height:2000px}
-.card-collapsed-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;gap:10px}
-.card-collapsed-title{flex:1;font-family:'Lora',serif;font-size:13px;font-weight:600;color:var(--navy);line-height:1.4}
-.card-collapsed-toggle{
-  display:flex;align-items:center;justify-content:center;
-  width:32px;height:32px;border-radius:50%;
-  background:linear-gradient(135deg,var(--surface),#fafbfd);
-  border:1px solid var(--border);
-  cursor:pointer;flex-shrink:0;
-  transition:all .3s var(--spring);
-  font-size:14px;
-}
-.card:hover .card-collapsed-toggle{transform:scale(1.1);background:linear-gradient(135deg,#f0f5fc,#e8f1ff);border-color:rgba(26,79,182,.2)}
-.card.is-expanded .card-collapsed-toggle{transform:rotate(180deg)}
-.card-expanded-content{padding:14px 16px;display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--border)}
-.card-expanded-portada{border-radius:10px;overflow:hidden;max-height:280px;display:flex;align-items:center;justify-content:center;background:var(--surface)}
-.card-expanded-portada img{width:100%;height:100%;object-fit:contain;max-height:280px}
-.card-expanded-results{display:flex;flex-direction:column;gap:8px}
-.card-expanded-result{font-size:12.5px;color:var(--steel);line-height:1.55;padding-left:16px;position:relative}
-.card-expanded-result::before{content:'→';position:absolute;left:0;color:var(--azure);font-weight:700}
-.card-expanded-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
-
 /* ═══ EMPTY STATE ════════════════════════════════════ */
 .empty-state{
   grid-column:1/-1;text-align:center;padding:90px 20px;
@@ -949,6 +922,27 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
     </div>
   </div>
   <div class="grid" id="grid"></div>
+</div>
+
+<div class="overlay" id="paper-overlay">
+  <div class="modal" id="paper-modal">
+    <div class="modal-handle"></div>
+    <button class="modal-close" id="paper-modal-close">✕</button>
+    <div class="modal-header">
+      <h2 class="modal-title"></h2>
+      <p class="modal-cite"></p>
+    </div>
+    <div class="modal-body">
+      <div id="m-paper-portada" style="margin-bottom:16px"></div>
+      <div id="m-paper-method" style="margin-bottom:12px;font-size:13.5px;line-height:1.6;color:var(--steel)"></div>
+      <div id="m-paper-results" style="margin-bottom:12px;font-size:13.5px;line-height:1.6;color:var(--steel)"></div>
+      <div id="m-paper-chips" style="margin-bottom:12px;font-size:13px;color:var(--steel)"></div>
+      <div id="m-paper-evidence" style="margin-bottom:12px;font-size:13px;color:var(--steel)"></div>
+    </div>
+    <div class="modal-footer">
+      <a class="modal-pdf" id="m-paper-pdf" href="#" target="_blank">↓ Descargar PDF</a>
+    </div>
+  </div>
 </div>
 
 <div class="overlay" id="overlay">
