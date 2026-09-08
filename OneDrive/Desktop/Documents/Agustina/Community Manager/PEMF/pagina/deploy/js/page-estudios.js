@@ -231,13 +231,14 @@ function attachCardClick(){
         c:card.dataset.paperBrandColor,
         el:card.dataset.paperTypeLevel
       };
-      openPaperModal(s);
+      openPaperModal(s,card);
     });
   });
 }
 
-function openPaperModal(s){
+function openPaperModal(s,card){
   const modal=document.getElementById('paper-modal');
+  const overlay=document.getElementById('paper-overlay');
   const modalTitle=document.querySelector('.modal-title');
   const modalCite=document.querySelector('.modal-cite');
   const modalPortada=document.getElementById('m-paper-portada');
@@ -251,9 +252,14 @@ function openPaperModal(s){
   modalCite.textContent=s.cite;
 
   if(s.portada){
-    modalPortada.innerHTML=`<img src="${s.portada}" alt="${s.titulo_es}" style="max-width:100%;max-height:400px;object-fit:contain;border-radius:10px">`;
+    modalPortada.style.display='block';
+    modalPortada.innerHTML=`<img src="${s.portada}" alt="${s.titulo_es}" class="paper-portada-img" style="max-width:100%;max-height:500px;object-fit:contain;border-radius:10px;cursor:zoom-in;transition:transform .2s;display:block;margin:0 auto">`;
+    const img=modalPortada.querySelector('img');
+    img.addEventListener('click',()=>showPortadaZoom(s.portada,s.titulo_es));
+    img.addEventListener('mouseenter',()=>img.style.transform='scale(1.02)');
+    img.addEventListener('mouseleave',()=>img.style.transform='');
   }else{
-    modalPortada.innerHTML='<div style="text-align:center;color:var(--mist);padding:40px;font-size:14px">Sin portada disponible</div>';
+    modalPortada.style.display='none';
   }
 
   modalMethod.innerHTML=s.method?`<strong>Método:</strong> ${s.method}`:'';
@@ -266,8 +272,36 @@ function openPaperModal(s){
 
   modalPdf.href=s.pdf;
 
-  const overlay=document.getElementById('paper-overlay');
   overlay.classList.add('open');
+
+  if(card){
+    const rect=card.getBoundingClientRect();
+    modal.style.transformOrigin=`${rect.left+rect.width/2}px ${rect.top+rect.height/2}px`;
+    modal.style.animation='none';
+    setTimeout(()=>{
+      modal.style.animation='modalEnter .4s var(--spring) forwards';
+    },10);
+  }
+}
+
+function showPortadaZoom(src,alt){
+  const zoom=document.createElement('div');
+  zoom.style.cssText=`
+    position:fixed;inset:0;z-index:9999;
+    background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;
+    cursor:zoom-out;padding:20px;
+  `;
+  const img=document.createElement('img');
+  img.src=src;
+  img.alt=alt;
+  img.style.cssText=`
+    max-width:90vw;max-height:90vh;object-fit:contain;border-radius:8px;
+    box-shadow:0 0 60px rgba(0,0,0,.8);
+  `;
+  zoom.appendChild(img);
+  document.body.appendChild(zoom);
+  zoom.addEventListener('click',()=>zoom.remove());
+  document.addEventListener('keydown',(e)=>{if(e.key==='Escape')zoom.remove();},{once:true});
 }
 
 document.getElementById('paper-modal-close').addEventListener('click',()=>{
