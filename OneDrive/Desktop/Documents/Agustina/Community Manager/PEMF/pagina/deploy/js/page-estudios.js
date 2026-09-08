@@ -276,14 +276,57 @@ function openPaperModal(s,card){
 
   // Contenido
   modalMethod.innerHTML=s.method||'';
-  modalResults.innerHTML=(s.results||[]).map(r=>`<div style="margin:8px 0;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:${s.c};font-weight:700">→</span>${r}</div>`).join('');
 
-  // Metadata
-  modalMeta.innerHTML=`
-    <div style="font-size:13px;color:var(--steel)"><strong>Participantes:</strong> ${s.n}</div>
-    ${s.dur&&s.dur!=='—'?`<div style="font-size:13px;color:var(--steel)"><strong>Duración:</strong> ${s.dur}</div>`:''}
-    <div style="font-size:13px;color:var(--steel)"><strong>Ubicación:</strong> ${s.loc}</div>
+  // Hallazgos con borde izquierdo de color
+  document.querySelector('#m-findings').innerHTML=(s.results||[]).map(r=>`
+    <div style="
+      padding:12px 16px;
+      background:var(--surface);
+      border-left:4px solid ${s.c};
+      border-radius:0 6px 6px 0;
+      margin:10px 0;
+      font-size:13.5px;
+      color:var(--steel);
+      line-height:1.55
+    ">${r}</div>
+  `).join('');
+
+  // Metadata en grid (3 columnas)
+  const metaGridHTML=`
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
+      <div style="
+        padding:16px;
+        background:var(--surface);
+        border-radius:10px;
+        border:1px solid var(--border);
+        text-align:center
+      ">
+        <div style="font-size:16px;font-weight:700;color:${s.c};margin-bottom:4px">${s.n}</div>
+        <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mist);font-weight:600">Participantes</div>
+      </div>
+      <div style="
+        padding:16px;
+        background:var(--surface);
+        border-radius:10px;
+        border:1px solid var(--border);
+        text-align:center
+      ">
+        <div style="font-size:14px;font-weight:700;color:${s.c};margin-bottom:4px">${s.loc}</div>
+        <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mist);font-weight:600">Lugar</div>
+      </div>
+      <div style="
+        padding:16px;
+        background:var(--surface);
+        border-radius:10px;
+        border:1px solid var(--border);
+        text-align:center
+      ">
+        <div style="font-size:14px;font-weight:700;color:${s.c};margin-bottom:4px">${s.dur||'—'}</div>
+        <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mist);font-weight:600">Duración</div>
+      </div>
+    </div>
   `;
+  document.querySelector('#m-paper-meta-grid').innerHTML=metaGridHTML;
 
   // DOI
   if(s.id.includes('doi')){
