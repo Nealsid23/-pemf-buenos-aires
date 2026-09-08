@@ -239,19 +239,33 @@ function attachCardClick(){
 function openPaperModal(s,card){
   const modal=document.getElementById('modal');
   const overlay=document.getElementById('overlay');
-  const modalTitle=document.querySelector('#modal .modal-title');
-  const modalCite=document.querySelector('#modal .modal-cite');
-  const modalPortada=document.querySelector('#modal #m-paper-portada');
+  const modalHeader=document.querySelector('#modal-header');
+  const modalBadges=document.querySelector('#m-badges');
   const modalMethod=document.querySelector('#modal #m-method');
   const modalResults=document.querySelector('#modal #m-findings');
-  const modalHeader=document.querySelector('#modal-header');
   const modalMeta=document.querySelector('#modal #m-meta');
+  const modalDoi=document.querySelector('#modal #m-doi');
   const modalPdf=document.querySelector('#modal #m-pdf');
 
-  modalTitle.textContent=s.titulo_es;
-  modalCite.textContent=s.cite;
-  modalHeader.innerHTML=`<div class="modal-badges"></div><h2 class="modal-title">${s.titulo_es}</h2><p class="modal-cite">${s.cite}</p>`;
+  // Agregar colores y estética de la tarjeta
+  const brand=B[s.id.split('-')[0]==='extra'?'all':Object.keys(B).find(k=>s.id.includes(k))||'all'];
+  modal.style.borderColor=s.c;
+  modalHeader.style.background=B[Object.keys(B).find(k=>s.id.includes(k))||'all'].bg;
 
+  // Badges
+  const t=T[card.dataset.paperTypeLevel.split(' ')[0].toLowerCase()]||T.piloto;
+  modalBadges.innerHTML=`
+    <span class="brand-tag" style="color:${s.c};background:${s.c}1c">
+      <span class="brand-dot" style="background:${s.c}"></span>${brand.l}
+    </span>
+    <span class="type-badge" style="color:${t.tc};background:${t.bg}">${t.sc}</span>
+  `;
+
+  // Título y cita
+  modalHeader.querySelector('.modal-title').textContent=s.titulo_es;
+  modalHeader.querySelector('.modal-cite').textContent=s.cite;
+
+  // Portada
   const mbgSlide0=document.querySelector('#mbg-slide-0');
   if(s.portada){
     document.querySelector('#m-book-gallery').style.display='block';
@@ -260,19 +274,26 @@ function openPaperModal(s,card){
     document.querySelector('#m-book-gallery').style.display='none';
   }
 
+  // Contenido
   modalMethod.innerHTML=s.method||'';
   modalResults.innerHTML=(s.results||[]).map(r=>`<div style="margin:8px 0;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:${s.c};font-weight:700">→</span>${r}</div>`).join('');
 
+  // Metadata
   modalMeta.innerHTML=`
     <div style="font-size:13px;color:var(--steel)"><strong>Participantes:</strong> ${s.n}</div>
     ${s.dur&&s.dur!=='—'?`<div style="font-size:13px;color:var(--steel)"><strong>Duración:</strong> ${s.dur}</div>`:''}
     <div style="font-size:13px;color:var(--steel)"><strong>Ubicación:</strong> ${s.loc}</div>
   `;
 
-  const segs=[1,2,3,4,5].map((i,idx)=>idx<parseInt(Object.entries(T).find(([k,v])=>v.el===s.el)?.[1]?.ev||1)?`<span class="ev-seg on" style="background:${s.c}"></span>`:`<span class="ev-seg"></span>`).join('');
-  document.querySelector('#modal .modal-meta-grid').insertAdjacentHTML('afterend',`<div style="margin-top:12px;font-size:13px;color:var(--steel)"><strong>Nivel de evidencia:</strong> ${segs} ${s.el}</div>`);
+  // DOI
+  if(s.id.includes('doi')){
+    modalDoi.innerHTML=`<a href="https://pubmed.ncbi.nlm.nih.gov/?term=${s.id.split('doi-')[1]}" target="_blank" style="font-size:12px;color:var(--azure)">Ver en PubMed →</a>`;
+    document.querySelector('#modal #m-doi').parentElement.style.display='block';
+  }
 
+  // PDF
   modalPdf.href=s.pdf;
+  modalPdf.textContent='↓ Descargar PDF';
 
   overlay.classList.add('open');
 
