@@ -213,12 +213,28 @@ const countLine=document.getElementById('count-line');
 const clearBtn=document.getElementById('clear-btn');
 
 function attachCardToggle(){
-  document.querySelectorAll('.card').forEach(card=>{
+  const cards=document.querySelectorAll('.card');
+  cards.forEach((card,i)=>{
     card.addEventListener('click',e=>{
       if(e.target.closest('.pdf-btn'))return;
       e.stopPropagation();
-      card.classList.toggle('is-collapsed');
-      card.classList.toggle('is-expanded');
+      const isExpanding=card.classList.contains('is-collapsed');
+      const companion=i%2===0?cards[i+1]:cards[i-1];
+      if(isExpanding){
+        card.classList.remove('is-collapsed');
+        card.classList.add('is-expanded');
+        if(companion&&companion.classList.contains('is-collapsed')){
+          companion.classList.remove('is-collapsed');
+          companion.classList.add('is-expanded');
+        }
+      }else{
+        card.classList.add('is-collapsed');
+        card.classList.remove('is-expanded');
+        if(companion&&companion.classList.contains('is-expanded')){
+          companion.classList.add('is-collapsed');
+          companion.classList.remove('is-expanded');
+        }
+      }
     });
   });
 }
