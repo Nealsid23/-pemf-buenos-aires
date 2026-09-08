@@ -237,38 +237,40 @@ function attachCardClick(){
 }
 
 function openPaperModal(s,card){
-  const modal=document.getElementById('paper-modal');
-  const overlay=document.getElementById('paper-overlay');
-  const modalTitle=document.querySelector('.modal-title');
-  const modalCite=document.querySelector('.modal-cite');
-  const modalPortada=document.getElementById('m-paper-portada');
-  const modalMethod=document.getElementById('m-paper-method');
-  const modalResults=document.getElementById('m-paper-results');
-  const modalChips=document.getElementById('m-paper-chips');
-  const modalEvidence=document.getElementById('m-paper-evidence');
-  const modalPdf=document.getElementById('m-paper-pdf');
+  const modal=document.getElementById('modal');
+  const overlay=document.getElementById('overlay');
+  const modalTitle=document.querySelector('#modal .modal-title');
+  const modalCite=document.querySelector('#modal .modal-cite');
+  const modalPortada=document.querySelector('#modal #m-paper-portada');
+  const modalMethod=document.querySelector('#modal #m-method');
+  const modalResults=document.querySelector('#modal #m-findings');
+  const modalHeader=document.querySelector('#modal-header');
+  const modalMeta=document.querySelector('#modal #m-meta');
+  const modalPdf=document.querySelector('#modal #m-pdf');
 
   modalTitle.textContent=s.titulo_es;
   modalCite.textContent=s.cite;
+  modalHeader.innerHTML=`<div class="modal-badges"></div><h2 class="modal-title">${s.titulo_es}</h2><p class="modal-cite">${s.cite}</p>`;
 
+  const mbgSlide0=document.querySelector('#mbg-slide-0');
   if(s.portada){
-    modalPortada.style.display='block';
-    modalPortada.innerHTML=`<img src="${s.portada}" alt="${s.titulo_es}" class="paper-portada-img" style="max-width:100%;max-height:500px;object-fit:contain;border-radius:10px;cursor:zoom-in;transition:transform .2s;display:block;margin:0 auto">`;
-    const img=modalPortada.querySelector('img');
-    img.addEventListener('click',()=>showPortadaZoom(s.portada,s.titulo_es));
-    img.addEventListener('mouseenter',()=>img.style.transform='scale(1.02)');
-    img.addEventListener('mouseleave',()=>img.style.transform='');
+    document.querySelector('#m-book-gallery').style.display='block';
+    mbgSlide0.innerHTML=`<img src="${s.portada}" alt="${s.titulo_es}" style="cursor:pointer" onclick="showPortadaZoom('${s.portada}','${s.titulo_es}')">`;
   }else{
-    modalPortada.style.display='none';
+    document.querySelector('#m-book-gallery').style.display='none';
   }
 
-  modalMethod.innerHTML=s.method?`<strong>Método:</strong> ${s.method}`:'';
-  modalResults.innerHTML=`<strong>Resultados:</strong><ul style="margin:10px 0;padding-left:20px;list-style:none">${(s.results||[]).map(r=>`<li style="margin:8px 0;padding-left:20px;position:relative"><span style="position:absolute;left:0;color:${s.c};font-weight:700">→</span>${r}</li>`).join('')}</ul>`;
+  modalMethod.innerHTML=s.method||'';
+  modalResults.innerHTML=(s.results||[]).map(r=>`<div style="margin:8px 0;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:${s.c};font-weight:700">→</span>${r}</div>`).join('');
 
-  modalChips.innerHTML=`<strong>Datos:</strong> <span class="meta-chip">${s.n}</span> ${s.dur&&s.dur!=='—'?`<span class="meta-chip">${s.dur}</span>`:''}  <span class="meta-chip">${s.loc}</span>`;
+  modalMeta.innerHTML=`
+    <div style="font-size:13px;color:var(--steel)"><strong>Participantes:</strong> ${s.n}</div>
+    ${s.dur&&s.dur!=='—'?`<div style="font-size:13px;color:var(--steel)"><strong>Duración:</strong> ${s.dur}</div>`:''}
+    <div style="font-size:13px;color:var(--steel)"><strong>Ubicación:</strong> ${s.loc}</div>
+  `;
 
   const segs=[1,2,3,4,5].map((i,idx)=>idx<parseInt(Object.entries(T).find(([k,v])=>v.el===s.el)?.[1]?.ev||1)?`<span class="ev-seg on" style="background:${s.c}"></span>`:`<span class="ev-seg"></span>`).join('');
-  modalEvidence.innerHTML=`<strong>Evidencia:</strong> <div style="display:flex;gap:3px;align-items:center">${segs} <span style="font-size:12px;color:var(--mist)">${s.el}</span></div>`;
+  document.querySelector('#modal .modal-meta-grid').insertAdjacentHTML('afterend',`<div style="margin-top:12px;font-size:13px;color:var(--steel)"><strong>Nivel de evidencia:</strong> ${segs} ${s.el}</div>`);
 
   modalPdf.href=s.pdf;
 
@@ -279,7 +281,7 @@ function openPaperModal(s,card){
     modal.style.transformOrigin=`${rect.left+rect.width/2}px ${rect.top+rect.height/2}px`;
     modal.style.animation='none';
     setTimeout(()=>{
-      modal.style.animation='modalEnter .4s var(--spring) forwards';
+      modal.style.animation='modalEnter 0.9s var(--spring) forwards';
     },10);
   }
 }
