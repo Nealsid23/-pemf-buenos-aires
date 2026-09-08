@@ -254,14 +254,11 @@ function openPaperModal(s,card){
 
   // Badges
   const t=T[card.dataset.paperTypeLevel.split(' ')[0].toLowerCase()]||T.piloto;
-  const fundBadge=proMode?fundingFlag(s):null;
   modalBadges.innerHTML=`
     <span class="brand-tag" style="color:${s.c};background:${s.c}1c">
       <span class="brand-dot" style="background:${s.c}"></span>${brand.l}
     </span>
     <span class="type-badge" style="color:${t.tc};background:${t.bg}">${t.sc}</span>
-    <span class="badge badge-evidence">${t.el}</span>
-    ${fundBadge?`<span class="badge badge-${fundBadge.l.toLowerCase().replace(/ /g,'-')}">${fundBadge.l}</span>`:''}
   `;
 
   // Título y cita
