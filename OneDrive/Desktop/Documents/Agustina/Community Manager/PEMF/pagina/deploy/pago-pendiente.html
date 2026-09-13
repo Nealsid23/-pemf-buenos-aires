@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pago pendiente — PEMF Buenos Aires</title>
+<link rel="icon" type="image/png" href="img/logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@700;800;900&family=Noto+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --spring:cubic-bezier(.34,1.56,.64,1);
+  --ease:cubic-bezier(.4,0,.2,1);
+  --out:cubic-bezier(.22,1,.36,1);
+}
+body{font-family:'Noto Sans',sans-serif;background:linear-gradient(135deg,#fffbeb 0%,#fef3c7 100%);color:#1a2332;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;position:relative;}
+
+.loading-bar{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:3px;height:3px;border-radius:50%;background:#d97706;box-shadow:0 0 0 0 rgba(217,119,6,.7);animation:loadingRadar 2s ease-out infinite;pointer-events:none;}
+@keyframes loadingRadar{0%{box-shadow:0 0 0 0 rgba(217,119,6,.7)}70%{box-shadow:0 0 0 30px rgba(217,119,6,0)}100%{box-shadow:0 0 0 30px rgba(217,119,6,0)}}
+
+.icon{width:80px;height:80px;background:#fef3c7;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;animation:iconSpin .8s linear infinite,iconBounce 2s var(--spring) infinite;cursor:pointer;transition:all .3s var(--spring);will-change:transform;position:relative;}
+.icon:hover{transform:scale(1.1)}
+.icon::before{content:'';position:absolute;inset:-8px;border-radius:50%;border:2px solid transparent;border-top:2px solid #d97706;border-right:2px solid #d97706;animation:iconRing 3s linear infinite}
+@keyframes iconSpin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes iconBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes iconRing{from{transform:rotate(0)}to{transform:rotate(-360deg)}}
+.icon svg{width:40px;height:40px;stroke:#d97706;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+
+h1{font-family:'Figtree',sans-serif;font-size:28px;font-weight:900;color:#b45309;text-align:center;margin-bottom:10px;animation:titleSlide .7s var(--out) .2s backwards;}
+@keyframes titleSlide{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+p{font-size:15px;color:#64748b;line-height:1.65;text-align:center;max-width:440px;margin-bottom:28px;animation:fadeIn .8s var(--ease) .35s backwards;}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+.btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;animation:buttonsSlide .9s var(--spring) .5s backwards;}
+@keyframes buttonsSlide{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+.btn-home,.btn-wa{font-family:'Figtree',sans-serif;font-weight:700;font-size:14px;padding:13px 28px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;transition:all .28s var(--spring);will-change:transform,box-shadow;}
+.btn-home{background:#1a4fb6;color:#fff}
+.btn-wa{background:#25D366;color:#fff}
+.btn-home:hover{transform:translateY(-4px) scale(1.06);box-shadow:0 12px 32px rgba(26,79,182,.35)}
+.btn-wa:hover{transform:translateY(-4px) scale(1.06);box-shadow:0 12px 32px rgba(37,211,102,.35)}
+.btn-home:active,.btn-wa:active{transform:scale(0.98)}
+
+.spinner{position:relative;width:12px;height:12px;display:inline-block;margin-left:8px;vertical-align:middle;animation:spinnerRotate .6s steps(8,end) infinite}
+@keyframes spinnerRotate{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="loading-bar"></div>
+<div class="icon" id="pending-icon">
+  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+</div>
+<h1 id="pending-title">Pago en proceso<span class="spinner">⏳</span></h1>
+<p id="pending-message">Tu pago está siendo verificado. Esto puede demorar unos minutos. Te avisamos por WhatsApp cuando se confirme.</p>
+<div class="btns">
+  <a class="btn-home" href="/">← Ir al inicio</a>
+  <a class="btn-wa" href="https://wa.me/5491161054411?text=Hola%2C%20hice%20un%20pago%20y%20aparece%20como%20pendiente." target="_blank" rel="noopener noreferrer">Consultar estado</a>
+</div>
+
+<script>
+const icon = document.getElementById('pending-icon');
+let clickCount = 0;
+
+// Easter egg 1: Click en el icono para ver el progreso "ficticio"
+icon.addEventListener('click', () => {
+  clickCount++;
+  const messages = [
+    '5% completado... ⏳',
+    '25% completado... 🔄',
+    '50% completado... ⚡',
+    '75% completado... 🚀',
+    '¡Casi! 99%... 🎯',
+    '¡Confirmado! 100%! 🎉'
+  ];
+
+  const title = document.getElementById('pending-title');
+  if (clickCount <= 6) {
+    title.textContent = messages[clickCount - 1];
+    title.style.animation = 'none';
+    setTimeout(() => {
+      title.style.animation = 'titleSlide .5s var(--out)';
+    }, 10);
+  }
+
+  // Animar el icono
+  icon.style.animation = 'none';
+  setTimeout(() => {
+    icon.style.animation = 'iconSpin .8s linear infinite, iconBounce 2s var(--spring) infinite';
+  }, 10);
+});
+
+// Easter egg 2: Triple click en el título para "fast track"
+let titleClicks = 0;
+let titleClickTimer;
+document.getElementById('pending-title').addEventListener('click', () => {
+  titleClicks++;
+  clearTimeout(titleClickTimer);
+
+  if (titleClicks === 3) {
+    activateFastTrack();
+    titleClicks = 0;
+  }
+
+  titleClickTimer = setTimeout(() => {
+    titleClicks = 0;
+  }, 500);
+});
+
+function activateFastTrack() {
+  const title = document.getElementById('pending-title');
+  const message = document.getElementById('pending-message');
+
+  title.textContent = '⚡ MODO TURBO ACTIVADO ⚡';
+  message.textContent = 'Hemos acelerado el proceso. Tu pago debería confirmarse muy pronto. ¡Gracias por tu paciencia! 🚀✨';
+
+  // Crear efecto de velocidad
+  for (let i = 0; i < 8; i++) {
+    const speed = document.createElement('div');
+    speed.style.position = 'fixed';
+    speed.style.fontSize = '24px';
+    speed.textContent = '⚡';
+    speed.style.left = Math.random() * 100 + '%';
+    speed.style.top = Math.random() * 100 + '%';
+    speed.style.animation = 'speedZoom 0.8s ease-out forwards';
+    speed.style.pointerEvents = 'none';
+    speed.style.animationDelay = i * 0.1 + 's';
+    document.body.appendChild(speed);
+
+    setTimeout(() => speed.remove(), 1000);
+  }
+}
+
+// Easter egg 3: Konami code para mensaje oculto
+const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+let konamiIndex = 0;
+
+document.addEventListener('keydown', (e) => {
+  const key = e.key.toLowerCase() === 'b' || e.key.toLowerCase() === 'a' ? e.key.toLowerCase() : e.code;
+
+  if (key === konamiCode[konamiIndex]) {
+    konamiIndex++;
+    if (konamiIndex === konamiCode.length) {
+      unlockHiddenMessage();
+      konamiIndex = 0;
+    }
+  } else {
+    konamiIndex = 0;
+  }
+});
+
+function unlockHiddenMessage() {
+  const message = document.getElementById('pending-message');
+  message.textContent = 'Secreto desbloqueado: "La paciencia es la virtud de los sabios... pero también puedes probar suerte haciendo clic en el icono 6 veces seguidas" 😉✨';
+  message.style.animation = 'none';
+  setTimeout(() => {
+    message.style.animation = 'fadeIn .6s var(--ease)';
+  }, 10);
+}
+
+// Agregar keyframes
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes speedZoom {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(2) translateX(100px); }
+  }
+`;
+document.head.appendChild(style);
+</script>
+</body>
+</html>

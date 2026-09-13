@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>¡Pago exitoso! — PEMF Buenos Aires</title>
+<link rel="icon" type="image/png" href="img/logo.png"/>
+<link rel="canonical" href="https://pemfba.com/pago-exitoso.html"/>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@700;800;900&family=Noto+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --spring:cubic-bezier(.34,1.56,.64,1);
+  --ease:cubic-bezier(.4,0,.2,1);
+  --out:cubic-bezier(.22,1,.36,1);
+}
+body{font-family:'Noto Sans',sans-serif;background:linear-gradient(135deg,#f0fdf4 0%,#e0fdf5 100%);color:#1a2332;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;overflow:hidden;}
+.confetti{position:fixed;pointer-events:none;font-size:20px;animation:confettiFall 3s linear forwards}
+@keyframes confettiFall{to{transform:translateY(100vh) rotate(360deg);opacity:0}}
+
+.icon{width:80px;height:80px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;animation:iconPop .6s var(--spring);cursor:pointer;transition:transform .3s var(--spring);will-change:transform;position:relative;}
+.icon:hover{transform:scale(1.15)}
+.icon::before{content:'';position:absolute;inset:-8px;border-radius:50%;background:radial-gradient(circle,rgba(22,163,74,.3),transparent);animation:iconGlow 2s var(--ease) infinite}
+@keyframes iconPop{from{opacity:0;transform:scale(0) rotate(-180deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes iconGlow{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+.icon svg{width:40px;height:40px;stroke:#16a34a;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+
+h1{font-family:'Figtree',sans-serif;font-size:28px;font-weight:900;color:#15803d;text-align:center;margin-bottom:10px;animation:titleSlide .7s var(--out) .2s backwards;cursor:pointer;transition:all .3s var(--spring);}
+h1:hover{transform:scale(1.05);text-shadow:0 4px 12px rgba(21,128,61,.2)}
+@keyframes titleSlide{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+p{font-size:15px;color:#64748b;line-height:1.65;text-align:center;max-width:400px;margin-bottom:28px;animation:fadeIn .8s var(--ease) .35s backwards;}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+.btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;animation:buttonsSlide .9s var(--spring) .5s backwards;}
+@keyframes buttonsSlide{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+.btn-home,.btn-wa{font-family:'Figtree',sans-serif;font-weight:700;font-size:14px;padding:13px 28px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;transition:all .28s var(--spring);will-change:transform,box-shadow;position:relative;overflow:hidden;}
+.btn-home{background:#1a4fb6;color:#fff}
+.btn-wa{background:#25D366;color:#fff}
+.btn-home:hover{transform:translateY(-4px) scale(1.06);box-shadow:0 12px 32px rgba(26,79,182,.35)}
+.btn-wa:hover{transform:translateY(-4px) scale(1.06);box-shadow:0 12px 32px rgba(37,211,102,.35)}
+.btn-home:active,.btn-wa:active{transform:scale(0.98)}
+</style>
+</head>
+<body>
+<div class="icon" id="celebration-icon">
+  <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+</div>
+<h1 id="title">¡Pago aprobado!</h1>
+<p id="message">Tu pago fue procesado correctamente. En breve te contactamos por WhatsApp para coordinar el envío.</p>
+<div class="btns">
+  <a class="btn-home" href="/">← Volver al inicio</a>
+  <a class="btn-wa" href="https://wa.me/5491161054411?text=Hola%2C%20acabo%20de%20realizar%20un%20pago%20y%20quiero%20coordinar%20el%20env%C3%ADo." target="_blank" rel="noopener noreferrer">Coordinar envío</a>
+</div>
+<script>
+// Easter egg: Click en el icono para celebración
+const icon = document.getElementById('celebration-icon');
+let clickCount = 0;
+
+icon.addEventListener('click', () => {
+  clickCount++;
+  // Animar el icono con bounce
+  icon.style.animation = 'none';
+  setTimeout(() => {
+    icon.style.animation = 'iconPop .4s var(--spring)';
+  }, 10);
+
+  // Generar confeti al 3er click
+  if (clickCount === 3) {
+    createConfetti();
+    clickCount = 0;
+  }
+});
+
+// Easter egg: Doble click en el título para efecto especial
+let titleClicks = 0;
+let titleClickTimer;
+document.getElementById('title').addEventListener('click', () => {
+  titleClicks++;
+  clearTimeout(titleClickTimer);
+
+  if (titleClicks === 2) {
+    // Celebración en el título
+    createConfetti();
+    playTitleAnimation();
+    titleClicks = 0;
+  }
+
+  titleClickTimer = setTimeout(() => {
+    titleClicks = 0;
+  }, 500);
+});
+
+function createConfetti() {
+  const emojis = ['🎉', '🎊', '✨', '🌟', '💚', '🚀', '⭐', '🎈'];
+  for (let i = 0; i < 30; i++) {
+    const confetti = document.createElement('div');
+    confetti.className = 'confetti';
+    confetti.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    confetti.style.left = Math.random() * 100 + '%';
+    confetti.style.top = '-10px';
+    confetti.style.animationDuration = (2 + Math.random() * 1) + 's';
+    confetti.style.animationDelay = Math.random() * 0.3 + 's';
+    document.body.appendChild(confetti);
+
+    setTimeout(() => confetti.remove(), 3500);
+  }
+}
+
+function playTitleAnimation() {
+  const title = document.getElementById('title');
+  title.style.animation = 'none';
+  setTimeout(() => {
+    title.style.animation = 'titlePulse .6s cubic-bezier(.34,1.56,.64,1)';
+  }, 10);
+}
+
+// Agregar keyframe dinámico para titlePulse
+const style = document.createElement('style');
+style.textContent = '@keyframes titlePulse { 0%{transform:scale(1)} 50%{transform:scale(1.1) rotate(2deg)} 100%{transform:scale(1)} }';
+document.head.appendChild(style);
+
+// Konami code easter egg: ↑↑↓↓←→←→BA
+const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+let konamiIndex = 0;
+
+document.addEventListener('keydown', (e) => {
+  const key = e.key.toLowerCase() === 'b' || e.key.toLowerCase() === 'a' ? e.key.toLowerCase() : e.code;
+
+  if (key === konamiCode[konamiIndex]) {
+    konamiIndex++;
+    if (konamiIndex === konamiCode.length) {
+      unlockHiddenMessage();
+      konamiIndex = 0;
+    }
+  } else {
+    konamiIndex = 0;
+  }
+});
+
+function unlockHiddenMessage() {
+  createConfetti();
+  const message = document.getElementById('message');
+  message.textContent = '¡Encontraste el código secreto! 🎮 Eres un verdadero campeón de PEMF. Tu energía llegará en los próximos días. ¡Que disfrutes! 💚✨';
+  message.style.animation = 'none';
+  setTimeout(() => {
+    message.style.animation = 'fadeIn .6s var(--ease)';
+  }, 10);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,1896 @@
+{
+ "_README": "Indice editable de papers adicionales del Centro de Informacion. Para AGREGAR un paper: (1) poné el PDF en deploy/estudios/extra/NOMBRE.pdf  (2) poné la imagen de la primera pagina en deploy/img/papers/NOMBRE.jpg  (3) copiá el bloque de _EJEMPLO dentro de \"papers\" y completá los datos. Para SACAR un paper: borrá su bloque. brand admite: lifewave | drinkhrw | gamma | neurogum | myvitalc | analemma | all. type admite: rct | piloto | meta | revision | animal | vitro | seguridad | factibilidad.",
+ "_EJEMPLO": {
+  "id": "extra-01",
+  "brand": "drinkhrw",
+  "type": "rct",
+  "portada": "img/papers/NOMBRE.jpg",
+  "title": "Título del estudio en su idioma original",
+  "cite": "Apellido A, Apellido B · Revista · Año",
+  "n": "120 participantes",
+  "loc": "Universidad, País",
+  "dur": "8 semanas",
+  "method": "Resumen breve del método del estudio.",
+  "results": [
+   "Hallazgo 1",
+   "Hallazgo 2",
+   "Hallazgo 3"
+  ],
+  "pdf": "estudios/extra/NOMBRE.pdf",
+  "doi": "10.xxxx/xxxxx",
+  "note": ""
+ },
+ "papers": [
+  {
+   "id": "extra-binhi-2023",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/binhi-2023.jpg",
+   "title": "Statistical Amplification of the Effects of Weak Magnetic Fields in Cellular Translation",
+   "cite": "Binhi VN · Cells (MDPI) · 2023",
+   "n": "Modelo teórico-matemático",
+   "loc": "Prokhorov General Physics Institute, Moscú",
+   "dur": "—",
+   "method": "Modelo matemático que propone que la traducción celular (síntesis de proteínas) involucra pares intermedios de radicales con electrones de spin correlacionado, sensibles al campo magnético externo débil.",
+   "results": [
+    "Un campo magnético débil modifica la probabilidad de errores en la síntesis de proteínas por amplificación estadística",
+    "El efecto alcanza niveles de varios por ciento: magnitudes observables y verificables experimentalmente",
+    "Identifica el sitio activo de la maquinaria bioquímica donde ocurren los efectos magnéticos primarios, sin requerir tiempos de relajación de spin largos (~1µs)"
+   ],
+   "pdf": "estudios/extra/binhi-2023.pdf",
+   "doi": "10.3390/cells12050724",
+   "note": "Paradigma cuántico: describe un mecanismo concreto (pares de radicales con spin de electrones) por el cual campos magnéticos débiles influyen en la biología celular — fundamento del efecto de los campos electromagnéticos en el cuerpo. Verificado contra el PDF original (acceso abierto CC-BY).",
+   "titulo_es": "Amplificación estadística de los efectos de los campos magnéticos débiles sobre la traducción celular",
+   "temas": [
+    "campos-em",
+    "quantum"
+   ]
+  },
+  {
+   "id": "extra-vanhuizen-2019-magnetic-stemcells",
+   "brand": "all",
+   "type": "animal",
+   "portada": "img/papers/vanhuizen-2019-magnetic-stemcells.jpg",
+   "title": "Weak magnetic fields alter stem cell-mediated growth",
+   "cite": "Van Huizen AV, Beane WS, et al · Science Advances · 2019",
+   "n": "Modelo de regeneración en planaria (Schmidtea mediterranea), n≥12 por condición",
+   "loc": "Western Michigan University y University of Colorado Boulder, EE.UU.",
+   "dur": "Exposición durante las primeras 72 h de regeneración; lectura a 3 días",
+   "method": "Planarias amputadas expuestas a campos magnéticos débiles estáticos (<1 mT) de distinta intensidad durante la regeneración. Se midió el tamaño del blastema, los niveles de especies reactivas de oxígeno (ROS) en la herida y la expresión de Hsp70, con inhibición de SOD por RNAi para manipular ROS.",
+   "results": [
+    "El efecto depende de la intensidad del campo: 100-400 µT redujeron significativamente el crecimiento de tejido nuevo, mientras que 500 µT lo aumentaron",
+    "Los campos magnéticos débiles actúan modificando la acumulación de ROS en el sitio de la herida: a 200 µT los ROS desaparecían y a 500 µT subían (intensidad media 61,7 vs 17,7 en controles; n=12; P<0,01)",
+    "Aumentar los ROS (inhibición de SOD) rescató por completo la regeneración bloqueada, confirmando que el campo magnético regula el crecimiento celular vía ROS y Hsp70"
+   ],
+   "pdf": "estudios/extra/vanhuizen-2019-magnetic-stemcells.pdf",
+   "doi": "10.1126/sciadv.aau7201",
+   "note": "Demuestra in vivo que campos magnéticos débiles modulan la proliferación de células madre y la regeneración de tejido a través de ROS — base biológica directa del efecto terapéutico de los campos electromagnéticos (PEMF). Verificado contra el PDF original (acceso abierto CC-BY).",
+   "titulo_es": "Los campos magnéticos débiles alteran el crecimiento mediado por células madre",
+   "temas": [
+    "campos-em",
+    "dolor"
+   ]
+  },
+  {
+   "id": "extra-usselman-2016-quantum-ros",
+   "brand": "all",
+   "type": "vitro",
+   "portada": "img/papers/usselman-2016-quantum-ros.jpg",
+   "title": "The Quantum Biology of Reactive Oxygen Species Partitioning Impacts Cellular Bioenergetics",
+   "cite": "Usselman RJ, Ritz T, Martino CF, et al · Scientific Reports (Nature) · 2016",
+   "n": "Cultivos de células endoteliales humanas (HUVEC), promedio de 3 experimentos independientes",
+   "loc": "Montana State University y Florida Institute of Technology (EE.UU.), con CONICET–Universidad de Belgrano, Buenos Aires",
+   "dur": "—",
+   "method": "Células humanas vivas expuestas a un campo magnético estático de 50 µT solo (control) o combinado con un campo de radiofrecuencia de 1,4 MHz a resonancia de Zeeman. Se midieron superóxido y peróxido de hidrógeno (ROS) y la bioenergética celular (respiración mitocondrial OCR y glucólisis ECAR) con un analizador Seahorse.",
+   "results": [
+    "El campo magnético a resonancia de Zeeman alteró la producción de ROS en células vivas: en orientación perpendicular bajó el superóxido un 36% y el peróxido un 21%",
+    "Esos cambios en los ROS modificaron la bioenergética celular: la glucólisis (ECAR) subió hasta 100% en orientación perpendicular y la respiración mitocondrial (OCR) subió 54% en orientación paralela",
+    "Es evidencia de coherencia cuántica (mezcla singlete-triplete en pares de radicales) operando en células vivas y conectando el nivel atómico con la energía celular"
+   ],
+   "pdf": "estudios/extra/usselman-2016-quantum-ros.pdf",
+   "doi": "10.1038/srep38543",
+   "note": "Paradigma cuántico aplicado: muestra que un campo magnético débil influye en la producción de radicales libres (ROS) y en la energía de células humanas vivas mediante coherencia de spin de electrones — mecanismo cuántico que sostiene el efecto de los campos electromagnéticos sobre las mitocondrias. Verificado contra el PDF original (acceso abierto CC-BY).",
+   "titulo_es": "La biología cuántica de la partición de las especies reactivas de oxígeno impacta en la bioenergética celular",
+   "temas": [
+    "quantum",
+    "campos-em",
+    "antioxidantes"
+   ]
+  },
+  {
+   "id": "extra-zlenko-2023-magnetic-dna-synthesis",
+   "brand": "all",
+   "type": "vitro",
+   "portada": "img/papers/zlenko-2023-magnetic-dna-synthesis.jpg",
+   "title": "Magnetic field and nuclear spin influence on the DNA synthesis rate",
+   "cite": "Stovbun SV, Zlenko DV, Buchachenko AL, et al · Scientific Reports (Nature) · 2023",
+   "n": "Ensayo enzimático in vitro de síntesis de ADN",
+   "loc": "N.N. Semenov Federal Research Center for Chemical Physics (RAS), Rusia",
+   "dur": "—",
+   "method": "Se midió la velocidad de la síntesis enzimática de ADN bajo campos magnéticos externos de distinta intensidad, comparando iones de magnesio sin spin (24Mg) frente a iones magnéticos con spin nuclear (25Mg). Se propone un mecanismo de competencia entre interacciones Zeeman y Fermi.",
+   "results": [
+    "Con magnesio sin spin, la velocidad de síntesis de ADN bajaba de forma monótona al aumentar el campo magnético",
+    "Con magnesio magnético (spin nuclear), la dependencia era no monótona y mostraba un mínimo marcado en 80-100 mT: el spin nuclear cambia cualitativamente la respuesta al campo",
+    "Confirma el efecto isotópico magnético en una reacción bioquímica central (síntesis de ADN), evidencia de un mecanismo cuántico de spin sensible al campo magnético"
+   ],
+   "pdf": "estudios/extra/zlenko-2023-magnetic-dna-synthesis.pdf",
+   "doi": "10.1038/s41598-022-26744-4",
+   "note": "Paradigma cuántico: demuestra que el campo magnético y el spin nuclear regulan la velocidad de la síntesis de ADN — base de cómo los campos magnéticos influyen en procesos bioquímicos fundamentales. Verificado contra el PDF original (acceso abierto CC-BY).",
+   "titulo_es": "Influencia del campo magnético y el spin nuclear sobre la velocidad de síntesis del ADN",
+   "temas": [
+    "campos-em",
+    "quantum"
+   ]
+  },
+  {
+   "id": "extra-mo-2013-magnetic-shielding-neuroblastoma",
+   "brand": "all",
+   "type": "vitro",
+   "portada": "img/papers/mo-2013-magnetic-shielding-neuroblastoma.jpg",
+   "title": "Magnetic Shielding Accelerates the Proliferation of Human Neuroblastoma Cell by Promoting G1-Phase Progression",
+   "cite": "Mo WC, Liu Y, Bartlett PF, He RQ · PLOS One · 2013",
+   "n": "Cultivos de células de neuroblastoma humano (SH-SY5Y)",
+   "loc": "Institute of Biophysics, Chinese Academy of Sciences (Beijing) y University of Queensland (Australia)",
+   "dur": "Exposición continua",
+   "method": "Células de neuroblastoma humano expuestas de forma continua a un campo hipomagnético (apantallamiento del campo geomagnético, HMF) frente a controles en el campo geomagnético normal. Se analizó la proliferación y la progresión del ciclo celular.",
+   "results": [
+    "El apantallamiento del campo magnético (entorno hipomagnético) aumentó significativamente la proliferación de las células de neuroblastoma humano",
+    "La aceleración se debió a un avance del ciclo celular en la fase G1, sin afectar la fase G2/M",
+    "Demuestra que la ausencia del campo geomagnético natural altera el ritmo de división celular: la célula es sensible al entorno magnético"
+   ],
+   "pdf": "estudios/extra/mo-2013-magnetic-shielding-neuroblastoma.pdf",
+   "doi": "10.1371/journal.pone.0054775",
+   "note": "Evidencia de que las células humanas detectan y responden al campo magnético del ambiente (su ausencia acelera la proliferación) — sostiene la idea de que los campos magnéticos modulan la biología celular. Verificado contra el PDF original (acceso abierto CC-BY).",
+   "titulo_es": "El blindaje magnético acelera la proliferación de células de neuroblastoma humano al promover la progresión de la fase G1",
+   "temas": [
+    "campos-em"
+   ]
+  },
+  {
+   "id": "extra-zadehhaghighi-2022-radical-pair-magnetic-biology",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/zadehhaghighi-2022-radical-pair-magnetic-biology.jpg",
+   "title": "Magnetic field effects in biology from the perspective of the radical pair mechanism",
+   "cite": "Zadeh-Haghighi H, Simon C · Journal of the Royal Society Interface · 2022",
+   "n": "Revisión de cientos de estudios",
+   "loc": "Institute for Quantum Science and Technology, University of Calgary, Canadá",
+   "dur": "—",
+   "method": "Revisión integral de la evidencia de efectos de campos magnéticos débiles en sistemas biológicos (estáticos, hipomagnéticos, oscilantes e isotópicos), proponiendo el mecanismo de pares de radicales (radical pair mechanism) como modelo unificador basado en la dinámica cuántica de spin de electrones.",
+   "results": [
+    "Cientos de estudios muestran que campos magnéticos débiles influyen significativamente en la biología, pese a que su energía es mucho menor que la energía térmica",
+    "El mecanismo de pares de radicales —dinámica cuántica de spin de electrones y núcleos— explica de forma unificada estos efectos, no solo la magnetorrecepción de las aves",
+    "La magnetosensibilidad está extendida por toda la biología y abarca funciones fisiológicas diversas; los pares de radicales y las especies reactivas de oxígeno son moléculas candidatas centrales"
+   ],
+   "pdf": "estudios/extra/zadehhaghighi-2022-radical-pair-magnetic-biology.pdf",
+   "doi": "10.1098/rsif.2022.0325",
+   "note": "Revisión de referencia del paradigma cuántico aplicado a la biología: fundamenta por qué campos magnéticos débiles (como los de PEMF) producen efectos biológicos reales a través de la química de spin. Verificado contra el PDF original (acceso abierto CC-BY).",
+   "titulo_es": "Efectos del campo magnético en biología desde la perspectiva del mecanismo de pares de radicales",
+   "temas": [
+    "campos-em",
+    "quantum"
+   ]
+  },
+  {
+   "id": "extra-chae-2022-human-magnetic-sense",
+   "brand": "all",
+   "type": "piloto",
+   "portada": "img/papers/chae-2022-human-magnetic-sense.jpg",
+   "title": "Human magnetic sense is mediated by a light and magnetic field resonance-dependent mechanism",
+   "cite": "Chae KS, Kim SC, Kwon HJ, Kim Y · Scientific Reports (Nature) · 2022",
+   "n": "Sujetos humanos (experimento de silla giratoria, elección forzada de 2 alternativas)",
+   "loc": "Kyungpook National University, Corea del Sur",
+   "dur": "—",
+   "method": "Experimento de orientación magnética en humanos con silla giratoria y paradigma de elección forzada, variando la longitud de onda de la luz y aplicando campos de radiofrecuencia a la frecuencia de Larmor para probar un mecanismo de resonancia de campo magnético.",
+   "results": [
+    "Demuestra la existencia de un sentido magnético humano: la orientación de los sujetos respondía al campo geomagnético",
+    "El efecto dependía críticamente de la luz azul que llega a los ojos y de la longitud de onda incidente",
+    "Un campo de radiofrecuencia a la frecuencia de Larmor alteraba o aumentaba la capacidad de orientarse, evidencia de un mecanismo de magnetorrecepción cuántico (par de radicales) dependiente de luz"
+   ],
+   "pdf": "estudios/extra/chae-2022-human-magnetic-sense.pdf",
+   "doi": "10.1038/s41598-022-12460-6",
+   "note": "Paradigma cuántico en humanos: el cuerpo humano detecta el campo magnético mediante un mecanismo de resonancia dependiente de luz (pares de radicales en criptocromos) — vincula luz, campo magnético y biología cuántica. Verificado contra el PDF original (acceso abierto CC-BY).",
+   "titulo_es": "El sentido magnético humano está mediado por un mecanismo de resonancia dependiente de luz y campo magnético",
+   "temas": [
+    "campos-em",
+    "quantum",
+    "luz"
+   ]
+  },
+  {
+   "id": "extra-bennett-onyango-2021-tunneling-brain-mitochondria",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/bennett-onyango-2021-tunneling-brain-mitochondria.jpg",
+   "title": "Energy, Entropy and Quantum Tunneling of Protons and Electrons in Brain Mitochondria",
+   "cite": "Bennett JP Jr, Onyango IG · Biomedicines (MDPI) · 2021",
+   "n": "Revisión",
+   "loc": "Neurodegeneration Therapeutics (EE.UU.) y St. Anne's University Hospital, Brno (Chequia)",
+   "dur": "—",
+   "method": "Revisión de la bioenergética del cerebro: cómo se produce el ATP por fosforilación oxidativa en las mitocondrias mediante la cadena de transporte de electrones, y el papel del túnel cuántico de protones y electrones en ese proceso y en las enfermedades neurodegenerativas del envejecimiento.",
+   "results": [
+    "El cerebro consume energía de forma desproporcionada (20-25% de la glucosa y el oxígeno del cuerpo); el ATP se genera por transferencia de electrones acoplada a protones en la cadena mitocondrial",
+    "El túnel cuántico de electrones y de protones facilita la separación necesaria entre el oxígeno y los electrones que fluyen por la cadena de transporte",
+    "La función de esta cadena está reducida en cerebros con enfermedades neurodegenerativas; las terapias mitocondriales buscan corregir esos déficits"
+   ],
+   "pdf": "estudios/extra/bennett-onyango-2021-tunneling-brain-mitochondria.pdf",
+   "doi": "10.3390/biomedicines9020225",
+   "note": "Conecta biología cuántica (túnel de protones y electrones) con la función mitocondrial cerebral y el envejecimiento — sostiene el foco en mitocondrias y energía celular. Verificado contra el PDF original (acceso abierto CC-BY).",
+   "titulo_es": "Energía, entropía y túnel cuántico de protones y electrones en las mitocondrias cerebrales",
+   "temas": [
+    "quantum",
+    "mitocondria"
+   ]
+  },
+  {
+   "id": "extra-bono-2012-coherent-structure-liquid-water",
+   "brand": "analemma",
+   "type": "revision",
+   "portada": "img/papers/bono-2012-coherent-structure-liquid-water.jpg",
+   "title": "Emergence of the Coherent Structure of Liquid Water",
+   "cite": "Bono I, Del Giudice E, Gamberale L, Henry M · Water (MDPI) · 2012",
+   "n": "Modelo teórico (electrodinámica cuántica)",
+   "loc": "Université de Strasbourg (Francia) e investigadores independientes, Italia",
+   "dur": "—",
+   "method": "Análisis de electrodinámica cuántica (QED) de la interacción de las moléculas de agua con el campo electromagnético radiativo, buscando transiciones de fase desde la fase vapor a una fase condensada en la que todas las moléculas oscilan al unísono.",
+   "results": [
+    "Predice una transición de fase en la que las moléculas de agua oscilan en sincronía con un campo electromagnético autoatrapado dentro de regiones mesoscópicas llamadas Dominios de Coherencia",
+    "Las propiedades de esa fase condensada coherente resultan compatibles con las propiedades fenomenológicas conocidas del agua líquida",
+    "Calcula con buena precisión el valor observado de la densidad crítica del agua, dando sustento teórico al concepto de agua coherente"
+   ],
+   "pdf": "estudios/extra/bono-2012-coherent-structure-liquid-water.pdf",
+   "doi": "10.3390/w4030510",
+   "note": "Base teórica del concepto de agua estructurada/coherente (Dominios de Coherencia) que sustenta Analemma — describe cómo el agua puede organizarse en una fase coherente acoplada al campo electromagnético. Verificado contra el PDF original (acceso abierto CC-BY).",
+   "titulo_es": "Emergencia de la estructura coherente del agua líquida",
+   "temas": [
+    "agua-h2",
+    "quantum"
+   ]
+  },
+  {
+   "id": "extra-li-pollack-2023-blood-circulation-beyond-heart",
+   "brand": "analemma",
+   "type": "animal",
+   "portada": "img/papers/li-pollack-2023-blood-circulation-beyond-heart.jpg",
+   "title": "On the driver of blood circulation beyond the heart",
+   "cite": "Li Z, Pollack GH · PLOS One · 2023",
+   "n": "Modelo de embrión de pollo de 3 días (n=6 para la medición con IR)",
+   "loc": "Department of Bioengineering, University of Washington, Seattle, EE.UU.",
+   "dur": "—",
+   "method": "Embriones de pollo de 3 días con el corazón detenido, para comprobar si la luz infrarroja (IR) puede impulsar el flujo sanguíneo sin presión generada por el corazón. Se midió la velocidad del flujo postmortem con y sin energía infrarroja.",
+   "results": [
+    "Tras detener el corazón, la sangre siguió fluyendo durante unos 50 minutos, aunque a menor velocidad",
+    "Al introducir luz infrarroja, el flujo postmortem aumentó de ~41,1 ± 25,6 µm/s a ~153,0 ± 59,5 µm/s (n=6)",
+    "Al disminuir la energía infrarroja en condiciones por lo demás fisiológicas, la sangre dejó de fluir: existe un mecanismo de impulsión del flujo dependiente de IR, basado en los vasos, que complementa al corazón"
+   ],
+   "pdf": "estudios/extra/li-pollack-2023-blood-circulation-beyond-heart.pdf",
+   "doi": "10.1371/journal.pone.0288236",
+   "note": "Del laboratorio de Gerald Pollack (agua EZ): muestra que la luz infrarroja —absorbida por el agua interfacial— puede impulsar el flujo sanguíneo, vinculando agua estructurada y luz con la fisiología. Verificado contra el PDF original (acceso abierto CC-BY).",
+   "titulo_es": "Sobre el motor de la circulación sanguínea más allá del corazón",
+   "temas": [
+    "agua-h2",
+    "luz"
+   ]
+  },
+  {
+   "id": "extra-lebaron-2022-electrolyzed-reduced-water-h2",
+   "brand": "drinkhrw",
+   "type": "revision",
+   "portada": "img/papers/lebaron-2022-electrolyzed-reduced-water-h2.jpg",
+   "title": "Electrolyzed-Reduced Water: Review I. Molecular Hydrogen Is the Exclusive Agent Responsible for the Therapeutic Effects",
+   "cite": "LeBaron TW, Sharpe R, Ohno K · Int. J. Molecular Sciences (MDPI) · 2022",
+   "n": "Revisión científica",
+   "loc": "Slovak Academy of Sciences (Eslovaquia), Molecular Hydrogen Institute (EE.UU.) y Nagoya University (Japón)",
+   "dur": "—",
+   "method": "Revisión crítica de la literatura sobre el agua alcalina electrolizada-reducida (ERW), separando las propiedades reales (hidrógeno molecular disuelto) de las afirmaciones pseudocientíficas (microclusters, estructura del agua alterada, hidrógeno activo, etc.).",
+   "results": [
+    "Los beneficios terapéuticos atribuidos al agua electrolizada-reducida se explican por el hidrógeno molecular (H2) disuelto, no por propiedades enigmáticas como microclusters o estructura alterada",
+    "El potencial redox negativo y el pH alcalino no son los responsables de los efectos biológicos; el H2 es el agente activo",
+    "Aporta un marco riguroso para distinguir el mecanismo real del hidrógeno molecular del marketing pseudocientífico que lo rodea"
+   ],
+   "pdf": "estudios/extra/lebaron-2022-electrolyzed-reduced-water-h2.pdf",
+   "doi": "10.3390/ijms232314750",
+   "note": "Sustenta el producto de hidrógeno molecular (H2 Tablets): aclara con rigor que el agente terapéutico del agua hidrogenada es el H2 disuelto. Verificado contra el PDF original (acceso abierto CC-BY).",
+   "titulo_es": "Agua reducida por electrólisis: Revisión I. El hidrógeno molecular es el único agente responsable de los efectos terapéuticos",
+   "temas": [
+    "agua-h2",
+    "antioxidantes"
+   ]
+  },
+  {
+   "id": "extra-barancik-2020-molecular-hydrogen-cardiovascular-cns",
+   "brand": "drinkhrw",
+   "type": "revision",
+   "portada": "img/papers/barancik-2020-molecular-hydrogen-cardiovascular-cns.jpg",
+   "title": "Molecular and Cellular Mechanisms Associated with Effects of Molecular Hydrogen in Cardiovascular and Central Nervous Systems",
+   "cite": "Barancik M, Kura B, LeBaron TW, Bolli R, Buday J, Slezak J · Antioxidants (MDPI) · 2020",
+   "n": "Revisión científica",
+   "loc": "Slovak Academy of Sciences y Comenius University (Eslovaquia), University of Louisville (EE.UU.), Charles University (Chequia)",
+   "dur": "—",
+   "method": "Revisión de los mecanismos moleculares y celulares por los que el hidrógeno molecular (H2) ejerce efectos protectores en los sistemas cardiovascular y nervioso central, donde el estrés oxidativo es un factor central de enfermedad.",
+   "results": [
+    "El hidrógeno molecular actúa como antioxidante selectivo y modula vías de señalización, reduciendo el estrés oxidativo y la inflamación en los tejidos cardiovascular y nervioso",
+    "Regula la expresión de genes y enzimas antioxidantes y disminuye la liberación de citoquinas proinflamatorias",
+    "Se perfila como terapia emergente con efectos positivos demostrados en modelos de enfermedad cardiovascular y neurológica"
+   ],
+   "pdf": "estudios/extra/barancik-2020-molecular-hydrogen-cardiovascular-cns.pdf",
+   "doi": "10.3390/antiox9121281",
+   "note": "Sostiene el producto de hidrógeno molecular (H2 Tablets): detalla cómo el H2 protege corazón y cerebro reduciendo estrés oxidativo. Verificado contra el PDF original (acceso abierto CC-BY).",
+   "titulo_es": "Mecanismos moleculares y celulares asociados a los efectos del hidrógeno molecular en los sistemas cardiovascular y nervioso central",
+   "temas": [
+    "agua-h2",
+    "antioxidantes",
+    "neuro"
+   ]
+  },
+  {
+   "id": "extra-kang-2011-hydrogen-rich-water-liver-radiotherapy",
+   "brand": "drinkhrw",
+   "type": "rct",
+   "portada": "img/papers/kang-2011-hydrogen-rich-water-liver-radiotherapy.jpg",
+   "title": "Effects of drinking hydrogen-rich water on the quality of life of patients treated with radiotherapy for liver tumors",
+   "cite": "Kang KM, Kang YN, Choi IB, Gu Y, Kawamura T, Toyoda Y, Nakao A · Medical Gas Research · 2011",
+   "n": "49 pacientes con tumores hepáticos en radioterapia",
+   "loc": "The Catholic University of Korea (Corea del Sur) y University of Pittsburgh (EE.UU.)",
+   "dur": "6 semanas",
+   "method": "Estudio aleatorizado y controlado con placebo: 49 pacientes en radioterapia por tumores hepáticos malignos bebieron agua rica en hidrógeno (0,55-0,65 mM, generada con una varilla de magnesio metálico) o agua placebo. Se midió la calidad de vida (cuestionario QLQ-C30 de la EORTC) y marcadores de estrés oxidativo en sangre.",
+   "results": [
+    "El consumo de agua rica en hidrógeno durante 6 semanas redujo los metabolitos reactivos del oxígeno en sangre y mantuvo el poder antioxidante biológico",
+    "Los puntajes de calidad de vida durante la radioterapia mejoraron significativamente frente al grupo placebo",
+    "No hubo diferencia en la respuesta del tumor a la radioterapia: el hidrógeno redujo el daño oxidativo sin comprometer el efecto antitumoral"
+   ],
+   "pdf": "estudios/extra/kang-2011-hydrogen-rich-water-liver-radiotherapy.pdf",
+   "doi": "10.1186/2045-9912-1-11",
+   "note": "Ensayo clínico aleatorizado en humanos que respalda el producto de hidrógeno molecular (H2 Tablets): el agua hidrogenada mejoró la calidad de vida y bajó el estrés oxidativo en pacientes oncológicos. Verificado contra el PDF original (acceso abierto CC-BY).",
+   "titulo_es": "Efectos de beber agua rica en hidrógeno sobre la calidad de vida de pacientes tratados con radioterapia por tumores hepáticos",
+   "temas": [
+    "agua-h2",
+    "antioxidantes"
+   ]
+  },
+  {
+   "id": "extra-zheng-2016-molecular-hydrogen-sepsis-organ-damage",
+   "brand": "drinkhrw",
+   "type": "revision",
+   "portada": "img/papers/zheng-2016-molecular-hydrogen-sepsis-organ-damage.jpg",
+   "title": "Molecular Hydrogen Therapy Ameliorates Organ Damage Induced by Sepsis",
+   "cite": "Zheng Y, Zhu D · Oxidative Medicine and Cellular Longevity · 2016",
+   "n": "Revisión de experimentos (mayormente en animales)",
+   "loc": "Zhongshan Hospital, Fudan University, Shanghái, China",
+   "dur": "—",
+   "method": "Revisión de la evidencia sobre la terapia con hidrógeno molecular frente a la sepsis, analizando su efecto sobre signos vitales, funciones de distintos órganos (cerebro, pulmón, hígado, riñón, intestino) y tasa de supervivencia.",
+   "results": [
+    "La terapia con hidrógeno molecular reduce de forma significativa la liberación de factores inflamatorios y el daño por estrés oxidativo",
+    "Disminuye el daño de la función de varios órganos provocado por la sepsis y mejora la tasa de supervivencia en los modelos estudiados",
+    "Se presenta como un método prometedor frente a la sepsis, coherente con los efectos antioxidantes y antiinflamatorios del H2"
+   ],
+   "pdf": "estudios/extra/zheng-2016-molecular-hydrogen-sepsis-organ-damage.pdf",
+   "doi": "10.1155/2016/5806057",
+   "note": "Sostiene el producto de hidrógeno molecular (H2 Tablets): muestra el efecto protector del H2 sobre múltiples órganos vía reducción de inflamación y estrés oxidativo. Verificado contra el PDF original (acceso abierto CC-BY).",
+   "titulo_es": "La terapia con hidrógeno molecular reduce el daño orgánico inducido por sepsis",
+   "temas": [
+    "agua-h2",
+    "antioxidantes"
+   ]
+  },
+  {
+   "id": "extra-yildiz-2025-molecular-hydrogen-nutrition-review",
+   "brand": "drinkhrw",
+   "type": "revision",
+   "portada": "img/papers/yildiz-lebaron-2025-molecular-hydrogen-nutrition-review.jpg",
+   "title": "A comprehensive review of molecular hydrogen as a novel nutrition therapy in relieving oxidative stress and diseases: Mechanisms and perspectives",
+   "cite": "Yildiz F, LeBaron TW, Alwazeer D · Biochemistry and Biophysics Reports · 2025",
+   "n": "Revisión científica",
+   "loc": "Igdir University (Türkiye) y Molecular Hydrogen Institute / Southern Utah University (EE.UU.)",
+   "dur": "—",
+   "method": "Revisión integral del hidrógeno molecular (H2) como terapia nutricional frente al estrés oxidativo y las enfermedades, sintetizando mecanismos de acción y evidencia experimental y clínica de las dos últimas décadas.",
+   "results": [
+    "El H2 es un antioxidante selectivo: neutraliza los oxidantes más dañinos (radical hidroxilo y peroxinitrito) sin afectar a las especies reactivas con función fisiológica",
+    "Presenta efectos antiinflamatorios, antioxidantes, anticancerígenos, antiapoptóticos y antialérgicos, y actúa como molécula señalizadora que regula el balance redox y la expresión de enzimas antioxidantes",
+    "Estudios experimentales y clínicos muestran el potencial del hidrógeno como terapia nutricional para mejorar la función vascular, el metabolismo energético y la protección del sistema nervioso"
+   ],
+   "pdf": "estudios/extra/yildiz-lebaron-2025-molecular-hydrogen-nutrition-review.pdf",
+   "doi": "10.1016/j.bbrep.2025.101933",
+   "note": "Revisión reciente que sostiene el producto de hidrógeno molecular (H2 Tablets): resume mecanismos y beneficios del H2 como terapia nutricional antioxidante. Verificado contra el PDF original (acceso abierto CC-BY-NC-ND).",
+   "titulo_es": "Revisión integral del hidrógeno molecular como nueva terapia nutricional para aliviar el estrés oxidativo y las enfermedades: mecanismos y perspectivas",
+   "temas": [
+    "agua-h2",
+    "antioxidantes"
+   ]
+  },
+  {
+   "id": "extra-timofejeva-2021-heart-rhythm-magnetic-field",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/timofejeva-2021-heart-rhythm-magnetic-field.jpg",
+   "title": "Global Study of Human Heart Rhythm Synchronization with the Earth's Time-Varying Magnetic Field",
+   "cite": "Timofejeva, McCraty, Atkinson et al. · Applied Sciences (MDPI) · 2021",
+   "n": "104 participantes",
+   "loc": "California, Lituania, Arabia Saudita, Nueva Zelanda e Inglaterra",
+   "dur": "15 días de monitoreo continuo",
+   "method": "Monitoreo ambulatorio continuo de variabilidad de la frecuencia cardíaca (HRV) en 5 sitios, sincronizado con una red calibrada de magnetómetros que registró la intensidad del campo magnético local (LMF).",
+   "results": [
+    "La actividad del sistema nervioso autónomo (reflejada en la HRV) puede sincronizarse con cambios en la amplitud de las frecuencias resonantes del campo geomagnético y las resonancias de Schumann.",
+    "Se identificaron patrones de sincronización entre la fisiología humana y el campo magnético terrestre variable en el tiempo, a escala global.",
+    "Las condiciones geomagnéticas influyen sobre los ritmos producidos por el corazón y el cerebro."
+   ],
+   "pdf": "estudios/extra/timofejeva-2021-heart-rhythm-magnetic-field.pdf",
+   "doi": "10.3390/app11072935",
+   "note": "OPTIMIZE (C. Clinton), referencias cap. 6. Sustenta la sensibilidad humana a campos magnéticos ambientales y resonancias de Schumann. Acceso abierto (MDPI). · Verificado contra el PDF original",
+   "titulo_es": "Estudio global de la sincronización del ritmo cardíaco humano con el campo magnético variable de la Tierra",
+   "temas": [
+    "campos-em",
+    "biocampo"
+   ]
+  },
+  {
+   "id": "extra-timofejeva-2017-group-sync-magnetic-field",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/timofejeva-2017-group-sync-magnetic-field.jpg",
+   "title": "Identification of a Group's Physiological Synchronization with the Earth's Magnetic Field",
+   "cite": "Timofejeva, McCraty, Atkinson et al. · Int. J. Environ. Res. Public Health (IJERPH) · 2017",
+   "n": "20 individuos",
+   "loc": "Lituania",
+   "dur": "2 semanas",
+   "method": "Desarrollo y validación de una técnica de análisis para evaluar el grado de sincronización entre el estado fisiológico de un grupo (intervalos entre latidos cardíacos) y los cambios del campo magnético terrestre; agrupamiento de patrones de sincronización similares.",
+   "results": [
+    "Se identificaron clusters de patrones de sincronización fisiológica similares dentro del grupo durante el período de dos semanas.",
+    "El estado fisiológico colectivo del grupo mostró sincronización mensurable con las variaciones del campo magnético de la Tierra.",
+    "Aporta una metodología validada para cuantificar la influencia del campo geomagnético sobre la fisiología humana."
+   ],
+   "pdf": "estudios/extra/timofejeva-2017-group-sync-magnetic-field.pdf",
+   "doi": "10.3390/ijerph14090998",
+   "note": "OPTIMIZE (C. Clinton), referencias cap. 6. Respalda la interacción entre campos magnéticos ambientales y la fisiología humana. Acceso abierto (IJERPH). · Verificado contra el PDF original",
+   "titulo_es": "Identificación de la sincronización fisiológica de un grupo con el campo magnético de la Tierra",
+   "temas": [
+    "campos-em",
+    "biocampo"
+   ]
+  },
+  {
+   "id": "extra-wang-2019-geomagnetic-brain-alpha",
+   "brand": "all",
+   "type": "piloto",
+   "portada": "img/papers/wang-2019-geomagnetic-brain-alpha.jpg",
+   "title": "Transduction of the Geomagnetic Field as Evidenced from Alpha-band Activity in the Human Brain",
+   "cite": "Wang, Hilburn, Wu et al. (Kirschvink) · eNeuro · 2019",
+   "n": "Participantes adultos (cámara de Faraday)",
+   "loc": "Caltech, EE. UU.",
+   "dur": "Sesiones experimentales con EEG",
+   "method": "Registro de EEG dentro de una cámara de Faraday blindada mientras se rotaban campos magnéticos de intensidad terrestre de forma controlada; análisis de oscilaciones de banda alfa.",
+   "results": [
+    "Se observó una respuesta cerebral específica y repetible: caída de la amplitud de las oscilaciones alfa (8–13 Hz), denominada desincronización alfa relacionada con eventos (alpha-ERD).",
+    "La respuesta se desencadenó ante rotaciones ecológicamente relevantes del campo magnético terrestre.",
+    "Constituye evidencia de un sentido geomagnético humano: el cerebro humano transduce (detecta) cambios en el campo magnético de la Tierra."
+   ],
+   "pdf": "estudios/extra/wang-2019-geomagnetic-brain-alpha.pdf",
+   "doi": "10.1523/ENEURO.0483-18.2019",
+   "note": "OPTIMIZE (C. Clinton), referencias cap. 6. Evidencia directa de magnetorrecepción en humanos; respalda la base biofísica de la sensibilidad a campos magnéticos. Acceso abierto (eNeuro/Caltech). · Verificado contra el PDF original",
+   "titulo_es": "Transducción del campo geomagnético evidenciada por la actividad de banda alfa en el cerebro humano",
+   "temas": [
+    "campos-em",
+    "neuro"
+   ]
+  },
+  {
+   "id": "extra-chevalier-2012-earthing-revision",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/chevalier-2012-earthing-revision.jpg",
+   "title": "Earthing: Health Implications of Reconnecting the Human Body to the Earth's Surface Electrons",
+   "cite": "Chevalier, Sinatra, Oschman et al. · Journal of Environmental and Public Health · 2012",
+   "n": "Revisión (sintetiza ~12 estudios piloto previos)",
+   "loc": "University of California Irvine, EE.UU. / Military Clinical Hospital, Bydgoszcz, Polonia",
+   "dur": "—",
+   "method": "Artículo de revisión que recopila la investigación sobre earthing/grounding: contacto eléctricamente conductivo del cuerpo con la superficie de la Tierra (descalzo o mediante sistemas conductivos conectados a tierra) y su efecto sobre la fisiología.",
+   "results": [
+    "La superficie de la Tierra mantiene un potencial negativo con un suministro continuo de electrones libres que pueden transferirse al cuerpo por contacto conductivo.",
+    "La reconexión con los electrones de la Tierra se asocia a mejor sueño, menor dolor, normalización del ritmo circadiano de cortisol y cambios fisiológicos medibles.",
+    "Propone que los electrones libres absorbidos actúan como antioxidantes neutralizando especies reactivas de oxígeno (ROS) implicadas en inflamación."
+   ],
+   "pdf": "estudios/extra/chevalier-2012-earthing-revision.pdf",
+   "doi": "10.1155/2012/291541",
+   "note": "Resuena con bioelectricidad y el rol de electrones/antioxidantes en la fisiología, base conceptual de terapias de campo. Verificado contra el PDF original.",
+   "titulo_es": "Earthing: implicaciones para la salud de reconectar el cuerpo humano con los electrones de la superficie terrestre",
+   "temas": [
+    "campos-em",
+    "antioxidantes"
+   ]
+  },
+  {
+   "id": "extra-li-pollack-2020-flujo-inducido-superficie-ir-ez",
+   "brand": "analemma",
+   "type": "vitro",
+   "portada": "img/papers/li-pollack-2020-flujo-inducido-superficie-ir-ez.jpg",
+   "title": "Surface-induced flow: A natural microscopic engine using infrared energy as fuel",
+   "cite": "Li & Pollack · Science Advances · 2020",
+   "n": "Experimentos in vitro en hidrogeles vegetales y animales (agarosa, agar, almidón, colágeno, gelatina)",
+   "loc": "Department of Bioengineering, University of Washington, Seattle, EE.UU.",
+   "dur": "—",
+   "method": "Estudio biofísico de laboratorio: túneles en hidrogeles inmersos en agua; se observa el flujo espontáneo con microesferas de poliestireno y se mide el efecto de la energía infrarroja incidente y del diámetro del túnel sobre la velocidad de flujo.",
+   "results": [
+    "Se produce flujo espontáneo dentro de túneles de hidrogel sin ningún gradiente de presión, confirmado en hidrogeles vegetales y animales.",
+    "El flujo se vincula a la zona de exclusión (EZ) cargada negativamente que se forma junto a superficies hidrofílicas; sin EZ (Teflón) no hay flujo.",
+    "La energía infrarroja incidente aumenta sustancialmente la velocidad del flujo y los túneles más estrechos generan flujo más rápido: el agua estructurada convierte energía radiante en energía cinética."
+   ],
+   "pdf": "estudios/extra/li-pollack-2020-flujo-inducido-superficie-ir-ez.pdf",
+   "doi": "10.1126/sciadv.aba0941",
+   "note": "Respalda el concepto de agua estructurada/EZ (Analemma) y la luz infrarroja como fuente de energía biológica. Verificado contra el PDF original.",
+   "titulo_es": "Flujo inducido por superficie: un motor microscópico natural que usa la energía infrarroja como combustible",
+   "temas": [
+    "agua-h2",
+    "luz"
+   ]
+  },
+  {
+   "id": "extra-powner-2024-luz-roja-mitocondria-glucosa",
+   "brand": "all",
+   "type": "rct",
+   "portada": "img/papers/powner-2024-luz-roja-mitocondria-glucosa.jpg",
+   "title": "Light stimulation of mitochondria reduces blood glucose levels",
+   "cite": "Powner & Jeffery · Journal of Biophotonics · 2024",
+   "n": "30 participantes sanos (15 luz 670 nm, 15 placebo)",
+   "loc": "City, University of London / UCL Institute of Ophthalmology, Reino Unido",
+   "dur": "Dos test de tolerancia a la glucosa en un periodo de 7 días",
+   "method": "Ensayo aleatorizado con placebo: prueba oral de tolerancia a la glucosa (75 g). El grupo de fotobiomodulación recibió 15 min de luz roja 670 nm 45 min antes de la glucosa; el placebo se posicionó igual con la luz apagada. Glucemia capilar medida cada 15 min durante 2 h.",
+   "results": [
+    "La exposición de 15 min a luz 670 nm redujo la elevación de glucosa tras la ingesta en un 27,7% integrado sobre 2 h.",
+    "El pico máximo de glucosa se redujo un 7,5% respecto al placebo.",
+    "La luz roja absorbida por la citocromo c oxidasa aumenta el potencial de membrana mitocondrial y la producción de ATP, incrementando la demanda y consumo de glucosa."
+   ],
+   "pdf": "estudios/extra/powner-2024-luz-roja-mitocondria-glucosa.pdf",
+   "doi": "10.1002/jbio.202300521",
+   "note": "Respalda fotobiomodulación / fototerapia (luz roja 670 nm, mitocondrias), núcleo conceptual de productos de luz. Verificado contra el PDF original.",
+   "titulo_es": "La estimulación lumínica de las mitocondrias reduce los niveles de glucosa en sangre",
+   "temas": [
+    "luz",
+    "mitocondria"
+   ]
+  },
+  {
+   "id": "extra-cheng-2023-hidrogeno-mitocondria-keap1-nrf2",
+   "brand": "drinkhrw",
+   "type": "revision",
+   "portada": "img/papers/cheng-2023-hidrogeno-mitocondria-keap1-nrf2.jpg",
+   "title": "Hydrogen: A Rising Star in Gas Medicine as a Mitochondria-Targeting Nutrient via Activating Keap1-Nrf2 Antioxidant System",
+   "cite": "Cheng, Long, Zhao & Liu · Antioxidants (MDPI) · 2023",
+   "n": "Revisión (múltiples modelos de enfermedad)",
+   "loc": "Center for Mitochondrial Biology and Medicine, Xi'an Jiaotong University, China",
+   "dur": "—",
+   "method": "Revisión de la evidencia sobre el hidrógeno molecular (H2) como gas medicinal, centrada en el mecanismo de targeting mitocondrial vía activación del sistema antioxidante de fase II Keap1-Nrf2 en distintos modelos de enfermedad.",
+   "results": [
+    "El H2 es la molécula diatómica más pequeña; no tóxica y de fácil acceso, con efectos preventivos y terapéuticos en sistemas respiratorio, cardiovascular y nervioso central.",
+    "Propone que el efecto protector del H2 depende principalmente de su capacidad para penetrar la célula y regular la homeostasis mitocondrial activando la vía Keap1-Nrf2, más que del barrido directo de radicales libres.",
+    "Las mitocondrias son la principal fuente y diana de las especies reactivas de oxígeno, lo que ubica al H2 como nutriente dirigido a la mitocondria."
+   ],
+   "pdf": "estudios/extra/cheng-2023-hidrogeno-mitocondria-keap1-nrf2.pdf",
+   "doi": "10.3390/antiox12122062",
+   "note": "Respalda hidrógeno molecular (H2 Tablets / drinkHRW) y mitocondrias. Verificado contra el PDF original.",
+   "titulo_es": "Hidrógeno: una estrella emergente de la medicina de gases como nutriente dirigido a la mitocondria mediante la activación del sistema antioxidante Keap1-Nrf2",
+   "temas": [
+    "agua-h2",
+    "mitocondria",
+    "antioxidantes"
+   ]
+  },
+  {
+   "id": "extra-zhang-2023-mitocondria-hidrogeno-molecular-funciones",
+   "brand": "drinkhrw",
+   "type": "revision",
+   "portada": "img/papers/zhang-2023-mitocondria-hidrogeno-molecular-funciones.jpg",
+   "title": "Mitochondria: one of the vital hubs for molecular hydrogen's biological functions",
+   "cite": "Zhang, Xie, Ma et al. · Frontiers in Cell and Developmental Biology · 2023",
+   "n": "Revisión (evidencia experimental en animales, plantas y microorganismos)",
+   "loc": "Beijing University of Technology / Beijing Molecular Hydrogen Research Center, China",
+   "dur": "—",
+   "method": "Revisión que sintetiza la evidencia experimental sobre el impacto del hidrógeno molecular (H2) en la función mitocondrial y las vías mitocondriales que subyacen a sus efectos biológicos, ademas del metabolismo del H2 en organismos eucariotas.",
+   "results": [
+    "Documenta efectos biológicos diversos del H2 en animales, plantas y microorganismos; >2000 estudios y >100 ensayos clínicos en 15 años.",
+    "Identifica la mitocondria (producción de ATP, señalización de Ca2+, regulación de ROS, apoptosis) como hub central de las funciones del H2, incluyendo el complejo I.",
+    "Propone que el H2 puede regular el control de calidad mitocondrial según el grado de daño, y plantea posible actividad hidrogenasa en mitocondrias de plantas y animales superiores."
+   ],
+   "pdf": "estudios/extra/zhang-2023-mitocondria-hidrogeno-molecular-funciones.pdf",
+   "doi": "10.3389/fcell.2023.1283820",
+   "note": "Respalda hidrógeno molecular (H2 Tablets / drinkHRW) y su acción mitocondrial. Verificado contra el PDF original.",
+   "titulo_es": "Mitocondrias: uno de los centros vitales de las funciones biológicas del hidrógeno molecular",
+   "temas": [
+    "agua-h2",
+    "mitocondria"
+   ]
+  },
+  {
+   "id": "extra-oschman-2015-grounding-inflamacion-cicatrizacion-revision",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/oschman-2015-grounding-inflamacion-cicatrizacion-revision.jpg",
+   "title": "The effects of grounding (earthing) on inflammation, the immune response, wound healing, and prevention and treatment of chronic inflammatory and autoimmune diseases",
+   "cite": "Oschman, Chevalier & Brown · Journal of Inflammation Research · 2015",
+   "n": "Revisión/hipótesis (integra estudios piloto y 20 casos con imagen infrarroja)",
+   "loc": "Nature's Own Research Association, EE.UU. / University of California Irvine / University of Oregon",
+   "dur": "—",
+   "method": "Artículo de hipótesis y revisión que integra estudios multidisciplinarios sobre el contacto eléctricamente conductivo del cuerpo con la Tierra (grounding) y sus efectos sobre inflamación, respuesta inmune y cicatrización; usa el modelo de dolor muscular de aparición tardía (DOMS).",
+   "results": [
+    "El grounding produce diferencias medibles en concentraciones de glóbulos blancos, citoquinas y otras moléculas de la respuesta inflamatoria.",
+    "Reduce o previene los signos cardinales de inflamación tras lesión y acelera la cicatrización (documentado con imagen infrarroja en 20 casos).",
+    "Hipótesis: los electrones de la Tierra crean un microambiente antioxidante alrededor del campo de reparación, limitando el daño por ROS y la inflamación 'silenciosa'."
+   ],
+   "pdf": "estudios/extra/oschman-2015-grounding-inflamacion-cicatrizacion-revision.pdf",
+   "doi": "10.2147/JIR.S69656",
+   "note": "Respalda bioelectricidad / rol de electrones y antioxidantes en inflamación y cicatrización. Verificado contra el PDF original.",
+   "titulo_es": "Los efectos del grounding (earthing) sobre la inflamación, la respuesta inmune, la cicatrización y la prevención y el tratamiento de enfermedades inflamatorias crónicas y autoinmunes",
+   "temas": [
+    "campos-em",
+    "dolor",
+    "antioxidantes"
+   ]
+  },
+  {
+   "id": "extra-waisberg-2024-luz-nir-roja-mitocondria-sans",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/waisberg-2024-luz-nir-roja-mitocondria-sans.jpg",
+   "title": "Near infrared/red light therapy a potential countermeasure for mitochondrial dysfunction in spaceflight associated neuro-ocular syndrome (SANS)",
+   "cite": "Waisberg, Ong, Masalkhi & Lee · Eye (Nature) · 2024",
+   "n": "Artículo de perspectiva/comentario",
+   "loc": "University of Cambridge, Reino Unido / University of Michigan / University College Dublin / Houston Methodist, EE.UU.",
+   "dur": "—",
+   "method": "Comentario científico que propone la terapia de luz roja / infrarrojo cercano (NIR) como contramedida no invasiva para la disfunción mitocondrial y el estrés oxidativo asociados al síndrome neuro-ocular del vuelo espacial (SANS).",
+   "results": [
+    "El vuelo espacial prolongado induce estrés y disfunción mitocondrial (evidenciado por análisis multi-ómicos), implicado en el SANS.",
+    "Las mitocondrias generan y reciben ROS; su deterioro contribuye al estrés oxidativo ocular; los fotorreceptores y axones de células ganglionares retinianas son ricos en mitocondrias.",
+    "La luz roja/NIR es absorbida por la mitocondria y se plantea como contramedida sin efectos secundarios para mejorar su función."
+   ],
+   "pdf": "estudios/extra/waisberg-2024-luz-nir-roja-mitocondria-sans.pdf",
+   "doi": "10.1038/s41433-024-03091-4",
+   "note": "Respalda fotobiomodulación / luz roja-infrarroja y mitocondrias (fototerapia). Verificado contra el PDF original.",
+   "titulo_es": "La terapia con luz roja/infrarroja cercana como posible contramedida para la disfunción mitocondrial en el síndrome neuro-ocular asociado a los vuelos espaciales (SANS)",
+   "temas": [
+    "luz",
+    "mitocondria"
+   ]
+  },
+  {
+   "id": "extra-becker-1972-estimulacion-electrica-regeneracion-extremidades-mamiferos",
+   "brand": "all",
+   "type": "animal",
+   "portada": "img/papers/becker-1972-estimulacion-electrica-regeneracion-extremidades-mamiferos.jpg",
+   "title": "Electrical Stimulation of Partial Limb Regeneration in Mammals",
+   "cite": "Becker & Spadaro · Bulletin of the New York Academy of Medicine · 1972",
+   "n": "Modelo experimental en mamíferos (ratas)",
+   "loc": "Veterans Administration Hospital / SUNY Upstate Medical Center, Syracuse, EE.UU.",
+   "dur": "—",
+   "method": "Estudio experimental de bioelectricidad: aplicación de corriente eléctrica continua de baja intensidad en muñones de amputación de extremidades de mamíferos para inducir respuestas regenerativas tipo blastema, comparado con la regeneración completa de anfibios.",
+   "results": [
+    "La estimulación eléctrica indujo respuestas regenerativas parciales (formación de blastema y crecimiento de tejidos) en extremidades amputadas de mamíferos, normalmente incapaces de regenerar.",
+    "Establece la relación entre el estado bioeléctrico de las células y la dirección del crecimiento/regeneración tisular.",
+    "Sustenta que las corrientes eléctricas endógenas y aplicadas controlan procesos de reparación y regeneración."
+   ],
+   "pdf": "estudios/extra/becker-1972-estimulacion-electrica-regeneracion-extremidades-mamiferos.pdf",
+   "doi": "PMC1806700",
+   "note": "Respalda bioelectricidad y regeneración por estimulación eléctrica (base conceptual de terapias de campo/PEMF). Verificado contra el PDF original.",
+   "titulo_es": "Estimulación eléctrica de la regeneración parcial de extremidades en mamíferos",
+   "temas": [
+    "campos-em",
+    "dolor"
+   ]
+  },
+  {
+   "id": "extra-chevalier-2014-grounding-flujo-sanguineo-facial-rct",
+   "brand": "all",
+   "type": "rct",
+   "portada": "img/papers/chevalier-2014-grounding-flujo-sanguineo-facial-rct.jpg",
+   "title": "Grounding the Human Body Improves Facial Blood Flow Regulation: Results of a Randomized, Placebo Controlled Pilot Study",
+   "cite": "Chevalier · Journal of Cosmetics, Dermatological Sciences and Applications · 2014",
+   "n": "40 sujetos (27 grounded, 13 sham-grounded como control)",
+   "loc": "Developmental and Cell Biology Department, University of California at Irvine, EE.UU.",
+   "dur": "Sesión de al menos 1 hora",
+   "method": "Estudio piloto doble ciego, aleatorizado y controlado con placebo: sujetos conectados a tierra (o sham) durante al menos 1 h en un sillón con manta, almohada y parches conductivos conectados a la toma de tierra. Flujo sanguíneo facial registrado de forma no invasiva con cámara de imagen de contraste de speckle láser (LSCI).",
+   "results": [
+    "La regulación del flujo sanguíneo facial mejoró claramente en los sujetos conectados a tierra, pero no en los sham-grounded.",
+    "Sugiere que el grounding mejora la circulación periférica/facial, relevante para perfusión y regeneración tisular.",
+    "Refuerza los efectos fisiológicos del contacto conductivo con la carga negativa de la Tierra observados en otros estudios de earthing."
+   ],
+   "pdf": "estudios/extra/chevalier-2014-grounding-flujo-sanguineo-facial-rct.pdf",
+   "doi": "10.4236/jcdsa.2014.45039",
+   "note": "RCT piloto que respalda bioelectricidad/grounding y circulación. Verificado contra el PDF original.",
+   "titulo_es": "El grounding del cuerpo humano mejora la regulación del flujo sanguíneo facial: estudio piloto aleatorizado controlado con placebo",
+   "temas": [
+    "campos-em"
+   ]
+  },
+  {
+   "id": "extra-zadro-2022-reiki-mental-health",
+   "brand": "all",
+   "type": "meta",
+   "portada": "img/papers/zadro-2022-reiki-mental-health.jpg",
+   "title": "Does Reiki Benefit Mental Health Symptoms Above Placebo?",
+   "cite": "Zadro S, Stapleton P · Frontiers in Psychology · 2022",
+   "n": "Revisión sistemática de 14 RCTs",
+   "loc": "Bond University, Australia",
+   "dur": "—",
+   "method": "Revisión sistemática (Cochrane ROB 2) de ensayos aleatorizados que comparan Reiki —una terapia de biocampo donde el terapeuta canaliza energía hacia el paciente— contra placebo en síntomas de salud mental.",
+   "results": [
+    "Reiki mostró un efecto terapéutico mayor que el placebo en varios síntomas de salud mental",
+    "Evidencia GRADE alta para estrés y depresión clínicamente relevantes; moderada-alta para ansiedad",
+    "Sin efectos adversos reportados"
+   ],
+   "pdf": "estudios/extra/zadro-2022-reiki-mental-health.pdf",
+   "doi": "10.3389/fpsyg.2022.897312",
+   "note": "Reiki como terapia de biocampo (energía sutil): evidencia de efecto sobre estrés, ansiedad y depresión por encima del placebo. Verificado contra el PDF original (CC-BY).",
+   "titulo_es": "¿El Reiki beneficia los síntomas de salud mental por encima del placebo?",
+   "temas": [
+    "biocampo"
+   ]
+  },
+  {
+   "id": "extra-tabatabaee-2016-therapeutic-touch-cancer",
+   "brand": "all",
+   "type": "rct",
+   "portada": "img/papers/tabatabaee-2016-therapeutic-touch-cancer.jpg",
+   "title": "Effect of Therapeutic Touch on Pain Related Parameters in Patients with Cancer: A Randomized Clinical Trial",
+   "cite": "Tabatabaee A, et al · Mater Sociomed · 2016",
+   "n": "Ensayo clínico aleatorizado, 3 grupos",
+   "loc": "Shahid Beheshti University, Irán",
+   "dur": "—",
+   "method": "Ensayo aleatorizado que evalúa el Toque Terapéutico (Therapeutic Touch, terapia de biocampo) frente a control en parámetros de dolor de pacientes oncológicos.",
+   "results": [
+    "El Toque Terapéutico mejoró significativamente los parámetros de dolor (actividad, ánimo, caminar, relaciones, sueño)",
+    "Diferencia significativa entre grupos al final de las sesiones (p=0.001)",
+    "Se sugiere como método complementario para el manejo del dolor"
+   ],
+   "pdf": "estudios/extra/tabatabaee-2016-therapeutic-touch-cancer.pdf",
+   "doi": "10.5455/msm.2016.28.220-223",
+   "note": "Toque Terapéutico (biocampo): RCT con efecto real sobre el dolor en cáncer. Verificado contra el PDF original (CC-BY-NC).",
+   "titulo_es": "Efecto del Toque Terapéutico sobre los parámetros relacionados con el dolor en pacientes con cáncer: ensayo clínico aleatorizado",
+   "temas": [
+    "biocampo",
+    "dolor"
+   ]
+  },
+  {
+   "id": "extra-valenti-2024-sound-matrix-mitochondria",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/valenti-2024-sound-matrix-mitochondria.jpg",
+   "title": "Sound Matrix Shaping of Living Matter: From Macrosystems to Cell Microenvironment, Where Mitochondria Act as Energy Portals in Detecting and Processing Sound Vibrations",
+   "cite": "Valenti D, Atlante A · Int. J. Molecular Sciences · 2024",
+   "n": "Revisión",
+   "loc": "IBIOM-CNR, Italia",
+   "dur": "—",
+   "method": "Revisión de la evidencia sobre cómo la vibración y el sonido modulan la función biológica, con foco en la mitocondria como organelo que detecta y procesa las vibraciones sonoras.",
+   "results": [
+    "Cada célula vibra a frecuencias definidas, generando una 'firma sonora' propia",
+    "Las mitocondrias actúan como portales de energía que transducen información biológica del sonido",
+    "La función mitocondrial puede modularse mediante vibración/sonido"
+   ],
+   "pdf": "estudios/extra/valenti-2024-sound-matrix-mitochondria.pdf",
+   "doi": "10.3390/ijms25136841",
+   "note": "Sonido y vibración como matriz de la materia viva, vía mitocondria: base del paradigma de resonancia/sonido. Verificado contra el PDF original (CC-BY).",
+   "titulo_es": "La matriz del sonido modela la materia viva: de los macrosistemas al microambiente celular, donde las mitocondrias actúan como portales de energía al detectar y procesar las vibraciones sonoras",
+   "temas": [
+    "biocampo",
+    "mitocondria"
+   ]
+  },
+  {
+   "id": "extra-toppi-2016-eeg-hyperscanning-cooperation",
+   "brand": "all",
+   "type": "piloto",
+   "portada": "img/papers/toppi-2016-eeg-hyperscanning-cooperation.jpg",
+   "title": "Investigating Cooperative Behavior in Ecological Settings: An EEG Hyperscanning Study",
+   "cite": "Toppi J, et al · PLOS One · 2016",
+   "n": "Pares de pilotos (hyperscanning EEG)",
+   "loc": "Sapienza Università di Roma, Italia",
+   "dur": "—",
+   "method": "Hyperscanning EEG de pares de pilotos durante un vuelo simulado, midiendo la conectividad inter-cerebral (cerebro a cerebro) según el grado de cooperación de cada fase.",
+   "results": [
+    "En las fases más cooperativas aparecieron patrones densos de conectividad entre cerebros (áreas frontales y parietales)",
+    "En las fases no cooperativas la conectividad inter-cerebral cayó casi a cero",
+    "La sincronización cerebro-a-cerebro es un indicador medible del grado de cooperación humana"
+   ],
+   "pdf": "estudios/extra/toppi-2016-eeg-hyperscanning-cooperation.pdf",
+   "doi": "10.1371/journal.pone.0154236",
+   "note": "Sincronización entre cerebros (consciencia/conexión): cuando las personas cooperan, sus cerebros se conectan medible­mente. Verificado contra el PDF original (CC-BY).",
+   "titulo_es": "Investigación del comportamiento cooperativo en entornos ecológicos: un estudio de hiperescaneo por EEG",
+   "temas": [
+    "biocampo",
+    "neuro"
+   ]
+  },
+  {
+   "id": "extra-dedic-2021-hyaluronan-orders-water",
+   "brand": "analemma",
+   "type": "vitro",
+   "portada": "img/papers/dedic-2021-hyaluronan-orders-water.jpg",
+   "title": "Hyaluronan Orders Water Molecules in its Nanoscale Extended Hydration Shells",
+   "cite": "Dedic J, Okur HI, Roke S · Science Advances · 2021",
+   "n": "Mediciones biofísicas (dispersión de segundo armónico, fs-ESHS)",
+   "loc": "EPFL, Suiza (Lab. de Biofotónica Fundamental)",
+   "dur": "—",
+   "method": "Mediante dispersión elástica de segundo armónico con pulsos de femtosegundos (fs-ESHS) y modelado óptico no lineal, midieron cómo el ácido hialurónico —un biopolímero abundante en la matriz extracelular y el líquido sinovial de las articulaciones— organiza el agua a su alrededor.",
+   "results": [
+    "El hialurónico ordena el agua en capas de hidratación extendidas, aumentando las correlaciones de orientación agua-agua mucho más allá de su superficie",
+    "Esa capa de agua ordenada se extiende hasta ~475 nm, equivalente a unas 1600 moléculas de agua alineadas",
+    "Aparece un fuerte efecto isotópico (×4,3 al cambiar H2O por D2O) atribuible a efectos cuánticos nucleares: el agua biológica no es un solvente pasivo, sino estructura"
+   ],
+   "pdf": "estudios/extra/dedic-2021-hyaluronan-orders-water.pdf",
+   "doi": "10.1126/sciadv.abf2558",
+   "note": "Agua estructurada alrededor de biomoléculas: respalda que el agua del cuerpo se organiza en capas ordenadas (relevante para Analemma / agua coherente). Verificado contra el PDF original (Science Advances, CC-BY).",
+   "titulo_es": "El hialuronano ordena las moléculas de agua en sus capas de hidratación extendidas a nanoescala",
+   "temas": [
+    "agua-h2",
+    "fascia"
+   ]
+  },
+  {
+   "id": "extra-cosic-2016-luz-resonancias-em-biomoleculas",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/cosic-2016-luz-resonancias-em-biomoleculas.jpg",
+   "title": "Environmental Light and Its Relationship with Electromagnetic Resonances of Biomolecular Interactions, as Predicted by the Resonant Recognition Model",
+   "cite": "Cosic I, Cosic D, Lazar K · Int. J. Environmental Research and Public Health · 2016",
+   "n": "Análisis computacional (Resonant Recognition Model)",
+   "loc": "RMIT University, Australia",
+   "dur": "—",
+   "method": "Aplican el Modelo de Reconocimiento Resonante (RRM) —que propone que las interacciones entre biomoléculas se basan en resonancias electromagnéticas a frecuencias específicas en el infrarrojo, visible y ultravioleta— para analizar la relación entre la luz ambiental y las funciones biológicas de proteínas y ADN.",
+   "results": [
+    "Las interacciones biológicas se agrupan por su frecuencia de resonancia en 'superfamilias' funcionales",
+    "El espectro RRM de las funciones analizadas cae dentro de los rangos infrarrojo, visible y ultravioleta: las mismas frecuencias de la luz ambiental",
+    "Sugiere que la luz (incluida la solar) puede activar resonantemente actividades biológicas específicas de proteínas y ADN"
+   ],
+   "pdf": "estudios/extra/cosic-2016-luz-resonancias-em-biomoleculas.pdf",
+   "doi": "10.3390/ijerph13070647",
+   "note": "Resonancias electromagnéticas de biomoléculas y su relación con la luz: marco teórico (RRM) que conecta campos EM/luz con la actividad de proteínas y ADN. Verificado contra el PDF original (IJERPH, MDPI, CC-BY).",
+   "titulo_es": "La luz ambiental y su relación con las resonancias electromagnéticas de las interacciones biomoleculares, según el Modelo de Reconocimiento Resonante",
+   "temas": [
+    "campos-em",
+    "luz",
+    "quantum"
+   ]
+  },
+  {
+   "id": "extra-schwartz-2010-integrinas-matriz-mecanotransduccion",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/schwartz-2010-integrinas-matriz-mecanotransduccion.jpg",
+   "title": "Integrins and Extracellular Matrix in Mechanotransduction",
+   "cite": "Schwartz MA · Cold Spring Harbor Perspectives in Biology · 2010",
+   "n": "Revisión",
+   "loc": "University of Virginia, EE. UU.",
+   "dur": "—",
+   "method": "Revisión sobre cómo las integrinas conectan mecánicamente la matriz extracelular con el citoesqueleto de actina, y cómo las fuerzas físicas que atraviesan esas adhesiones se transducen en señales bioquímicas (mecanotransducción).",
+   "results": [
+    "Las integrinas unen las fibrillas de la matriz extracelular con los filamentos de actina, transmitiendo fuerzas entre el interior y el exterior de la célula",
+    "Esas fuerzas mecánicas activan vías de señalización y programas génicos que controlan la supervivencia, el destino y el comportamiento celular",
+    "Las células 'sienten' las propiedades físicas de su entorno (rigidez, tensión) a través de las adhesiones mediadas por integrinas"
+   ],
+   "pdf": "estudios/extra/schwartz-2010-integrinas-matriz-mecanotransduccion.pdf",
+   "doi": "10.1101/cshperspect.a005066",
+   "note": "Mecanotransducción: cómo el tejido conectivo/matriz convierte fuerzas físicas en señales celulares. Base para entender por qué los estímulos físicos (incluidos campos y vibración) influyen en la biología celular. Verificado contra el PDF (PMC, acceso abierto).",
+   "titulo_es": "Integrinas y matriz extracelular en la mecanotransducción",
+   "temas": [
+    "fascia"
+   ]
+  },
+  {
+   "id": "extra-fischer-2018-mitocondria-puntos-gatillo-miofasciales",
+   "brand": "all",
+   "type": "piloto",
+   "portada": "img/papers/fischer-2018-mitocondria-puntos-gatillo-miofasciales.jpg",
+   "title": "Evaluation of Mitochondrial Function in Chronic Myofascial Trigger Points — A Prospective Cohort Pilot Study Using High-Resolution Respirometry",
+   "cite": "Fischer MJ, Horvath G, Krismer M, et al · BMC Musculoskeletal Disorders · 2018",
+   "n": "20 hombres sanos (10 con dolor miofascial en trapecio, 10 en glúteo medio)",
+   "loc": "Medical University of Innsbruck, Austria",
+   "dur": "—",
+   "method": "Estudio piloto que estableció una técnica de biopsia mínimamente invasiva para obtener muestras de puntos gatillo miofasciales (zonas hiperirritables de la fascia del músculo) y evaluar su función mitocondrial mediante respirometría de alta resolución, comparándolas con músculo control.",
+   "results": [
+    "Establecieron una técnica de biopsia mínimamente invasiva, factible y segura, para muestrear puntos gatillo y medir su función mitocondrial por respirometría de alta resolución",
+    "Se observaron diferencias en la respiración mitocondrial entre los puntos gatillo y el músculo control (resultados preliminares de un estudio piloto)",
+    "Los puntos gatillo miofasciales podrían relacionarse con alteración mitocondrial y zonas hipóxicas dentro del músculo"
+   ],
+   "pdf": "estudios/extra/fischer-2018-mitocondria-puntos-gatillo-miofasciales.pdf",
+   "doi": "10.1186/s12891-018-2307-0",
+   "note": "Mitocondria y dolor miofascial: conecta la disfunción energética celular con los puntos gatillo de la fascia. Verificado contra el PDF original (BMC, CC-BY).",
+   "titulo_es": "Evaluación de la función mitocondrial en puntos gatillo miofasciales crónicos — estudio piloto de cohorte prospectivo con respirometría de alta resolución",
+   "temas": [
+    "fascia",
+    "mitocondria",
+    "dolor"
+   ]
+  },
+  {
+   "id": "extra-vodyanoy-2015-sistema-primo-vascular-bong-han-kim",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/vodyanoy-2015-sistema-primo-vascular-bong-han-kim.jpg",
+   "title": "Primo-Vascular System as Presented by Bong Han Kim",
+   "cite": "Vodyanoy V, Pustovyy O, Globa L, Sorokulova I · Evidence-Based Complementary and Alternative Medicine · 2015",
+   "n": "Revisión histórico-científica",
+   "loc": "Auburn University, EE. UU.",
+   "dur": "—",
+   "method": "Revisión que recupera y reexamina, con criterio científico moderno, los trabajos de Bong Han Kim (años 1960) sobre el 'sistema primo-vascular': una red de nódulos y vasos distinta de la sangre y la linfa, que él asoció a la regeneración tisular y a los meridianos de acupuntura.",
+   "results": [
+    "Kim describió un sistema de nódulos y vasos diferenciable de los sistemas vascular sanguíneo y linfático, que relacionó con la regeneración de tejidos",
+    "Reconstruyen las técnicas de tinción que Kim usó (no divulgadas en su momento), lo que había dificultado la replicación moderna",
+    "Aporta una posible base anatómica para los meridianos de la medicina tradicional china / biocampo, hoy objeto de re-estudio"
+   ],
+   "pdf": "estudios/extra/vodyanoy-2015-sistema-primo-vascular-bong-han-kim.pdf",
+   "doi": "10.1155/2015/361974",
+   "note": "Sistema primo-vascular / meridianos: revisión de la evidencia anatómica clásica detrás del biocampo y la acupuntura. Verificado contra el PDF original (eCAM, Hindawi, CC-BY).",
+   "titulo_es": "El sistema primo-vascular según lo presentó Bong Han Kim",
+   "temas": [
+    "biocampo",
+    "fascia"
+   ]
+  },
+  {
+   "id": "extra-hoyle-2017-actina-circadiana-cicatrizacion",
+   "brand": "all",
+   "type": "animal",
+   "portada": "img/papers/hoyle-2017-actina-circadiana-cicatrizacion.jpg",
+   "title": "Circadian Actin Dynamics Drive Rhythmic Fibroblast Mobilisation During Wound Healing",
+   "cite": "Hoyle NP, Seinkmane E, Putker M, et al · Science Translational Medicine · 2017",
+   "n": "Fibroblastos en cultivo y heridas cutáneas en ratón",
+   "loc": "MRC Laboratory of Molecular Biology, Cambridge, Reino Unido",
+   "dur": "—",
+   "method": "Mediante un cribado proteómico de proteínas de expresión rítmica, estudiaron cómo el reloj circadiano propio de los fibroblastos regula la dinámica de la actina y, con ello, la migración celular y la cicatrización de heridas, en cultivo y en ratones.",
+   "results": [
+    "El reloj interno del fibroblasto impone un ritmo de ~24 h a la dinámica de la actina, modulando la migración y la adhesión celular",
+    "Las heridas producidas durante la fase activa del ratón cicatrizan mejor (mayor invasión de fibroblastos) que las de la fase de reposo",
+    "La eficacia de la cicatrización depende de la hora del día: el tiempo biológico regula la reparación del tejido conectivo"
+   ],
+   "pdf": "estudios/extra/hoyle-2017-actina-circadiana-cicatrizacion.pdf",
+   "doi": "10.1126/scitranslmed.aal2774",
+   "note": "Ritmos circadianos y cicatrización: el reloj celular del fibroblasto regula la reparación del tejido conectivo. Respalda el peso de los ritmos biológicos (luz/día-noche) en la regeneración. Verificado contra el PDF (manuscrito de autor en PMC).",
+   "titulo_es": "La dinámica circadiana de la actina impulsa la movilización rítmica de los fibroblastos durante la cicatrización",
+   "temas": [
+    "fascia",
+    "dolor"
+   ]
+  },
+  {
+   "id": "extra-alvarez-lorenzo-2023-piezoelectricidad-regeneracion-tejidos",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/alvarez-lorenzo-2023-piezoelectricidad-regeneracion-tejidos.jpg",
+   "title": "Physical Stimuli-Emitting Scaffolds: The Role of Piezoelectricity in Tissue Regeneration",
+   "cite": "Alvarez-Lorenzo C, Zarur M, Seijo-Rabina A, et al · Materials Today Bio · 2023",
+   "n": "Revisión",
+   "loc": "Universidade de Santiago de Compostela, España",
+   "dur": "—",
+   "method": "Revisión sobre el uso de materiales piezoeléctricos —que generan cargas y campos eléctricos al deformarse— como andamios para medicina regenerativa: cómo la 'piezoestimulación' aporta señales eléctricas a las células para reparar hueso, cartílago y heridas.",
+   "results": [
+    "Los materiales piezoeléctricos convierten estímulos mecánicos (presión, ultrasonido, movimiento) en señales eléctricas locales que activan la regeneración celular",
+    "Esa estimulación eléctrica favorece la reparación de hueso, cartílago y heridas crónicas sin fuentes externas de corriente",
+    "Confirma que las señales eléctricas son un regulador central de la regeneración de tejidos (el mismo principio bioeléctrico que aprovecha PEMF)"
+   ],
+   "pdf": "estudios/extra/alvarez-lorenzo-2023-piezoelectricidad-regeneracion-tejidos.pdf",
+   "doi": "10.1016/j.mtbio.2023.100740",
+   "note": "Piezoelectricidad y regeneración: la estimulación eléctrica local repara hueso, cartílago y heridas. Base del principio bioeléctrico detrás de PEMF. Verificado contra el PDF original (Materials Today Bio, CC-BY-NC-ND).",
+   "titulo_es": "Andamios emisores de estímulos físicos: el papel de la piezoelectricidad en la regeneración de tejidos",
+   "temas": [
+    "campos-em",
+    "dolor"
+   ]
+  },
+  {
+   "id": "extra-demine-2019-desacople-mitocondrial",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/demine-2019-desacople-mitocondrial.jpg",
+   "title": "Mitochondrial Uncoupling: A Key Controller of Biological Processes in Physiology and Diseases",
+   "cite": "Demine S, Renard P, Arnould T · Cells · 2019",
+   "n": "Revisión",
+   "loc": "University of Namur / ULB, Bélgica",
+   "dur": "—",
+   "method": "Revisión sobre el 'desacople mitocondrial': la disociación entre el potencial de membrana de la mitocondria y su uso para producir ATP. Analiza las proteínas y compuestos que lo regulan y su papel fisiológico.",
+   "results": [
+    "El desacople mitocondrial, antes visto como disfunción, es en realidad un proceso fisiológico regulado (p. ej. por las proteínas UCP)",
+    "Participa en la termogénesis (producción de calor), el control de los radicales libres (ROS) y la protección celular",
+    "Modular el desacople mitocondrial abre vías terapéuticas en obesidad, enfermedades metabólicas y neurodegenerativas"
+   ],
+   "pdf": "estudios/extra/demine-2019-desacople-mitocondrial.pdf",
+   "doi": "10.3390/cells8080795",
+   "note": "Función mitocondrial: el desacople controlado regula energía, calor y radicales libres. Contexto para entender cómo se modula la salud mitocondrial. Verificado contra el PDF original (Cells, MDPI, CC-BY).",
+   "titulo_es": "Desacople mitocondrial: un controlador clave de los procesos biológicos en la fisiología y las enfermedades",
+   "temas": [
+    "mitocondria"
+   ]
+  },
+  {
+   "id": "extra-clemente-suarez-2023-transferencia-mitocondrial",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/clemente-suarez-2023-transferencia-mitocondrial.jpg",
+   "title": "Mitochondrial Transfer as a Novel Therapeutic Approach in Disease Diagnosis and Treatment",
+   "cite": "Clemente-Suárez VJ, Martín-Rodríguez A, Yáñez-Sepúlveda R, Tornero-Aguilera JF · Int. J. Molecular Sciences · 2023",
+   "n": "Revisión",
+   "loc": "Universidad Europea de Madrid, España",
+   "dur": "—",
+   "method": "Revisión sobre la 'transferencia mitocondrial': el traspaso de mitocondrias sanas entre células (por ejemplo, vía nanotubos de túnel) y su potencial como herramienta terapéutica y diagnóstica.",
+   "results": [
+    "Las células pueden transferirse mitocondrias entre sí, rescatando a las que tienen mitocondrias dañadas",
+    "La disfunción mitocondrial es un denominador común de numerosas enfermedades (neurodegenerativas, metabólicas, cáncer)",
+    "La transferencia mitocondrial emerge como estrategia para restaurar la energía celular en tejidos dañados"
+   ],
+   "pdf": "estudios/extra/clemente-suarez-2023-transferencia-mitocondrial.pdf",
+   "doi": "10.3390/ijms24108848",
+   "note": "Transferencia de mitocondrias entre células como terapia regenerativa. Refuerza el papel central de la energía mitocondrial en la salud. Verificado contra el PDF original (IJMS, MDPI, CC-BY).",
+   "titulo_es": "La transferencia mitocondrial como nuevo enfoque terapéutico en el diagnóstico y tratamiento de enfermedades",
+   "temas": [
+    "mitocondria",
+    "dolor"
+   ]
+  },
+  {
+   "id": "extra-chung-2017-biogenesis-mitocondrial-ejercicio-frio",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/chung-2017-biogenesis-mitocondrial-ejercicio-frio.jpg",
+   "title": "The Effects of Exercise and Cold Exposure on Mitochondrial Biogenesis in Skeletal Muscle and White Adipose Tissue",
+   "cite": "Chung J, Park J, Lim K · J Exerc Nutr Biochem · 2017",
+   "n": "Revisión",
+   "loc": "Hallym University, Corea del Sur",
+   "dur": "—",
+   "method": "Revisión de cómo dos estímulos ambientales (ejercicio y exposición al frío) aumentan la demanda energética celular y disparan la biogénesis mitocondrial, con foco en la vía del coactivador PGC-1α en músculo esquelético y tejido adiposo blanco.",
+   "results": [
+    "El ejercicio y el frío elevan la expresión de PGC-1α, el regulador maestro de la creación de nuevas mitocondrias",
+    "Ambos estímulos pueden inducir el pardeamiento (browning) del tejido adiposo blanco, aumentando su capacidad de quemar energía",
+    "Plantea estos estímulos no farmacológicos como estrategia para mejorar la función mitocondrial"
+   ],
+   "note": "Base para entender cómo estímulos físicos no invasivos mejoran la salud mitocondrial. Verificado contra el PDF original (J Exerc Nutr Biochem, acceso abierto).",
+   "pdf": "estudios/extra/chung-2017-biogenesis-mitocondrial-ejercicio-frio.pdf",
+   "doi": "10.20463/jenb.2017.0020",
+   "titulo_es": "Los efectos del ejercicio y la exposición al frío sobre la biogénesis mitocondrial en el músculo esquelético y el tejido adiposo blanco",
+   "temas": [
+    "mitocondria"
+   ]
+  },
+  {
+   "id": "extra-liu-2021-transferencia-mitocondrial-revitalizacion-tejidos",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/liu-2021-transferencia-mitocondrial-revitalizacion-tejidos.jpg",
+   "title": "Intercellular Mitochondrial Transfer as a Means of Tissue Revitalization",
+   "cite": "Liu D, Gao Y, et al · Signal Transduction and Targeted Therapy · 2021",
+   "n": "Revisión",
+   "loc": "Shanghai Jiao Tong University, China / University of Western Australia",
+   "dur": "—",
+   "method": "Revisión del fenómeno de transferencia de mitocondrias de una célula a otra, describiendo sus mecanismos (nanotúbulos, vesículas) y su papel en condiciones fisiológicas y en la reparación de tejidos dañados.",
+   "results": [
+    "Las células pueden transferir mitocondrias entre sí para rescatar a células estresadas o con mitocondrias dañadas",
+    "La transferencia mitocondrial ocurre también en condiciones fisiológicas normales, no solo ante daño",
+    "Se perfila como base de estrategias para revitalizar tejidos mediante el aporte de mitocondrias sanas"
+   ],
+   "note": "Documenta la mitocondria como unidad transferible y reparadora, clave para la regeneración tisular a nivel energético. Verificado contra el PDF original (Signal Transduction and Targeted Therapy, Springer Nature, acceso abierto).",
+   "pdf": "estudios/extra/liu-2021-transferencia-mitocondrial-revitalizacion-tejidos.pdf",
+   "doi": "10.1038/s41392-020-00440-z",
+   "titulo_es": "La transferencia mitocondrial intercelular como medio de revitalización tisular",
+   "temas": [
+    "mitocondria",
+    "dolor"
+   ]
+  },
+  {
+   "id": "extra-marie-2018-espectro-luz-estres-oxidativo-mitocondria-rpe",
+   "brand": "all",
+   "type": "vitro",
+   "portada": "img/papers/marie-2018-espectro-luz-estres-oxidativo-mitocondria-rpe.jpg",
+   "title": "Light Action Spectrum on Oxidative Stress and Mitochondrial Damage in A2E-Loaded Retinal Pigment Epithelium Cells",
+   "cite": "Marie M, et al · Cell Death & Disease · 2018",
+   "n": "Estudio in vitro (células de epitelio pigmentario retiniano)",
+   "loc": "Institut de la Vision (Sorbonne), Francia",
+   "dur": "—",
+   "method": "Estudio in vitro que expuso células del epitelio pigmentario de la retina cargadas con el fotosensibilizador A2E a bandas estrechas de luz de distintas longitudes de onda, midiendo estrés oxidativo y daño mitocondrial.",
+   "results": [
+    "La luz azul-violeta generó altos niveles de especies reactivas de oxígeno",
+    "Provocó agrupamiento perinuclear de las mitocondrias con caída del potencial de membrana y de la respiración",
+    "Identificó una franja específica del espectro como la más tóxica para la mitocondria"
+   ],
+   "note": "Demuestra que la longitud de onda de la luz determina su impacto sobre la función mitocondrial, fundamento de la fotobiomodulación. Verificado contra el PDF original (Cell Death & Disease, Springer Nature, CC BY).",
+   "pdf": "estudios/extra/marie-2018-espectro-luz-estres-oxidativo-mitocondria-rpe.pdf",
+   "doi": "10.1038/s41419-018-0331-5",
+   "titulo_es": "Espectro de acción de la luz sobre el estrés oxidativo y el daño mitocondrial en células del epitelio pigmentario retiniano cargadas con A2E",
+   "temas": [
+    "luz",
+    "mitocondria",
+    "antioxidantes"
+   ]
+  },
+  {
+   "id": "extra-aguda-2023-nir-ros-citoquinas-spike",
+   "brand": "all",
+   "type": "vitro",
+   "portada": "img/papers/aguda-2023-nir-ros-citoquinas-spike.jpg",
+   "title": "Near-Infrared Light Exposure Triggers ROS to Downregulate Inflammatory Cytokines Induced by SARS-CoV-2 Spike Protein in Human Cell Culture",
+   "cite": "Aguida B, Chabi M-M, Baouz S, et al · Antioxidants · 2023",
+   "n": "Cultivos de células humanas (in vitro)",
+   "loc": "University of Westminster (RU) / Sorbonne Université (Francia)",
+   "dur": "—",
+   "method": "Cultivos celulares humanos expuestos a la proteína Spike del SARS-CoV-2 e irradiados con luz infrarroja cercana (NIR); se midió la producción de especies reactivas de oxígeno (ROS) y la liberación de citoquinas inflamatorias.",
+   "results": [
+    "La luz NIR generó un pulso transitorio y controlado de ROS dentro de la célula",
+    "Ese pulso redujo significativamente las citoquinas inflamatorias (incluida la IL-6) inducidas por la proteína Spike",
+    "Sugiere un mecanismo por el cual la luz NIR modula la respuesta inflamatoria a nivel celular"
+   ],
+   "note": "Fotobiomodulación con luz infrarroja cercana modulando la inflamación vía señalización redox mitocondrial. Verificado contra el PDF original (Antioxidants, MDPI, CC BY).",
+   "pdf": "estudios/extra/aguda-2023-nir-ros-citoquinas-spike.pdf",
+   "doi": "10.3390/antiox12101824",
+   "titulo_es": "La exposición a luz infrarroja cercana desencadena ROS que regulan a la baja las citoquinas inflamatorias inducidas por la proteína Spike del SARS-CoV-2 en cultivo de células humanas",
+   "temas": [
+    "luz",
+    "antioxidantes",
+    "mitocondria"
+   ]
+  },
+  {
+   "id": "extra-vanwijk-2013-emision-fotonica-artritis-raton",
+   "brand": "all",
+   "type": "animal",
+   "portada": "img/papers/vanwijk-2013-emision-fotonica-artritis-raton.jpg",
+   "title": "Imaging of Ultra-Weak Photon Emission in a Rheumatoid Arthritis Mouse Model",
+   "cite": "van Wijk E, Kobayashi M, van Wijk R, van der Greef J · PLOS ONE · 2013",
+   "n": "Modelo murino de artritis reumatoide",
+   "loc": "Leiden University, Países Bajos / Samueli Institute, EE. UU.",
+   "dur": "—",
+   "method": "Captura de imágenes de la emisión ultradébil de fotones (biofotones) de las patas de ratones con artritis reumatoide inducida, comparando miembros inflamados con controles sanos mediante cámara fotomultiplicadora.",
+   "results": [
+    "La emisión ultradébil de fotones fue significativamente mayor en las patas con artritis que en las sanas",
+    "La intensidad luminosa se correlacionó con el grado de inflamación y de estrés oxidativo del tejido",
+    "Valida la emisión de biofotones como ventana no invasiva al estado redox de un tejido vivo"
+   ],
+   "note": "Evidencia revisada por pares de que los tejidos vivos emiten luz ultradébil ligada al estado oxidativo (base del concepto de biofotones/biocampo). Verificado contra el PDF original (PLOS ONE, CC BY).",
+   "pdf": "estudios/extra/vanwijk-2013-emision-fotonica-artritis-raton.pdf",
+   "doi": "10.1371/journal.pone.0084579",
+   "titulo_es": "Imagenología de la emisión ultradébil de fotones en un modelo de artritis reumatoide en ratón",
+   "temas": [
+    "biocampo",
+    "luz"
+   ]
+  },
+  {
+   "id": "extra-vanwijk-2020-emision-fotonica-mitocondria-revision",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/vanwijk-2020-emision-fotonica-mitocondria-revision.jpg",
+   "title": "Integrating Ultra-Weak Photon Emission Analysis in Mitochondrial Research",
+   "cite": "Van Wijk R, Van Wijk EPA, Pang J, et al · Frontiers in Physiology · 2020",
+   "n": "Revisión",
+   "loc": "Meluna Research, Países Bajos / Shandong First Medical University, China",
+   "dur": "—",
+   "method": "Revisión que integra la evidencia sobre la emisión ultradébil de fotones (biofotones) y su origen en el metabolismo mitocondrial y el estrés oxidativo, proponiendo su uso como biomarcador no invasivo.",
+   "results": [
+    "La emisión ultradébil de fotones se origina en especies reactivas de oxígeno generadas mayormente en la mitocondria",
+    "La intensidad y el espectro de la emisión reflejan el estado energético y oxidativo de la célula",
+    "Plantea la medición de biofotones como herramienta para evaluar la función mitocondrial in vivo"
+   ],
+   "note": "Vincula explícitamente biofotones, mitocondria y estado redox; sustenta el marco de luz/biocampo. Verificado contra el PDF original (Frontiers in Physiology, CC BY).",
+   "pdf": "estudios/extra/vanwijk-2020-emision-fotonica-mitocondria-revision.pdf",
+   "doi": "10.3389/fphys.2020.00717",
+   "titulo_es": "Integración del análisis de la emisión ultradébil de fotones en la investigación mitocondrial",
+   "temas": [
+    "biocampo",
+    "luz",
+    "mitocondria"
+   ]
+  },
+  {
+   "id": "extra-wunsch-2014-luz-roja-nir-piel-colageno-rct",
+   "brand": "all",
+   "type": "rct",
+   "portada": "img/papers/wunsch-2014-luz-roja-nir-piel-colageno-rct.jpg",
+   "title": "A Controlled Trial to Determine the Efficacy of Red and Near-Infrared Light Treatment in Patient Satisfaction, Reduction of Fine Lines, Wrinkles, Skin Roughness, and Intradermal Collagen Density Increase",
+   "cite": "Wunsch A, Matuschka K · Photomedicine and Laser Surgery · 2014",
+   "n": "113 participantes (ensayo controlado)",
+   "loc": "Medical Light Consulting, Heidelberg, Alemania",
+   "dur": "30 sesiones",
+   "method": "Ensayo controlado: participantes tratados con fotobiomodulación policromática no térmica (luz roja y NIR) frente a grupo control. Se evaluó satisfacción, líneas finas, arrugas, rugosidad cutánea y densidad de colágeno intradérmico por ecografía.",
+   "results": [
+    "El grupo tratado mostró mejoras significativas en satisfacción, textura y aspecto de la piel",
+    "Aumentó de forma medible la densidad de colágeno intradérmico frente al control",
+    "La fotobiomodulación policromática de gran superficie resultó segura y eficaz"
+   ],
+   "note": "Ensayo controlado en humanos que muestra efecto regenerador de la luz roja/NIR (fotobiomodulación) sobre la piel y el colágeno. Verificado contra el PDF original (Photomedicine and Laser Surgery, acceso abierto vía PMC).",
+   "pdf": "estudios/extra/wunsch-2014-luz-roja-nir-piel-colageno-rct.pdf",
+   "doi": "10.1089/pho.2013.3616",
+   "titulo_es": "Ensayo controlado para determinar la eficacia del tratamiento con luz roja e infrarroja cercana en la satisfacción del paciente y el aumento de la densidad de colágeno intradérmico",
+   "temas": [
+    "luz"
+   ]
+  },
+  {
+   "id": "extra-mccraty-2017-geomagnetismo-sistema-nervioso-autonomo",
+   "brand": "all",
+   "type": "piloto",
+   "portada": "img/papers/mccraty-2017-geomagnetismo-sistema-nervioso-autonomo.jpg",
+   "title": "Synchronization of Human Autonomic Nervous System Rhythms with Geomagnetic Activity in Human Subjects",
+   "cite": "McCraty R, Atkinson M, Stolc V, et al · Int. J. Environmental Research and Public Health · 2017",
+   "n": "16 participantes monitorizados durante 5 meses (HRV continua)",
+   "loc": "HeartMath Institute (EE. UU.), NASA Ames, Prince Sultan Cardiac Center (Arabia Saudita), Univ. de Lituania",
+   "dur": "5 meses",
+   "method": "Estudio de campo: 16 personas usaron registro continuo de variabilidad de la frecuencia cardíaca (HRV) durante 5 meses, correlacionando los ritmos del sistema nervioso autónomo con índices de actividad geomagnética, viento solar y resonancias Schumann mediante análisis espectral.",
+   "results": [
+    "Se detectó acoplamiento entre la actividad geomagnética/solar y la función del sistema nervioso autónomo humano",
+    "Los ritmos de la HRV se sincronizaron con frecuencias del campo magnético terrestre y resonancias Schumann",
+    "Los efectos variaron entre individuos pero fueron consistentes en el grupo a lo largo del tiempo"
+   ],
+   "note": "Vincula los campos geomagnéticos terrestres con la regulación autonómica y la coherencia cardíaca humana, eje central del enfoque de campos electromagnéticos y biocampo. Verificado contra el PDF original (IJERPH, MDPI, CC BY).",
+   "pdf": "estudios/extra/mccraty-2017-geomagnetismo-sistema-nervioso-autonomo.pdf",
+   "doi": "10.3390/ijerph14070770",
+   "titulo_es": "Sincronización de los ritmos del sistema nervioso autónomo humano con la actividad geomagnética",
+   "temas": [
+    "campos-em",
+    "biocampo",
+    "sueno"
+   ]
+  },
+  {
+   "id": "extra-yau-2021-exposicion-frio-autofagia-grasa-parda",
+   "brand": "all",
+   "type": "animal",
+   "portada": "img/papers/yau-2021-exposicion-frio-autofagia-grasa-parda.jpg",
+   "title": "Chronic Cold Exposure Induces Autophagy to Promote Fatty Acid Oxidation, Mitochondrial Turnover, and Thermogenesis in Brown Adipose Tissue",
+   "cite": "Yau WW, Wong KA, Zhou J, et al · iScience (Cell Press) · 2021",
+   "n": "Modelo murino (tejido adiposo pardo)",
+   "loc": "Duke-NUS Medical School / National University of Singapore",
+   "dur": "Exposición crónica al frío",
+   "method": "Estudio en ratón: se sometió a los animales a exposición crónica al frío y se analizó la activación del tejido adiposo pardo, midiendo autofagia/mitofagia, oxidación de ácidos grasos, recambio mitocondrial y termogénesis.",
+   "results": [
+    "El frío crónico estimuló la beta-oxidación en la grasa parda para aumentar la termogénesis",
+    "Activó la mitofagia como control de calidad mitocondrial",
+    "La autofagia resultó crítica para sostener la función y la termogénesis mitocondrial"
+   ],
+   "note": "Evidencia mecanística de cómo un estímulo ambiental natural (frío) mejora la calidad y el recambio mitocondrial. Verificado contra el PDF original (iScience, Cell Press, CC BY).",
+   "pdf": "estudios/extra/yau-2021-exposicion-frio-autofagia-grasa-parda.pdf",
+   "doi": "10.1016/j.isci.2021.102434",
+   "titulo_es": "La exposición crónica al frío induce autofagia para promover la oxidación de ácidos grasos, el recambio mitocondrial y la termogénesis en el tejido adiposo pardo",
+   "temas": [
+    "mitocondria"
+   ]
+  },
+  {
+   "id": "extra-jain-2015-biofield-estudios-clinicos",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/jain-2015-biofield-estudios-clinicos.jpg",
+   "title": "Clinical Studies of Biofield Therapies: Summary, Methodological Challenges, and Recommendations",
+   "cite": "Jain S, Hammerschlag R, Mills P, et al · Global Advances in Health and Medicine · 2015",
+   "n": "Revisión metodológica de ensayos clínicos de terapias de biocampo",
+   "loc": "University of California San Diego / Consciousness and Healing Initiative, EE. UU.",
+   "dur": "—",
+   "method": "Revisión de la evidencia clínica de terapias de biocampo (Reiki, Therapeutic Touch, Healing Touch), con análisis de la calidad metodológica y recomendaciones para futuros ensayos.",
+   "results": [
+    "La mayor evidencia clínica de biocampo es para la reducción del dolor",
+    "Señala señales prometedoras en fatiga relacionada con el cáncer y calidad de vida",
+    "Identifica limitaciones de diseño (cegamiento, controles, tamaño muestral) y recomienda estandarización"
+   ],
+   "note": "Revisión central del campo del biocampo por el grupo de la Consciousness and Healing Initiative. Verificado contra el PDF original (Global Advances in Health and Medicine, acceso abierto).",
+   "pdf": "estudios/extra/jain-2015-biofield-estudios-clinicos.pdf",
+   "doi": "10.7453/gahmj.2015.034.suppl",
+   "titulo_es": "Estudios clínicos de las terapias de biocampo: resumen, desafíos metodológicos y recomendaciones",
+   "temas": [
+    "biocampo"
+   ]
+  },
+  {
+   "id": "extra-hammerschlag-2015-biofield-fisiologia",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/hammerschlag-2015-biofield-fisiologia.jpg",
+   "title": "Biofield Physiology: A Framework for an Emerging Discipline",
+   "cite": "Hammerschlag R, Levin M, McCraty R, et al · Global Advances in Health and Medicine · 2015",
+   "n": "Revisión / marco conceptual",
+   "loc": "The Institute for Integrative Health, Baltimore / Institute of HeartMath, EE. UU.",
+   "dur": "—",
+   "method": "Revisión que propone un marco fisiológico para el estudio del biocampo, integrando campos electromagnéticos endógenos medibles (corazón, cerebro) y su papel en la regulación del organismo.",
+   "results": [
+    "Propone el biocampo como campo de regulación biológica con base electromagnética medible",
+    "Vincula la fisiología del corazón (HeartMath) y la actividad bioeléctrica celular (Levin)",
+    "Plantea una agenda de investigación interdisciplinaria para una disciplina emergente"
+   ],
+   "note": "Marco fisiológico del biocampo con coautoría de McCraty (coherencia cardíaca) y Levin (bioelectricidad). Verificado contra el PDF original (Global Advances in Health and Medicine, acceso abierto).",
+   "pdf": "estudios/extra/hammerschlag-2015-biofield-fisiologia.pdf",
+   "doi": "10.7453/gahmj.2015.015.suppl",
+   "titulo_es": "Fisiología del biocampo: un marco para una disciplina emergente",
+   "temas": [
+    "biocampo",
+    "campos-em"
+   ]
+  },
+  {
+   "id": "extra-fishburn-2018-sincronizacion-neural-interpersonal",
+   "brand": "all",
+   "type": "piloto",
+   "portada": "img/papers/fishburn-2018-sincronizacion-neural-interpersonal.jpg",
+   "title": "Putting Our Heads Together: Interpersonal Neural Synchronization as a Biological Mechanism for Shared Intentionality",
+   "cite": "Fishburn FA, Murty VP, Hlutkowsky CO, et al · Social Cognitive and Affective Neuroscience · 2018",
+   "n": "Hyperscanning fNIRS en díadas",
+   "loc": "University of Pittsburgh, EE. UU.",
+   "dur": "—",
+   "method": "Hyperscanning con fNIRS en pares de personas durante tareas cooperativas frente a competitivas/individuales, midiendo la sincronización neural interpersonal en la corteza prefrontal.",
+   "results": [
+    "La sincronización neural interpersonal aumenta durante la cooperación",
+    "La sincronía se asocia con la intencionalidad compartida, no solo con la actividad conjunta",
+    "Aporta evidencia de un mecanismo biológico de acoplamiento entre cerebros"
+   ],
+   "note": "Sincronía cerebro-a-cerebro durante la interacción cooperativa. Verificado contra el PDF original (Social Cognitive and Affective Neuroscience, Oxford, acceso abierto).",
+   "pdf": "estudios/extra/fishburn-2018-sincronizacion-neural-interpersonal.pdf",
+   "doi": "10.1093/scan/nsy060",
+   "titulo_es": "Juntando nuestras cabezas: la sincronización neural interpersonal como mecanismo biológico de la intencionalidad compartida",
+   "temas": [
+    "biocampo",
+    "neuro"
+   ]
+  },
+  {
+   "id": "extra-goldstein-2018-acoplamiento-cerebro-dolor",
+   "brand": "all",
+   "type": "piloto",
+   "portada": "img/papers/goldstein-2018-acoplamiento-cerebro-dolor.jpg",
+   "title": "Brain-to-Brain Coupling During Handholding Is Associated with Pain Reduction",
+   "cite": "Goldstein P, Weissman-Fogel I, Dumas G, Shamay-Tsoory SG · PNAS · 2018",
+   "n": "Hyperscanning EEG en parejas (22 díadas)",
+   "loc": "University of Haifa, Israel / University of Colorado Boulder, EE. UU.",
+   "dur": "—",
+   "method": "Hyperscanning EEG en parejas mientras una persona sentía dolor; se comparó tomarse de la mano frente a no tener contacto, midiendo el acoplamiento cerebro-a-cerebro y la intensidad del dolor reportada.",
+   "results": [
+    "Tomarse de la mano aumentó el acoplamiento entre los cerebros de la pareja",
+    "Mayor acoplamiento cerebro-a-cerebro se asoció con mayor reducción del dolor",
+    "Mayor empatía del acompañante predijo mayor sincronía y analgesia"
+   ],
+   "note": "Sincronización entre cerebros y su correlato con la reducción del dolor por contacto. Verificado contra el PDF original (PNAS, acceso abierto).",
+   "pdf": "estudios/extra/goldstein-2018-acoplamiento-cerebro-dolor.pdf",
+   "doi": "10.1073/pnas.1703643115",
+   "titulo_es": "El acoplamiento cerebro-a-cerebro durante el contacto de manos se asocia con la reducción del dolor",
+   "temas": [
+    "biocampo",
+    "neuro",
+    "dolor"
+   ]
+  },
+  {
+   "id": "extra-bartel-2021-vibracion-sonora-salud",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/bartel-2021-vibracion-sonora-salud.jpg",
+   "title": "Possible Mechanisms for the Effects of Sound Vibration on Human Health",
+   "cite": "Bartel L, Mosabbir A · Healthcare · 2021",
+   "n": "Revisión",
+   "loc": "University of Toronto, Canadá",
+   "dur": "—",
+   "method": "Revisión de los mecanismos fisiológicos por los que la vibración sonora (incluida la estimulación vibroacústica) podría afectar la salud: resonancia celular, óxido nítrico, ritmos cerebrales y modulación autonómica.",
+   "results": [
+    "Propone vías por las que la vibración de baja frecuencia influye en células y tejidos",
+    "Vincula la estimulación vibroacústica con cambios en ritmos cerebrales y flujo sanguíneo",
+    "Sugiere aplicaciones en dolor, Parkinson y fibromialgia, señalando que la evidencia clínica aún es preliminar"
+   ],
+   "note": "Mecanismos de sonido/vibración sobre el organismo. Verificado contra el PDF original (Healthcare, MDPI, acceso abierto).",
+   "pdf": "estudios/extra/bartel-2021-vibracion-sonora-salud.pdf",
+   "doi": "10.3390/healthcare9050597",
+   "titulo_es": "Posibles mecanismos de los efectos de la vibración sonora sobre la salud humana",
+   "temas": [
+    "biocampo"
+   ]
+  },
+  {
+   "id": "extra-perry-2021-canto-ritmico-estados-misticos",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/perry-2021-canto-ritmico-estados-misticos.jpg",
+   "title": "Rhythmic Chanting and Mystical States across Traditions",
+   "cite": "Perry G, Polito V, Thompson WF · Brain Sciences · 2021",
+   "n": "Revisión interdisciplinaria",
+   "loc": "Macquarie University, Australia",
+   "dur": "—",
+   "method": "Revisión que examina el canto rítmico (mantra, kirtan, etc.) a través de tradiciones y su asociación con estados alterados de consciencia, integrando neurociencia, psicología y musicología.",
+   "results": [
+    "El canto rítmico se asocia con estados místicos y de absorción",
+    "Describe correlatos fisiológicos: cambios en respiración, ritmo cardíaco y actividad cerebral",
+    "Propone marcos de cómo el sonido/vibración rítmica modula la consciencia"
+   ],
+   "note": "Sonido/vibración y estados de consciencia. Verificado contra el PDF original (Brain Sciences, MDPI, acceso abierto).",
+   "pdf": "estudios/extra/perry-2021-canto-ritmico-estados-misticos.pdf",
+   "doi": "10.3390/brainsci11010101",
+   "titulo_es": "El canto rítmico y los estados místicos a través de las tradiciones",
+   "temas": [
+    "biocampo"
+   ]
+  },
+  {
+   "id": "extra-pinna-2020-interocepcion-tono-vagal",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/pinna-2020-interocepcion-tono-vagal.jpg",
+   "title": "A Systematic Review of Associations Between Interoception, Vagal Tone, and Emotional Regulation",
+   "cite": "Pinna T, Edwards DJ · Frontiers in Psychology · 2020",
+   "n": "Revisión sistemática",
+   "loc": "Swansea University, Reino Unido",
+   "dur": "—",
+   "method": "Revisión sistemática de la asociación entre la interocepción, el tono vagal (variabilidad de la frecuencia cardíaca) y la regulación emocional.",
+   "results": [
+    "Mayor tono vagal/HRV se asocia con mejor regulación emocional",
+    "La interocepción se vincula al bienestar y a la flexibilidad psicológica",
+    "Apoya intervenciones que modulan la actividad vagal para la salud mental"
+   ],
+   "note": "Tono vagal / coherencia autonómica (HRV) y regulación emocional, base fisiológica de la coherencia cardíaca. Verificado contra el PDF original (Frontiers in Psychology, acceso abierto).",
+   "pdf": "estudios/extra/pinna-2020-interocepcion-tono-vagal.pdf",
+   "doi": "10.3389/fpsyg.2020.01792",
+   "titulo_es": "Revisión sistemática de las asociaciones entre la interocepción, el tono vagal y la regulación emocional",
+   "temas": [
+    "biocampo",
+    "sueno"
+   ]
+  },
+  {
+   "id": "extra-he-2016-contagio-emocional-redes",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/he-2016-contagio-emocional-redes.jpg",
+   "title": "Exploring Entrainment Patterns of Human Emotion in Social Media",
+   "cite": "He S, Zheng X, Zeng D, Luo C, Zhang Z · PLOS ONE · 2016",
+   "n": "Estudio observacional de gran escala en redes sociales",
+   "loc": "Chinese Academy of Sciences, China / University of Arizona, EE. UU.",
+   "dur": "—",
+   "method": "Análisis de patrones de entrainment (arrastre/sincronización) de las emociones humanas en datos masivos de redes sociales.",
+   "results": [
+    "Las emociones muestran patrones de arrastre/sincronización entre individuos",
+    "Identifica dinámicas de contagio emocional a escala poblacional",
+    "Aporta evidencia cuantitativa de sincronía emocional colectiva"
+   ],
+   "note": "Sincronización/arrastre emocional entre personas, relacionado con la sincronía interpersonal. Verificado contra el PDF original (PLOS ONE, acceso abierto).",
+   "pdf": "estudios/extra/he-2016-contagio-emocional-redes.pdf",
+   "doi": "10.1371/journal.pone.0150630",
+   "titulo_es": "Exploración de los patrones de arrastre de la emoción humana en las redes sociales",
+   "temas": [
+    "biocampo"
+   ]
+  },
+  {
+   "id": "extra-babcock-2024-superradiancia-triptofano",
+   "brand": "all",
+   "type": "vitro",
+   "portada": "img/papers/babcock-2024-superradiancia-triptofano.jpg",
+   "title": "Ultraviolet Superradiance from Mega-Networks of Tryptophan in Biological Architectures",
+   "cite": "Babcock NS, Montes-Cabrera G, Oberhofer KE, et al · J. Physical Chemistry B · 2024",
+   "n": "Estudio teórico-computacional de óptica cuántica",
+   "loc": "Howard University, EE. UU. / EPFL, Suiza",
+   "dur": "—",
+   "method": "Modelado de óptica cuántica de redes de triptófano en estructuras biológicas (microtúbulos, proteínas de membrana), evaluando efectos colectivos de superradiancia ultravioleta.",
+   "results": [
+    "Las megarredes de triptófano pueden exhibir superradiancia cuántica colectiva en el ultravioleta",
+    "Estos efectos colectivos son robustos a temperatura biológica",
+    "Sugiere un posible canal de señalización fotónica/cuántica en arquitecturas celulares"
+   ],
+   "note": "Base físico-cuántica de los biofotones y de hipótesis sobre consciencia en microtúbulos; es un estudio teórico, no clínico. Verificado contra el PDF original (J. Phys. Chem. B, ACS, acceso abierto).",
+   "pdf": "estudios/extra/babcock-2024-superradiancia-triptofano.pdf",
+   "doi": "10.1021/acs.jpcb.3c07936",
+   "titulo_es": "Superradiancia ultravioleta de megaredes de triptófano en arquitecturas biológicas",
+   "temas": [
+    "quantum",
+    "biocampo",
+    "luz"
+   ]
+  },
+  {
+   "id": "extra-zheng-pollack-2006-interfacial-water",
+   "brand": "analemma",
+   "type": "vitro",
+   "portada": "img/papers/zheng-pollack-2006-interfacial-water.jpg",
+   "title": "Surfaces and interfacial water: Evidence that hydrophilic surfaces have long-range impact",
+   "cite": "Zheng JM, Chin WC, Khijniak E, Khijniak E Jr, Pollack GH · Advances in Colloid and Interface Science · 2006",
+   "n": "Experimentos in vitro (hidrogeles, tejidos biológicos, polímeros, monocapas)",
+   "loc": "University of Washington, Seattle",
+   "dur": "—",
+   "method": "Observación microscópica de la exclusión de solutos coloidales y moleculares cerca de superficies hidrofílicas, con mediciones de potencial eléctrico, espectros de absorción UV-Vis, imágenes infrarrojas y resonancia magnética (NMR).",
+   "results": [
+    "Los solutos son excluidos de la vecindad de superficies hidrofílicas hasta distancias de cientos de micrones — órdenes de magnitud más lejos que las 'pocas capas moleculares' aceptadas",
+    "La zona libre de solutos es una fase de agua físicamente distinta, menos móvil, que coexiste indefinidamente con el agua normal contigua",
+    "El fenómeno se observó en geles artificiales y naturales, tejidos biológicos, polímeros hidrofílicos, monocapas y perlas de intercambio iónico"
+   ],
+   "pdf": "estudios/extra/zheng-pollack-2006-interfacial-water.pdf",
+   "doi": "10.1016/j.cis.2006.07.002",
+   "note": "El paper FUNDACIONAL del agua EZ del laboratorio de Gerald Pollack: la primera demostración sistemática peer-reviewed de que el agua se ordena a gran escala junto a superficies hidrofílicas — el cimiento histórico del concepto de agua estructurada que sustenta Analemma. Verificado contra el PDF original.",
+   "titulo_es": "Superficies y agua interfacial: evidencia de que las superficies hidrofílicas tienen impacto de largo alcance",
+   "temas": [
+    "agua-h2",
+    "quantum"
+   ]
+  },
+  {
+   "id": "extra-deninno-2017-exclusion-zone-dynamics",
+   "brand": "analemma",
+   "type": "vitro",
+   "portada": "img/papers/deninno-2017-exclusion-zone-dynamics.jpg",
+   "title": "Dynamics of Formation of the Exclusion Zone near Hydrophilic Surfaces",
+   "cite": "De Ninno A · Chemical Physics Letters · 2017",
+   "n": "Análisis teórico-experimental (superficies de Nafion y geles poliacrílicos)",
+   "loc": "ENEA, Frascati, Italia",
+   "dur": "—",
+   "method": "Análisis de la ley de formación de la zona de exclusión (proceso difusivo) y modelo teórico del puente de hidrógeno capaz de explicar la configuración hexagonal de larga vida observada cerca de la superficie de Nafion.",
+   "results": [
+    "La formación de la EZ sigue una ley difusiva y excluye solutos a cientos de micrones de la superficie",
+    "Los modelos convencionales de agua (mezcla de puentes H estables y distorsionados) NO pueden explicar la configuración hexagonal de larga vida observada",
+    "Propone un marco teórico del puente de hidrógeno que explica las propiedades más llamativas de esta agua"
+   ],
+   "pdf": "estudios/extra/deninno-2017-exclusion-zone-dynamics.pdf",
+   "doi": "10.1016/j.cplett.2016.11.066",
+   "note": "Confirmación independiente (laboratorio estatal italiano ENEA) de la fenomenología del agua EZ de Pollack, con un marco teórico propio — suma una segunda fuente institucional al concepto de agua estructurada detrás de Analemma. Verificado contra el PDF original.",
+   "titulo_es": "Dinámica de formación de la zona de exclusión cerca de superficies hidrofílicas",
+   "temas": [
+    "agua-h2",
+    "quantum"
+   ]
+  },
+  {
+   "id": "extra-arani-1995-qed-coherence-water",
+   "brand": "analemma",
+   "type": "revision",
+   "portada": "img/papers/arani-1995-qed-coherence-water.jpg",
+   "title": "QED Coherence and the Thermodynamics of Water",
+   "cite": "Arani R, Bono I, Del Giudice E, Preparata G · International Journal of Modern Physics B · 1995",
+   "n": "Modelo teórico (electrodinámica cuántica)",
+   "loc": "Universidad de Milán · INFN, Italia",
+   "dur": "—",
+   "method": "Desarrollo teórico en electrodinámica cuántica (QED): por encima de una densidad crítica, un conjunto de moléculas de agua evoluciona hacia un estado fundamental coherente en el que las moléculas oscilan en fase con el campo electromagnético.",
+   "results": [
+    "El agua líquida consiste en dos fases coexistentes: una fase coherente (moléculas oscilando en fase con el campo EM) y una fase normal poblada por excitaciones térmicas",
+    "El modelo reproduce satisfactoriamente las cantidades termodinámicas observadas del agua y sus conocidas anomalías",
+    "Base física de los 'dominios de coherencia' del agua"
+   ],
+   "pdf": "estudios/extra/arani-1995-qed-coherence-water.pdf",
+   "doi": "10.1142/S0217979295000744",
+   "note": "El paper madre de la teoría de dominios de coherencia del agua (Del Giudice y Preparata): el fundamento teórico-cuántico más citado del agua coherente — completa, junto a Bono 2012 (ya indexado), la base física profunda de Analemma. Verificado contra el PDF original.",
+   "titulo_es": "Coherencia QED y la termodinámica del agua",
+   "temas": [
+    "agua-h2",
+    "quantum"
+   ]
+  },
+  {
+   "id": "extra-baek-2014-emf-cell-reprogramming",
+   "brand": "all",
+   "type": "vitro",
+   "portada": "img/papers/baek-2014-emf-cell-reprogramming.jpg",
+   "title": "Electromagnetic Fields Mediate Efficient Cell Reprogramming into a Pluripotent State",
+   "cite": "Baek S, Quan X, Kim S, Lengner C, Park JK, Kim J · ACS Nano · 2014",
+   "n": "Fibroblastos somáticos (in vitro)",
+   "loc": "Dongguk University, Seúl + University of Pennsylvania",
+   "dur": "—",
+   "method": "Exposición de células somáticas en reprogramación a campos electromagnéticos de frecuencia extremadamente baja (EL-EMF), midiendo la eficiencia de conversión a células pluripotentes y los mecanismos epigenéticos implicados.",
+   "results": [
+    "Los campos EM de baja frecuencia aumentaron drásticamente la eficiencia de la reprogramación celular hacia pluripotencia",
+    "El efecto opera vía activación epigenética (regulador de cromatina), sin modificación genética",
+    "Publicado en ACS Nano, una de las revistas de nanociencia de mayor impacto"
+   ],
+   "pdf": "estudios/extra/baek-2014-emf-cell-reprogramming.pdf",
+   "doi": "10.1021/nn5052483",
+   "note": "Evidencia de alto impacto de que los campos electromagnéticos pueden dirigir el destino celular hasta el nivel de la pluripotencia — respaldo mecanístico de primer nivel para el paradigma PEMF y los claims regenerativos del catálogo. Verificado contra el PDF original.",
+   "titulo_es": "Los campos electromagnéticos median la reprogramación celular eficiente hacia un estado pluripotente",
+   "temas": [
+    "campos-em",
+    "quantum"
+   ]
+  },
+  {
+   "id": "extra-buchachenko-2023-longevity-magnetic-field",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/buchachenko-2023-longevity-magnetic-field.jpg",
+   "title": "Does Biological Longevity Depend on the Magnetic Fields?",
+   "cite": "Buchachenko AL · Russian Journal of Physical Chemistry B · 2023",
+   "n": "Revisión (química de spin y efectos isotópicos magnéticos)",
+   "loc": "Academia Rusa de Ciencias · Universidad Estatal de Moscú",
+   "dur": "—",
+   "method": "Revisión del efecto isotópico magnético en la síntesis de ADN: polimerasas cargadas con iones 25Mg²⁺, 43Ca²⁺ y 67Zn²⁺ (núcleos magnéticos) versus sus isótopos no magnéticos, y análisis del mecanismo de par de radicales enzimático.",
+   "results": [
+    "Los iones con núcleos magnéticos reducen la velocidad de síntesis de ADN 3-5 veces respecto a los no magnéticos — un efecto isotópico enorme",
+    "La síntesis, el daño y la reparación del ADN están magnéticamente controlados, con mecanismo físico fundamentado (transferencia de electrón y par de radicales)",
+    "Discute el vínculo entre campos magnéticos, límite de Hayflick y longevidad biológica"
+   ],
+   "pdf": "estudios/extra/buchachenko-2023-longevity-magnetic-field.pdf",
+   "doi": "10.1134/S1990793123010037",
+   "note": "Del padre de la química de spin (Buchachenko): los procesos centrales del genoma responden al magnetismo nuclear y externo — fundamento químico-cuántico del efecto de campos magnéticos sobre la biología, en línea con Binhi 2023 ya indexado. Verificado contra el PDF original.",
+   "titulo_es": "¿Depende la longevidad biológica de los campos magnéticos?",
+   "temas": [
+    "campos-em",
+    "longevidad"
+   ]
+  },
+  {
+   "id": "extra-mcclanahan-1983-electric-field-bone",
+   "brand": "all",
+   "type": "animal",
+   "portada": "img/papers/mcclanahan-1983-electric-field-bone.jpg",
+   "title": "The Influence of Electric Field Exposure on Bone Growth and Fracture Repair in Rats",
+   "cite": "McClanahan BJ, Phillips RD · Bioelectromagnetics · 1983",
+   "n": "Ratas (osteotomías de fíbula)",
+   "loc": "Pacific Northwest Laboratory, Richland, WA",
+   "dur": "14-30 días según experimento",
+   "method": "Exposición de ratas a un campo eléctrico de 60 Hz a 100 kV/m (20 h/día). Se midió crecimiento óseo (área cortical y cavidad medular de la tibia) y reparación de osteotomías fibulares (resistencia a la deformación y fuerza de ruptura) a distintos tiempos.",
+   "results": [
+    "El campo eléctrico de 60 Hz NO alteró el crecimiento óseo en ratas inmaduras",
+    "La reparación de fracturas fue MÁS LENTA en los animales expuestos a los días 16-20, igualándose recién al día 26",
+    "Resultado negativo/cautelar: la exposición pasiva a campos eléctricos de red no acelera — y puede retrasar — la reparación ósea"
+   ],
+   "pdf": "estudios/extra/mcclanahan-1983-electric-field-bone.pdf",
+   "doi": "10.1002/bem.2250040104",
+   "note": "Resultado negativo incluido a propósito (como el de Yang 2023 en gamma): un campo eléctrico crónico de 60 Hz no mejoró y hasta retrasó la reparación ósea. Aporta el contraste honesto — no todo campo electromagnético es terapéutico: importan frecuencia, forma y dosis, que es exactamente la premisa del PEMF pulsado. Verificado contra el PDF original.",
+   "titulo_es": "La influencia de la exposición a campos eléctricos sobre el crecimiento óseo y la reparación de fracturas en ratas",
+   "temas": [
+    "campos-em",
+    "dolor"
+   ]
+  },
+  {
+   "id": "extra-cervera-2023-planaria-bioelectric-model",
+   "brand": "all",
+   "type": "vitro",
+   "portada": "img/papers/cervera-2023-planaria-bioelectric-model.jpg",
+   "title": "Transplantation of fragments from different planaria: A bioelectrical model for head regeneration",
+   "cite": "Cervera J, Manzanares JA, Levin M, Mafe S · Journal of Theoretical Biology · 2023",
+   "n": "Modelo bioeléctrico computacional (planaria)",
+   "loc": "Universitat de València + Tufts University (lab. Michael Levin)",
+   "dur": "—",
+   "method": "Modelo bioeléctrico de los potenciales de membrana a lo largo del eje primario de la planaria, que simula qué morfología emerge al trasplantar tejido entre planarias de distintas especies y formas de cabeza.",
+   "results": [
+    "Los patrones de potencial eléctrico a través del eje corporal predicen la morfología de la regeneración (incluidos animales de dos cabezas genéticamente normales)",
+    "El modelo reproduce cualitativamente los efectos de trasplantes y quimeras espaciales",
+    "La información de patrón corporal se almacena en gradientes bioeléctricos, no solo en los genes"
+   ],
+   "pdf": "estudios/extra/cervera-2023-planaria-bioelectric-model.pdf",
+   "doi": "10.1016/j.jtbi.2022.111356",
+   "note": "Del laboratorio de Michael Levin (Tufts/Harvard Wyss): la bioelectricidad dicta la forma en la regeneración — el patrón corporal es información eléctrica editable. Pilar contemporáneo del paradigma bioeléctrico que heredó el trabajo de Robert Becker. Verificado contra el PDF original (acceso abierto CC BY-NC-ND).",
+   "titulo_es": "Trasplante de fragmentos de distintas planarias: un modelo bioeléctrico de la regeneración de la cabeza",
+   "temas": [
+    "campos-em",
+    "quantum"
+   ]
+  },
+  {
+   "id": "extra-lee-burke-2024-mitochondria-voltage-imaging",
+   "brand": "all",
+   "type": "vitro",
+   "portada": "img/papers/lee-burke-2024-mitochondria-voltage-imaging.jpg",
+   "title": "Super-Resolution Imaging of Voltages in the Interior of Individual, Vital Mitochondria",
+   "cite": "Lee C, Wallace DC, Burke PJ · ACS Nano · 2024",
+   "n": "Mitocondrias vivas aisladas (microscopía de super-resolución)",
+   "loc": "University of California / Children's Hospital of Philadelphia",
+   "dur": "—",
+   "method": "Microscopía de super-resolución sobre mitocondrias funcionales aisladas, midiendo el potencial de membrana en tiempo real y por posición ante sustratos e inhibidores de la cadena de transporte de electrones, con modelo de la señal de los colorantes de voltaje.",
+   "results": [
+    "Primera visualización en super-resolución del voltaje dentro de mitocondrias individuales vivas, en distintos estados metabólicos",
+    "El potencial de membrana puede seguirse en el tiempo y en el espacio, incluso en estructuras submitocondriales",
+    "Coautoría de Douglas Wallace, fundador de la medicina mitocondrial moderna"
+   ],
+   "pdf": "estudios/extra/lee-burke-2024-mitochondria-voltage-imaging.pdf",
+   "doi": "10.1021/acsnano.3c02768",
+   "note": "La bioelectricidad mitocondrial hecha visible: la mitocondria es literalmente un dispositivo de voltaje que ahora se puede filmar. Sostiene con ciencia de frontera todos los claims energético-mitocondriales del catálogo. Verificado contra el PDF original.",
+   "titulo_es": "Imágenes de super-resolución de los voltajes en el interior de mitocondrias individuales vivas",
+   "temas": [
+    "mitocondria",
+    "campos-em"
+   ]
+  },
+  {
+   "id": "extra-barolet-2021-no-release-red-nir",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/barolet-2021-no-release-red-nir.jpg",
+   "title": "Light-induced nitric oxide release in the skin beyond UVA and blue light: Red & near-infrared wavelengths",
+   "cite": "Barolet AC, Litvinov IV, Barolet D · Nitric Oxide (Elsevier) · 2021",
+   "n": "Revisión científica",
+   "loc": "McGill University, Montreal",
+   "dur": "—",
+   "method": "Revisión de la fotólisis de los depósitos cutáneos de derivados de óxido nítrico (NO): mecanismos no enzimáticos por los que la irradiación de la piel moviliza NO al torrente sanguíneo, comparando UVA/azul con las longitudes de onda rojas/NIR más seguras.",
+   "results": [
+    "La piel almacena un reservorio de compuestos que liberan NO al ser irradiados, bajando la presión arterial",
+    "Las longitudes de onda rojas/NIR pueden movilizar NO sin el daño asociado al UV y la luz azul",
+    "El NO fotoliberado es un mecanismo vasodilatador y de señalización sistémico, no solo local"
+   ],
+   "pdf": "estudios/extra/barolet-2021-no-release-red-nir.pdf",
+   "doi": "10.1016/j.niox.2021.09.003",
+   "note": "Mecanismo directo para la fototerapia de parches y dispositivos de luz roja del catálogo: la luz roja/NIR sobre la piel libera óxido nítrico — vasodilatación y señalización medibles sin fármacos. Verificado contra el PDF original (acceso abierto CC BY-NC-ND).",
+   "titulo_es": "Liberación de óxido nítrico en la piel inducida por luz más allá del UVA y la luz azul: longitudes de onda rojas e infrarrojas cercanas",
+   "temas": [
+    "luz"
+   ]
+  },
+  {
+   "id": "extra-rodriguez-santana-2014-crystalline-water-light-eye",
+   "brand": "all",
+   "type": "piloto",
+   "portada": "img/papers/rodriguez-santana-2014-crystalline-water-light-eye.jpg",
+   "title": "Emerging Evidence on the Crystalline Water-Light Interface in Ophthalmology and Therapeutic Implications in Photobiomodulation: First Communication",
+   "cite": "Rodríguez-Santana E, Santana-Blank L · Photomedicine and Laser Surgery · 2014",
+   "n": "Análisis retrospectivo de imágenes quirúrgicas y de resonancia",
+   "loc": "Venezuela",
+   "dur": "—",
+   "method": "Análisis retrospectivo de microscopía quirúrgica (cirugía de agujero macular) y resonancia magnética por difusión, buscando expresiones de la zona de exclusión (EZ, cuarta fase del agua) en retina y nervio óptico.",
+   "results": [
+    "Las imágenes quirúrgicas muestran líneas blanquecinas continuas indicativas de ordenamiento del agua en la interfaz colágeno-cristales",
+    "El coeficiente de difusión aparente muestra un eje paralelo al nervio óptico compatible con una expresión ocular de la EZ",
+    "Sugiere un nuevo entendimiento del entorno bioenergético del ojo con implicancias para fotobiomodulación"
+   ],
+   "pdf": "estudios/extra/rodriguez-santana-2014-crystalline-water-light-eye.pdf",
+   "doi": "10.1089/pho.2013.3682",
+   "note": "Puente clínico entre agua estructurada y luz terapéutica: la EZ aparece en tejido ocular humano real. Conecta el concepto de Pollack (Analemma) con la fotobiomodulación (parches y dispositivos de luz). Verificado contra el PDF original.",
+   "titulo_es": "Evidencia emergente sobre la interfaz agua cristalina-luz en oftalmología e implicancias terapéuticas en fotobiomodulación",
+   "temas": [
+    "luz",
+    "agua-h2"
+   ]
+  },
+  {
+   "id": "extra-price-2021-natural-elf-fields",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/price-2021-natural-elf-fields.jpg",
+   "title": "Natural ELF fields in the atmosphere and in living organisms",
+   "cite": "Price C, Williams E, Elhalel G, Sentman D · International Journal of Biometeorology · 2021",
+   "n": "Revisión (biometeorología y electrofisiología comparada)",
+   "loc": "Tel Aviv University + MIT",
+   "dur": "—",
+   "method": "Comparación de los espectros de la actividad eléctrica de vertebrados e invertebrados con las resonancias electromagnéticas naturales de la atmósfera (resonancias de Schumann, <50 Hz) generadas por la actividad global de rayos.",
+   "results": [
+    "La mayor parte de la actividad eléctrica biológica ocurre en frecuencias extremadamente bajas (ELF), con máximos bajo 50 Hz — igual que el fondo atmosférico natural",
+    "En algunos animales el espectro eléctrico es difícil de distinguir del campo atmosférico natural generado por rayos",
+    "Propone que los campos de resonancia atmosféricos moldearon evolutivamente la electricidad celular"
+   ],
+   "pdf": "estudios/extra/price-2021-natural-elf-fields.pdf",
+   "doi": "10.1007/s00484-020-01864-6",
+   "note": "Coautoría del MIT: las frecuencias eléctricas de la vida coinciden con las resonancias naturales de la Tierra (Schumann) — marco evolutivo para el grounding y para entender por qué los campos artificiales desincronizan y los naturales sincronizan. Verificado contra el PDF original.",
+   "titulo_es": "Campos ELF naturales en la atmósfera y en los organismos vivos",
+   "temas": [
+    "campos-em"
+   ]
+  },
+  {
+   "id": "extra-vonschulze-2022-heat-mitochondria",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/vonschulze-2022-heat-mitochondria.jpg",
+   "title": "Heat and mitochondrial bioenergetics",
+   "cite": "Von Schulze AT, Geiger PC · Current Opinion in Physiology · 2022",
+   "n": "Revisión científica",
+   "loc": "Stowers Institute + University of Kansas Medical Center",
+   "dur": "—",
+   "method": "Revisión de los efectos del tratamiento térmico recurrente sobre la función respiratoria mitocondrial: estrés agudo (menos ATP, más ROS) que activa AMPK, Nrf2, PGC-1α, NRF-1 y la respuesta de choque térmico (HSF1).",
+   "results": [
+    "El calor recurrente mejora la función respiratoria mitocondrial y reduce la producción de ROS con el tiempo",
+    "El estrés térmico agudo activa en cascada los programas de control de calidad mitocondrial: mitofagia, autofagia mediada por chaperonas y biogénesis",
+    "El tratamiento térmico es una opción no farmacológica atractiva para condiciones con disfunción mitocondrial"
+   ],
+   "pdf": "estudios/extra/vonschulze-2022-heat-mitochondria.pdf",
+   "doi": "10.1016/j.cophys.2022.100553",
+   "note": "La base científica del sauna y el calor terapéutico: hormesis térmica que renueva la mitocondria. Complementa a Chung 2017 (frío) — juntos cubren los dos polos de la hormesis térmica del paradigma. Verificado contra el PDF original.",
+   "titulo_es": "Calor y bioenergética mitocondrial",
+   "temas": [
+    "mitocondria"
+   ]
+  },
+  {
+   "id": "extra-tiller-mccraty-1996-cardiac-coherence",
+   "brand": "all",
+   "type": "piloto",
+   "portada": "img/papers/tiller-mccraty-1996-cardiac-coherence.jpg",
+   "title": "Cardiac Coherence: A New, Noninvasive Measure of Autonomic Nervous System Order",
+   "cite": "Tiller WA, McCraty R, Atkinson M · Alternative Therapies in Health and Medicine · 1996",
+   "n": "N=20 (entrenados en la técnica Freeze-Frame)",
+   "loc": "Stanford University + Institute of HeartMath",
+   "dur": "Sesiones de laboratorio y condiciones reales de trabajo",
+   "method": "Análisis de densidad espectral de potencia de los intervalos R-R del ECG en 20 sujetos entrenados en autorregulación emocional (Freeze-Frame), en laboratorio y en el trabajo: 5 minutos de línea de base seguidos de 5 minutos de expresión emocional positiva.",
+   "results": [
+    "Se discriminan tres modos del sistema nervioso autónomo: función normal, 'entrainment' (arrastre) y coherencia interna — los dos últimos nuevos para la literatura",
+    "En el modo entrainment, otros sistemas fisiológicos se acoplan a la frecuencia de ~0.1 Hz",
+    "Las emociones positivas (apreciación) desplazan el balance simpático-vagal hacia un orden beneficioso — sugerente para hipertensión y falla cardíaca"
+   ],
+   "pdf": "estudios/extra/tiller-mccraty-1996-cardiac-coherence.pdf",
+   "doi": "",
+   "note": "El paper fundacional de la coherencia cardíaca (HeartMath + Stanford): definió la métrica que hoy usan los wearables de HRV y que el catálogo emplea en AEON y en todo el discurso de coherencia. Verificado contra el PDF original (escaneo).",
+   "titulo_es": "Coherencia cardíaca: una nueva medida no invasiva del orden del sistema nervioso autónomo",
+   "temas": [
+    "biocampo"
+   ]
+  },
+  {
+   "id": "extra-vandervaart-2009-reiki-systematic-review",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/vandervaart-2009-reiki-systematic-review.jpg",
+   "title": "A Systematic Review of the Therapeutic Effects of Reiki",
+   "cite": "vanderVaart S, Gijsen VMGJ, de Wildt SN, Koren G · Journal of Alternative and Complementary Medicine · 2009",
+   "n": "12 ensayos incluidos",
+   "loc": "University of Toronto / Hospital for Sick Children",
+   "dur": "—",
+   "method": "Búsqueda sistemática en Medline, EMBASE, Cochrane y Google Scholar. Calidad de reporte evaluada con criterios CONSORT modificados y calidad metodológica con la escala de Jadad. Inclusión: control adecuado, intervención con practicante de Reiki, humanos.",
+   "results": [
+    "9 de los 12 ensayos detectaron un efecto terapéutico significativo del Reiki",
+    "Sin embargo, 11 de los 12 estudios calificaron 'pobre' en calidad metodológica (Jadad); todos fallaron en al menos un área clave (aleatorización, cegamiento o seguimiento)",
+    "Conclusión: los resultados son prometedores pero la baja calidad impide una conclusión definitiva — se necesitan ensayos rigurosos"
+   ],
+   "pdf": "estudios/extra/vandervaart-2009-reiki-systematic-review.pdf",
+   "doi": "10.1089/acm.2009.0036",
+   "note": "La revisión honesta del Reiki: la mayoría de los ensayos ve efecto, pero la calidad metodológica es baja y se dice sin vueltas. Presentar el biocampo con esta franqueza (efecto prometedor + evidencia aún débil) es lo que protege la credibilidad del resto del centro. Verificado contra el PDF original.",
+   "titulo_es": "Revisión sistemática de los efectos terapéuticos del Reiki",
+   "temas": [
+    "biocampo"
+   ]
+  },
+  {
+   "id": "extra-thrane-2014-reiki-pain-anxiety",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/thrane-2014-reiki-pain-anxiety.jpg",
+   "title": "Effect of Reiki Therapy on Pain and Anxiety in Adults: An In-Depth Literature Review of Randomized Trials with Effect Size Calculations",
+   "cite": "Thrane S, Cohen SM · Pain Management Nursing · 2014",
+   "n": "7 estudios aleatorizados (cáncer, post-quirúrgicos, adultos mayores)",
+   "loc": "University of Pittsburgh School of Nursing",
+   "dur": "—",
+   "method": "Búsqueda sistemática en 8 bases de datos; inclusión solo de ensayos aleatorizados con grupo control publicados desde 2000 que midieran dolor o ansiedad; cálculo del tamaño de efecto (d de Cohen) para todos los estudios. Financiado por el NIH (NINR).",
+   "results": [
+    "7 ensayos aleatorizados cumplieron los criterios: 4 en pacientes oncológicos, 1 post-quirúrgico, 2 en adultos mayores de la comunidad",
+    "Los tamaños de efecto calculados para dolor y ansiedad resultaron de rango pequeño a moderado según el estudio",
+    "Los autores concluyen que el Reiki puede ser un complemento útil y de bajo riesgo, y piden ensayos con mayor rigor y potencia"
+   ],
+   "pdf": "estudios/extra/thrane-2014-reiki-pain-anxiety.pdf",
+   "doi": "10.1016/j.pmn.2013.07.002",
+   "note": "Complementa a vanderVaart 2009 y Zadro 2022: revisión financiada por el NIH que cuantifica (d de Cohen) el efecto del Reiki en dolor y ansiedad en ensayos aleatorizados. Cierra la tríada de evidencia honesta sobre terapias de biocampo. Verificado contra el PDF original.",
+   "titulo_es": "Efecto de la terapia Reiki sobre el dolor y la ansiedad en adultos: revisión en profundidad de ensayos aleatorizados con cálculo de tamaños de efecto",
+   "temas": [
+    "biocampo",
+    "dolor"
+   ]
+  },
+  {
+   "id": "extra-stuart-1978-nonlocal-memory",
+   "brand": "all",
+   "type": "revision",
+   "portada": "img/papers/stuart-1978-nonlocal-memory.jpg",
+   "title": "On the Stability and Non-local Properties of Memory",
+   "cite": "Stuart CIJM, Takahashi Y, Umezawa H · Journal of Theoretical Biology · 1978",
+   "n": "Modelo teórico (teoría cuántica de campos)",
+   "loc": "University of Alberta, Canadá",
+   "dur": "—",
+   "method": "Modelo del cerebro como sistema físico mixto: la parte electroquímica neuronal interactúa con un modo cooperativo cuántico macroscópico. Se analiza cómo un estado ordenado emergente puede dar cuenta de la estabilidad y no-localidad de la memoria.",
+   "results": [
+    "Propone que la memoria no reside en sinapsis puntuales sino en un estado cuántico ordenado distribuido — por eso es estable y no-local",
+    "El formalismo (teoría cuántica de campos de Umezawa) fundó la línea de investigación del 'cerebro cuántico'",
+    "Antecedente directo de los modelos modernos de coherencia neuronal y conciencia de campo"
+   ],
+   "pdf": "estudios/extra/stuart-1978-nonlocal-memory.pdf",
+   "doi": "10.1016/0022-5193(78)90307-2",
+   "note": "El paper clásico del 'cerebro cuántico' (Umezawa, uno de los grandes de la teoría cuántica de campos): la memoria como estado de campo distribuido. Fundamento histórico para la sección de conciencia y biocampo. Verificado contra el PDF original.",
+   "titulo_es": "Sobre la estabilidad y las propiedades no-locales de la memoria",
+   "temas": [
+    "quantum",
+    "neuro"
+   ]
+  },
+  {
+   "id": "extra-zadbood-2017-shared-neural-representations",
+   "brand": "all",
+   "type": "piloto",
+   "portada": "img/papers/zadbood-2017-shared-neural-representations.jpg",
+   "title": "How We Transmit Memories to Other Brains: Constructing Shared Neural Representations Via Communication",
+   "cite": "Zadbood A, Chen J, Leong YC, Norman KA, Hasson U · Cerebral Cortex · 2017",
+   "n": "fMRI: espectadores, narradores y oyentes naïve",
+   "loc": "Princeton Neuroscience Institute",
+   "dur": "—",
+   "method": "fMRI con tarea de comunicación verbal: se registraron los patrones neuronales al ver escenas de una película, al recordarlas en voz alta y en oyentes que solo escucharon el relato, comparando los patrones entre las tres condiciones.",
+   "results": [
+    "Los patrones neuronales específicos de cada evento en la red por defecto se comparten entre codificación, recuerdo y construcción del mismo episodio",
+    "El cerebro del oyente reconstruye la escena con patrones que se asemejan a los del cerebro que la vivió",
+    "Primera demostración directa de la 'transmisión' de memorias entre cerebros vía comunicación"
+   ],
+   "pdf": "estudios/extra/zadbood-2017-shared-neural-representations.pdf",
+   "doi": "10.1093/cercor/bhx202",
+   "note": "De Princeton (lab. de Uri Hasson): contar una experiencia literalmente replica los patrones cerebrales del que la vivió en el que la escucha. Base neurocientífica de la co-regulación y la sincronización interpersonal — complementa a Fishburn 2018 y Goldstein 2018 ya indexados. Verificado contra el PDF original.",
+   "titulo_es": "Cómo transmitimos memorias a otros cerebros: la construcción de representaciones neuronales compartidas a través de la comunicación",
+   "temas": [
+    "neuro",
+    "biocampo"
+   ]
+  }
+ ]
+}

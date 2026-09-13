@@ -169,34 +169,36 @@
   /* ────────────────────────────────────────────
      4 · ABANICO DE PAPERS — ligado al scroll
      ──────────────────────────────────────────── */
+  var _fanTicking = false;
   function initEvidenceFan() {
     var fan = document.querySelector('.ev-fan');
     if (!fan) return;
-    var papers = [].map.call(fan.querySelectorAll('.ev-paper'), function (el, i, all) {
-      var n = all.length;
-      var spread = 56; // grados totales del abanico
-      var target = (i - (n - 1) / 2) * (spread / Math.max(1, n - 1));
-      return { el: el, target: target, ty: -Math.abs(target) * 0.8 };
-    });
-    var ticking = false;
+    // re-consulta los .ev-paper en cada update -> funciona aunque el HTML del abanico se reemplace
     function update() {
-      ticking = false;
+      _fanTicking = false;
+      var papers = fan.querySelectorAll('.ev-paper');
+      var n = papers.length;
+      if (!n) return;
+      var spread = Math.min(120, 14 * (n - 1)); // abanico se ensancha con la cantidad
       var r = fan.getBoundingClientRect();
       var vh = window.innerHeight;
-      // progreso: 0 cuando el abanico entra, 1 cuando su centro pasa el centro del viewport
       var p = Math.min(1, Math.max(0, (vh - r.top) / (vh * 0.9)));
-      // easing suave
       var e = p * p * (3 - 2 * p);
-      papers.forEach(function (pa) {
-        pa.el.style.setProperty('--rot', (pa.target * e).toFixed(2) + 'deg');
-        pa.el.style.setProperty('--ty', (pa.ty * e).toFixed(2) + 'px');
-      });
+      for (var i = 0; i < n; i++) {
+        var target = (i - (n - 1) / 2) * (spread / Math.max(1, n - 1));
+        papers[i].style.setProperty('--rot', (target * e).toFixed(2) + 'deg');
+        papers[i].style.setProperty('--ty', (-Math.abs(target) * 0.8 * e).toFixed(2) + 'px');
+      }
     }
-    window.addEventListener('scroll', function () {
-      if (!ticking) { ticking = true; requestAnimationFrame(update); }
-    }, { passive: true });
+    if (!fan._fanBound) {
+      fan._fanBound = 1;
+      window.addEventListener('scroll', function () {
+        if (!_fanTicking) { _fanTicking = true; requestAnimationFrame(update); }
+      }, { passive: true });
+    }
     update();
   }
+  window.PEMF_initEvidenceFan = initEvidenceFan;
 
   /* ────────────────────────────────────────────
      5 · CONTADORES — números que suben al aparecer

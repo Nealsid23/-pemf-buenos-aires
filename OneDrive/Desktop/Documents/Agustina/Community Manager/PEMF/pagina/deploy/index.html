@@ -38,6 +38,9 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
   --muted: #64748b;
   --border:#e2e8f0;
   --wa:    #25D366;
+  --ease:cubic-bezier(.4,0,.2,1);
+  --spring:cubic-bezier(.34,1.56,.64,1);
+  --out:cubic-bezier(.22,1,.36,1);
 }
 
 /* ── NAV ── */
@@ -50,15 +53,16 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
 }
 .nav-inner{max-width:1200px;margin:0 auto;width:100%;padding:0 32px;display:flex;align-items:center;justify-content:space-between;}
 .logo{display:flex;align-items:center;gap:10px;}
-.logo-mark{width:40px;height:40px;border-radius:50%;background:#fff;overflow:hidden;box-shadow:0 0 0 1.5px rgba(103,204,233,.25);flex-shrink:0;}
-.logo-mark img{width:100%;height:100%;object-fit:cover;display:block;}
+.logo-mark{width:46px;height:46px;border-radius:50%;background:#fff;overflow:hidden;box-shadow:0 2px 10px rgba(26,79,182,.12),0 0 0 1.5px rgba(103,204,233,.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.logo-mark img{width:100%;height:100%;object-fit:contain;padding:3px;display:block;}
 .logo-name{font-family:'Figtree',sans-serif;font-weight:800;font-size:16px;color:var(--slate);letter-spacing:-.3px;}
 .logo-name span{color:var(--blue);}
 .nav-links{display:flex;gap:32px;}
 .nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s;}
 .nav-links a:hover{color:var(--slate);}
 .nav-cta{display:flex;gap:10px;align-items:center;}
-.btn-ghost{font-size:13px;font-weight:600;color:var(--blue);background:none;border:1.5px solid rgba(26,79,182,.25);padding:8px 16px;border-radius:100px;cursor:pointer;font-family:'Figtree',sans-serif;}
+.btn-ghost{font-size:13px;font-weight:600;color:var(--blue);background:none;border:1.5px solid rgba(26,79,182,.25);padding:8px 16px;border-radius:100px;cursor:pointer;font-family:'Figtree',sans-serif;transition:all .25s var(--spring);will-change:transform,background,border-color,box-shadow}
+.btn-ghost:hover{transform:translateY(-2px) scale(1.04);background:rgba(26,79,182,.06);border-color:rgba(26,79,182,.4);box-shadow:0 6px 16px rgba(26,79,182,.15)}
 .btn-nav-wa{font-size:13px;font-weight:700;color:#fff;background:var(--wa);border:none;padding:9px 20px;border-radius:100px;cursor:pointer;font-family:'Figtree',sans-serif;display:flex;align-items:center;gap:7px;}
 
 /* ── HERO ── */
@@ -182,9 +186,15 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
 .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px;}
 .problem-card{
   background:#fff;border:1px solid var(--border);border-radius:20px;
-  overflow:hidden;transition:box-shadow .2s,transform .2s;
+  overflow:hidden;transition:box-shadow .25s var(--spring),transform .25s var(--spring);
+  will-change:transform,box-shadow;opacity:0;transform:translateY(24px);
+  animation:cardFadeIn .5s var(--out) forwards;
 }
-.problem-card:hover{box-shadow:0 10px 36px rgba(26,35,50,.1);}
+.problem-card:nth-child(1){animation-delay:.1s}
+.problem-card:nth-child(2){animation-delay:.2s}
+.problem-card:nth-child(3){animation-delay:.3s}
+.problem-card:hover{box-shadow:0 12px 42px rgba(26,35,50,.15);transform:translateY(-6px) scale(1.01);}
+@keyframes cardFadeIn{to{opacity:1;transform:translateY(0) scale(1)}}
 .prob-photo{height:140px;overflow:hidden;}
 .prob-photo img{width:100%;height:100%;object-fit:cover;}
 .prob-icon-area{height:56px;display:flex;align-items:center;padding:0 20px;}
@@ -244,17 +254,34 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
 .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
 .prod-card{
   background:var(--cream);border:1px solid var(--border);border-radius:20px;
-  overflow:hidden;transition:box-shadow .25s,transform .25s;cursor:pointer;
+  overflow:hidden;transition:box-shadow .28s var(--spring),transform .28s var(--spring);
+  cursor:pointer;opacity:0;transform:translateY(32px) scale(.96);
+  will-change:transform,box-shadow;animation:cardFadeIn .55s var(--out) forwards;
 }
-.prod-card:hover{box-shadow:0 16px 50px rgba(26,35,50,.12);}
+.prod-card:nth-child(1){animation-delay:.05s}
+.prod-card:nth-child(2){animation-delay:.15s}
+.prod-card:nth-child(3){animation-delay:.25s}
+.prod-card:nth-child(4){animation-delay:.35s}
+.prod-card:nth-child(5){animation-delay:.45s}
+.prod-card:nth-child(6){animation-delay:.55s}
+.prod-card:hover{box-shadow:0 18px 56px rgba(26,35,50,.16);transform:translateY(-8px) scale(1.02)}
 .prod-card-img{
   height:200px;display:flex;align-items:center;justify-content:center;
   position:relative;overflow:hidden;
 }
+/* spotlight de vidriera: luz cenital + sombra de apoyo sobre el color de categoría */
+.prod-card-img::before{
+  content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(115% 78% at 50% 8%, rgba(255,255,255,.82), rgba(255,255,255,0) 58%),
+    radial-gradient(54% 22% at 50% 91%, rgba(15,45,107,.16), rgba(15,45,107,0) 72%);
+}
 .prod-card-img img{
   height:164px;width:auto;object-fit:contain;
+  position:relative;z-index:1;
   transition:transform .08s linear;
   will-change:transform;
+  filter:drop-shadow(0 10px 18px rgba(15,45,107,.16));
 }
 .prod-card-img img.returning{transition:transform 8s cubic-bezier(.16,1,.3,1);}
 .prod-cat{
@@ -303,7 +330,15 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
   border-radius:20px;padding:28px;
   border-left:3px solid var(--sky);
   display:flex;flex-direction:column;
+  opacity:0;transform:translateY(28px) scale(.97);
+  will-change:transform,opacity,box-shadow;
+  animation:cardFadeIn .5s var(--out) forwards;
+  transition:box-shadow .25s var(--spring),transform .25s var(--spring);
 }
+.testi-card:nth-child(1){animation-delay:.15s}
+.testi-card:nth-child(2){animation-delay:.28s}
+.testi-card:nth-child(3){animation-delay:.41s}
+.testi-card:hover{box-shadow:0 16px 48px rgba(103,204,233,.2);transform:translateY(-4px) scale(1.01)}
 .testi-quote-mark{
   font-family:Georgia,serif;font-size:52px;line-height:.5;
   color:var(--sky);opacity:.4;display:block;margin-bottom:14px;
@@ -344,7 +379,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
 .faq-item{border-bottom:1px solid var(--border);}
 .faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 0;background:none;border:none;cursor:pointer;text-align:left;gap:16px;}
 .faq-q span{font-family:'Figtree',sans-serif;font-size:15px;font-weight:600;color:var(--slate);}
-.faq-icon{width:28px;height:28px;border-radius:50%;background:rgba(103,204,233,.12);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:transform .25s,background .25s;}
+.faq-icon{width:28px;height:28px;border-radius:50%;background:rgba(103,204,233,.12);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:transform .3s var(--spring),background .3s var(--spring);will-change:transform}
 .faq-icon svg{width:14px;height:14px;stroke:var(--blue);fill:none;stroke-width:2.5;stroke-linecap:round;}
 .faq-item.open .faq-icon{background:var(--blue);transform:rotate(45deg);}
 .faq-item.open .faq-icon svg{stroke:#fff;}
@@ -451,11 +486,15 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
 
 /* ── MAGNETIC BUTTON GLOW ── */
 .btn-wa-hero,.btn-nav-wa{
-  transition:box-shadow .25s ease,transform .18s ease;
+  transition:box-shadow .28s var(--spring),transform .25s var(--spring);
+  will-change:transform,box-shadow;
 }
 .btn-wa-hero:hover{
-  box-shadow:0 8px 36px rgba(37,211,102,.5),0 0 0 4px rgba(37,211,102,.12);
+  box-shadow:0 10px 40px rgba(37,211,102,.55),0 0 0 6px rgba(37,211,102,.15);
+  transform:translateY(-3px) scale(1.05);
 }
+.btn-outline-hero{transition:all .25s var(--spring);will-change:transform,background,border-color}
+.btn-outline-hero:hover{transform:translateY(-3px) scale(1.04);background:rgba(26,79,182,.08);border-color:var(--blue)}
 
 /* ── PRODUCT CARD GLOW TRAIL ── */
 .prod-card-img{
@@ -493,13 +532,18 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
   border-radius:24px;
   padding:36px 28px 32px;
   position:relative;overflow:hidden;
-  transition:transform .22s,box-shadow .22s;
+  transition:transform .28s var(--spring),box-shadow .28s var(--spring);
+  will-change:transform,box-shadow;opacity:0;transform:translateY(28px) scale(.96);
+  animation:cardFadeIn .5s var(--out) forwards;
 }
+.como-card:nth-child(1){animation-delay:.12s}
+.como-card:nth-child(2){animation-delay:.24s}
+.como-card:nth-child(3){animation-delay:.36s}
 .como-card::before{
   content:'';position:absolute;top:0;left:0;right:0;height:4px;
   background:linear-gradient(90deg,var(--sky),var(--blue));
 }
-.como-card:hover{transform:translateY(-5px);box-shadow:0 18px 52px rgba(26,35,50,.1);}
+.como-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 20px 60px rgba(26,35,50,.15)}
 .como-step-num{
   font-family:'Figtree',sans-serif;font-size:56px;font-weight:900;
   color:var(--deep);line-height:1;letter-spacing:-2px;
@@ -607,6 +651,14 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
 .pm-store-btn{display:inline-flex;align-items:center;gap:6px;color:var(--blue);font-family:'Figtree',sans-serif;font-weight:700;font-size:14px;padding:12px 20px;border-radius:100px;text-decoration:none;border:1.5px solid rgba(26,79,182,.3);background:rgba(26,79,182,.05);transition:background .15s,border-color .15s;}
 .pm-store-btn:hover{background:rgba(26,79,182,.1);border-color:rgba(26,79,182,.5);}
 .pm-store-btn.hidden{display:none!important;}
+
+/* ── RESPECT MOTION PREFERENCES ── */
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important;transition:none!important}
+  .problem-card,.prod-card,.testi-card,.como-card{
+    opacity:1;transform:translateY(0) scale(1);animation:none!important
+  }
+}
 
 /* ── RESPONSIVE MOBILE ── */
 @media(max-width:768px){
@@ -1223,13 +1275,13 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
           <div class="prod-cat" style="background:rgba(245,158,11,.12);color:#b45309;">Deporte</div>
           <img src="img/productos/lifewave/x49.png" alt="Parche X49" loading="lazy"/>
           <span class="prod-badge badge-blue">Ideal con X39</span>
-          <span class="prod-price-badge sin-stock">Sin Stock</span>
+          <span class="prod-price-badge">$155.000</span>
         </div>
         <div class="prod-body">
           <h4>Parche X49</h4>
           <p>Potenciador de rendimiento deportivo. Aumenta fuerza, resistencia y recuperacion post-entrenamiento.</p>
           <div class="prod-footer">
-            <span class="prod-price" style="color:#ef4444;font-weight:800;">Sin Stock</span>
+            <span class="prod-price">$155.000</span>
             <a class="prod-btn" href="https://pemf-buenos-aires.tiendup.com/p/lifewave-x49" target="_blank">Ver producto</a>
           </div>
         </div>
@@ -1325,7 +1377,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
       <div class="prod-card reveal" data-product="Aeon">
         <div class="prod-card-img" style="background:#f5f3ff;">
           <div class="prod-cat" style="background:rgba(139,92,246,.1);color:#7c3aed;">Estres</div>
-          <img src="img/productos/lifewave/aeon.png" alt="Aeon" loading="lazy"/>
+          <img src="img/productos/lifewave/aeon2.png" alt="Aeon" loading="lazy"/>
           <span class="prod-badge badge-blue">Combina con X39</span>
           <span class="prod-price-badge">$150.000</span>
         </div>
@@ -1726,19 +1778,19 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
       <div class="ig-strip">
         <div class="ig-strip-track">
           <!-- set 1 -->
-          <a class="ig-card" href="https://www.instagram.com/pemfbuenosaires/" target="_blank" rel="noopener"><img src="img/contenido/reels/reel-luz.jpg" alt="Reel: tu cuerpo emite luz" loading="lazy"/><span class="ig-handle">@pemfbuenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">Tu cuerpo emite luz</span></a>
-          <a class="ig-card" href="https://www.instagram.com/pemfbuenosaires/" target="_blank" rel="noopener"><img src="img/contenido/reels/reel-cuantica.jpg" alt="Reel: qué es la medicina cuántica" loading="lazy"/><span class="ig-handle">@pemfbuenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">¿Qué es la medicina cuántica?</span></a>
-          <a class="ig-card" href="https://www.instagram.com/pemfbuenosaires/" target="_blank" rel="noopener"><img src="img/contenido/reels/reel-calma.jpg" alt="Reel: calma y claridad" loading="lazy"/><span class="ig-handle">@pemfbuenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">Calma & claridad</span></a>
-          <a class="ig-card" href="https://www.instagram.com/pemfbuenosaires/" target="_blank" rel="noopener"><img src="img/contenido/reels/reel-coherencia.jpg" alt="Reel: coherencia celular" loading="lazy"/><span class="ig-handle">@pemfbuenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">Coherencia celular</span></a>
-          <a class="ig-card" href="https://www.instagram.com/pemfbuenosaires/" target="_blank" rel="noopener"><img src="img/contenido/reels/reel-energia.jpg" alt="Reel: energía y foco" loading="lazy"/><span class="ig-handle">@pemfbuenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">Energía & foco</span></a>
-          <a class="ig-card" href="https://www.instagram.com/pemfbuenosaires/" target="_blank" rel="noopener"><img src="img/contenido/reels/reel-disney.jpg" alt="Reel: te acompañamos en todas tus aventuras" loading="lazy"/><span class="ig-handle">@pemfbuenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">En todas tus aventuras</span></a>
+          <a class="ig-card" href="https://www.instagram.com/pemf.buenosaires/reel/DcuamqaNMHS/" target="_blank" rel="noopener"><img src="img/contenido/reels/reel-luz.jpg" alt="Reel: tu cuerpo emite luz" loading="lazy"/><span class="ig-handle">@pemf.buenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">Tu cuerpo emite luz</span></a>
+          <a class="ig-card" href="https://www.instagram.com/pemf.buenosaires/reel/DWHp9HJDTeu/" target="_blank" rel="noopener"><img src="img/contenido/reels/reel-cuantica.jpg" alt="Reel: qué es la medicina cuántica" loading="lazy"/><span class="ig-handle">@pemf.buenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">¿Qué es la medicina cuántica?</span></a>
+          <a class="ig-card" href="https://www.instagram.com/pemf.buenosaires/reel/DVt7EYwlKma/" target="_blank" rel="noopener"><img src="img/contenido/reels/reel-calma.jpg" alt="Reel: calma y claridad" loading="lazy"/><span class="ig-handle">@pemf.buenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">Calma & claridad</span></a>
+          <a class="ig-card" href="https://www.instagram.com/pemf.buenosaires/reel/DVL50xZESFN/" target="_blank" rel="noopener"><img src="img/contenido/reels/reel-coherencia.jpg" alt="Reel: coherencia celular" loading="lazy"/><span class="ig-handle">@pemf.buenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">Coherencia celular</span></a>
+          <a class="ig-card" href="https://www.instagram.com/pemf.buenosaires/reel/DU6J9kiEcVy/" target="_blank" rel="noopener"><img src="img/contenido/reels/reel-energia.jpg" alt="Reel: energía y foco" loading="lazy"/><span class="ig-handle">@pemf.buenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">Energía & foco</span></a>
+          <a class="ig-card" href="https://www.instagram.com/pemf.buenosaires/reel/DUV6MB1Dxqb/" target="_blank" rel="noopener"><img src="img/contenido/reels/reel-disney.jpg" alt="Reel: te acompañamos en todas tus aventuras" loading="lazy"/><span class="ig-handle">@pemf.buenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">En todas tus aventuras</span></a>
           <!-- set 2 (duplicado para el loop) -->
-          <a class="ig-card" href="https://www.instagram.com/pemfbuenosaires/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/contenido/reels/reel-luz.jpg" alt="" loading="lazy"/><span class="ig-handle">@pemfbuenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">Tu cuerpo emite luz</span></a>
-          <a class="ig-card" href="https://www.instagram.com/pemfbuenosaires/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/contenido/reels/reel-cuantica.jpg" alt="" loading="lazy"/><span class="ig-handle">@pemfbuenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">¿Qué es la medicina cuántica?</span></a>
-          <a class="ig-card" href="https://www.instagram.com/pemfbuenosaires/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/contenido/reels/reel-calma.jpg" alt="" loading="lazy"/><span class="ig-handle">@pemfbuenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">Calma & claridad</span></a>
-          <a class="ig-card" href="https://www.instagram.com/pemfbuenosaires/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/contenido/reels/reel-coherencia.jpg" alt="" loading="lazy"/><span class="ig-handle">@pemfbuenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">Coherencia celular</span></a>
-          <a class="ig-card" href="https://www.instagram.com/pemfbuenosaires/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/contenido/reels/reel-energia.jpg" alt="" loading="lazy"/><span class="ig-handle">@pemfbuenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">Energía & foco</span></a>
-          <a class="ig-card" href="https://www.instagram.com/pemfbuenosaires/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/contenido/reels/reel-disney.jpg" alt="" loading="lazy"/><span class="ig-handle">@pemfbuenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">En todas tus aventuras</span></a>
+          <a class="ig-card" href="https://www.instagram.com/pemf.buenosaires/reel/DcuamqaNMHS/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/contenido/reels/reel-luz.jpg" alt="" loading="lazy"/><span class="ig-handle">@pemf.buenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">Tu cuerpo emite luz</span></a>
+          <a class="ig-card" href="https://www.instagram.com/pemf.buenosaires/reel/DWHp9HJDTeu/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/contenido/reels/reel-cuantica.jpg" alt="" loading="lazy"/><span class="ig-handle">@pemf.buenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">¿Qué es la medicina cuántica?</span></a>
+          <a class="ig-card" href="https://www.instagram.com/pemf.buenosaires/reel/DVt7EYwlKma/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/contenido/reels/reel-calma.jpg" alt="" loading="lazy"/><span class="ig-handle">@pemf.buenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">Calma & claridad</span></a>
+          <a class="ig-card" href="https://www.instagram.com/pemf.buenosaires/reel/DVL50xZESFN/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/contenido/reels/reel-coherencia.jpg" alt="" loading="lazy"/><span class="ig-handle">@pemf.buenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">Coherencia celular</span></a>
+          <a class="ig-card" href="https://www.instagram.com/pemf.buenosaires/reel/DU6J9kiEcVy/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/contenido/reels/reel-energia.jpg" alt="" loading="lazy"/><span class="ig-handle">@pemf.buenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">Energía & foco</span></a>
+          <a class="ig-card" href="https://www.instagram.com/pemf.buenosaires/reel/DUV6MB1Dxqb/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/contenido/reels/reel-disney.jpg" alt="" loading="lazy"/><span class="ig-handle">@pemf.buenosaires</span><span class="ig-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="ig-caption">En todas tus aventuras</span></a>
         </div>
       </div>
     </div>
@@ -1986,6 +2038,8 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
   </div>
 </div>
 
+<script src="js/papers-data.js"></script>
+<script src="js/evidence-sync.js"></script>
 <script src="js/page-index.js" defer></script>
 <script src="js/scroll-premium.js?v=4" defer></script>
 </body>
