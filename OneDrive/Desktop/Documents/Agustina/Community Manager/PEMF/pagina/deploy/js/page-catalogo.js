@@ -1,4 +1,4 @@
-/* page-catalogo.js — renderiza el catálogo completo */
+/* page-catalogo.js — catálogo completo con productos, kits y filtros */
 
 (function() {
   'use strict';
@@ -11,12 +11,7 @@
     productGrid: document.getElementById('productGrid'),
     gridTitle: document.getElementById('gridTitle'),
     gridCount: document.getElementById('gridCount'),
-    brandStage: document.getElementById('brandStage'),
-    stageBanner: document.getElementById('stageBanner'),
-    stageImg: document.getElementById('stageImg'),
-    stageCount: document.getElementById('stageCount'),
-    modalOverlay: document.getElementById('modalOverlay'),
-    modalClose: document.getElementById('modalClose'),
+    combosScroll: document.getElementById('combosScroll'),
   };
 
   function renderBrandNav() {
@@ -34,21 +29,9 @@
   function switchBrand(brandId) {
     currentBrand = brandId;
     currentGoal = 'todos';
-    updateStage();
     renderBrandNav();
     renderProducts();
     updateGoalChips();
-  }
-
-  function updateStage() {
-    if (!DOM.stageBanner) return;
-    const brand = BRANDS.find(b => b.id === currentBrand);
-    if (brand) {
-      DOM.stageBanner.src = `img/estructura/banner-${brand.id}.webp`;
-      if (DOM.stageImg) DOM.stageImg.src = brand.stageImg || 'img/productos/lifewave/x39.png';
-    }
-    const count = PRODUCTS.filter(p => p.brand === currentBrand).length;
-    if (DOM.stageCount) DOM.stageCount.textContent = `${count} productos disponibles`;
   }
 
   function setupGoalFilters() {
@@ -64,6 +47,24 @@
   function updateGoalChips() {
     document.querySelectorAll('.goal-chip').forEach(chip => {
       chip.classList.toggle('active', chip.dataset.goal === currentGoal);
+    });
+  }
+
+  function renderKits() {
+    if (!DOM.combosScroll || !KITS) return;
+    DOM.combosScroll.innerHTML = '';
+    KITS.forEach(kit => {
+      const card = document.createElement('div');
+      card.className = 'combo-card';
+      card.innerHTML = `
+        <div class="combo-name">${kit.name}</div>
+        <div class="combo-products">${kit.products}</div>
+        <button class="combo-btn">Consultar combo →</button>
+      `;
+      card.addEventListener('click', () => {
+        window.location.hash = kit.id;
+      });
+      DOM.combosScroll.appendChild(card);
     });
   }
 
@@ -91,20 +92,37 @@
     products.forEach((prod, idx) => {
       const card = document.createElement('div');
       card.className = 'prod-card';
+
+      const badgeHtml = prod.badge ? `<div class="card-badge" style="background: ${prod.badgeBg}; color: ${prod.badgeColor};">${prod.badge}</div>` : '';
+      const stockColor = prod.stockCount > 10 ? '#15803d' : prod.stockCount > 5 ? '#854d0e' : '#dc2626';
+
       card.innerHTML = `
-        <div class="card-img-wrap">
+        <div class="card-img-wrap" style="background: linear-gradient(135deg, ${brand?.bg1 || '#f5f3ff'}, ${brand?.bg2 || '#ede9fe'});">
           <img class="card-img" src="${prod.img}" alt="${prod.name}" loading="lazy"/>
           <div class="card-overlay">
             <button class="ov-btn primary">Ver detalles</button>
             <a class="ov-btn wa" href="https://wa.me/5491161054411" target="_blank">WhatsApp</a>
           </div>
+          ${badgeHtml}
         </div>
         <div class="card-body">
           <div class="card-brand-tag" style="background: ${brand?.tagBg}; color: ${brand?.tagColor};">${brand?.name}</div>
-          <div class="card-name">${prod.name}</div>
+          <div class="card-meta-row">
+            <div class="card-name">${prod.name}</div>
+            <div class="daily-cost-badge"><strong>${prod.priceDay}</strong></div>
+          </div>
+          <div class="card-meta-row">
+            <div class="stock-badge stock-ok">
+              <span class="stock-dot"></span>
+              ${prod.stockStatus}
+            </div>
+          </div>
           <div class="card-desc">${prod.desc}</div>
           <div class="card-footer">
-            <div class="card-price">${prod.price}</div>
+            <div>
+              <div class="card-price">${prod.price}</div>
+              <div class="card-price-note">${prod.stock}</div>
+            </div>
             <button class="card-cta">Comprar</button>
           </div>
         </div>
@@ -118,7 +136,8 @@
 
       card.querySelector('.card-cta')?.addEventListener('click', (e) => {
         e.stopPropagation();
-        window.open(prod.storeUrl || '#', '_blank');
+        const msg = `Hola, me interesa ${prod.name}`;
+        window.open(`https://wa.me/5491161054411?text=${encodeURIComponent(msg)}`, '_blank');
       });
 
       DOM.productGrid.appendChild(card);
@@ -140,8 +159,6 @@
       modalPane: document.getElementById('modalPane'),
       mBenefits: document.getElementById('mBenefits'),
       mScience: document.getElementById('mScience'),
-      mBuyBtn: document.getElementById('mBuyBtn'),
-      mWaBtn: document.getElementById('mWaBtn'),
     };
 
     if (ids.mBrandTag) {
@@ -150,31 +167,12 @@
       ids.mBrandTag.style.color = brand?.tagColor;
     }
     if (ids.mName) ids.mName.textContent = prod.name;
-    if (ids.mTagline) ids.mTagline.textContent = prod.sub || prod.desc;
+    if (ids.mTagline) ids.mTagline.textContent = prod.desc;
     if (ids.mPrice) ids.mPrice.textContent = prod.price;
-    if (ids.mPriceNote) ids.mPriceNote.innerHTML = 'Incluye asesoramiento personalizado';
+    if (ids.mPriceNote) ids.mPriceNote.textContent = prod.stock;
     if (ids.dvdImg) ids.dvdImg.src = prod.img;
     if (ids.modalPane && brand) {
       ids.modalPane.style.background = `linear-gradient(135deg, ${brand.bg1}, ${brand.bg2})`;
-    }
-
-    if (ids.mBenefits && prod.benefits) {
-      ids.mBenefits.innerHTML = prod.benefits.map((b, i) => `
-        <div class="benefit-row">
-          <div class="benefit-dot" style="background: ${brand?.tagColor || '#1a4fb6'};">${i + 1}</div>
-          <div>${b}</div>
-        </div>
-      `).join('');
-    }
-
-    if (ids.mScience) ids.mScience.textContent = prod.science || '';
-    if (ids.mBuyBtn) {
-      ids.mBuyBtn.href = prod.storeUrl || '#';
-      ids.mBuyBtn.target = '_blank';
-    }
-    if (ids.mWaBtn) {
-      ids.mWaBtn.href = `https://wa.me/5491161054411?text=Hola,%20me%20interesa%20${encodeURIComponent(prod.name)}`;
-      ids.mWaBtn.target = '_blank';
     }
 
     document.querySelectorAll('.modal-tab').forEach(t => t.classList.remove('active'));
@@ -182,30 +180,38 @@
     document.querySelector('[data-tab="desc"]')?.classList.add('active');
     document.getElementById('tab-desc')?.classList.add('active');
 
-    if (DOM.modalOverlay) {
-      DOM.modalOverlay.classList.add('open');
+    const modal = document.getElementById('modalOverlay');
+    if (modal) {
+      modal.classList.add('open');
       document.body.style.overflow = 'hidden';
     }
   }
 
-  function closeModal() {
-    if (DOM.modalOverlay) {
-      DOM.modalOverlay.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  }
-
   function setupModalHandlers() {
-    if (DOM.modalClose) {
-      DOM.modalClose.addEventListener('click', closeModal);
-    }
-    if (DOM.modalOverlay) {
-      DOM.modalOverlay.addEventListener('click', (e) => {
-        if (e.target === DOM.modalOverlay) closeModal();
+    const closeBtn = document.querySelector('.modal-close');
+    const modal = document.getElementById('modalOverlay');
+
+    if (closeBtn) closeBtn.addEventListener('click', () => {
+      if (modal) {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.remove('open');
+          document.body.style.overflow = '';
+        }
       });
     }
+
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeModal();
+      if (e.key === 'Escape' && modal?.classList.contains('open')) {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
     });
 
     document.querySelectorAll('.modal-tab').forEach(tab => {
@@ -227,8 +233,8 @@
     renderBrandNav();
     setupGoalFilters();
     setupModalHandlers();
-    updateStage();
     renderProducts();
+    renderKits();
   }
 
   if (document.readyState === 'loading') {
