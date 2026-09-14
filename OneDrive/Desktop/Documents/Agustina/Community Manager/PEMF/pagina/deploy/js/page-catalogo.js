@@ -3,7 +3,7 @@
 (function() {
   'use strict';
 
-  let currentBrand = 'lifewave';
+  let currentBrand = 'todos';
   let currentGoal = 'todos';
 
   const DOM = {
@@ -17,6 +17,13 @@
   function renderBrandNav() {
     if (!DOM.brandNav || !BRANDS) return;
     DOM.brandNav.innerHTML = '';
+
+    const todosPill = document.createElement('button');
+    todosPill.className = `brand-pill ${currentBrand === 'todos' ? 'active' : ''}`;
+    todosPill.textContent = 'Todos';
+    todosPill.addEventListener('click', () => switchBrand('todos'));
+    DOM.brandNav.appendChild(todosPill);
+
     BRANDS.forEach(brand => {
       const pill = document.createElement('button');
       pill.className = `brand-pill ${brand.id === currentBrand ? 'active' : ''}`;
@@ -70,7 +77,7 @@
 
   function getFilteredProducts() {
     if (!PRODUCTS) return [];
-    let filtered = PRODUCTS.filter(p => p.brand === currentBrand);
+    let filtered = currentBrand === 'todos' ? PRODUCTS : PRODUCTS.filter(p => p.brand === currentBrand);
     if (currentGoal !== 'todos') {
       filtered = filtered.filter(p => p.goals && p.goals.includes(currentGoal));
     }
@@ -144,7 +151,13 @@
       setTimeout(() => card.classList.add('revealed'), 30 + idx * 20);
     });
 
-    if (DOM.gridTitle) DOM.gridTitle.textContent = `Productos ${brand?.name || 'LifeWave'}`;
+    if (DOM.gridTitle) {
+      if (currentBrand === 'todos') {
+        DOM.gridTitle.textContent = 'Todos los productos';
+      } else {
+        DOM.gridTitle.textContent = `Productos ${brand?.name || 'LifeWave'}`;
+      }
+    }
     if (DOM.gridCount) DOM.gridCount.textContent = `${products.length} producto${products.length !== 1 ? 's' : ''}`;
   }
 
@@ -173,6 +186,34 @@
     if (ids.dvdImg) ids.dvdImg.src = prod.img;
     if (ids.modalPane && brand) {
       ids.modalPane.style.background = `linear-gradient(135deg, ${brand.bg1}, ${brand.bg2})`;
+    }
+
+    const mVariants = document.getElementById('mVariants');
+    if (prod.variants && prod.variants.length > 0 && mVariants) {
+      mVariants.style.display = 'block';
+      mVariants.innerHTML = `
+        <div style="font-size:12px;font-weight:600;color:#1a2332;margin-bottom:8px;">Presentación:</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          ${prod.variants.map((v, idx) => `
+            <button class="variant-btn ${idx === 0 ? 'active' : ''}" data-variant="${idx}" style="
+              padding:8px 14px;border-radius:8px;font-size:11px;font-weight:700;
+              border:1.5px solid #e2e8f0;background:#fff;color:#1a2332;
+              cursor:pointer;transition:all .2s;
+            ">${v.name} - ${v.price}</button>
+          `).join('')}
+        </div>
+      `;
+      document.querySelectorAll('.variant-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          document.querySelectorAll('.variant-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const idx = parseInt(btn.dataset.variant);
+          if (ids.mPrice) ids.mPrice.textContent = prod.variants[idx].price;
+          if (ids.mPriceNote) ids.mPriceNote.textContent = prod.variants[idx].stock + ' disponibles';
+        });
+      });
+    } else if (mVariants) {
+      mVariants.style.display = 'none';
     }
 
     document.querySelectorAll('.modal-tab').forEach(t => t.classList.remove('active'));
