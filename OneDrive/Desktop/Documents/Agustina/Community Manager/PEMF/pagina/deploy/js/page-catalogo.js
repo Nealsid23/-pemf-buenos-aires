@@ -12,17 +12,6 @@
     gridTitle: document.getElementById('gridTitle'),
     gridCount: document.getElementById('gridCount'),
     combosScroll: document.getElementById('combosScroll'),
-    stageBanner: document.getElementById('stageBanner'),
-  };
-
-  const BANNER_MAP = {
-    'todos': 'img/estructura/banner-lifewave.webp',
-    'lifewave': 'img/estructura/banner-lifewave.webp',
-    'neuro': 'img/estructura/banner-neuro.webp',
-    'analemma': 'img/estructura/banner-analemma.webp',
-    'gamma-light': 'img/estructura/banner-gamma.webp',
-    'ess60': 'img/estructura/banner-myvitalc.webp',
-    'h2': 'img/estructura/banner-drinkhrw.webp',
   };
 
   function renderBrandNav() {
@@ -44,20 +33,9 @@
     });
   }
 
-  function updateBanner() {
-    if (!DOM.stageBanner) return;
-    const bannerSrc = BANNER_MAP[currentBrand] || BANNER_MAP['todos'];
-    DOM.stageBanner.classList.add('fade-out');
-    setTimeout(() => {
-      DOM.stageBanner.src = bannerSrc;
-      DOM.stageBanner.classList.remove('fade-out');
-    }, 175);
-  }
-
   function switchBrand(brandId) {
     currentBrand = brandId;
     currentGoal = 'todos';
-    updateBanner();
     renderBrandNav();
     renderProducts();
     updateGoalChips();
