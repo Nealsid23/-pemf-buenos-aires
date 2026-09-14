@@ -4,6 +4,7 @@ const BRANDS = [
   { id: 'analemma', name: 'Analemma', tag: 'Agua estructurada', tagColor: '#0369a1', tagBg: '#e0f2fe', bg1: 'linear-gradient(135deg,#0c4a6e,#0369a1)', bg2: 'linear-gradient(135deg,#075985,#38bdf8)' },
   { id: 'gamma-light', name: 'Gamma Light', tag: 'Luz gamma', tagColor: '#92400e', tagBg: '#fef3c7', bg1: 'linear-gradient(135deg,#78350f,#92400e)', bg2: 'linear-gradient(135deg,#92400e,#f59e0b)' },
   { id: 'ess60', name: 'ESS60', tag: 'Carbono C60', tagColor: '#9d174d', tagBg: '#fce7f3', bg1: 'linear-gradient(135deg,#831843,#9d174d)', bg2: 'linear-gradient(135deg,#9d174d,#ec4899)' },
+  { id: 'h2', name: 'Drink HRW', tag: 'Hidrógeno', tagColor: '#0369a1', tagBg: '#e0f2fe', bg1: 'linear-gradient(135deg,#0c4a6e,#0369a1)', bg2: 'linear-gradient(135deg,#075985,#38bdf8)' },
 ];
 
 const KITS = [
@@ -40,4 +41,7 @@ const PRODUCTS = [
 
   // ESS60
   { brand: 'ess60', name: 'ESS60 Oil', badge: 'Antioxidante', badgeBg: '#fce7f3', badgeColor: '#9d174d', price: '$450.000', priceDay: '$15.000/día', stock: '50ml', stockCount: 4, stockStatus: '4 en stock', img: 'img/productos/ess60.png', goals: ['longevidad', 'inmunidad'], desc: 'Carbono C60 en aceite de oliva virgen extra puro.' },
+
+  // H2 TABLETS (HIDRÓGENO)
+  { brand: 'h2', name: 'H2 Tablets', badge: 'H₂ Molecular', badgeBg: '#e0f2fe', badgeColor: '#0369a1', price: '$170.000', priceDay: '$5.666/día', stock: '1 frasco', stockCount: 12, stockStatus: '12 en stock', img: 'img/productos/h2-tablets.png', goals: ['energia', 'inmunidad', 'longevidad'], desc: 'Hidrógeno molecular con +2000 estudios científicos. Máximo antioxidante selectivo.' },
 ];
