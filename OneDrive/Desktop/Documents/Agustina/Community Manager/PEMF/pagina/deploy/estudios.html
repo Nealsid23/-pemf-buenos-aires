@@ -189,7 +189,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
 }
 .filter-scroll{display:flex;flex-direction:column;gap:9px}
 .filter-group{display:flex;align-items:center;gap:8px}
-.filter-row-label{font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--mist);flex-shrink:0;min-width:56px}
+.filter-row-label{font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#475569;flex-shrink:0;min-width:56px}
 .pills-scroll{
   display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;
   scrollbar-width:none;-ms-overflow-style:none;
@@ -231,7 +231,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
   background:transparent;font-size:13px;font-family:'DM Sans',sans-serif;
   color:var(--ink);outline:none;padding:2px 0;
 }
-.search-input::placeholder{color:var(--mist)}
+.search-input::placeholder{color:#64748b;font-weight:500;opacity:.8}
 
 /* ═══ MÉTODO EN TARJETA + MODO PRO ═══════════════════ */
 .card-method{
@@ -261,14 +261,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
 
 /* ═══ FILTERBAR (compacta) ═══════════════════════════ */
 .filterbar{display:flex;flex-direction:column;gap:16px}
-.filterbar-search{display:flex;align-items:center;gap:12px;padding:11px 16px;background:#fff;border-radius:10px;border:1.5px solid rgba(26,79,182,.12);transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 2px 8px rgba(11,31,74,.04)}
+.filterbar-search{display:flex;align-items:center;gap:12px;padding:14px 18px;background:#fff;border-radius:10px;border:1.5px solid rgba(26,79,182,.12);transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 2px 8px rgba(11,31,74,.04);min-height:48px}
 .filterbar-search:focus-within{border-color:var(--azure);box-shadow:0 0 0 4px rgba(26,79,182,.12);background:#fafbfd;transform:translateY(-1px)}
 .filterbar-search:focus-within .search-icon{color:var(--azure);transform:scale(1.2)}
 .filterbar-menus{display:flex;flex-wrap:wrap;gap:10px}
 .search-icon{transition:all .3s cubic-bezier(.34,1.56,.64,1);color:var(--mist);font-size:15px}
 .fb-btn{display:inline-flex;align-items:center;gap:8px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;color:var(--steel);background:#fff;border:1.5px solid rgba(26,79,182,.12);border-radius:10px;padding:9px 16px;cursor:pointer;transition:all .3s cubic-bezier(.34,1.56,.64,1);white-space:nowrap;position:relative;overflow:hidden}
 .fb-btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--azure),#1e6eb8);opacity:0;z-index:-1;transition:opacity .3s}
-.fb-btn:hover{border-color:var(--azure);color:var(--azure);transform:translateY(-3px);box-shadow:0 8px 24px rgba(26,79,182,.15);background:#f8fbff}
+.fb-btn:hover{border-color:var(--azure);color:var(--azure);transform:translateY(-3px);box-shadow:0 12px 32px rgba(26,79,182,.2);background:#f8fbff}
 .fb-btn:hover::before{opacity:.06}
 .fb-btn.active{border-color:transparent;color:#fff;background:linear-gradient(135deg,var(--azure),#1e6eb8);box-shadow:0 6px 24px rgba(26,79,182,.3)}
 .fb-btn .fb-caret{font-size:9px;opacity:.7;transition:transform .2s}
@@ -296,8 +296,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
   display:flex;align-items:center;justify-content:space-between;
   padding:12px 0 16px;gap:12px;flex-wrap:wrap;
 }
-.results-count{font-size:13px;color:var(--mist)}
-.results-count strong{color:var(--steel);font-weight:600}
+.results-count{font-size:14px;color:#64748b;font-weight:500}
+.results-count strong{color:var(--azure);font-weight:700;font-size:16px}
 .clear-btn{
   font-size:12px;font-weight:700;color:var(--azure);
   background:#fff;border:1.5px solid rgba(26,79,182,.15);
@@ -474,10 +474,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
 }
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 .empty-icon{
-  width:48px;height:48px;margin:0 auto 16px;opacity:.35;
+  width:80px;height:80px;margin:0 auto 16px;opacity:.42;
 }
-.empty-state h3{font-family:'Lora',serif;font-size:20px;color:var(--slate);margin-bottom:8px}
-.empty-state p{font-size:14px;color:var(--mist)}
+.empty-state h3{font-family:'Lora',serif;font-size:22px;font-weight:700;color:var(--slate);margin-bottom:12px}
+.empty-state p{font-size:15px;color:#64748b;line-height:1.6}
 
 
 /* ═══ OVERLAY / MODAL ════════════════════════════════ */
@@ -909,7 +909,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
     <div id="papers-filters" class="filterbar">
       <div class="filterbar-search">
         <span class="search-icon">⌕</span>
-        <input class="search-input" id="search" type="text" placeholder="Buscar por título, autor, ingrediente…">
+        <input class="search-input" id="search" type="text" placeholder="¿Qué estudio buscás?">
       </div>
       <div class="filterbar-menus" id="menus-estudios"></div>
       <div class="filterbar-chips" id="chips-estudios"></div>
@@ -918,7 +918,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
     <div id="guias-filters" class="filterbar" style="display:none">
       <div class="filterbar-search">
         <span class="search-icon">⌕</span>
-        <input class="search-input" id="search-guia" type="text" placeholder="Buscar guías…">
+        <input class="search-input" id="search-guia" type="text" placeholder="¿Qué protocolo necesitás?">
       </div>
       <div class="filterbar-menus" id="menus-guias"></div>
       <div class="filterbar-chips" id="chips-guias"></div>
@@ -933,7 +933,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V2"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.58 16.5h12.85"/></svg>
         Modo profesional
       </button>
-      <button class="clear-btn" id="clear-btn">Limpiar filtros ×</button>
+      <button class="clear-btn" id="clear-btn">Borrar filtros</button>
     </div>
   </div>
   <div class="grid" id="grid"></div>
