@@ -214,7 +214,12 @@ const clearBtn=document.getElementById('clear-btn');
 
 function attachCardClick(){
   document.querySelectorAll('.card').forEach(card=>{
-    card.addEventListener('click',e=>{
+    // Hacer cards accesibles con keyboard
+    card.setAttribute('role','button');
+    card.setAttribute('tabindex','0');
+    card.setAttribute('aria-label',`Estudio: ${card.dataset.paperTitle}`);
+
+    const openCard=(e)=>{
       if(e.target.closest('.pdf-btn'))return;
       e.stopPropagation();
       const s={
@@ -232,6 +237,15 @@ function attachCardClick(){
         el:card.dataset.paperTypeLevel
       };
       openPaperModal(s,card);
+    };
+
+    card.addEventListener('click',openCard);
+    // Soporte para Enter y Space en keyboard
+    card.addEventListener('keydown',e=>{
+      if(e.key==='Enter'||e.key===' '){
+        e.preventDefault();
+        openCard(e);
+      }
     });
   });
 }
@@ -411,10 +425,13 @@ function render(animate=true){
 
   if(!list.length){
     grid.style.opacity='1';grid.style.transform='none';
-    grid.innerHTML=`<div class="empty-state">
-      <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-      <h3>Sin resultados</h3>
-      <p>Probá con otro producto o cambiá el tipo de estudio.</p>
+    grid.innerHTML=`<div class="empty-state" role="status" aria-live="polite">
+      <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      <h3>No encontramos estudios</h3>
+      <p>Probá ajustando los filtros o explorando otras marcas.</p>
+      <button class="empty-state-btn" onclick="document.querySelectorAll('.fb-btn').forEach(b=>b.classList.remove('active')); document.getElementById('search').value=''; render(); this.closest('.empty-state').remove();" title="Mostrar todos los estudios disponibles" aria-label="Botón: Ver todos los estudios disponibles">
+        Ver todos los estudios
+      </button>
     </div>`;
     return;
   }
@@ -641,7 +658,7 @@ function renderGuias(){
   countLine.appendChild(_cn3);
   countLine.appendChild(document.createTextNode(list.length===guias.length?' guías prácticas':' de '+guias.length+' guías'));
   if(!list.length){
-    grid.innerHTML=`<div class="empty-state"><svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><h3>Sin resultados</h3><p>Probá con otra categoría.</p></div>`;
+    grid.innerHTML=`<div class="empty-state" role="status" aria-live="polite"><svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><h3>No encontramos guías</h3><p>Probá con otra categoría o limpiá los filtros.</p><button class="empty-state-btn" onclick="document.getElementById('search-guia').value=''; document.querySelectorAll('#guias-filters .fb-btn').forEach(b=>b.classList.remove('active')); render(); this.closest('.empty-state').remove();" title="Mostrar todas las guías disponibles" aria-label="Botón: Ver todas las guías disponibles">Ver todas las guías</button></div>`;
     return;
   }
   grid.innerHTML=list.map(g=>{

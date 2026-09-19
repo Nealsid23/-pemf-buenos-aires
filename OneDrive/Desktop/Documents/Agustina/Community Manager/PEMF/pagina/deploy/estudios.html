@@ -288,8 +288,15 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
 @keyframes shimmer{to{transform:translateX(100%)}}
 .fb-chip button{display:flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;border:none;background:rgba(255,255,255,.25);color:#fff;cursor:pointer;font-size:12px;line-height:1;padding:0;transition:all .2s;flex-shrink:0}
 .fb-chip button:hover{background:rgba(255,255,255,.45);transform:scale(1.1)}
-.fb-clear-all{font-size:11px;font-weight:700;color:var(--azure);background:none;border:none;cursor:pointer;padding:4px 8px;font-family:'DM Sans',sans-serif}
-.fb-clear-all:hover{text-decoration:underline}
+.fb-clear-all{font-size:11px;font-weight:700;color:var(--azure);background:none;border:none;cursor:pointer;padding:4px 8px;font-family:'DM Sans',sans-serif;transition:all .2s}
+.fb-clear-all:hover{text-decoration:underline;color:#1e6eb8}
+.fb-clear-all:focus{outline:2px solid var(--azure);outline-offset:2px}
+
+/* ═══ FOCUS STATES (Keyboard Navigation) ════════════ */
+.fb-btn:focus{outline:2px solid var(--azure);outline-offset:2px}
+.pill:focus{outline:2px solid var(--azure);outline-offset:2px}
+.clear-btn:focus{outline:2px solid var(--azure);outline-offset:2px}
+.search-input:focus{outline:2px solid var(--azure);outline-offset:2px}
 
 /* ═══ RESULTS BAR ════════════════════════════════════ */
 .results-bar{
@@ -442,6 +449,23 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
   display:flex;align-items:center;gap:4px;white-space:nowrap;flex-shrink:0;
 }
 .pdf-btn:hover{color:#fff!important;border-color:transparent!important;transform:translateY(-2px) scale(1.04);box-shadow:0 8px 22px rgba(0,0,0,.22)}
+.pdf-btn:focus{outline:2px solid currentColor;outline-offset:2px}
+
+/* ═══ BUTTON TOOLTIPS & ARIA LABELS ════════════════ */
+[role="tooltip"]{
+  font-size:12px;font-weight:500;background:#1a2332;color:#fff;
+  padding:8px 12px;border-radius:6px;position:absolute;
+  z-index:1000;pointer-events:none;white-space:nowrap;
+  animation:tooltipFade .2s ease-out;
+}
+@keyframes tooltipFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+
+/* ═══ ENHANCED CARD HOVER ═════════════════════════ */
+.card:focus-within{outline:2px solid var(--azure);outline-offset:2px}
+.card:hover{
+  box-shadow:var(--card-hover-shadow);
+  --card-ring:rgba(26,79,182,.4);
+}
 
 /* ─── Click ripple ─── */
 .ripple{
@@ -473,6 +497,23 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
   animation:fadeUp .45s var(--out);
 }
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* ─── Empty state button ─── */
+.empty-state-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:14px;font-weight:600;
+  color:#fff;background:var(--azure);
+  border:none;border-radius:10px;padding:12px 24px;
+  cursor:pointer;transition:all .3s var(--spring);
+  margin-top:16px;
+}
+.empty-state-btn:hover{
+  background:#1e6eb8;transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(26,79,182,.3);
+}
+.empty-state-btn:focus{
+  outline:2px solid #fff;outline-offset:2px;
+}
 .empty-icon{
   width:80px;height:80px;margin:0 auto 16px;opacity:.42;
 }
@@ -908,8 +949,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
 
     <div id="papers-filters" class="filterbar">
       <div class="filterbar-search">
-        <span class="search-icon">⌕</span>
-        <input class="search-input" id="search" type="text" placeholder="¿Qué estudio buscás?">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input class="search-input" id="search" type="text" placeholder="¿Qué estudio buscás?" title="Buscá por título, autor, tema o metodología" aria-label="Buscar estudios científicos">
       </div>
       <div class="filterbar-menus" id="menus-estudios"></div>
       <div class="filterbar-chips" id="chips-estudios"></div>
@@ -917,8 +958,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
 
     <div id="guias-filters" class="filterbar" style="display:none">
       <div class="filterbar-search">
-        <span class="search-icon">⌕</span>
-        <input class="search-input" id="search-guia" type="text" placeholder="¿Qué protocolo necesitás?">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input class="search-input" id="search-guia" type="text" placeholder="¿Qué protocolo necesitás?" title="Buscá por nombre del protocolo o categoría" aria-label="Buscar guías y protocolos">
       </div>
       <div class="filterbar-menus" id="menus-guias"></div>
       <div class="filterbar-chips" id="chips-guias"></div>
@@ -929,11 +970,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
   <div class="results-bar">
     <div class="results-count" id="count-line"></div>
     <div style="display:flex;align-items:center;gap:10px">
-      <button class="pro-toggle" id="pro-toggle" title="Ordena por rigor y muestra el financiamiento de cada estudio">
+      <button class="pro-toggle" id="pro-toggle" title="Modo profesional: Ordena por rigor y muestra el financiamiento de cada estudio" aria-label="Activar modo profesional para ver rigor y financiamiento" aria-pressed="false">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V2"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.58 16.5h12.85"/></svg>
         Modo profesional
       </button>
-      <button class="clear-btn" id="clear-btn">Borrar filtros</button>
+      <button class="clear-btn" id="clear-btn" title="Limpiar todos los filtros aplicados" aria-label="Borrar todos los filtros">Borrar filtros</button>
     </div>
   </div>
   <div class="grid" id="grid"></div>
@@ -942,7 +983,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
 <div class="overlay" id="paper-overlay">
   <div class="modal" id="paper-modal">
     <div class="modal-handle"></div>
-    <button class="modal-close" id="paper-modal-close">✕</button>
+    <button class="modal-close" id="paper-modal-close" aria-label="Cerrar modal de estudio" title="Cerrar (Esc)">✕</button>
     <div class="modal-header">
       <h2 class="modal-title"></h2>
       <p class="modal-cite"></p>
@@ -963,7 +1004,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--page);color:var(--ink);-w
 <div class="overlay" id="overlay">
   <div class="modal" id="modal">
     <div class="modal-handle"></div>
-    <button class="modal-close" id="modal-close">✕</button>
+    <button class="modal-close" id="modal-close" aria-label="Cerrar modal" title="Cerrar (Esc)">✕</button>
     <div class="modal-header" id="modal-header">
       <div class="modal-badges" id="m-badges"></div>
       <h2 class="modal-title" id="m-title"></h2>
