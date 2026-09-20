@@ -50,8 +50,8 @@
     };
 
     const featuredMap = {
-      'todos': { img: 'img/productos/lifewave/x39.png', name: 'X39' },
-      'lifewave': { img: 'img/productos/lifewave/x39.png', name: 'X39' },
+      'todos': { img: 'img/productos/lifewave/ia personas usando el parche/mujer x39.png', name: 'X39' },
+      'lifewave': { img: 'img/productos/lifewave/ia personas usando el parche/mujer x39.png', name: 'X39' },
       'neuro': { img: 'img/productos/neuro/neurogum.png', name: 'Neuro Gum' },
       'analemma': { img: 'img/productos/analemma.png', name: 'Analemma' },
       'gamma-light': { img: 'img/productos/gamma-light.png', name: 'Gamma Light' },
