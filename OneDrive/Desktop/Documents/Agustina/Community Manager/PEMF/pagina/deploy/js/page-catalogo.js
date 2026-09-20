@@ -120,11 +120,12 @@
       const card = document.createElement('div');
       card.className = 'prod-card';
 
+      const prodBrand = BRANDS.find(b => b.id === prod.brand);
       const badgeHtml = prod.badge ? `<div class="card-badge" style="background: ${prod.badgeBg}; color: ${prod.badgeColor};">${prod.badge}</div>` : '';
       const stockColor = prod.stockCount > 10 ? '#15803d' : prod.stockCount > 5 ? '#854d0e' : '#dc2626';
 
       card.innerHTML = `
-        <div class="card-img-wrap" style="background: linear-gradient(135deg, ${brand?.bg1 || '#f5f3ff'}, ${brand?.bg2 || '#ede9fe'});">
+        <div class="card-img-wrap" style="background: linear-gradient(135deg, ${prodBrand?.bg1 || '#f5f3ff'}, ${prodBrand?.bg2 || '#ede9fe'});">
           <img class="card-img" src="${prod.img}" alt="${prod.name}" loading="lazy"/>
           <div class="card-overlay">
             <button class="ov-btn primary">Ver detalles</button>
@@ -133,7 +134,7 @@
           ${badgeHtml}
         </div>
         <div class="card-body">
-          <div class="card-brand-tag" style="background: ${brand?.tagBg}; color: ${brand?.tagColor};">${brand?.name}</div>
+          <div class="card-brand-tag" style="background: ${prodBrand?.tagBg}; color: ${prodBrand?.tagColor};">${prodBrand?.name}</div>
           <div class="card-meta-row">
             <div class="card-name">${prod.name}</div>
             <div class="daily-cost-badge"><strong>${prod.priceDay}</strong> <span style="font-size:10px;color:#94a3b8;">— Menos que un café</span></div>
@@ -182,6 +183,7 @@
   }
 
   function openModal(prod, brand) {
+    const prodBrand = BRANDS.find(b => b.id === prod.brand) || brand;
     const ids = {
       mBrandTag: document.getElementById('mBrandTag'),
       mName: document.getElementById('mName'),
@@ -195,17 +197,17 @@
     };
 
     if (ids.mBrandTag) {
-      ids.mBrandTag.textContent = brand?.name || '';
-      ids.mBrandTag.style.background = brand?.tagBg;
-      ids.mBrandTag.style.color = brand?.tagColor;
+      ids.mBrandTag.textContent = prodBrand?.name || '';
+      ids.mBrandTag.style.background = prodBrand?.tagBg;
+      ids.mBrandTag.style.color = prodBrand?.tagColor;
     }
     if (ids.mName) ids.mName.textContent = prod.name;
     if (ids.mTagline) ids.mTagline.textContent = prod.desc;
     if (ids.mPrice) ids.mPrice.textContent = prod.price;
     if (ids.mPriceNote) ids.mPriceNote.textContent = prod.stock;
     if (ids.dvdImg) ids.dvdImg.src = prod.img;
-    if (ids.modalPane && brand) {
-      ids.modalPane.style.background = `linear-gradient(135deg, ${brand.bg1}, ${brand.bg2})`;
+    if (ids.modalPane && prodBrand) {
+      ids.modalPane.style.background = `linear-gradient(135deg, ${prodBrand.bg1}, ${prodBrand.bg2})`;
     }
 
     const mVariants = document.getElementById('mVariants');
