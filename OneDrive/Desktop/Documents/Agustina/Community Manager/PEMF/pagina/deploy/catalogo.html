@@ -516,46 +516,6 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
       <div class="stage-count" id="stageCount">10 productos disponibles</div>
     </div>
   </div>
-  <button id="editBannerBtn" style="position:fixed;top:100px;right:20px;z-index:999;padding:10px 16px;background:#67CCE9;color:#fff;border:none;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);">⚙️ Editar</button>
-</section>
-
-<!-- ── BANNER EDITOR MODAL ── -->
-<div id="bannerEditorModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;overflow-y:auto;padding:20px;">
-  <div style="background:#fff;border-radius:8px;max-width:600px;margin:50px auto;padding:30px;">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;">
-      <h2 style="font-size:20px;color:#1a2332;margin:0;">Editor de Banner</h2>
-      <button id="closeBannerEditor" style="background:none;border:none;font-size:24px;cursor:pointer;color:#64748b;">✕</button>
-    </div>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:25px;">
-      <div>
-        <label style="display:block;font-size:12px;font-weight:600;color:#64748b;margin-bottom:8px;">Altura del Banner (px)</label>
-        <input id="editorHeight" type="number" value="480" min="300" max="800" step="10" style="width:100%;padding:8px 12px;border:1px solid #e2e8f0;border-radius:4px;"/>
-      </div>
-      <div>
-        <label style="display:block;font-size:12px;font-weight:600;color:#64748b;margin-bottom:8px;">Escala Imagen (%)</label>
-        <input id="editorScale" type="number" value="100" min="50" max="200" step="5" style="width:100%;padding:8px 12px;border:1px solid #e2e8f0;border-radius:4px;"/>
-      </div>
-      <div>
-        <label style="display:block;font-size:12px;font-weight:600;color:#64748b;margin-bottom:8px;">Desde Derecha (px)</label>
-        <input id="editorRight" type="number" value="48" min="0" max="300" step="5" style="width:100%;padding:8px 12px;border:1px solid #e2e8f0;border-radius:4px;"/>
-      </div>
-      <div>
-        <label style="display:block;font-size:12px;font-weight:600;color:#64748b;margin-bottom:8px;">Desde Abajo (px)</label>
-        <input id="editorBottom" type="number" value="40" min="0" max="300" step="5" style="width:100%;padding:8px 12px;border:1px solid #e2e8f0;border-radius:4px;"/>
-      </div>
-    </div>
-
-    <div style="display:flex;gap:10px;margin-bottom:20px;">
-      <button id="saveBannerSettings" style="flex:1;padding:10px 20px;background:#15803d;color:#fff;border:none;border-radius:4px;font-weight:600;cursor:pointer;">✓ Guardar</button>
-      <button id="resetBannerSettings" style="flex:1;padding:10px 20px;background:#dc2626;color:#fff;border:none;border-radius:4px;font-weight:600;cursor:pointer;">↻ Restaurar</button>
-    </div>
-
-    <div style="background:#e0f2fe;border-left:4px solid #67CCE9;padding:12px;border-radius:4px;font-size:12px;color:#0c4a6e;">
-      ℹ️ Los cambios se ven en vivo arriba. Haz clic en "Guardar" para fijar los parámetros.
-    </div>
-  </div>
-</div>
 
 <!-- ── STICKY FILTER BAR ── -->
 <div class="filter-bar" id="filterBar">
@@ -676,77 +636,6 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
   </div>
 </footer>
 
-<script>
-// Banner Editor Modal con cambios en vivo
-(function() {
-  const modal = document.getElementById('bannerEditorModal');
-  const editBtn = document.getElementById('editBannerBtn');
-  const closeBtn = document.getElementById('closeBannerEditor');
-  const heightInput = document.getElementById('editorHeight');
-  const rightInput = document.getElementById('editorRight');
-  const bottomInput = document.getElementById('editorBottom');
-  const saveBtn = document.getElementById('saveBannerSettings');
-  const resetBtn = document.getElementById('resetBannerSettings');
-
-  const brandStage = document.querySelector('.brand-stage');
-  const stageProduct = document.getElementById('stageProduct');
-
-  function loadSettings() {
-    const saved = localStorage.getItem('bannerSettings');
-    if (saved) {
-      const config = JSON.parse(saved);
-      heightInput.value = config.bannerHeight || 480;
-      rightInput.value = config.imgRight || 48;
-      bottomInput.value = config.imgBottom || 40;
-    }
-    applySettings();
-  }
-
-  function applySettings() {
-    const height = parseInt(heightInput.value);
-    const right = parseInt(rightInput.value);
-    const bottom = parseInt(bottomInput.value);
-
-    if (brandStage) brandStage.style.height = height + 'px';
-    if (stageProduct) {
-      stageProduct.style.right = right + 'px';
-      stageProduct.style.bottom = bottom + 'px';
-    }
-  }
-
-  function saveSettings() {
-    const config = {
-      bannerHeight: parseInt(heightInput.value),
-      imgRight: parseInt(rightInput.value),
-      imgBottom: parseInt(bottomInput.value)
-    };
-    localStorage.setItem('bannerSettings', JSON.stringify(config));
-    modal.style.display = 'none';
-  }
-
-  function resetSettings() {
-    heightInput.value = 480;
-    rightInput.value = 48;
-    bottomInput.value = 40;
-    localStorage.removeItem('bannerSettings');
-    applySettings();
-  }
-
-  editBtn.addEventListener('click', () => {
-    modal.style.display = 'block';
-    loadSettings();
-  });
-  closeBtn.addEventListener('click', () => modal.style.display = 'none');
-  modal.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
-  heightInput.addEventListener('input', applySettings);
-  rightInput.addEventListener('input', applySettings);
-  bottomInput.addEventListener('input', applySettings);
-  saveBtn.addEventListener('click', saveSettings);
-  resetBtn.addEventListener('click', resetSettings);
-
-  loadSettings();
-})();
-</script>
 <script src="js/catalogo.js" defer></script>
 <script src="js/page-catalogo.js" defer></script>
 <script src="js/scroll-premium.js?v=4" defer></script>
