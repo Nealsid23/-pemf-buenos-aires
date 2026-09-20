@@ -6,7 +6,30 @@
   document.addEventListener('DOMContentLoaded', () => {
     setupCardMouseTracking();
     setupReviewForm();
+    applyCardGradients();
   });
+
+  function applyCardGradients() {
+    if (!window.PRODUCTS) return;
+
+    const brandGradients = {
+      lifewave: 'linear-gradient(135deg, #3b0764, #6d28d9)',
+      neuro: 'linear-gradient(135deg, #064e3b, #065f46)',
+      analemma: 'linear-gradient(135deg, #0c4a6e, #0369a1)',
+      'gamma-light': 'linear-gradient(135deg, #78350f, #92400e)',
+      ess60: 'linear-gradient(135deg, #831843, #9d174d)',
+      h2: 'linear-gradient(135deg, #0c4a6e, #0369a1)',
+    };
+
+    const cards = document.querySelectorAll('.prod-card');
+    cards.forEach((card, idx) => {
+      const product = PRODUCTS[idx];
+      if (product && brandGradients[product.brand]) {
+        card.style.setProperty('--card-gradient', brandGradients[product.brand]);
+        card.setAttribute('data-brand', product.brand);
+      }
+    });
+  }
 
   function setupCardMouseTracking() {
     const cards = document.querySelectorAll('.prod-card');

@@ -193,12 +193,28 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 20px; background: #fff;
   border: 1.5px solid var(--border); overflow: hidden;
   cursor: pointer; position: relative;
-  transition: transform .3s var(--spring), box-shadow .3s;
+  transition: transform .3s var(--spring), box-shadow .3s, border-color .3s;
+  background: linear-gradient(135deg, #ffffff 0%, #fafbff 100%);
 }
 .prod-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 24px 64px rgba(26,79,182,.16);
+  box-shadow: 0 24px 80px rgba(26,79,182,.18);
   will-change: transform;
+  border-color: rgba(103,204,233,.3);
+}
+.prod-card[data-brand]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--card-gradient);
+  opacity: 0;
+  transition: opacity .3s;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 20px;
+}
+.prod-card:hover::before {
+  opacity: .03;
 }
 .prod-card.filtered-out {
   opacity: 0; transform: scale(.95) translateY(8px);
