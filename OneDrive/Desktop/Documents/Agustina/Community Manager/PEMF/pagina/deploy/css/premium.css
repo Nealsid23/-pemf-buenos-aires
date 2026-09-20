@@ -754,16 +754,10 @@
 }
 
 /* ════════════════════════════════════════════
-   MOBILE
+   TABLET (768px-900px)
    ════════════════════════════════════════════ */
-@media (max-width: 768px) {
-  /* fix preexistente: site.css pisaba el display:none del nav mobile */
-  .nav-links { display: none !important; }
-  .nav .btn-ghost, .nav-cta .btn-ghost { display: none !important; }
-}
-
 @media (max-width: 900px) {
-  .hero-v2 .hero-inner { grid-template-columns: 1fr; gap: 8px; }
+  .hero-v2 .hero-inner { grid-template-columns: 1fr; gap: 8px; padding: 28px 20px; }
   .constellation { height: 380px; margin-top: -10px; }
   .const-x39      { width: 150px; top: 24%; left: 30%; }
   .const-analemma { width: 88px;  top: 0;   left: 2%; }
@@ -781,6 +775,71 @@
   .ig-strip { margin: 0 -20px; }
   .ig-band { margin-top: 48px; }
   .mech-aura { inset: -8%; filter: blur(40px); }
+  .opts-grid-3, .opts-grid-2 { grid-template-columns: 1fr; }
+  .result-cards { grid-template-columns: 1fr; }
+}
+
+/* ════════════════════════════════════════════
+   MOBILE (<480px)
+   ════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  body { font-size: 12px; }
+
+  /* NAV */
+  .nav { height: 52px; }
+  .nav-inner { padding: 0 16px; }
+  .nav-links { display: none !important; }
+  .nav .btn-ghost, .nav-cta .btn-ghost { display: none !important; }
+  .logo-mark { width: 36px; height: 36px; }
+  .logo-name { font-size: 13px; }
+  .btn-nav-wa { font-size: 12px; padding: 7px 14px; }
+
+  /* HERO */
+  .hero-v2 { padding-top: 52px; }
+  .hero-v2 .hero-inner { grid-template-columns: 1fr; gap: 8px; padding: 16px; }
+  .hero-v2 h1 { font-size: 28px; }
+  .hero-v2 p { font-size: 13px; }
+  .constellation { display: none; }
+
+  /* QUIZ SHELL */
+  .quiz-shell { padding-top: 52px; }
+  .quiz-body { padding: 16px; }
+  .step-question { font-size: 20px; }
+  .step-sub { font-size: 12px; }
+  .opts-grid-3, .opts-grid-2 { grid-template-columns: 1fr; gap: 10px; margin-bottom: 12px; }
+  .opt-card { padding: 18px 14px; }
+  .opt-label { font-size: 12px; }
+  .opt-desc { font-size: 10px; }
+
+  /* RESULTADOS */
+  .result-header { margin-bottom: 20px; }
+  .result-title { font-size: 22px; }
+  .result-cards { grid-template-columns: 1fr; gap: 12px; }
+  .res-card { border-radius: 16px; }
+  .res-img-area { height: 140px; }
+  .res-img-area img { height: 100px; }
+  .res-body { padding: 14px 12px; }
+  .res-name { font-size: 16px; }
+  .res-price { font-size: 18px; }
+  .res-btn-buy, .res-btn-wa, .res-btn-cat { font-size: 12px; min-height: 44px; padding: 10px 12px; }
+
+  /* FOOTER */
+  .trust-footer { grid-template-columns: 1fr; gap: 12px; padding: 16px; }
+  .trust-item { gap: 8px; }
+  .trust-text strong { font-size: 11px; }
+  .trust-text span { font-size: 9px; }
+
+  /* OTROS */
+  .progress-label { font-size: 10px; }
+  .progress-dots { gap: 4px; }
+  .progress-dot { width: 8px; height: 8px; }
+  .quizcta-card { padding: 28px 16px; }
+  .bg-orb { filter: blur(40px); }
+  .orb-sky { width: 200px; height: 200px; }
+  .ig-card { width: 160px; border-radius: 12px; font-size: 11px; }
+  .ig-strip { margin: 0 -16px; }
+  .ig-band { margin-top: 28px; }
+  .mech-aura { inset: -10%; filter: blur(30px); }
 }
 
 /* ════════════════════════════════════════════
