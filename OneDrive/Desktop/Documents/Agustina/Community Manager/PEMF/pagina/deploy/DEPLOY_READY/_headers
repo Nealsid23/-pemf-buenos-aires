@@ -1,0 +1,39 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Headers de Seguridad HTTP — PEMF Buenos Aires
+# ──────────────────────────────────────────────────────────────────────────────
+#
+# Referencia rápida de headers no-CSP:
+#   X-Content-Type-Options      → evita que el browser adivine el tipo MIME del archivo
+#   X-Frame-Options             → prohíbe que el sitio se cargue en un <iframe> ajeno (clickjacking)
+#   Referrer-Policy             → controla qué URL de referrer se envía al salir a otros dominios
+#   Strict-Transport-Security   → fuerza HTTPS por 2 años; inscribe en el HSTS preload list
+#   Permissions-Policy          → desactiva cámara, micrófono y geolocalización (no se usan)
+#
+# ──────────────────────────────────────────────────────────────────────────────
+# CSP — EN ENFORCEMENT (ya no es Report-Only)
+#
+# Orígenes permitidos:
+#   cdn.jsdelivr.net        → Motion.js (con SRI sha384)
+#   fonts.googleapis.com    → CSS de Google Fonts
+#   fonts.gstatic.com       → archivos .woff2 de Google Fonts
+#
+# 'unsafe-inline' en script-src: ELIMINADO
+#   Todos los <script> inline fueron movidos a archivos .js externos (js/page-*.js).
+#   Los atributos onerror= del HTML también fueron removidos y manejados via JS.
+#
+# 'unsafe-inline' en style-src: MANTENIDO (necesario por <style> blocks y style="" attrs)
+#   Para eliminarlo en el futuro: mover todos los <style> a CSS externo
+#   y reemplazar los atributos style="" del HTML con clases CSS.
+#
+# CUANDO ACTIVAR GA4 (actualmente comentado en index.html):
+#   Agregar a script-src: https://www.googletagmanager.com
+#   Agregar a connect-src: https://www.google-analytics.com https://www.googletagmanager.com
+# ──────────────────────────────────────────────────────────────────────────────
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; object-src 'none'; media-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://wa.me https://api.whatsapp.com; upgrade-insecure-requests

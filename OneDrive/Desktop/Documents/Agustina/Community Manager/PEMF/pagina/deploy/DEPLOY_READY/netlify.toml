@@ -1,0 +1,32 @@
+[build]
+  publish = "."
+
+# Cache largo para assets estáticos con hash/versión (JS, CSS, imágenes)
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/estudios/*.pdf"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# Página 404 personalizada
+[[redirects]]
+  from   = "/*"
+  to     = "/404.html"
+  status = 404
+
+[functions]
+  directory = "netlify/functions"

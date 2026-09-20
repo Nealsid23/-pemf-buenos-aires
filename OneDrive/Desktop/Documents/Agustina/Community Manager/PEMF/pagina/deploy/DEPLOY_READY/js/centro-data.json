@@ -1,0 +1,2406 @@
+{
+  "papers": [
+    {
+      "id": "paper_1",
+      "title": "The Microbiome and Butyrate Regulate Energy Metabolism and Autoimmunity",
+      "author": "Donohoe",
+      "year": 2011,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "TIER-1-Hybrid",
+      "pemf_score": 4,
+      "quantum_score": 1,
+      "hook": "PEMF: 4/10 | Quantum: 1/5",
+      "method": "Paper academico - Donohoe (2011)",
+      "findings": [
+        "Relevancia PEMF: 4/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "paper_11",
+      "title": "The Role of the Gut Microbiota in Neuroinflammation",
+      "author": "Haeir",
+      "year": 2021,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "TIER-2-PEMF",
+      "pemf_score": 4,
+      "quantum_score": 0,
+      "hook": "PEMF: 4/10 | Quantum: 0/5",
+      "method": "Paper academico - Haeir (2021)",
+      "findings": [
+        "Relevancia PEMF: 4/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_17",
+      "title": "Microbiota Modulators of Blood Brain Barrier Integrity and Neuroinflammation",
+      "author": "Gaspar",
+      "year": 2021,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "TIER-2-PEMF",
+      "pemf_score": 4,
+      "quantum_score": 0,
+      "hook": "PEMF: 4/10 | Quantum: 0/5",
+      "method": "Paper academico - Gaspar (2021)",
+      "findings": [
+        "Relevancia PEMF: 4/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_10",
+      "title": "Neurochemistry of the Microbiota-Brain-Immune Axis",
+      "author": "His",
+      "year": 2022,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "TIER-2-PEMF",
+      "pemf_score": 3,
+      "quantum_score": 0,
+      "hook": "PEMF: 3/10 | Quantum: 0/5",
+      "method": "Paper academico - His (2022)",
+      "findings": [
+        "Relevancia PEMF: 3/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_14",
+      "title": "Impact of Bacterial Metabolites on Gut Intestinal Inflammation",
+      "author": "Farges",
+      "year": 2023,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "TIER-2-PEMF",
+      "pemf_score": 3,
+      "quantum_score": 0,
+      "hook": "PEMF: 3/10 | Quantum: 0/5",
+      "method": "Paper academico - Farges (2023)",
+      "findings": [
+        "Relevancia PEMF: 3/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_20",
+      "title": "Bacterial Production of Metabolites via Environmental Disruption of Cellular Signaling",
+      "author": "Dessauer",
+      "year": 2019,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "TIER-3-Quantum",
+      "pemf_score": 2,
+      "quantum_score": 1,
+      "hook": "PEMF: 2/10 | Quantum: 1/5",
+      "method": "Paper academico - Dessauer (2019)",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "paper_66",
+      "title": "Alterations in Brain and Immune Function Produced by Mindfulness Meditation",
+      "author": "Davidson",
+      "year": 2003,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "TIER-3-Quantum",
+      "pemf_score": 2,
+      "quantum_score": 1,
+      "hook": "PEMF: 2/10 | Quantum: 1/5",
+      "method": "Paper academico - Davidson (2003)",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "paper_69",
+      "title": "Regulating Commensal Microbiota Composition in the Gut: Metabolite Mechanisms",
+      "author": "Engel",
+      "year": 2019,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "TIER-2-PEMF",
+      "pemf_score": 3,
+      "quantum_score": 0,
+      "hook": "PEMF: 3/10 | Quantum: 0/5",
+      "method": "Paper academico - Engel (2019)",
+      "findings": [
+        "Relevancia PEMF: 3/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_5",
+      "title": "The Crosstalk Between the Gut Microbiota and Mucosal Immunity",
+      "author": "Bauer",
+      "year": 2020,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2/10 | Quantum: 0/5",
+      "method": "Paper academico - Bauer (2020)",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_6",
+      "title": "Regulation of Neurotransmitters by the Colonic Microbiota",
+      "author": "Chen",
+      "year": 2020,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2/10 | Quantum: 0/5",
+      "method": "Paper academico - Chen (2020)",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_12",
+      "title": "Chromatin Remodeling by Short-Chain Fatty Acids from the Gut Microbiota",
+      "author": "Donohoe",
+      "year": 2011,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2/10 | Quantum: 0/5",
+      "method": "Paper academico - Donohoe (2011)",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_22",
+      "title": "Protective Role of Antitumor Immunity: Bacterial Metabolites in Innate Intestinal Inflammation",
+      "author": "Daneshjou",
+      "year": 2023,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2/10 | Quantum: 0/5",
+      "method": "Paper academico - Daneshjou (2023)",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_27",
+      "title": "Quantum Transport in Conductive Bacterial Nanostructures",
+      "author": "Cullen",
+      "year": 2020,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "TIER-3-Quantum",
+      "pemf_score": 1,
+      "quantum_score": 1,
+      "hook": "PEMF: 1/10 | Quantum: 1/5",
+      "method": "Paper academico - Cullen (2020)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "paper_32",
+      "title": "Crosstalk Between Gut Microbiota and Mucosal Immunity",
+      "author": "Chiles",
+      "year": 2020,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2/10 | Quantum: 0/5",
+      "method": "Paper academico - Chiles (2020)",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_34",
+      "title": "Immune Microbiota-Based Evolutionary and Metagenomic Insights in Health",
+      "author": "Aker",
+      "year": 2020,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2/10 | Quantum: 0/5",
+      "method": "Paper academico - Aker (2020)",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_37",
+      "title": "Gut Microbiota Alterations and Metabolic Activity During Circadian Disruption",
+      "author": "Ayda",
+      "year": 2020,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2/10 | Quantum: 0/5",
+      "method": "Paper academico - Ayda (2020)",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_42",
+      "title": "Gut Microbiome: The Microbial Frontier of Disease Prevention",
+      "author": "Alireza",
+      "year": 2023,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2/10 | Quantum: 0/5",
+      "method": "Paper academico - Alireza (2023)",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_43",
+      "title": "Conceptual Morphs Derived Butyrate Indicates the Underestimation of Microbiota Alterations",
+      "author": "Andler",
+      "year": 2021,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2/10 | Quantum: 0/5",
+      "method": "Paper academico - Andler (2021)",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_46",
+      "title": "Two-In-One Protein in Gut Microbiota Synergism Emerging Goal-Free Competitive Circadian",
+      "author": "Aoyagi",
+      "year": 2023,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2/10 | Quantum: 0/5",
+      "method": "Paper academico - Aoyagi (2023)",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_47",
+      "title": "Toward a Unified Approach to Mindfulness Practice, Positive Functioning & Psychotherapy",
+      "author": "Bateson",
+      "year": 2010,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "TIER-3-Quantum",
+      "pemf_score": 0,
+      "quantum_score": 2,
+      "hook": "PEMF: 0/10 | Quantum: 2/5",
+      "method": "Paper academico - Bateson (2010)",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 2/5"
+      ]
+    },
+    {
+      "id": "paper_57",
+      "title": "Train Your Mind, Change Your Brain: How a New Science Reveals Our Extraordinary Potential",
+      "author": "Begley",
+      "year": 2007,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "TIER-3-Quantum",
+      "pemf_score": 1,
+      "quantum_score": 1,
+      "hook": "PEMF: 1/10 | Quantum: 1/5",
+      "method": "Paper academico - Begley (2007)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "paper_59",
+      "title": "In Search of Memory: The Emergence of a New Science of Mind",
+      "author": "Kandel",
+      "year": 2006,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "TIER-3-Quantum",
+      "pemf_score": 1,
+      "quantum_score": 1,
+      "hook": "PEMF: 1/10 | Quantum: 1/5",
+      "method": "Paper academico - Kandel (2006)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "paper_2",
+      "title": "The Role of Tight Junction Proteins in Leaky Gut Syndrome",
+      "author": "Bilski",
+      "year": 2014,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Bilski (2014)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_3",
+      "title": "Microbiota and Intestinal Diseases",
+      "author": "Canani",
+      "year": 2021,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Canani (2021)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_4",
+      "title": "New Perspectives on the Integral Roles of Intestinal Commensals",
+      "author": "Belizário",
+      "year": 2015,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Belizário (2015)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_7",
+      "title": "Microbiota Composition and Metabolic Imbalance in Neuropsychiatric Disorders",
+      "author": "Cooper",
+      "year": 2020,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Cooper (2020)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_8",
+      "title": "Exercise Microbiota Influences Physical Function and Mental Health",
+      "author": "Evans",
+      "year": 2013,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Evans (2013)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_13",
+      "title": "The Microbiome: Metabolic Roles and Therapeutic Applications in Health",
+      "author": "Dybenko",
+      "year": 2013,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Dybenko (2013)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_15",
+      "title": "Gut Microbial Influence Tumor Development and Metabolic Regulation",
+      "author": "Gagnon",
+      "year": 2022,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Gagnon (2022)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_16",
+      "title": "Hydrogen Sulfide: The Forgotten Messenger in Lipid Signaling",
+      "author": "Garcia",
+      "year": 2020,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "TIER-3-Quantum",
+      "pemf_score": 0,
+      "quantum_score": 1,
+      "hook": "PEMF: 0/10 | Quantum: 1/5",
+      "method": "Paper academico - Garcia (2020)",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "paper_19",
+      "title": "Microbiota and Intestinal Barrier Function in Health and Disease",
+      "author": "Haji",
+      "year": 2019,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Haji (2019)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_21",
+      "title": "Role of Intestinal Dysbiosis in Disease Progression Through Inflammation",
+      "author": "Dey",
+      "year": 2020,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Dey (2020)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_23",
+      "title": "Bacteria-Mediated Enterocytic Tight Junction Leakage Through Reactive Oxygen Species",
+      "author": "Deng",
+      "year": 2009,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Deng (2009)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_28",
+      "title": "Regulation of Nerve Inflammation by the GAIT Factor",
+      "author": "Athanasiadou",
+      "year": 2013,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Athanasiadou (2013)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_29",
+      "title": "Histone Acetylation in Immune Cells and the SIRT1-GATA3 Axis",
+      "author": "Heatley",
+      "year": 2019,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Heatley (2019)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_31",
+      "title": "Protective Bacterial Metabolite Function in the APC Tryptophan Metabolites",
+      "author": "Di Prisco",
+      "year": 2022,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Di Prisco (2022)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_33",
+      "title": "Microbiota Composition and Metabolic Activity During Circadian Disruption",
+      "author": "Ayda",
+      "year": 2020,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Ayda (2020)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_35",
+      "title": "What We Transmit Memories to Other Brains: Constructing Shared Neural Representations",
+      "author": "Ashford",
+      "year": 2017,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Ashford (2017)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_38",
+      "title": "Molecular Pharmacology Aspects of CAM for Immune Function",
+      "author": "Abdo",
+      "year": 2022,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Abdo (2022)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_41",
+      "title": "Mitochondrial dysfunction and Environmental Circadian Disruption Changes",
+      "author": "Ajiha",
+      "year": 2020,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Ajiha (2020)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_44",
+      "title": "Microbiota Biota and Cognition in Neuroscience and Development",
+      "author": "Anil",
+      "year": 2021,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Anil (2021)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_49",
+      "title": "Light on Life: The Yoga Journey to Wholeness, Peace, and Purpose",
+      "author": "Iyengar",
+      "year": 2005,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "TIER-3-Quantum",
+      "pemf_score": 0,
+      "quantum_score": 1,
+      "hook": "PEMF: 0/10 | Quantum: 1/5",
+      "method": "Paper academico - Iyengar (2005)",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "paper_53",
+      "title": "Quantum Healing: Exploring Possibilities for Perfect Health",
+      "author": "Chopra",
+      "year": 1989,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "TIER-3-Quantum",
+      "pemf_score": 0,
+      "quantum_score": 1,
+      "hook": "PEMF: 0/10 | Quantum: 1/5",
+      "method": "Paper academico - Chopra (1989)",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "paper_54",
+      "title": "Mindset: The New Psychology of Success",
+      "author": "Dweck",
+      "year": 2006,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "TIER-3-Quantum",
+      "pemf_score": 0,
+      "quantum_score": 1,
+      "hook": "PEMF: 0/10 | Quantum: 1/5",
+      "method": "Paper academico - Dweck (2006)",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "paper_55",
+      "title": "Mindsight: The New Science of Personal Transformation",
+      "author": "Siegel",
+      "year": 2010,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "TIER-3-Quantum",
+      "pemf_score": 0,
+      "quantum_score": 1,
+      "hook": "PEMF: 0/10 | Quantum: 1/5",
+      "method": "Paper academico - Siegel (2010)",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "paper_56",
+      "title": "Buddha's Brain: The Practical Neuroscience of Happiness, Love & Wisdom",
+      "author": "Hanson",
+      "year": 2009,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Hanson (2009)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_58",
+      "title": "Change Your Brain, Change Your Life",
+      "author": "Amen",
+      "year": 2015,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Amen (2015)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_60",
+      "title": "The Emotional Brain: Mysterious Underpinnings of Emotional Life",
+      "author": "LeDoux",
+      "year": 1996,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - LeDoux (1996)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_63",
+      "title": "Descartes' Error: Emotion, Reason, and the Human Brain",
+      "author": "Damasio",
+      "year": 1994,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Damasio (1994)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "paper_67",
+      "title": "How God Changes Your Brain: Breakthrough Findings from a Leading Neuroscientist",
+      "author": "Newberg",
+      "year": 2009,
+      "view": "estudios",
+      "type": "revision",
+      "brand": "all",
+      "tier": "General",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1/10 | Quantum: 0/5",
+      "method": "Paper academico - Newberg (2009)",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "ref_0",
+      "title": ",nsiation.” Cells 12 (2023). https//doiorg/10.3990/cels12050724 semistry E 17 (2022) 120-124. Htnps/",
+      "view": "biblioteca",
+      "tema": "quantum",
+      "type": "book",
+      "pemf_score": 10,
+      "quantum_score": 5,
+      "hook": "PEMF: 10 | Quantum: 5",
+      "method": "Book - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 10/10",
+        "Paradigma Quantum: 5/5"
+      ]
+    },
+    {
+      "id": "ref_1",
+      "title": "seg/10.1021/nn5099235 hoter. Amnon, Raffaele Cannio, Simonetta Bartolucci, and Judith P. Klinman. “E",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 1,
+      "hook": "PEMF: 1 | Quantum: 1",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "ref_2",
+      "title": "sabes ). A) halil 3 “A Quantum Mechanical Model of Adaptive Mutation. Biosystems 50 ss 05333). lps. ",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "paper",
+      "pemf_score": 0,
+      "quantum_score": 2,
+      "hook": "PEMF: 0 | Quantum: 2",
+      "method": "Paper - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 2/5"
+      ]
+    },
+    {
+      "id": "ref_3",
+      "title": "Página 208 de 274 v mr Mobseni, Masoud, Patrick Rebentrost, Seth Lloyd, and Alán Aspuru-Guzik. “Envi",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 1,
+      "hook": "PEMF: 1 | Quantum: 1",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "ref_4",
+      "title": "Mo Weischuan, Zijian Zhang, Ying Liv, Perry F.Bartlet, and Rong-qjao He. “Magnetic Shielding, Accele",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_5",
+      "title": "Neuhaus Eva M., WeiyiZhang, Lian Gelis, Ying Deng, Joachim Noldus, and Hanns Hat. “Activation fan Ol",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "paper",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Paper - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_6",
+      "title": "Ashattasnim Liza, and Enrique P. Blair. \"An Explicit Electron: Vibron Model for Olfactory Inelastre ",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "article",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Article - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_7",
+      "title": "org/10.1063/1.5086053. MobelPrize.org. “The Nobel Prizein Physics1921. NobelPrize.org (2019). .www.n",
+      "view": "biblioteca",
+      "tema": "quantum",
+      "type": "book",
+      "pemf_score": 1,
+      "quantum_score": 3,
+      "hook": "PEMF: 1 | Quantum: 3",
+      "method": "Book - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 3/5"
+      ]
+    },
+    {
+      "id": "ref_8",
+      "title": "Rodríguez-Santana, Elizabeth, and Luis Santana-Blank. “Emerging Evidence on the Crystalline Water-Li",
+      "view": "biblioteca",
+      "tema": "quantum",
+      "type": "book",
+      "pemf_score": 4,
+      "quantum_score": 3,
+      "hook": "PEMF: 4 | Quantum: 3",
+      "method": "Book - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 4/10",
+        "Paradigma Quantum: 3/5"
+      ]
+    },
+    {
+      "id": "ref_9",
+      "title": "van Muizen. Alanna V. Jacob M. Morton, Luke J. Kinsey, Donald G. Von Kannon, Marwa A. Saad. Taylor R",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "paper",
+      "pemf_score": 1,
+      "quantum_score": 1,
+      "hook": "PEMF: 1 | Quantum: 1",
+      "method": "Paper - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "ref_10",
+      "title": "Xin. Hongbao, Wen Jing Sim, Bumseok Namgung, Yeonho Choi, Baojun Li,.and Luke P. Lee. Quantum Biolog",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 2,
+      "hook": "PEMF: 1 | Quantum: 2",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 2/5"
+      ]
+    },
+    {
+      "id": "ref_11",
+      "title": "«The Bakerian Lecture: On the Theory of Light and Colours.” Philosophical Young, Thomas. 92 (1802): ",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_12",
+      "title": "Transactions of the Royal Society: sn. \"Magnetic Field Effects in Biology from the Zadeh-Haghighi, M",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 2,
+      "hook": "PEMF: 1 | Quantum: 2",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 2/5"
+      ]
+    },
+    {
+      "id": "ref_13",
+      "title": "Añalemma. “Effects on Gut Microbiome 2022 Double-Blind Placebo-Blind Study. Aralemma (2023). https:/",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 4,
+      "quantum_score": 1,
+      "hook": "PEMF: 4 | Quantum: 1",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 4/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "ref_14",
+      "title": "Farancik, Miroslav, Branislav Kura, Tyler W. LeBaron, Roberto Bol, Jozef Buday, and Jan Sezak. \"Mole",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "article",
+      "pemf_score": 1,
+      "quantum_score": 1,
+      "hook": "PEMF: 1 | Quantum: 1",
+      "method": "Article - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "ref_15",
+      "title": "org/10.3390/antioxg121281. Batmanghelid), F. “Pain: A Need for Paradigm Change: Anticancer Research7",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_16",
+      "title": "Bono, Ivan, Emilio Del Giudice, Luca Gamberale, and Marc Henry. “Emergence of the Coherent Structure",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_17",
+      "title": "Cusack, Carole. “Scotland's Sacred Waters: Holy Wells and Healing Springs” Sydney Society for Scotti",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 2,
+      "quantum_score": 1,
+      "hook": "PEMF: 2 | Quantum: 1",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "ref_18",
+      "title": "De Ninno, Antonella, “Dynamics of Formation ofthe Exclusion Zone Near Hydrophilie Surfaces” Chemical",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_19",
+      "title": "Ebrahim, Shaban, and Azab Azab “Biological Effects of Magnetic Water on Human andAnimals.” Biomedica",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_20",
+      "title": "Emoto, Masura, The Hidden Messages in Water. Beyond Words Pub, 2004. ISBN 97815827011412. Geesink, H",
+      "view": "biblioteca",
+      "tema": "quantum",
+      "type": "book",
+      "pemf_score": 6,
+      "quantum_score": 3,
+      "hook": "PEMF: 6 | Quantum: 3",
+      "method": "Book - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 6/10",
+        "Paradigma Quantum: 3/5"
+      ]
+    },
+    {
+      "id": "ref_21",
+      "title": "REFERENCES Geesink, Hans]. H., and Dirk K. F. Meijer. “Electromagnetic Frequency Patterns That Are C",
+      "view": "biblioteca",
+      "tema": "quantum",
+      "type": "website",
+      "pemf_score": 4,
+      "quantum_score": 3,
+      "hook": "PEMF: 4 | Quantum: 3",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 4/10",
+        "Paradigma Quantum: 3/5"
+      ]
+    },
+    {
+      "id": "ref_22",
+      "title": "Hwang, Seong Gu, Ho-Sung Lee, Byung-Cheon Lee, and GunWoong Bahng. “Effect of Antioxidant Water on t",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_23",
+      "title": "org/10.1186/2045-9912-1-11. Karnib, Mona, Ahmad Kabbani, Hanafy Holail, and Zakia Olama. “Heavy Meta",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_24",
+      "title": "Kerch, Carry, “Role of Changes in State of Bound Water and Tissue Stiffness in Development of Age-Re",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_25",
+      "title": "Korotkov, K.G., O. A. Churganow, E. A. Gavrilova, M. A. Belodedova, and A. K. Korotkova. “Influence ",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_26",
+      "title": "LeBaron, Tyler W., Randy Sharpe, and Kinji Ohno. “Electrolyzed-Reduced Water: Review!. Molecular Hyd",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_27",
+      "title": "Li, Tian-Ren, Fabian Huck, GiovanniMaria Piccini, and Konrad Tiefenbacher. “Mimicry ofthe Proton Wir",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_28",
+      "title": "Lindinger, Michael. “Structured Water: Effects on Animals.” Journal of Animal Science 99, no. 5 (202",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 3,
+      "quantum_score": 2,
+      "hook": "PEMF: 3 | Quantum: 2",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 3/10",
+        "Paradigma Quantum: 2/5"
+      ]
+    },
+    {
+      "id": "ref_29",
+      "title": "13NT.2016.079670. Manil, Christian, and Laurent Lichtenstein; Daniel Leconte, prod. Water Memory: 20",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_30",
+      "title": "Mojica, Karina Torres, Jorge R. Miranda-Massari, Jose R. Rodriguez, Jose Olalde, Miguel Berdiel, and",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 3,
+      "quantum_score": 0,
+      "hook": "PEMF: 3 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 3/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_31",
+      "title": "Montagnuer, L. J. Aissa, E. Del Giudice, C. Lavallee, A. Tedeschi, and G. Vitiello. “DNA Waves and W",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_32",
+      "title": "Pollack. G.M. “Cancer: An Unexpectedly Critical Role of Cell Water?” Advances in Preventive Medicine",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_33",
+      "title": "Pollack, Gerald. The Fourth Phase of Water. Ebner 8: Sons, 2013. Página 213 de 274 Y Pomés, R. and B",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_34",
+      "title": "Popielska-Grzybowska, Joanna. “Contexts of Appearance of Water in the Pyramid Texts an Introduction.",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "book",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Book - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_35",
+      "title": "Ramsey, Craig. “Case Study: Long-Term Monitoring of Health Biomarkers after Drinking 'Structured Wat",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_36",
+      "title": "Ramsey, C.L. “Biologically Structured Water (8SW)—A Review (Part 3): Structured Water (SW) Generatio",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 3,
+      "quantum_score": 2,
+      "hook": "PEMF: 3 | Quantum: 2",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 3/10",
+        "Paradigma Quantum: 2/5"
+      ]
+    },
+    {
+      "id": "ref_37",
+      "title": "Ramsey, Craig. “Biologically Structured Water (BSW)=A Review (Part): Structured Water (SW) Propertie",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_38",
+      "title": "Raptim Research Pvt. Ltd. “The Effects of Analemma Water on Human ATP Levels: Research Report (2022)",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_39",
+      "title": "Rohani, Mina, and Pollack, Gerald. “Flow through Horizontal Tubes Submerged in Water in the Absenceo",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "book",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Book - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_40",
+      "title": "Shen, Yuchen, Alexis Theodorou, Zheng Li, and Gerald H. Pollack. “Ultraviolet (UV) Light Effect onth",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 3,
+      "quantum_score": 0,
+      "hook": "PEMF: 3 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 3/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_41",
+      "title": "Ebrahim, Shaban Ali, and Azab Elsayed Azab. “Biological Effects of Magnetic Water on Human and Anima",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_42",
+      "title": "Singh, RanaP.B. “Sacrality and Waterfront Sacred Placesiin India.\" In Sacred Waters: A Cross\" cultur",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_43",
+      "title": "Barry,C.M. G.Kestell, M.Gillan, R.V. Haberberger, and!.L.Gibbins, “Sensory Nerve Fibers Containing C",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_44",
+      "title": "Berlin, uri. Alexander L. Burin, and Mark A. Ratner. “DNA as a Molecular Wire. Superlattices and Mic",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_45",
+      "title": "Berrueta,L, J.Bergholz,D. Munoz, Muskaj,G.. Badger, A. Shukd, e l.“Stretching Reduces TumorGrowthin ",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "paper",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Paper - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_46",
+      "title": "org/10.1038/541598-018-26198-7. Berruela, Lisbeth, Ila Muska), Sara Olench, Taylor Butler, Gary) Bad",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_47",
+      "title": "Bordoni, Bruno, Fabiola Marelli, Bruno Morabito, and Beatrice Sacconi. “Emission of Biophotons and A",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "paper",
+      "pemf_score": 1,
+      "quantum_score": 1,
+      "hook": "PEMF: 1 | Quantum: 1",
+      "method": "Paper - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "ref_48",
+      "title": "orgho.1177/2515690X17750750. Bordoni, Bruno, and Fabiola Marelli. “Emotions in Motion: Myofascial In",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "paper",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Paper - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_49",
+      "title": "Chevalier, Gaétan, Stephen T.Sinatra, James L. Oschman, Karol Sokal, and Pawel Sokal. *Earthing: Hea",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "book",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Book - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_50",
+      "title": "Chevalier, Gaétan, Stephen”. Sinatra, James L. Oschman, and Richard M. Delany. “Earthing (Grounding)",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "book",
+      "pemf_score": 2,
+      "quantum_score": 1,
+      "hook": "PEMF: 2 | Quantum: 1",
+      "method": "Book - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "ref_51",
+      "title": "Vidal Lorenzo, Cristina, nd Patricia Horcajada-Campos. “Water ituals and Oferingst the Mayan Rain Di",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_52",
+      "title": "orgho.1016/j.scitotenw2017.04.102. Ye, Tao, and Gerald H. Pollack, Which Waters Hydrate Best? A Stud",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "paper",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Paper - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_53",
+      "title": "Yildiz, Fatmanur, Tyler W. LeBaron, and Duried Alwazeer, “A Comprehensive Review of Molecular Hydrog",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "paper",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Paper - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_54",
+      "title": "orgh0.1016/j.bbrep.2025.101933. Yu, Arthur, Peter Carlson, and Gerald Pollack, “Unexpected Axial Flo",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_55",
+      "title": "Zheng, Jian-Ming, Wei-Chun Chin, Eugene Khijniak, Eugene Khiniak Jr,and Gerald H.Pollack. “Surfaces ",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "paper",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2 | Quantum: 0",
+      "method": "Paper - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_56",
+      "title": "org/o.1155/2016/5806057. Zuo, Guanghong, Jun Hu, and Haiping Fang, “Effect of the Ordered Water on P",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "book",
+      "pemf_score": 4,
+      "quantum_score": 2,
+      "hook": "PEMF: 4 | Quantum: 2",
+      "method": "Book - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 4/10",
+        "Paradigma Quantum: 2/5"
+      ]
+    },
+    {
+      "id": "ref_57",
+      "title": "Cosio, Irena, and Drasko Cosic. “DNA-Protein Interactions at Distance Explained by the Resonant Reco",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "paper",
+      "pemf_score": 0,
+      "quantum_score": 1,
+      "hook": "PEMF: 0 | Quantum: 1",
+      "method": "Paper - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "ref_58",
+      "title": "org/10.18483/ijSci.2805. Cosic, Irena, and Elena Pirogova. “Bioactive 'Peptide Design Using the Reso",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_59",
+      "title": "Cosie, Irena, Vasilis Paspaliaris, and Drasko Cosic. “Analysis of rotein-Receptor Interactions onan ",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_60",
+      "title": "Dedic,., H.1. Okur; and S. Roke. “Hyaluronan Orders Water Molecules inits Nanoscale Extended Hydrati",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_61",
+      "title": "Elango, Jeevithan, Chunyu Hou, Bin Bao, Shujun Wang, José Eduardo Maté Sánchez de Val, and Wu Wenhui",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_62",
+      "title": "Fischer, Michael ., Gergo Horvath, Martin Krismer, Erich Gnaiger, ¡Georg Goebel, and Dominik H. Pest",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_63",
+      "title": "'Ghannam, Jack Y., Jason' Wang, and Arif Jan. Biochemistry, Structure. StatPearls, 2025. https://www",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "book",
+      "pemf_score": 3,
+      "quantum_score": 1,
+      "hook": "PEMF: 3 | Quantum: 1",
+      "method": "Book - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 3/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "ref_64",
+      "title": "ForumImmunDisTher.2013007869. Hoyle, Nathaniel P. Estere Seinkmane, Marrit Putker, Kevin A. Feeny, T",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_65",
+      "title": "Ibbotson, James Norman, and Sushant Shekhar. “Electromagnetic Field-Induced Amplification o€ Proton ",
+      "view": "biblioteca",
+      "tema": "quantum",
+      "type": "website",
+      "pemf_score": 2,
+      "quantum_score": 3,
+      "hook": "PEMF: 2 | Quantum: 3",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 3/5"
+      ]
+    },
+    {
+      "id": "ref_66",
+      "title": "Kolay, Jayeeta, Sudipta Bera, und Rupa Mukhopadhyay; “Electron Transport in Muscle Protein Langmuir ",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 3,
+      "quantum_score": 0,
+      "hook": "PEMF: 3 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 3/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_67",
+      "title": "org/10.1016/).celrep.2018.06.073. Lyons, Carey E., Jean Pierre Pallais, Seth McGonigle, Rachel P. Ma",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_68",
+      "title": "MacDonald, Donald lan, Monessha Jayabalan, Jonathan T. Seaman, Rakshita Balaji, Alec R. Nickolls, an",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "paper",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Paper - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_69",
+      "title": "Maki, Kevin C., Fulya Eren, Martha E. Cassens, MaryR. Dicklin, and Michael H. Davidson. “v-6 Polyuns",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "paper",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Paper - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_70",
+      "title": "org/o.1093/advances/nmyo38. Masic, Admir, Luca Bertinetti, Roman Schuetz, Shu-Wei Chang, Till Hartmu",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "book",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Book - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_71",
+      "title": "Matsuno, Yusuke, Yuko Atsumi, Md. Alauddin, Md. Masud Rana, Harula Fujimori, Mai Hyodo, et al “Resve",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "paper",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Paper - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_72",
+      "title": "Mense, S., U. Hoheisel, and A. Reinert. “The Possible Role of Substance Pin Eliciting and Modulating",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "paper",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Paper - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_73",
+      "title": "org/10.1016/50079-6123(08)62570-4. PMID: 9000721. Michalak, Johannes, Lanre Aranmolate, Antonia Bonn",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "book",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Book - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_74",
+      "title": "Miroslav, Stefanov. “Primo Vascular System: Before the Past, Bizarre Present, and Peek After the Fut",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "paper",
+      "pemf_score": 0,
+      "quantum_score": 1,
+      "hook": "PEMF: 0 | Quantum: 1",
+      "method": "Paper - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "ref_75",
+      "title": "org/10.51507/jjams.2022.151.61. Ogluszka, Magdalena, Pawel Lipiñski, and Rafat R. Starzyúiski. “Effe",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "paper",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Paper - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_76",
+      "title": "org/10.3390/nu14183723. Ortega-Campos, Sara M., Eva M. Verdugo-Sivianes, Ana Amiama-Roig, Josa R. Bl",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "paper",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Paper - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_77",
+      "title": "org/10.1016/j.bbcan.2023.188900. Oschman, James L., Gaétan Chevalier, and Richard Brown. “The Effect",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 2,
+      "quantum_score": 1,
+      "hook": "PEMF: 2 | Quantum: 1",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "ref_78",
+      "title": "Sancar, Aziz, Laura A., Lindsey-Boltz, Tae-hong Kang, Joyce T. Reardon, Jin Hyup Lee, and Nuri Oztur",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_79",
+      "title": "Schleip, Robert. “Fascial Plasticity-A New Neurobiological Explanation: Part 1.\" Journal of Body1wor",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_80",
+      "title": "org/10.1016/j.bpj:2021.10.016. Slater, Alison M., S. Jade Barclay, Rouha M. S. Granfar, and Rebecca ",
+      "view": "biblioteca",
+      "tema": "quantum",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 3,
+      "hook": "PEMF: 1 | Quantum: 3",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 3/5"
+      ]
+    },
+    {
+      "id": "ref_81",
+      "title": "Stecco, Carla, Caterina Fede, Veronica Macchi, Andrea Porzionato, Lucia Petrelli, Carlo Biz, etal. “",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "book",
+      "pemf_score": 1,
+      "quantum_score": 1,
+      "hook": "PEMF: 1 | Quantum: 1",
+      "method": "Book - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "ref_82",
+      "title": "org/10.1080/03008200802143166. Tozzi, Paolo. “Does Fascia Hold Memories?” Journal of Bodywork and Mo",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_83",
+      "title": "van der Veen, Jelske N., John P. Kennelly, Sereana Wan, Jean E. Vance, Dennis E. Vance, and René L. ",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 1,
+      "hook": "PEMF: 1 | Quantum: 1",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "ref_84",
+      "title": "Wang, Likun, Na Li, Mengyao Cao, Yun Zhu, Xiewei Xiong, Li Li, et al. “Predicting DNA Reactions with",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 0,
+      "quantum_score": 1,
+      "hook": "PEMF: 0 | Quantum: 1",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "ref_85",
+      "title": "org/10.1371/journal.pbio.3001954. Xu, Tiezhu, Zhenming Xu, Tengyu Yao, Miaoran Zhang, Duo Chen, Xiao",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_86",
+      "title": "Zheng, Li, and Gerald H. Pollack. “Surface-Induced Flow: A Natural Mieroscopic Engine Using Infrared",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_87",
+      "title": "Zullo, Alberto, Johannes Fleckenstein, Robert Schleip, Kerstin Hoppe, Scott Wearing, and Werner Klin",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_88",
+      "title": "REFERENCES Ahlbom, Anders, Adele Green, Lecka Kheifets, David Savitz, Anthony Swerdlow,and ICNIRP (I",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_89",
+      "title": "Balasubramanian, Swarnalatha, David A. Weston, Michael Levin, and Devon Charles Cardoso Davidian. \"E",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 0,
+      "quantum_score": 1,
+      "hook": "PEMF: 0 | Quantum: 1",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "ref_90",
+      "title": "org/10.1038/23510930. Bittner, Stefan, and Sven G. Meuth. “Targeting lon Channels for the Treatment ",
+      "view": "biblioteca",
+      "tema": "bioelectricidad",
+      "type": "website",
+      "pemf_score": 5,
+      "quantum_score": 0,
+      "hook": "PEMF: 5 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 5/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_91",
+      "title": "Cervera, Javier, José A. Manzanares, Michael Levin, and Salvador Mafe, “Transplantation of Fragments",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_92",
+      "title": "Chernet, Brook, and Michael Levin. “Endogenous Voltage Potentials and the Microenvironment: Bioelect",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_93",
+      "title": "Chen, Ruijing.and Jun Chen. “Mitochondrial Transfer—A Novel Promising Approach for the Treatment of ",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 2,
+      "quantum_score": 1,
+      "hook": "PEMF: 2 | Quantum: 1",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    },
+    {
+      "id": "ref_94",
+      "title": "OPTIMIZE Chevalier, G., S. T. Sinatra, J. L. Oschman, K. Sokal, and P. Sokal. “Earthing: Health Impl",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "book",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Book - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_95",
+      "title": "Chevalier, Gaétan, Gregory Melvin, and Tiffany Barsotti. “One-Hour Contact with the Earth's Surface ",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_96",
+      "title": "Chevalier, Gaétan. “Grounding the Human Body Improves Facial Blood Flow Regulation: Results ofa Rand",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 0,
+      "quantum_score": 0,
+      "hook": "PEMF: 0 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 0/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_97",
+      "title": "Chevalier Gaétan, Kazuhito Mori, and James L. Oschman. “The Effect of Earthing (Grounding) on Human ",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "website",
+      "pemf_score": 2,
+      "quantum_score": 0,
+      "hook": "PEMF: 2 | Quantum: 0",
+      "method": "Website - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 2/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_98",
+      "title": "Clemente-Suárez Vicente, Javier, Alexandra Martín-Rodriguez, Rodrigo Yáñez-Sepúlveda, and José Franc",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "book",
+      "pemf_score": 1,
+      "quantum_score": 0,
+      "hook": "PEMF: 1 | Quantum: 0",
+      "method": "Book - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 0/5"
+      ]
+    },
+    {
+      "id": "ref_99",
+      "title": "Elkin, Howard K., and Angela Winter: “Grounding Patients with Hypertension Improves Blood Pressure: ",
+      "view": "biblioteca",
+      "tema": "longevidad",
+      "type": "book",
+      "pemf_score": 1,
+      "quantum_score": 1,
+      "hook": "PEMF: 1 | Quantum: 1",
+      "method": "Book - OPTIMIZE Bibliography",
+      "findings": [
+        "Relevancia PEMF: 1/10",
+        "Paradigma Quantum: 1/5"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pago no procesado — PEMF Buenos Aires</title>
+<link rel="icon" type="image/png" href="img/logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@700;800;900&family=Noto+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --spring:cubic-bezier(.34,1.56,.64,1);
+  --ease:cubic-bezier(.4,0,.2,1);
+  --out:cubic-bezier(.22,1,.36,1);
+}
+body{font-family:'Noto Sans',sans-serif;background:linear-gradient(135deg,#faf8f4 0%,#fee2e2 100%);color:#1a2332;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;overflow:hidden;position:relative;}
+
+.icon{width:80px;height:80px;background:#fee2e2;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;animation:iconShake .6s var(--spring);cursor:pointer;transition:all .3s var(--spring);will-change:transform;position:relative;}
+.icon:hover{transform:scale(1.1)}
+.icon::before{content:'';position:absolute;inset:-8px;border-radius:50%;background:radial-gradient(circle,rgba(220,38,38,.2),transparent);animation:errorPulse 2s var(--ease) infinite}
+@keyframes iconShake{0%{transform:scale(0) rotateZ(-45deg)}50%{transform:scale(1.1) rotateZ(5deg)}100%{transform:scale(1) rotateZ(0)}}
+@keyframes errorPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+.icon svg{width:40px;height:40px;stroke:#dc2626;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s}
+
+h1{font-family:'Figtree',sans-serif;font-size:28px;font-weight:900;color:#dc2626;text-align:center;margin-bottom:10px;animation:titleSlideError .7s var(--out) .2s backwards;cursor:pointer;}
+@keyframes titleSlideError{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+
+p{font-size:15px;color:#64748b;line-height:1.65;text-align:center;max-width:400px;margin-bottom:28px;animation:fadeIn .8s var(--ease) .35s backwards;}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+.btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;animation:buttonsSlide .9s var(--spring) .5s backwards;}
+@keyframes buttonsSlide{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+.btn-retry,.btn-wa{font-family:'Figtree',sans-serif;font-weight:700;font-size:14px;padding:13px 28px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;transition:all .28s var(--spring);will-change:transform,box-shadow;position:relative;}
+.btn-retry{background:#1a4fb6;color:#fff}
+.btn-wa{background:#25D366;color:#fff}
+.btn-retry:hover{transform:translateY(-4px) scale(1.06);box-shadow:0 12px 32px rgba(26,79,182,.35)}
+.btn-wa:hover{transform:translateY(-4px) scale(1.06);box-shadow:0 12px 32px rgba(37,211,102,.35)}
+.btn-retry:active,.btn-wa:active{transform:scale(0.98)}
+
+.encouragement{position:fixed;bottom:20px;right:20px;font-size:36px;cursor:pointer;animation:encouragementBounce 1s var(--spring) infinite;opacity:0;pointer-events:none;}
+@keyframes encouragementBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+</style>
+</head>
+<body>
+<div class="icon" id="error-icon">
+  <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+</div>
+<h1 id="error-title">El pago no se procesó</h1>
+<p id="error-message">Hubo un problema con el pago. Podés intentarlo de nuevo o contactarnos directamente por WhatsApp para ayudarte.</p>
+<div class="btns">
+  <a class="btn-retry" href="catalogo.html">← Volver al catálogo</a>
+  <a class="btn-wa" href="https://wa.me/5491161054411?text=Hola%2C%20tuve%20un%20problema%20al%20pagar%20y%20necesito%20ayuda." target="_blank" rel="noopener noreferrer">Pedir ayuda</a>
+</div>
+<div class="encouragement" id="encouragement"></div>
+
+<script>
+const icon = document.getElementById('error-icon');
+const message = document.getElementById('error-message');
+let clickCount = 0;
+
+// Easter egg 1: Click en el icono para ánimo
+icon.addEventListener('click', () => {
+  clickCount++;
+
+  const messages = [
+    '¡No te rindas! 💪',
+    '¡Seguro lo logras! 🎯',
+    '¡Casi! Probá de nuevo 🔄',
+    '¡Vamos, tú puedes! ⚡'
+  ];
+
+  const encouragement = document.getElementById('encouragement');
+  encouragement.textContent = messages[clickCount % messages.length];
+  encouragement.style.opacity = '1';
+  encouragement.style.pointerEvents = 'auto';
+
+  setTimeout(() => {
+    encouragement.style.opacity = '0';
+    encouragement.style.pointerEvents = 'none';
+  }, 2500);
+
+  // Animar el icono
+  icon.style.animation = 'none';
+  setTimeout(() => {
+    icon.style.animation = 'iconShake .6s var(--spring)';
+  }, 10);
+});
+
+// Easter egg 2: Konami code para mensaje especial
+const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+let konamiIndex = 0;
+
+document.addEventListener('keydown', (e) => {
+  const key = e.key.toLowerCase() === 'b' || e.key.toLowerCase() === 'a' ? e.key.toLowerCase() : e.code;
+
+  if (key === konamiCode[konamiIndex]) {
+    konamiIndex++;
+    if (konamiIndex === konamiCode.length) {
+      unlockHiddenEncouragement();
+      konamiIndex = 0;
+    }
+  } else {
+    konamiIndex = 0;
+  }
+});
+
+function unlockHiddenEncouragement() {
+  const title = document.getElementById('error-title');
+  title.textContent = '¡Eres guerrero/a! 🦸';
+  message.textContent = 'Los problemas son solo oportunidades disfrazadas. Intentalo de nuevo cuando estés listo. El PEMF que te mereces está esperando. 💚✨';
+  message.style.animation = 'none';
+  setTimeout(() => {
+    message.style.animation = 'fadeIn .6s var(--ease)';
+  }, 10);
+}
+
+// Easter egg 3: Triple click en el título para animación especial
+let titleClicks = 0;
+let titleClickTimer;
+document.getElementById('error-title').addEventListener('click', () => {
+  titleClicks++;
+  clearTimeout(titleClickTimer);
+
+  if (titleClicks === 3) {
+    activatePowerMode();
+    titleClicks = 0;
+  }
+
+  titleClickTimer = setTimeout(() => {
+    titleClicks = 0;
+  }, 500);
+});
+
+function activatePowerMode() {
+  const title = document.getElementById('error-title');
+  title.textContent = '⚡ MODO PODER ACTIVADO ⚡';
+
+  // Crear efecto de brillo
+  for (let i = 0; i < 15; i++) {
+    const spark = document.createElement('div');
+    spark.style.position = 'fixed';
+    spark.style.fontSize = '20px';
+    spark.textContent = '⚡';
+    spark.style.left = Math.random() * 100 + '%';
+    spark.style.top = Math.random() * 100 + '%';
+    spark.style.animation = 'sparkle 1s ease-out forwards';
+    spark.style.pointerEvents = 'none';
+    document.body.appendChild(spark);
+
+    setTimeout(() => spark.remove(), 1200);
+  }
+}
+
+// Agregar keyframes
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes sparkle {
+    0% { opacity: 1; transform: scale(1) translateY(0); }
+    100% { opacity: 0; transform: scale(0) translateY(-50px); }
+  }
+`;
+document.head.appendChild(style);
+</script>
+</body>
+</html>

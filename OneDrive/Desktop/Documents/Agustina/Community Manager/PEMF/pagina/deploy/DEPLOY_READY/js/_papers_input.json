@@ -1,0 +1,339 @@
+{
+ "extra": [
+  {
+   "id": "extra-binhi-2023",
+   "title": "Statistical Amplification of the Effects of Weak Magnetic Fields in Cellular Translation",
+   "ctx": "Paradigma cuántico: describe un mecanismo concreto (pares de radicales con spin de electrones) por el cual campos magnéticos débiles influyen en la biología cel"
+  },
+  {
+   "id": "extra-vanhuizen-2019-magnetic-stemcells",
+   "title": "Weak magnetic fields alter stem cell-mediated growth",
+   "ctx": "Demuestra in vivo que campos magnéticos débiles modulan la proliferación de células madre y la regeneración de tejido a través de ROS — base biológica directa d"
+  },
+  {
+   "id": "extra-usselman-2016-quantum-ros",
+   "title": "The Quantum Biology of Reactive Oxygen Species Partitioning Impacts Cellular Bioenergetics",
+   "ctx": "Paradigma cuántico aplicado: muestra que un campo magnético débil influye en la producción de radicales libres (ROS) y en la energía de células humanas vivas me"
+  },
+  {
+   "id": "extra-zlenko-2023-magnetic-dna-synthesis",
+   "title": "Magnetic field and nuclear spin influence on the DNA synthesis rate",
+   "ctx": "Paradigma cuántico: demuestra que el campo magnético y el spin nuclear regulan la velocidad de la síntesis de ADN — base de cómo los campos magnéticos influyen "
+  },
+  {
+   "id": "extra-mo-2013-magnetic-shielding-neuroblastoma",
+   "title": "Magnetic Shielding Accelerates the Proliferation of Human Neuroblastoma Cell by Promoting G1-Phase Progression",
+   "ctx": "Evidencia de que las células humanas detectan y responden al campo magnético del ambiente (su ausencia acelera la proliferación) — sostiene la idea de que los c"
+  },
+  {
+   "id": "extra-zadehhaghighi-2022-radical-pair-magnetic-biology",
+   "title": "Magnetic field effects in biology from the perspective of the radical pair mechanism",
+   "ctx": "Revisión de referencia del paradigma cuántico aplicado a la biología: fundamenta por qué campos magnéticos débiles (como los de PEMF) producen efectos biológico"
+  },
+  {
+   "id": "extra-chae-2022-human-magnetic-sense",
+   "title": "Human magnetic sense is mediated by a light and magnetic field resonance-dependent mechanism",
+   "ctx": "Paradigma cuántico en humanos: el cuerpo humano detecta el campo magnético mediante un mecanismo de resonancia dependiente de luz (pares de radicales en criptoc"
+  },
+  {
+   "id": "extra-bennett-onyango-2021-tunneling-brain-mitochondria",
+   "title": "Energy, Entropy and Quantum Tunneling of Protons and Electrons in Brain Mitochondria",
+   "ctx": "Conecta biología cuántica (túnel de protones y electrones) con la función mitocondrial cerebral y el envejecimiento — sostiene el foco en mitocondrias y energía"
+  },
+  {
+   "id": "extra-bono-2012-coherent-structure-liquid-water",
+   "title": "Emergence of the Coherent Structure of Liquid Water",
+   "ctx": "Base teórica del concepto de agua estructurada/coherente (Dominios de Coherencia) que sustenta Analemma — describe cómo el agua puede organizarse en una fase co"
+  },
+  {
+   "id": "extra-li-pollack-2023-blood-circulation-beyond-heart",
+   "title": "On the driver of blood circulation beyond the heart",
+   "ctx": "Del laboratorio de Gerald Pollack (agua EZ): muestra que la luz infrarroja —absorbida por el agua interfacial— puede impulsar el flujo sanguíneo, vinculando agu"
+  },
+  {
+   "id": "extra-lebaron-2022-electrolyzed-reduced-water-h2",
+   "title": "Electrolyzed-Reduced Water: Review I. Molecular Hydrogen Is the Exclusive Agent Responsible for the Therapeutic Effects",
+   "ctx": "Sustenta el producto de hidrógeno molecular (H2 Tablets): aclara con rigor que el agente terapéutico del agua hidrogenada es el H2 disuelto. Verificado contra e"
+  },
+  {
+   "id": "extra-barancik-2020-molecular-hydrogen-cardiovascular-cns",
+   "title": "Molecular and Cellular Mechanisms Associated with Effects of Molecular Hydrogen in Cardiovascular and Central Nervous Systems",
+   "ctx": "Sostiene el producto de hidrógeno molecular (H2 Tablets): detalla cómo el H2 protege corazón y cerebro reduciendo estrés oxidativo. Verificado contra el PDF ori"
+  },
+  {
+   "id": "extra-kang-2011-hydrogen-rich-water-liver-radiotherapy",
+   "title": "Effects of drinking hydrogen-rich water on the quality of life of patients treated with radiotherapy for liver tumors",
+   "ctx": "Ensayo clínico aleatorizado en humanos que respalda el producto de hidrógeno molecular (H2 Tablets): el agua hidrogenada mejoró la calidad de vida y bajó el est"
+  },
+  {
+   "id": "extra-zheng-2016-molecular-hydrogen-sepsis-organ-damage",
+   "title": "Molecular Hydrogen Therapy Ameliorates Organ Damage Induced by Sepsis",
+   "ctx": "Sostiene el producto de hidrógeno molecular (H2 Tablets): muestra el efecto protector del H2 sobre múltiples órganos vía reducción de inflamación y estrés oxida"
+  },
+  {
+   "id": "extra-yildiz-2025-molecular-hydrogen-nutrition-review",
+   "title": "A comprehensive review of molecular hydrogen as a novel nutrition therapy in relieving oxidative stress and diseases: Mechanisms and perspectives",
+   "ctx": "Revisión reciente que sostiene el producto de hidrógeno molecular (H2 Tablets): resume mecanismos y beneficios del H2 como terapia nutricional antioxidante. Ver"
+  },
+  {
+   "id": "extra-timofejeva-2021-heart-rhythm-magnetic-field",
+   "title": "Estudio global de la sincronización del ritmo cardíaco humano con el campo magnético variable de la Tierra",
+   "ctx": "OPTIMIZE (C. Clinton), referencias cap. 6. Sustenta la sensibilidad humana a campos magnéticos ambientales y resonancias de Schumann. Acceso abierto (MDPI). · V"
+  },
+  {
+   "id": "extra-timofejeva-2017-group-sync-magnetic-field",
+   "title": "Identificación de la sincronización fisiológica de un grupo con el campo magnético de la Tierra",
+   "ctx": "OPTIMIZE (C. Clinton), referencias cap. 6. Respalda la interacción entre campos magnéticos ambientales y la fisiología humana. Acceso abierto (IJERPH). · Verifi"
+  },
+  {
+   "id": "extra-wang-2019-geomagnetic-brain-alpha",
+   "title": "Transducción del campo geomagnético evidenciada por la actividad de banda alfa en el cerebro humano",
+   "ctx": "OPTIMIZE (C. Clinton), referencias cap. 6. Evidencia directa de magnetorrecepción en humanos; respalda la base biofísica de la sensibilidad a campos magnéticos."
+  },
+  {
+   "id": "extra-chevalier-2012-earthing-revision",
+   "title": "Earthing: Health Implications of Reconnecting the Human Body to the Earth's Surface Electrons",
+   "ctx": "Resuena con bioelectricidad y el rol de electrones/antioxidantes en la fisiología, base conceptual de terapias de campo. Verificado contra el PDF original."
+  },
+  {
+   "id": "extra-li-pollack-2020-flujo-inducido-superficie-ir-ez",
+   "title": "Surface-induced flow: A natural microscopic engine using infrared energy as fuel",
+   "ctx": "Respalda el concepto de agua estructurada/EZ (Analemma) y la luz infrarroja como fuente de energía biológica. Verificado contra el PDF original."
+  },
+  {
+   "id": "extra-powner-2024-luz-roja-mitocondria-glucosa",
+   "title": "Light stimulation of mitochondria reduces blood glucose levels",
+   "ctx": "Respalda fotobiomodulación / fototerapia (luz roja 670 nm, mitocondrias), núcleo conceptual de productos de luz. Verificado contra el PDF original."
+  },
+  {
+   "id": "extra-cheng-2023-hidrogeno-mitocondria-keap1-nrf2",
+   "title": "Hydrogen: A Rising Star in Gas Medicine as a Mitochondria-Targeting Nutrient via Activating Keap1-Nrf2 Antioxidant System",
+   "ctx": "Respalda hidrógeno molecular (H2 Tablets / drinkHRW) y mitocondrias. Verificado contra el PDF original."
+  },
+  {
+   "id": "extra-zhang-2023-mitocondria-hidrogeno-molecular-funciones",
+   "title": "Mitochondria: one of the vital hubs for molecular hydrogen's biological functions",
+   "ctx": "Respalda hidrógeno molecular (H2 Tablets / drinkHRW) y su acción mitocondrial. Verificado contra el PDF original."
+  },
+  {
+   "id": "extra-oschman-2015-grounding-inflamacion-cicatrizacion-revision",
+   "title": "The effects of grounding (earthing) on inflammation, the immune response, wound healing, and prevention and treatment of chronic inflammatory and autoimmune diseases",
+   "ctx": "Respalda bioelectricidad / rol de electrones y antioxidantes en inflamación y cicatrización. Verificado contra el PDF original."
+  },
+  {
+   "id": "extra-waisberg-2024-luz-nir-roja-mitocondria-sans",
+   "title": "Near infrared/red light therapy a potential countermeasure for mitochondrial dysfunction in spaceflight associated neuro-ocular syndrome (SANS)",
+   "ctx": "Respalda fotobiomodulación / luz roja-infrarroja y mitocondrias (fototerapia). Verificado contra el PDF original."
+  },
+  {
+   "id": "extra-becker-1972-estimulacion-electrica-regeneracion-extremidades-mamiferos",
+   "title": "Electrical Stimulation of Partial Limb Regeneration in Mammals",
+   "ctx": "Respalda bioelectricidad y regeneración por estimulación eléctrica (base conceptual de terapias de campo/PEMF). Verificado contra el PDF original."
+  },
+  {
+   "id": "extra-chevalier-2014-grounding-flujo-sanguineo-facial-rct",
+   "title": "Grounding the Human Body Improves Facial Blood Flow Regulation: Results of a Randomized, Placebo Controlled Pilot Study",
+   "ctx": "RCT piloto que respalda bioelectricidad/grounding y circulación. Verificado contra el PDF original."
+  },
+  {
+   "id": "extra-zadro-2022-reiki-mental-health",
+   "title": "Does Reiki Benefit Mental Health Symptoms Above Placebo?",
+   "ctx": "Reiki como terapia de biocampo (energía sutil): evidencia de efecto sobre estrés, ansiedad y depresión por encima del placebo. Verificado contra el PDF original"
+  },
+  {
+   "id": "extra-tabatabaee-2016-therapeutic-touch-cancer",
+   "title": "Effect of Therapeutic Touch on Pain Related Parameters in Patients with Cancer: A Randomized Clinical Trial",
+   "ctx": "Toque Terapéutico (biocampo): RCT con efecto real sobre el dolor en cáncer. Verificado contra el PDF original (CC-BY-NC)."
+  },
+  {
+   "id": "extra-valenti-2024-sound-matrix-mitochondria",
+   "title": "Sound Matrix Shaping of Living Matter: From Macrosystems to Cell Microenvironment, Where Mitochondria Act as Energy Portals in Detecting and Processing Sound Vibrations",
+   "ctx": "Sonido y vibración como matriz de la materia viva, vía mitocondria: base del paradigma de resonancia/sonido. Verificado contra el PDF original (CC-BY)."
+  },
+  {
+   "id": "extra-toppi-2016-eeg-hyperscanning-cooperation",
+   "title": "Investigating Cooperative Behavior in Ecological Settings: An EEG Hyperscanning Study",
+   "ctx": "Sincronización entre cerebros (consciencia/conexión): cuando las personas cooperan, sus cerebros se conectan medible­mente. Verificado contra el PDF original (C"
+  },
+  {
+   "id": "extra-dedic-2021-hyaluronan-orders-water",
+   "title": "Hyaluronan Orders Water Molecules in its Nanoscale Extended Hydration Shells",
+   "ctx": "Agua estructurada alrededor de biomoléculas: respalda que el agua del cuerpo se organiza en capas ordenadas (relevante para Analemma / agua coherente). Verifica"
+  },
+  {
+   "id": "extra-cosic-2016-luz-resonancias-em-biomoleculas",
+   "title": "Environmental Light and Its Relationship with Electromagnetic Resonances of Biomolecular Interactions, as Predicted by the Resonant Recognition Model",
+   "ctx": "Resonancias electromagnéticas de biomoléculas y su relación con la luz: marco teórico (RRM) que conecta campos EM/luz con la actividad de proteínas y ADN. Verif"
+  },
+  {
+   "id": "extra-schwartz-2010-integrinas-matriz-mecanotransduccion",
+   "title": "Integrins and Extracellular Matrix in Mechanotransduction",
+   "ctx": "Mecanotransducción: cómo el tejido conectivo/matriz convierte fuerzas físicas en señales celulares. Base para entender por qué los estímulos físicos (incluidos "
+  },
+  {
+   "id": "extra-fischer-2018-mitocondria-puntos-gatillo-miofasciales",
+   "title": "Evaluation of Mitochondrial Function in Chronic Myofascial Trigger Points — A Prospective Cohort Pilot Study Using High-Resolution Respirometry",
+   "ctx": "Mitocondria y dolor miofascial: conecta la disfunción energética celular con los puntos gatillo de la fascia. Verificado contra el PDF original (BMC, CC-BY)."
+  },
+  {
+   "id": "extra-vodyanoy-2015-sistema-primo-vascular-bong-han-kim",
+   "title": "Primo-Vascular System as Presented by Bong Han Kim",
+   "ctx": "Sistema primo-vascular / meridianos: revisión de la evidencia anatómica clásica detrás del biocampo y la acupuntura. Verificado contra el PDF original (eCAM, Hi"
+  },
+  {
+   "id": "extra-hoyle-2017-actina-circadiana-cicatrizacion",
+   "title": "Circadian Actin Dynamics Drive Rhythmic Fibroblast Mobilisation During Wound Healing",
+   "ctx": "Ritmos circadianos y cicatrización: el reloj celular del fibroblasto regula la reparación del tejido conectivo. Respalda el peso de los ritmos biológicos (luz/d"
+  },
+  {
+   "id": "extra-alvarez-lorenzo-2023-piezoelectricidad-regeneracion-tejidos",
+   "title": "Physical Stimuli-Emitting Scaffolds: The Role of Piezoelectricity in Tissue Regeneration",
+   "ctx": "Piezoelectricidad y regeneración: la estimulación eléctrica local repara hueso, cartílago y heridas. Base del principio bioeléctrico detrás de PEMF. Verificado "
+  },
+  {
+   "id": "extra-demine-2019-desacople-mitocondrial",
+   "title": "Mitochondrial Uncoupling: A Key Controller of Biological Processes in Physiology and Diseases",
+   "ctx": "Función mitocondrial: el desacople controlado regula energía, calor y radicales libres. Contexto para entender cómo se modula la salud mitocondrial. Verificado "
+  },
+  {
+   "id": "extra-clemente-suarez-2023-transferencia-mitocondrial",
+   "title": "Mitochondrial Transfer as a Novel Therapeutic Approach in Disease Diagnosis and Treatment",
+   "ctx": "Transferencia de mitocondrias entre células como terapia regenerativa. Refuerza el papel central de la energía mitocondrial en la salud. Verificado contra el PD"
+  },
+  {
+   "id": "extra-chung-2017-biogenesis-mitocondrial-ejercicio-frio",
+   "title": "The Effects of Exercise and Cold Exposure on Mitochondrial Biogenesis in Skeletal Muscle and White Adipose Tissue",
+   "ctx": "Base para entender cómo estímulos físicos no invasivos mejoran la salud mitocondrial. Verificado contra el PDF original (J Exerc Nutr Biochem, acceso abierto)."
+  },
+  {
+   "id": "extra-liu-2021-transferencia-mitocondrial-revitalizacion-tejidos",
+   "title": "Intercellular Mitochondrial Transfer as a Means of Tissue Revitalization",
+   "ctx": "Documenta la mitocondria como unidad transferible y reparadora, clave para la regeneración tisular a nivel energético. Verificado contra el PDF original (Signal"
+  },
+  {
+   "id": "extra-marie-2018-espectro-luz-estres-oxidativo-mitocondria-rpe",
+   "title": "Light Action Spectrum on Oxidative Stress and Mitochondrial Damage in A2E-Loaded Retinal Pigment Epithelium Cells",
+   "ctx": "Demuestra que la longitud de onda de la luz determina su impacto sobre la función mitocondrial, fundamento de la fotobiomodulación. Verificado contra el PDF ori"
+  },
+  {
+   "id": "extra-aguda-2023-nir-ros-citoquinas-spike",
+   "title": "Near-Infrared Light Exposure Triggers ROS to Downregulate Inflammatory Cytokines Induced by SARS-CoV-2 Spike Protein in Human Cell Culture",
+   "ctx": "Fotobiomodulación con luz infrarroja cercana modulando la inflamación vía señalización redox mitocondrial. Verificado contra el PDF original (Antioxidants, MDPI"
+  },
+  {
+   "id": "extra-vanwijk-2013-emision-fotonica-artritis-raton",
+   "title": "Imaging of Ultra-Weak Photon Emission in a Rheumatoid Arthritis Mouse Model",
+   "ctx": "Evidencia revisada por pares de que los tejidos vivos emiten luz ultradébil ligada al estado oxidativo (base del concepto de biofotones/biocampo). Verificado co"
+  },
+  {
+   "id": "extra-vanwijk-2020-emision-fotonica-mitocondria-revision",
+   "title": "Integrating Ultra-Weak Photon Emission Analysis in Mitochondrial Research",
+   "ctx": "Vincula explícitamente biofotones, mitocondria y estado redox; sustenta el marco de luz/biocampo. Verificado contra el PDF original (Frontiers in Physiology, CC"
+  },
+  {
+   "id": "extra-wunsch-2014-luz-roja-nir-piel-colageno-rct",
+   "title": "A Controlled Trial to Determine the Efficacy of Red and Near-Infrared Light Treatment in Patient Satisfaction, Reduction of Fine Lines, Wrinkles, Skin Roughness, and Intradermal Collagen Density Increase",
+   "ctx": "Ensayo controlado en humanos que muestra efecto regenerador de la luz roja/NIR (fotobiomodulación) sobre la piel y el colágeno. Verificado contra el PDF origina"
+  },
+  {
+   "id": "extra-mccraty-2017-geomagnetismo-sistema-nervioso-autonomo",
+   "title": "Synchronization of Human Autonomic Nervous System Rhythms with Geomagnetic Activity in Human Subjects",
+   "ctx": "Vincula los campos geomagnéticos terrestres con la regulación autonómica y la coherencia cardíaca humana, eje central del enfoque de campos electromagnéticos y "
+  },
+  {
+   "id": "extra-yau-2021-exposicion-frio-autofagia-grasa-parda",
+   "title": "Chronic Cold Exposure Induces Autophagy to Promote Fatty Acid Oxidation, Mitochondrial Turnover, and Thermogenesis in Brown Adipose Tissue",
+   "ctx": "Evidencia mecanística de cómo un estímulo ambiental natural (frío) mejora la calidad y el recambio mitocondrial. Verificado contra el PDF original (iScience, Ce"
+  },
+  {
+   "id": "extra-jain-2015-biofield-estudios-clinicos",
+   "title": "Clinical Studies of Biofield Therapies: Summary, Methodological Challenges, and Recommendations",
+   "ctx": "Revisión central del campo del biocampo por el grupo de la Consciousness and Healing Initiative. Verificado contra el PDF original (Global Advances in Health an"
+  },
+  {
+   "id": "extra-hammerschlag-2015-biofield-fisiologia",
+   "title": "Biofield Physiology: A Framework for an Emerging Discipline",
+   "ctx": "Marco fisiológico del biocampo con coautoría de McCraty (coherencia cardíaca) y Levin (bioelectricidad). Verificado contra el PDF original (Global Advances in H"
+  },
+  {
+   "id": "extra-fishburn-2018-sincronizacion-neural-interpersonal",
+   "title": "Putting Our Heads Together: Interpersonal Neural Synchronization as a Biological Mechanism for Shared Intentionality",
+   "ctx": "Sincronía cerebro-a-cerebro durante la interacción cooperativa. Verificado contra el PDF original (Social Cognitive and Affective Neuroscience, Oxford, acceso a"
+  },
+  {
+   "id": "extra-goldstein-2018-acoplamiento-cerebro-dolor",
+   "title": "Brain-to-Brain Coupling During Handholding Is Associated with Pain Reduction",
+   "ctx": "Sincronización entre cerebros y su correlato con la reducción del dolor por contacto. Verificado contra el PDF original (PNAS, acceso abierto)."
+  },
+  {
+   "id": "extra-bartel-2021-vibracion-sonora-salud",
+   "title": "Possible Mechanisms for the Effects of Sound Vibration on Human Health",
+   "ctx": "Mecanismos de sonido/vibración sobre el organismo. Verificado contra el PDF original (Healthcare, MDPI, acceso abierto)."
+  },
+  {
+   "id": "extra-perry-2021-canto-ritmico-estados-misticos",
+   "title": "Rhythmic Chanting and Mystical States across Traditions",
+   "ctx": "Sonido/vibración y estados de consciencia. Verificado contra el PDF original (Brain Sciences, MDPI, acceso abierto)."
+  },
+  {
+   "id": "extra-pinna-2020-interocepcion-tono-vagal",
+   "title": "A Systematic Review of Associations Between Interoception, Vagal Tone, and Emotional Regulation",
+   "ctx": "Tono vagal / coherencia autonómica (HRV) y regulación emocional, base fisiológica de la coherencia cardíaca. Verificado contra el PDF original (Frontiers in Psy"
+  },
+  {
+   "id": "extra-he-2016-contagio-emocional-redes",
+   "title": "Exploring Entrainment Patterns of Human Emotion in Social Media",
+   "ctx": "Sincronización/arrastre emocional entre personas, relacionado con la sincronía interpersonal. Verificado contra el PDF original (PLOS ONE, acceso abierto)."
+  },
+  {
+   "id": "extra-babcock-2024-superradiancia-triptofano",
+   "title": "Ultraviolet Superradiance from Mega-Networks of Tryptophan in Biological Architectures",
+   "ctx": "Base físico-cuántica de los biofotones y de hipótesis sobre consciencia en microtúbulos; es un estudio teórico, no clínico. Verificado contra el PDF original (J"
+  }
+ ],
+ "base_ids": [
+  "lw-01",
+  "lw-02",
+  "lw-03",
+  "lw-04",
+  "lw-05",
+  "lw-06",
+  "lw-07",
+  "lw-08",
+  "lw-09",
+  "lw-10",
+  "lw-11",
+  "lw-12",
+  "lw-13",
+  "lw-14",
+  "mvc-01",
+  "mvc-02",
+  "drh-01",
+  "drh-02",
+  "drh-03",
+  "drh-04",
+  "drh-05",
+  "drh-06",
+  "ana-01",
+  "ana-02",
+  "ana-03",
+  "gam-01",
+  "gam-02",
+  "gam-03",
+  "gam-04",
+  "gam-05",
+  "gam-06",
+  "gam-07",
+  "gam-08",
+  "ng-01",
+  "ng-02",
+  "ng-03",
+  "ng-04",
+  "ng-05",
+  "ng-06",
+  "ng-07",
+  "ng-08",
+  "ng-09",
+  "ng-10"
+ ]
+}

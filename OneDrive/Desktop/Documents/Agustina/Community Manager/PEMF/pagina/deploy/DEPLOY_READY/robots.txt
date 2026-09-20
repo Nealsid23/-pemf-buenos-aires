@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pemfba.com/sitemap.xml

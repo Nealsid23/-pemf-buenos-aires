@@ -320,6 +320,8 @@
     document.querySelector('[data-tab="desc"]')?.classList.add('active');
     document.getElementById('tab-desc')?.classList.add('active');
 
+    window.currentReviewProduct = prod.name || 'product';
+
     const modal = document.getElementById('modalOverlay');
     if (modal) {
       modal.classList.add('open');
