@@ -35,6 +35,8 @@
 
   function updateBanner(brandId) {
     const stageBanner = document.getElementById('stageBanner');
+    const stageImg = document.getElementById('stageImg');
+    const stageCount = document.getElementById('stageCount');
     if (!stageBanner) return;
 
     const bannerMap = {
@@ -47,9 +49,36 @@
       'h2': 'img/estructura/banner-drinkhrw.webp',
     };
 
+    const featuredMap = {
+      'todos': { img: 'img/productos/lifewave/x39.png', name: 'X39' },
+      'lifewave': { img: 'img/productos/lifewave/x39.png', name: 'X39' },
+      'neuro': { img: 'img/productos/neuro/neurogum.png', name: 'Neuro Gum' },
+      'analemma': { img: 'img/productos/analemma.png', name: 'Analemma' },
+      'gamma-light': { img: 'img/productos/gamma-light.png', name: 'Gamma Light' },
+      'ess60': { img: 'img/productos/ess60.png', name: 'ESS60' },
+      'h2': { img: 'img/productos/h2-tablets.png', name: 'H2 Tablets' },
+    };
+
     stageBanner.src = bannerMap[brandId] || bannerMap['todos'];
     stageBanner.classList.add('fade-out');
-    setTimeout(() => stageBanner.classList.remove('fade-out'), 300);
+
+    const featured = featuredMap[brandId] || featuredMap['todos'];
+    const filtered = getFilteredProducts();
+
+    setTimeout(() => {
+      stageBanner.classList.remove('fade-out');
+      if (stageImg) {
+        stageImg.classList.add('fade-out');
+        setTimeout(() => {
+          stageImg.src = featured.img;
+          stageImg.alt = featured.name;
+          stageImg.classList.remove('fade-out');
+        }, 100);
+      }
+      if (stageCount) {
+        stageCount.textContent = `${filtered.length} producto${filtered.length !== 1 ? 's' : ''} disponible${filtered.length !== 1 ? 's' : ''}`;
+      }
+    }, 150);
   }
 
   function switchBrand(brandId) {
