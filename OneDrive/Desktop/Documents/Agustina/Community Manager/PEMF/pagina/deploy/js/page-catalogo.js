@@ -43,8 +43,8 @@
       'neuro': 'img/estructura/banner-neuro.webp',
       'analemma': 'img/estructura/banner-analemma.webp',
       'gamma-light': 'img/estructura/banner-gamma.webp',
-      'ess60': 'img/estructura/banner-ess60.webp',
-      'h2': 'img/estructura/banner-h2.webp',
+      'ess60': 'img/estructura/banner-myvitalc.webp',
+      'h2': 'img/estructura/banner-drinkhrw.webp',
     };
 
     stageBanner.src = bannerMap[brandId] || bannerMap['todos'];
