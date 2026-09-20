@@ -50,13 +50,13 @@
     };
 
     const featuredMap = {
-      'todos': { img: 'img/productos/lifewave/x39-pro.png', name: 'X39' },
-      'lifewave': { img: 'img/productos/lifewave/x39-pro.png', name: 'X39' },
-      'neuro': { img: 'img/productos/neuro/Screenshot 2025-07-09 060532.png', name: 'Neuro Gum' },
+      'todos': { img: 'img/productos/lifewave/featured-x39.png', name: 'X39' },
+      'lifewave': { img: 'img/productos/lifewave/featured-x39.png', name: 'X39' },
+      'neuro': { img: 'img/productos/neuro/neuro-featured.png', name: 'Neuro Gum' },
       'analemma': { img: 'img/productos/analemma/Screenshot 2025-07-09 055601.png', name: 'Analemma' },
-      'gamma-light': { img: 'img/productos/gamma light/Screenshot 2025-07-09 055855.png', name: 'Gamma Light' },
-      'ess60': { img: 'img/productos/ess60-pro.png', name: 'ESS60' },
-      'h2': { img: 'img/productos/h2-tablets.png', name: 'H2 Tablets' },
+      'gamma-light': { img: 'img/productos/gamma-light-featured.png', name: 'Gamma Light' },
+      'ess60': { img: 'img/productos/ess60-featured.png', name: 'ESS60' },
+      'h2': { img: 'img/productos/h2-featured.png', name: 'H2 Tablets' },
     };
 
     stageBanner.src = bannerMap[brandId] || bannerMap['todos'];
