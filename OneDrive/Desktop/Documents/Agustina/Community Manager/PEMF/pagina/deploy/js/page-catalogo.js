@@ -116,7 +116,7 @@
           <div class="card-brand-tag" style="background: ${brand?.tagBg}; color: ${brand?.tagColor};">${brand?.name}</div>
           <div class="card-meta-row">
             <div class="card-name">${prod.name}</div>
-            <div class="daily-cost-badge"><strong>${prod.priceDay}</strong></div>
+            <div class="daily-cost-badge"><strong>${prod.priceDay}</strong> <span style="font-size:10px;color:#94a3b8;">— Menos que un café</span></div>
           </div>
           <div class="card-meta-row">
             <div class="stock-badge stock-ok">
