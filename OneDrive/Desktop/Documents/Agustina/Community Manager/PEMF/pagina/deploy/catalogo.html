@@ -113,6 +113,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
   display:flex;
   align-items:center;
   justify-content:center;
+  transition:height .3s ease;
 }
 /* banner altura fija consistente — todos los banners alineados */
 .stage-banner{
@@ -636,6 +637,25 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
   </div>
 </footer>
 
+<script>
+// Aplicar configuración guardada del editor de banner
+(function() {
+  const saved = localStorage.getItem('bannerSettings');
+  if (saved) {
+    const config = JSON.parse(saved);
+    const brandStage = document.querySelector('.brand-stage');
+    const stageProduct = document.querySelector('.stage-product');
+
+    if (brandStage) {
+      brandStage.style.height = config.bannerHeight + 'px';
+    }
+    if (stageProduct) {
+      stageProduct.style.right = config.imgRight + 'px';
+      stageProduct.style.bottom = config.imgBottom + 'px';
+    }
+  }
+})();
+</script>
 <script src="js/catalogo.js" defer></script>
 <script src="js/page-catalogo.js" defer></script>
 <script src="js/scroll-premium.js?v=4" defer></script>
