@@ -33,10 +33,30 @@
     });
   }
 
+  function updateBanner(brandId) {
+    const stageBanner = document.getElementById('stageBanner');
+    if (!stageBanner) return;
+
+    const bannerMap = {
+      'todos': 'img/estructura/banner-lifewave.webp',
+      'lifewave': 'img/estructura/banner-lifewave.webp',
+      'neuro': 'img/estructura/banner-neuro.webp',
+      'analemma': 'img/estructura/banner-analemma.webp',
+      'gamma-light': 'img/estructura/banner-gamma.webp',
+      'ess60': 'img/estructura/banner-ess60.webp',
+      'h2': 'img/estructura/banner-h2.webp',
+    };
+
+    stageBanner.src = bannerMap[brandId] || bannerMap['todos'];
+    stageBanner.classList.add('fade-out');
+    setTimeout(() => stageBanner.classList.remove('fade-out'), 300);
+  }
+
   function switchBrand(brandId) {
     currentBrand = brandId;
     currentGoal = 'todos';
     renderBrandNav();
+    updateBanner(brandId);
     renderProducts();
     updateGoalChips();
   }
