@@ -50,12 +50,12 @@
     };
 
     const featuredMap = {
-      'todos': { img: 'img/productos/lifewave/x39.png', name: 'X39' },
-      'lifewave': { img: 'img/productos/lifewave/x39.png', name: 'X39' },
+      'todos': { img: 'img/productos/lifewave/x39-pro.png', name: 'X39' },
+      'lifewave': { img: 'img/productos/lifewave/x39-pro.png', name: 'X39' },
       'neuro': { img: 'img/productos/neuro/Screenshot 2025-07-09 060532.png', name: 'Neuro Gum' },
       'analemma': { img: 'img/productos/analemma/Screenshot 2025-07-09 055601.png', name: 'Analemma' },
       'gamma-light': { img: 'img/productos/gamma light/Screenshot 2025-07-09 055855.png', name: 'Gamma Light' },
-      'ess60': { img: 'img/productos/ess60.png', name: 'ESS60' },
+      'ess60': { img: 'img/productos/ess60-pro.png', name: 'ESS60' },
       'h2': { img: 'img/productos/h2-tablets.png', name: 'H2 Tablets' },
     };
 
