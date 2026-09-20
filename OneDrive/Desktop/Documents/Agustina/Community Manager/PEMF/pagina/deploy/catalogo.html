@@ -636,6 +636,33 @@ h1,h2,h3,h4,h5,h6{font-family:'Figtree',sans-serif;}
   </div>
 </footer>
 
+<script>
+(function() {
+  function applyBannerSettings() {
+    const saved = localStorage.getItem('bannerSettings');
+    const config = saved ? JSON.parse(saved) : {
+      bannerHeight: 480,
+      imgRight: 48,
+      imgBottom: 40
+    };
+
+    const brandStage = document.querySelector('.brand-stage');
+    const stageProduct = document.getElementById('stageProduct');
+
+    if (brandStage) brandStage.style.height = config.bannerHeight + 'px';
+    if (stageProduct) {
+      stageProduct.style.right = config.imgRight + 'px';
+      stageProduct.style.bottom = config.imgBottom + 'px';
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyBannerSettings);
+  } else {
+    applyBannerSettings();
+  }
+})();
+</script>
 <script src="js/catalogo.js" defer></script>
 <script src="js/page-catalogo.js" defer></script>
 <script src="js/scroll-premium.js?v=4" defer></script>
