@@ -1,0 +1,47 @@
+# ── SECRETOS Y CREDENCIALES ──────────────────────────
+# Nunca commitear valores sensibles
+.env
+.env.*
+.env.local
+.env.development
+.env.production
+.env.staging
+*.env
+secrets.json
+credentials.json
+service-account.json
+*.pem
+*.key
+*.cert
+*.p12
+*.pfx
+config.local.js
+config.secret.js
+
+# ── HERRAMIENTAS DE DESARROLLO (no van al repo) ───────
+.claude/
+.superpowers/
+.worktrees/
+*.claude-session
+
+# ── NODE / BUILD ──────────────────────────────────────
+node_modules/
+dist/
+.cache/
+*.log
+npm-debug.log*
+
+# ── SISTEMA OPERATIVO ────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ── EDITORES ─────────────────────────────────────────
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
